@@ -78,205 +78,205 @@ extern "C"
  ******************************************************************************/
  /**
  ******************************************************************************
- **\brief uarté€šé“é€‰æ‹©
+ **\brief uartÍ¨µÀÑ¡Ôñ
  ******************************************************************************/
 
 typedef enum en_uart_channel
 {
-    UARTCH0 = 0u, ///<ä¸²å£0
-    UARTCH1 = 1u, ///<ä¸²å£1
+    UARTCH0 = 0u, ///<´®¿Ú0
+    UARTCH1 = 1u, ///<´®¿Ú1
 }en_uart_channel_t;
 /**
  ******************************************************************************
- ** \brief uartå¤šä¸»æœºæ¨¡å¼åœ°å€å¸§/æ•°æ®å¸§æˆ–è€…å¥‡å¶æ ¡éªŒ
+ ** \brief uart¶àÖ÷»úÄ£Ê½µØÖ·Ö¡/Êı¾İÖ¡»òÕßÆæÅ¼Ğ£Ñé
  ******************************************************************************/
 typedef enum en_uart_mmdorck
 {
-    UartDataOrAddr = 0u, ///<å¤šä¸»æœºæ¨¡å¼æ—¶ï¼Œé€šè¿‡è¯»å†™SBUF[8]å†³å®šå¸§ä¸ºæ•°æ®å¸§æˆ–åœ°å€å¸§
-    UartEven       = 1u, ///<éå¤šä¸»æœºæ¨¡å¼å¶æ ¡éªŒ   
-    UartOdd        = 2u, ///<éå¤šä¸»æœºæ¨¡å¼å¥‡æ ¡éªŒ    
+    UartDataOrAddr = 0u, ///<¶àÖ÷»úÄ£Ê½Ê±£¬Í¨¹ı¶ÁĞ´SBUF[8]¾ö¶¨Ö¡ÎªÊı¾İÖ¡»òµØÖ·Ö¡
+    UartEven       = 1u, ///<·Ç¶àÖ÷»úÄ£Ê½Å¼Ğ£Ñé   
+    UartOdd        = 2u, ///<·Ç¶àÖ÷»úÄ£Ê½ÆæĞ£Ñé    
 }en_uart_mmdorck_t;
 
 /**
  ******************************************************************************
- ** \brief uartå¤šä¸»æœºæ¨¡å¼é…ç½®
+ ** \brief uart¶àÖ÷»úÄ£Ê½ÅäÖÃ
  ******************************************************************************/
 typedef enum en_uart_multimode
 {
-    UartNormal = 0u, ///<æ­£å¸¸å·¥ä½œæ¨¡å¼
-    UartMulti  = 1u, ///<å¤šä¸»æœºå·¥ä½œæ¨¡å¼
+    UartNormal = 0u, ///<Õı³£¹¤×÷Ä£Ê½
+    UartMulti  = 1u, ///<¶àÖ÷»ú¹¤×÷Ä£Ê½
 }en_uart_multimode_t;
 /**
  ******************************************************************************
- ** \brief uartå¤šä¸»æœºæ¨¡å¼åŠä»æœºåœ°å€å’Œåœ°å€æ©ç é…ç½®
+ ** \brief uart¶àÖ÷»úÄ£Ê½¼°´Ó»úµØÖ·ºÍµØÖ·ÑÚÂëÅäÖÃ
  ******************************************************************************/
 
 typedef struct stc_uart_multimode
 {
-    en_uart_multimode_t enMulti_mode; ///<å¤šä¸»æœºæ¨¡å¼é…ç½®
-    uint8_t             u8SlaveAddr;  ///<ä»æœºåœ°å€
-    uint8_t                u8SaddEn;  ///<ä»åŠåœ°å€æ©ç 
+    en_uart_multimode_t enMulti_mode; ///<¶àÖ÷»úÄ£Ê½ÅäÖÃ
+    uint8_t             u8SlaveAddr;  ///<´Ó»úµØÖ·
+    uint8_t                u8SaddEn;  ///<´Ó¼°µØÖ·ÑÚÂë
 }stc_uart_multimode_t;
 
 /**
  ******************************************************************************
- ** \brief uart å››ç§å·¥ä½œæ¨¡å¼é€‰æ‹©
+ ** \brief uart ËÄÖÖ¹¤×÷Ä£Ê½Ñ¡Ôñ
  ******************************************************************************/
 
 typedef enum en_uart_mode
 {
-    UartMode0 = 0u, ///<æ¨¡å¼0    
-    UartMode1 = 1u, ///<æ¨¡å¼1
-    UartMode2 = 2u, ///<æ¨¡å¼2
-    UartMode3 = 3u, ///<æ¨¡å¼3
+    UartMode0 = 0u, ///<Ä£Ê½0    
+    UartMode1 = 1u, ///<Ä£Ê½1
+    UartMode2 = 2u, ///<Ä£Ê½2
+    UartMode3 = 3u, ///<Ä£Ê½3
 } en_uart_mode_t;
 /**
  ******************************************************************************
- ** \brief uart stopé•¿åº¦é€‰æ‹©
+ ** \brief uart stop³¤¶ÈÑ¡Ôñ
  ******************************************************************************/
 
 typedef enum en_uart_stop
 {
-    Uart1bit  = 0u, ///<1ä½åœæ­¢ä½ 
-    Uart15bit = 1u, ///<1.5ä½åœæ­¢ä½
-    Uart2bit  = 2u, ///<2ä½åœæ­¢ä½
+    Uart1bit  = 0u, ///<1Î»Í£Ö¹Î» 
+    Uart15bit = 1u, ///<1.5Î»Í£Ö¹Î»
+    Uart2bit  = 2u, ///<2Î»Í£Ö¹Î»
 } en_uart_stop_t;
 /**
  ******************************************************************************
- ** \brief uart åŠŸèƒ½ä½¿èƒ½
+ ** \brief uart ¹¦ÄÜÊ¹ÄÜ
  ******************************************************************************/
 typedef enum en_uart_func
 {
-    UartTx     = 0u, ///<mode0æ¨¡å¼ä»£è¡¨TX    
-    UartRx     = 1u, ///<émode0æ¨¡å¼ä»£è¡¨RX and TX ,mode0æ¨¡å¼ä»£è¡¨RX  
-    UartDmaTx  = 3u, ///<DMAå‘é€ä½¿èƒ½
-    UartDmaRx  = 4u, ///<DMAæ¥æ”¶ä½¿èƒ½
-    UartCtsRts = 5u, ///<ç¡¬ä»¶æµä½¿èƒ½
+    UartTx     = 0u, ///<mode0Ä£Ê½´ú±íTX    
+    UartRx     = 1u, ///<·Çmode0Ä£Ê½´ú±íRX and TX ,mode0Ä£Ê½´ú±íRX  
+    UartDmaTx  = 3u, ///<DMA·¢ËÍÊ¹ÄÜ
+    UartDmaRx  = 4u, ///<DMA½ÓÊÕÊ¹ÄÜ
+    UartCtsRts = 5u, ///<Ó²¼şÁ÷Ê¹ÄÜ
 }en_uart_func_t;
 /**
  ******************************************************************************
- ** \brief uartä¸­æ–­ä½¿èƒ½æ§åˆ¶
+ ** \brief uartÖĞ¶ÏÊ¹ÄÜ¿ØÖÆ
  ******************************************************************************/
 typedef enum en_uart_irq_sel
 {
-    UartTxIrq  = 0u,  ///<å‘é€ä¸­æ–­ä½¿èƒ½        
-    UartRxIrq  = 1u,  ///<æ¥æ”¶ä¸­æ–­ä½¿èƒ½
-    UartFEIrq  = 3u,  ///<å¸§é”™è¯¯ä¸­æ–­ä½¿èƒ½
-    UartCtsIrq = 4u,  ///<CTSä¿¡å·ç¿»è½¬ä¸­æ–­ä½¿èƒ½
-    UartPEIrq  = 5u,  ///<å¥‡å¶æ ¡éªŒä¸­æ–­ä½¿èƒ½
-    UartTxEIrq = 6u,  ///<TXç©ºä¸­æ–­ä½¿èƒ½   
+    UartTxIrq  = 0u,  ///<·¢ËÍÖĞ¶ÏÊ¹ÄÜ        
+    UartRxIrq  = 1u,  ///<½ÓÊÕÖĞ¶ÏÊ¹ÄÜ
+    UartFEIrq  = 3u,  ///<Ö¡´íÎóÖĞ¶ÏÊ¹ÄÜ
+    UartCtsIrq = 4u,  ///<CTSĞÅºÅ·­×ªÖĞ¶ÏÊ¹ÄÜ
+    UartPEIrq  = 5u,  ///<ÆæÅ¼Ğ£ÑéÖĞ¶ÏÊ¹ÄÜ
+    UartTxEIrq = 6u,  ///<TX¿ÕÖĞ¶ÏÊ¹ÄÜ   
 }en_uart_irq_sel_t;
 /**
  ******************************************************************************
- ** \brief uartå‘é€æ¥æ”¶ä¸­æ–­å¤„ç†å‡½æ•°æ¥å£
+ ** \brief uart·¢ËÍ½ÓÊÕÖĞ¶Ï´¦Àíº¯Êı½Ó¿Ú
  ******************************************************************************/
 
 typedef struct stc_uart_irq_cb
 {
-    func_ptr_t pfnTxIrqCb;    ///<å‘é€ä¸­æ–­æœåŠ¡å‡½æ•°     
-    func_ptr_t pfnRxFEIrqCb;  ///<æ¥æ”¶å¸§é”™è¯¯ä¸­æ–­æœåŠ¡å‡½æ•°
-    func_ptr_t pfnRxIrqCb;    ///<æ¥æ”¶ä¸­æ–­æœåŠ¡å‡½æ•° 
-    func_ptr_t pfnCtsIrqCb;   ///<CTSä¿¡å·ç¿»è½¬ä¸­æ–­æœåŠ¡å‡½æ•° 
-    func_ptr_t pfnPEIrqCb;    ///<å¥‡å¶æ ¡éªŒé”™è¯¯ä¸­æ–­æœåŠ¡å‡½æ•° 
+    func_ptr_t pfnTxIrqCb;    ///<·¢ËÍÖĞ¶Ï·şÎñº¯Êı     
+    func_ptr_t pfnRxFEIrqCb;  ///<½ÓÊÕÖ¡´íÎóÖĞ¶Ï·şÎñº¯Êı
+    func_ptr_t pfnRxIrqCb;    ///<½ÓÊÕÖĞ¶Ï·şÎñº¯Êı 
+    func_ptr_t pfnCtsIrqCb;   ///<CTSĞÅºÅ·­×ªÖĞ¶Ï·şÎñº¯Êı 
+    func_ptr_t pfnPEIrqCb;    ///<ÆæÅ¼Ğ£Ñé´íÎóÖĞ¶Ï·şÎñº¯Êı 
 }stc_uart_irq_cb_t;
 /**
  ******************************************************************************
- ** \brief uart çŠ¶æ€æ ‡å¿—ä½
+ ** \brief uart ×´Ì¬±êÖ¾Î»
  ******************************************************************************/
 typedef enum en_uart_status
 {
-    UartCts   = 0u,  ///<CTSä¿¡å·æ ‡è®°
-    UartRC    = 1u,  ///<æ¥æ”¶æ•°æ®å®Œæˆæ ‡è®°
-    UartTC    = 2u,  ///<å‘é€æ•°æ®å®Œæˆæ ‡è®°
-    UartPE    = 3u,  ///<å¥‡å¶æ ¡éªŒé”™è¯¯æ ‡è®°
-    UartFE    = 4u,  ///<å¸§é”™è¯¯æ ‡è®°  
-    UartCtsIf = 5u,  ///<CTSä¸­æ–­æ ‡è®°
-    UartTxe   = 6u,  ///<TXbuffç©ºæ ‡è®°
+    UartCts   = 0u,  ///<CTSĞÅºÅ±ê¼Ç
+    UartRC    = 1u,  ///<½ÓÊÕÊı¾İÍê³É±ê¼Ç
+    UartTC    = 2u,  ///<·¢ËÍÊı¾İÍê³É±ê¼Ç
+    UartPE    = 3u,  ///<ÆæÅ¼Ğ£Ñé´íÎó±ê¼Ç
+    UartFE    = 4u,  ///<Ö¡´íÎó±ê¼Ç  
+    UartCtsIf = 5u,  ///<CTSÖĞ¶Ï±ê¼Ç
+    UartTxe   = 6u,  ///<TXbuff¿Õ±ê¼Ç
 }en_uart_status_t;
 /**
  ******************************************************************************
- ** \brief uart é€šé“åœ°å€åŠä¸­æ–­å‡½æ•°åœ°å€ç»“æ„
+ ** \brief uart Í¨µÀµØÖ·¼°ÖĞ¶Ïº¯ÊıµØÖ·½á¹¹
  ******************************************************************************/
 typedef struct stc_uart_instance_data
 {   
-    uint32_t               u32Idx;               ///< é€šé“å·
-    M0P_UART_TypeDef       *pstcInstance;        ///< é€šé“å¯„å­˜å™¨åœ°å€
-    stc_uart_irq_cb_t      stcUartInternIrqCb;   ///< é€šé“ä¸­æ–­æœåŠ¡å‡½æ•°
+    uint32_t               u32Idx;               ///< Í¨µÀºÅ
+    M0P_UART_TypeDef       *pstcInstance;        ///< Í¨µÀ¼Ä´æÆ÷µØÖ·
+    stc_uart_irq_cb_t      stcUartInternIrqCb;   ///< Í¨µÀÖĞ¶Ï·şÎñº¯Êı
 } stc_uart_instance_data_t;
 /**
  ******************************************************************************
- ** \brief uart é€šé“æ³¢ç‰¹ç‡é…ç½®
+ ** \brief uart Í¨µÀ²¨ÌØÂÊÅäÖÃ
  ******************************************************************************/
 typedef enum en_uart_clkdiv
 {
-    Uart16Or32Div = 0u,///<æ¨¡å¼0æ— æ•ˆï¼Œæ¨¡å¼1/3ä¸º16åˆ†é¢‘ï¼Œæ¨¡å¼2ä¸º32åˆ†é¢‘
-    Uart8Or16Div  = 1u,///<æ¨¡å¼0æ— æ•ˆï¼Œæ¨¡å¼1/3ä¸º8åˆ†é¢‘ï¼Œæ¨¡å¼2ä¸º16åˆ†é¢‘
+    Uart16Or32Div = 0u,///<Ä£Ê½0ÎŞĞ§£¬Ä£Ê½1/3Îª16·ÖÆµ£¬Ä£Ê½2Îª32·ÖÆµ
+    Uart8Or16Div  = 1u,///<Ä£Ê½0ÎŞĞ§£¬Ä£Ê½1/3Îª8·ÖÆµ£¬Ä£Ê½2Îª16·ÖÆµ
 }en_uart_clkdiv_t;
 /**
  ******************************************************************************
- ** \brief uart é€šé“æ³¢ç‰¹ç‡è®¡ç®—å‚æ•°
+ ** \brief uart Í¨µÀ²¨ÌØÂÊ¼ÆËã²ÎÊı
  ******************************************************************************/
 typedef struct stc_uart_baud
 {
     uint32_t             u32Pclk;        ///<pclk
-    en_uart_mode_t       enRunMode;      ///< å››ç§æ¨¡å¼é…ç½®
-    uint32_t             u32Baud;        ///< æ³¢ç‰¹ç‡
+    en_uart_mode_t       enRunMode;      ///< ËÄÖÖÄ£Ê½ÅäÖÃ
+    uint32_t             u32Baud;        ///< ²¨ÌØÂÊ
 } stc_uart_baud_t;
 /**
  ******************************************************************************
- ** \uart æ€»ä½“é…ç½®
+ ** \uart ×ÜÌåÅäÖÃ
  ******************************************************************************/
 
 typedef struct stc_uart_config
 {
-    en_uart_mode_t       enRunMode;      ///< å››ç§æ¨¡å¼é…ç½®
-    en_uart_stop_t       enStopBit;      ///<åœæ­¢ä½é•¿åº¦
-    stc_uart_irq_cb_t*  pstcIrqCb;       ///<ä¸­æ–­æœåŠ¡å‡½æ•°          
-    boolean_t           bTouchNvic;      ///<NVICä¸­æ–­ä½¿èƒ½    
+    en_uart_mode_t       enRunMode;      ///< ËÄÖÖÄ£Ê½ÅäÖÃ
+    en_uart_stop_t       enStopBit;      ///<Í£Ö¹Î»³¤¶È
+    stc_uart_irq_cb_t*  pstcIrqCb;       ///<ÖĞ¶Ï·şÎñº¯Êı          
+    boolean_t           bTouchNvic;      ///<NVICÖĞ¶ÏÊ¹ÄÜ    
 } stc_uart_config_t;
-//ä¸­æ–­ç›¸å…³è®¾ç½®å‡½æ•°
+//ÖĞ¶ÏÏà¹ØÉèÖÃº¯Êı
 en_result_t Uart_EnableIrq(uint8_t u8Idx,
                            en_uart_irq_sel_t enIrqSel);
 en_result_t Uart_DisableIrq(uint8_t u8Idx,
                             en_uart_irq_sel_t enIrqSel);
 //void Uart_IrqHandler(uint8_t u8Idx);
-// æ€»åˆå§‹åŒ–å¤„ç†
+// ×Ü³õÊ¼»¯´¦Àí
 en_result_t Uart_Init(uint8_t u8Idx, 
                       stc_uart_config_t* pstcConfig);
 en_result_t Uart_DeInit(uint8_t u8Idx, boolean_t bTouchNvic);
-//UARTæ¨¡å—å·¥ä½œæ¨¡å¼è®¾ç½®å‡½æ•°
+//UARTÄ£¿é¹¤×÷Ä£Ê½ÉèÖÃº¯Êı
 en_result_t Uart_SetMode(uint8_t u8Idx,en_uart_mode_t enMode);
-//UARTæ¨¡å—å¤šä¸»æœºæ¨¡å¼è®¾ç½®å‡½æ•°
+//UARTÄ£¿é¶àÖ÷»úÄ£Ê½ÉèÖÃº¯Êı
 en_result_t Uart_SetMultiMode(uint8_t u8Idx,stc_uart_multimode_t* pstcMultiConfig);
-//UARTé€šé“å¤šä¸»æœºæ¨¡å¼å‘é€æ•°æ®/åœ°å€å¸§æˆ–è€…å¥‡å¶æ ¡éªŒé…ç½®TB8
+//UARTÍ¨µÀ¶àÖ÷»úÄ£Ê½·¢ËÍÊı¾İ/µØÖ·Ö¡»òÕßÆæÅ¼Ğ£ÑéÅäÖÃTB8
 en_result_t Uart_SetMMDOrCk(uint8_t u8Idx,en_uart_mmdorck_t enTb8);
-//ä»æœºåœ°å€é…ç½®
+//´Ó»úµØÖ·ÅäÖÃ
 en_result_t Uart_SetSaddr(uint8_t u8Idx,uint8_t u8Addr);
-//ä»æœºåœ°å€æ©ç é…ç½®
+//´Ó»úµØÖ·ÑÚÂëÅäÖÃ
 en_result_t Uart_SetSaddrEn(uint8_t u8Idx,uint8_t u8Addren);
-//åœæ­¢ä½é•¿åº¦è®¾ç½®
+//Í£Ö¹Î»³¤¶ÈÉèÖÃ
 en_result_t Uart_SetStopBit(uint8_t u8Idx,uint8_t u8Len);
-//RB8æ•°æ®è·å–
+//RB8Êı¾İ»ñÈ¡
 boolean_t Uart_GetRb8(uint8_t u8Idx);
 
-//é‡‡æ ·åˆ†é¢‘è®¾ç½®
+//²ÉÑù·ÖÆµÉèÖÃ
 en_result_t Uart_SetClkDiv(uint8_t u8Idx,en_uart_clkdiv_t enClkDiv);
-//æ³¢ç‰¹ç‡è®¾ç½®å€¼è®¡ç®—
+//²¨ÌØÂÊÉèÖÃÖµ¼ÆËã
 uint16_t Uart_CalScnt(uint8_t u8Idx,stc_uart_baud_t *pstcBaud);
-//æ³¢ç‰¹ç‡è®¾ç½®
+//²¨ÌØÂÊÉèÖÃ
 en_result_t Uart_SetBaud(uint8_t u8Idx,uint16_t u16Scnt);
-//è·å–æ³¢ç‰¹ç‡
+//»ñÈ¡²¨ÌØÂÊ
 uint32_t Uart_GetBaud(uint8_t u8Idx,uint8_t u8Mode,uint32_t u32Pclk);
                              
-// åŠŸèƒ½ä½¿èƒ½å’Œç¦æ­¢
+// ¹¦ÄÜÊ¹ÄÜºÍ½ûÖ¹
 en_result_t Uart_EnableFunc(uint8_t u8Idx, en_uart_func_t enFunc);
 en_result_t Uart_DisableFunc(uint8_t u8Idx, en_uart_func_t enFunc);
-//çŠ¶æ€ä½çš„è·å–å’Œæ¸…é™¤ 
+//×´Ì¬Î»µÄ»ñÈ¡ºÍÇå³ı 
 uint8_t Uart_GetIsr(uint8_t u8Idx);
 boolean_t Uart_GetStatus(uint8_t u8Idx,en_uart_status_t enStatus);
 en_result_t Uart_ClrIsr(uint8_t u8Idx);
 en_result_t Uart_ClrStatus(uint8_t u8Idx,en_uart_status_t enStatus);
-//æ•°æ®æŸ¥è¯¢æ–¹å¼çš„æ”¶å‘æ“ä½œ
+//Êı¾İ²éÑ¯·½Ê½µÄÊÕ·¢²Ù×÷
 //en_result_t  Uart_MultiSendFirstData(uint8_t U8Addr);
 en_result_t Uart_SendData(uint8_t u8Idx, uint8_t u8Data);
 uint8_t Uart_ReceiveData(uint8_t u8Idx);

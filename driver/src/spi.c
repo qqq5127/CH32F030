@@ -86,11 +86,11 @@ static func_ptr_t pfnSpi0Callback = NULL; ///< callback function pointer for SPI
 static func_ptr_t pfnSpi1Callback = NULL; ///< callback function pointer for SPI Irq
 /**
  ******************************************************************************
- ** \brief  SPI ä¸­æ–­å¤„ç†å‡½æ•°
+ ** \brief  SPI ÖÐ¶Ï´¦Àíº¯Êý
  **
- ** \param [in] enChé€šé“
+ ** \param [in] enChÍ¨µÀ
  **
- ** \retval æ— 
+ ** \retval ÎÞ
  ** 
  ******************************************************************************/
 void Spi_IRQHandler(en_spi_channel_t enCh)
@@ -113,11 +113,11 @@ void Spi_IRQHandler(en_spi_channel_t enCh)
 }
 /**
  ******************************************************************************
- ** \brief  SPI è¯·æ±‚çŠ¶æ€èŽ·å–
+ ** \brief  SPI ÇëÇó×´Ì¬»ñÈ¡
  **
- ** \param [in]enCh é€šé“
+ ** \param [in]enCh Í¨µÀ
  **
- ** \retval è¯·æ±‚çŠ¶æ€
+ ** \retval ÇëÇó×´Ì¬
  ** 
  ******************************************************************************/
 uint8_t Spi_GetState(en_spi_channel_t enCh)
@@ -136,11 +136,11 @@ uint8_t Spi_GetState(en_spi_channel_t enCh)
 }
 /**
  ******************************************************************************
- ** \brief  SPI è¯·æ±‚çŠ¶æ€èŽ·å–
+ ** \brief  SPI ÇëÇó×´Ì¬»ñÈ¡
  **
- ** \param [in]enCh é€šé“ï¼Œ enStatus èŽ·å–è¯·æ±‚
+ ** \param [in]enCh Í¨µÀ£¬ enStatus »ñÈ¡ÇëÇó
  **
- ** \retval è¯·æ±‚çŠ¶æ€
+ ** \retval ÇëÇó×´Ì¬
  ** 
  ******************************************************************************/
 boolean_t Spi_GetStatus(en_spi_channel_t enCh,en_spi_status_t enStatus)
@@ -204,11 +204,11 @@ boolean_t Spi_GetStatus(en_spi_channel_t enCh,en_spi_status_t enStatus)
 }
 /**
  ******************************************************************************
- ** \brief  SPIä¸­æ–­æ¸…é™¤
+ ** \brief  SPIÖÐ¶ÏÇå³ý
  **
- ** \param [in]enCh é€šé“ï¼Œ enStatus èŽ·å–è¯·æ±‚
+ ** \param [in]enCh Í¨µÀ£¬ enStatus »ñÈ¡ÇëÇó
  **
- ** \retval è¯·æ±‚çŠ¶æ€
+ ** \retval ÇëÇó×´Ì¬
  ** 
  ******************************************************************************/
 en_result_t Spi_ClearStatus(en_spi_channel_t enCh)
@@ -228,12 +228,12 @@ en_result_t Spi_ClearStatus(en_spi_channel_t enCh)
 }
 /**
  ******************************************************************************
- ** \brief  SPI åŠŸèƒ½ä½¿èƒ½ç¦æ­¢å‡½æ•°
+ ** \brief  SPI ¹¦ÄÜÊ¹ÄÜ½ûÖ¹º¯Êý
  **
- ** \param [in] enChé€šé“ï¼ŒenFuncåŠŸèƒ½ï¼ŒbFlag 0/1ä½¿èƒ½æˆ–ç¦æ­¢
+ ** \param [in] enChÍ¨µÀ£¬enFunc¹¦ÄÜ£¬bFlag 0/1Ê¹ÄÜ»ò½ûÖ¹
  **
- ** \retval Okåˆå§‹åŒ–æˆåŠŸ
- ** \retval ErrorInvalidParameter åˆå§‹åŒ–é”™è¯¯
+ ** \retval Ok³õÊ¼»¯³É¹¦
+ ** \retval ErrorInvalidParameter ³õÊ¼»¯´íÎó
  ******************************************************************************/
 en_result_t Spi_FuncEn(en_spi_channel_t enCh,en_spi_func_t enFunc,boolean_t bFlag)
 {
@@ -284,14 +284,14 @@ en_result_t Spi_FuncEn(en_spi_channel_t enCh,en_spi_func_t enFunc,boolean_t bFla
 }
 /**
  ******************************************************************************
- ** \brief  SPI æ€»ä½“åˆå§‹åŒ–å‡½æ•°
+ ** \brief  SPI ×ÜÌå³õÊ¼»¯º¯Êý
  **
  ** \param [in] 
-            enChé€šé“
-            pstcSpiConfigåˆå§‹åŒ–ç»“æž„
+            enChÍ¨µÀ
+            pstcSpiConfig³õÊ¼»¯½á¹¹
  **
- ** \retval Okåˆå§‹åŒ–æˆåŠŸ
- ** \retval ErrorInvalidParameter åˆå§‹åŒ–é”™è¯¯
+ ** \retval Ok³õÊ¼»¯³É¹¦
+ ** \retval ErrorInvalidParameter ³õÊ¼»¯´íÎó
  ******************************************************************************/
 en_result_t Spi_Init(en_spi_channel_t enCh,stc_spi_config_t *pstcSpiConfig)
 {
@@ -360,11 +360,11 @@ en_result_t Spi_Init(en_spi_channel_t enCh,stc_spi_config_t *pstcSpiConfig)
 
 /**
  ******************************************************************************
- ** \brief  SPI ç¦æ­¢å‡½æ•°
+ ** \brief  SPI ½ûÖ¹º¯Êý
  **
- ** \param [in] enChé€šé“
+ ** \param [in] enChÍ¨µÀ
  **
- ** \retval Okç¦æ­¢è®¾ç½®æˆåŠŸ
+ ** \retval Ok½ûÖ¹ÉèÖÃ³É¹¦
  ** 
  ******************************************************************************/
 en_result_t Spi_DeInit(en_spi_channel_t enCh)
@@ -390,11 +390,11 @@ en_result_t Spi_DeInit(en_spi_channel_t enCh)
 }
 /**
  ******************************************************************************
- ** \brief  SPI é…ç½®ä¸»å‘é€çš„ç”µå¹³
+ ** \brief  SPI ÅäÖÃÖ÷·¢ËÍµÄµçÆ½
  **
- ** \param [in] é«˜ä½Žç”µå¹³
+ ** \param [in] ¸ßµÍµçÆ½
  **
- ** \retval æ— 
+ ** \retval ÎÞ
  ** 
  ******************************************************************************/
 void Spi_SetCS(en_spi_channel_t enCh,boolean_t bFlag) 
@@ -411,11 +411,11 @@ void Spi_SetCS(en_spi_channel_t enCh,boolean_t bFlag)
 } 
 /**
  ******************************************************************************
- ** \brief  SPI å‘é€ä¸€å­—èŠ‚å‡½æ•°
+ ** \brief  SPI ·¢ËÍÒ»×Ö½Úº¯Êý
  **
- ** \param [in] enChé€šé“ï¼Œu8Dataå‘é€å­—èŠ‚
+ ** \param [in] enChÍ¨µÀ£¬u8Data·¢ËÍ×Ö½Ú
  **
- ** \retval Okå‘é€æˆåŠŸ
+ ** \retval Ok·¢ËÍ³É¹¦
  ** 
  ******************************************************************************/
 en_result_t Spi_SendData(en_spi_channel_t enCh,uint8_t u8Data)
@@ -487,11 +487,11 @@ en_result_t Spi_SendData(en_spi_channel_t enCh,uint8_t u8Data)
 
 /**
  ******************************************************************************
- ** \brief  SPI æŽ¥æ”¶ä¸€å­—èŠ‚å‡½æ•°
+ ** \brief  SPI ½ÓÊÕÒ»×Ö½Úº¯Êý
  **
- ** \param [in] enChæŽ¥æ”¶é€šé“
+ ** \param [in] enCh½ÓÊÕÍ¨µÀ
  **
- ** \retval æŽ¥æ”¶ä¸€å­—èŠ‚æ•°æ®
+ ** \retval ½ÓÊÕÒ»×Ö½ÚÊý¾Ý
  ** 
  ******************************************************************************/
 uint8_t Spi_ReceiveData(en_spi_channel_t enCh,boolean_t bMasterOrSlave)

@@ -88,11 +88,11 @@ static func_ptr_t    pfnAdtIrqCbk[3][16] = {NULL};
 
 /*************************************************
  * \brief   
- *          ä½¿èƒ½NVICä¸­ADTä¸­æ–­
+ *          Ê¹ÄÜNVICÖĞADTÖĞ¶Ï
  *
- * \param   [in]  enIrqn  ä¸­æ–­å·
+ * \param   [in]  enIrqn  ÖĞ¶ÏºÅ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  **************************************************/
 static void AdtEnableNvic(IRQn_Type enIrqn)
 {
@@ -103,11 +103,11 @@ static void AdtEnableNvic(IRQn_Type enIrqn)
 
 /**************************************************
  * \brief   
- *          é™¤èƒ½NVICä¸­ADTä¸­æ–­
+ *          ³ıÄÜNVICÖĞADTÖĞ¶Ï
  *
- * \param   [in]  enIrqn  ä¸­æ–­å·
+ * \param   [in]  enIrqn  ÖĞ¶ÏºÅ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  **************************************************/
 static void AdtDisableNvic(IRQn_Type enIrqn)
 {
@@ -118,11 +118,11 @@ static void AdtDisableNvic(IRQn_Type enIrqn)
 
 /***************************************************
  * \brief   
- *          ADTä¸­æ–­æœåŠ¡ç¨‹åº
+ *          ADTÖĞ¶Ï·şÎñ³ÌĞò
  *
- * \param   [in]  u8Param  æœªä½¿ç”¨
+ * \param   [in]  u8Param  Î´Ê¹ÓÃ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  ****************************************************/
 void Adt_IRQHandler(uint8_t u8Param)
 {
@@ -213,15 +213,15 @@ void Adt_IRQHandler(uint8_t u8Param)
 
 /*****************************************************************
  * \brief   
- *          é…ç½®ä¸­æ–­
+ *          ÅäÖÃÖĞ¶Ï
  *
- * \param   [in]  enAdtUnit     ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtIrq      ä¸­æ–­ç±»å‹
- * \param   [in]  bEn           ä¸­æ–­ä½¿èƒ½/ç¦æ­¢
- * \param   [in]  pfnIrqCalbak  å›è°ƒå‡½æ•°æŒ‡é’ˆ
+ * \param   [in]  enAdtUnit     ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtIrq      ÖĞ¶ÏÀàĞÍ
+ * \param   [in]  bEn           ÖĞ¶ÏÊ¹ÄÜ/½ûÖ¹
+ * \param   [in]  pfnIrqCalbak  »Øµ÷º¯ÊıÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ****************************************************************/
 en_result_t Adt_ConfigIrq(en_adt_unit_t enAdtUnit,
                           en_adt_irq_type_t enAdtIrq,
@@ -253,14 +253,14 @@ en_result_t Adt_ConfigIrq(en_adt_unit_t enAdtUnit,
 
 /*******************************************************************
  * \brief   
- *          è·å–ä¸­æ–­æ ‡å¿—
+ *          »ñÈ¡ÖĞ¶Ï±êÖ¾
  *
- * \param   [in]  enAdtUnit     ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtIrq      ä¸­æ–­ç±»å‹
- * \param   [in]  pbFlag        ä¸­æ–­æ ‡å¿—æŒ‡é’ˆ
+ * \param   [in]  enAdtUnit     ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtIrq      ÖĞ¶ÏÀàĞÍ
+ * \param   [in]  pbFlag        ÖĞ¶Ï±êÖ¾Ö¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  *****************************************************************/
 en_result_t Adt_GetIrqFlag(en_adt_unit_t enAdtUnit,
                            en_adt_irq_type_t enAdtIrq,
@@ -282,13 +282,13 @@ en_result_t Adt_GetIrqFlag(en_adt_unit_t enAdtUnit,
 
 /****************************************************************
  * \brief   
- *          æ¸…é™¤ä¸­æ–­æ ‡å¿—
+ *          Çå³ıÖĞ¶Ï±êÖ¾
  *
- * \param   [in]  enAdtUnit     ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtIrq      ä¸­æ–­ç±»å‹
+ * \param   [in]  enAdtUnit     ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtIrq      ÖĞ¶ÏÀàĞÍ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ****************************************************************/
 en_result_t Adt_ClearIrqFlag(en_adt_unit_t enAdtUnit,
                              en_adt_irq_type_t enAdtIrq)
@@ -307,13 +307,13 @@ en_result_t Adt_ClearIrqFlag(en_adt_unit_t enAdtUnit,
 
 /**************************************************************
  * \brief   
- *          é…ç½®ç¡¬ä»¶é€’åŠ äº‹ä»¶
+ *          ÅäÖÃÓ²¼şµİ¼ÓÊÂ¼ş
  *
- * \param   [in]  enAdtUnit     ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtHwCntUp  ç¡¬ä»¶é€’åŠ äº‹ä»¶
+ * \param   [in]  enAdtUnit     ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtHwCntUp  Ó²¼şµİ¼ÓÊÂ¼ş
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  ****************************************************************/
 en_result_t Adt_ConfigHwCntUp(en_adt_unit_t enAdtUnit, en_adt_hw_cnt_t enAdtHwCntUp)
 {
@@ -332,12 +332,12 @@ en_result_t Adt_ConfigHwCntUp(en_adt_unit_t enAdtUnit, en_adt_hw_cnt_t enAdtHwCn
 
 /**************************************************************
  * \brief   
- *          æ¸…é™¤ç¡¬ä»¶é€’åŠ äº‹ä»¶
+ *          Çå³ıÓ²¼şµİ¼ÓÊÂ¼ş
  *
- * \param   [in]  enAdtUnit     ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit     ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  ************************************************************/
 en_result_t Adt_ClearHwCntUp(en_adt_unit_t enAdtUnit)
 {
@@ -354,13 +354,13 @@ en_result_t Adt_ClearHwCntUp(en_adt_unit_t enAdtUnit)
 
 /**
  * \brief   
- *          é…ç½®ç¡¬ä»¶é€’å‡äº‹ä»¶
+ *          ÅäÖÃÓ²¼şµİ¼õÊÂ¼ş
  *
- * \param   [in]  enAdtUnit     ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtHwCntDwn ç¡¬ä»¶é€’å‡äº‹ä»¶
+ * \param   [in]  enAdtUnit     ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtHwCntDwn Ó²¼şµİ¼õÊÂ¼ş
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  */
 en_result_t Adt_ConfigHwCntDwn(en_adt_unit_t enAdtUnit, en_adt_hw_cnt_t enAdtHwCntDwn)
 {
@@ -379,12 +379,12 @@ en_result_t Adt_ConfigHwCntDwn(en_adt_unit_t enAdtUnit, en_adt_hw_cnt_t enAdtHwC
 
 /******************************************************************
  * \brief   
- *          æ¸…é™¤ç¡¬ä»¶é€’å‡äº‹ä»¶
+ *          Çå³ıÓ²¼şµİ¼õÊÂ¼ş
  *
- * \param   [in]  enAdtUnit     ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit     ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  *****************************************************************/
 en_result_t Adt_ClearHwCntDwn(en_adt_unit_t enAdtUnit)
 {
@@ -401,13 +401,13 @@ en_result_t Adt_ClearHwCntDwn(en_adt_unit_t enAdtUnit)
 
 /******************************************************************
  * \brief   
- *          é…ç½®ç¡¬ä»¶å¯åŠ¨äº‹ä»¶
+ *          ÅäÖÃÓ²¼şÆô¶¯ÊÂ¼ş
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtHwStart      ç¡¬ä»¶å¯åŠ¨äº‹ä»¶
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtHwStart      Ó²¼şÆô¶¯ÊÂ¼ş
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  *******************************************************************/
 en_result_t Adt_ConfigHwStart(en_adt_unit_t enAdtUnit, en_adt_hw_trig_t enAdtHwStart)
 {
@@ -425,12 +425,12 @@ en_result_t Adt_ConfigHwStart(en_adt_unit_t enAdtUnit, en_adt_hw_trig_t enAdtHwS
 
 /************************************************************************
  * \brief   
- *          æ¸…é™¤ç¡¬ä»¶å¯åŠ¨äº‹ä»¶
+ *          Çå³ıÓ²¼şÆô¶¯ÊÂ¼ş
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  ***********************************************************************/
 en_result_t Adt_ClearHwStart(en_adt_unit_t enAdtUnit)
 {
@@ -447,12 +447,12 @@ en_result_t Adt_ClearHwStart(en_adt_unit_t enAdtUnit)
 
 /*********************************************************************
  * \brief   
- *          ä½¿èƒ½ç¡¬ä»¶å¯åŠ¨
+ *          Ê¹ÄÜÓ²¼şÆô¶¯
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  *********************************************************************/
 en_result_t Adt_EnableHwStart(en_adt_unit_t enAdtUnit)
 {
@@ -471,12 +471,12 @@ en_result_t Adt_EnableHwStart(en_adt_unit_t enAdtUnit)
 
 /*************************************************************************
  * \brief   
- *          é™¤èƒ½ç¡¬ä»¶å¯åŠ¨
+ *          ³ıÄÜÓ²¼şÆô¶¯
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  ************************************************************************/
 en_result_t Adt_DisableHwStart(en_adt_unit_t enAdtUnit)
 {
@@ -495,13 +495,13 @@ en_result_t Adt_DisableHwStart(en_adt_unit_t enAdtUnit)
 
 /****************************************************************
  * \brief   
- *          é…ç½®ç¡¬ä»¶åœæ­¢äº‹ä»¶
+ *          ÅäÖÃÓ²¼şÍ£Ö¹ÊÂ¼ş
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtHwStop       ç¡¬ä»¶åœæ­¢äº‹ä»¶
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtHwStop       Ó²¼şÍ£Ö¹ÊÂ¼ş
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  ***************************************************************/
 en_result_t Adt_ConfigHwStop(en_adt_unit_t enAdtUnit, en_adt_hw_trig_t enAdtHwStop)
 {
@@ -519,12 +519,12 @@ en_result_t Adt_ConfigHwStop(en_adt_unit_t enAdtUnit, en_adt_hw_trig_t enAdtHwSt
 
 /***************************************************************
  * \brief   
- *          æ¸…é™¤ç¡¬ä»¶åœæ­¢äº‹ä»¶
+ *          Çå³ıÓ²¼şÍ£Ö¹ÊÂ¼ş
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  ***************************************************************/
 en_result_t Adt_ClearHwStop(en_adt_unit_t enAdtUnit)
 {
@@ -541,12 +541,12 @@ en_result_t Adt_ClearHwStop(en_adt_unit_t enAdtUnit)
 
 /*************************************************************
  * \brief   
- *          ä½¿èƒ½ç¡¬ä»¶åœæ­¢
+ *          Ê¹ÄÜÓ²¼şÍ£Ö¹
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  **********************************************************/
 en_result_t Adt_EnableHwStop(en_adt_unit_t enAdtUnit)
 {
@@ -565,12 +565,12 @@ en_result_t Adt_EnableHwStop(en_adt_unit_t enAdtUnit)
 
 /*****************************************************************************
  * \brief   
- *          é™¤èƒ½ç¡¬ä»¶åœæ­¢
+ *          ³ıÄÜÓ²¼şÍ£Ö¹
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  ***************************************************************************/
 en_result_t Adt_DisableHwStop(en_adt_unit_t enAdtUnit)
 {
@@ -589,13 +589,13 @@ en_result_t Adt_DisableHwStop(en_adt_unit_t enAdtUnit)
 
 /**************************************************************************
  * \brief   
- *          é…ç½®ç¡¬ä»¶æ¸…é›¶äº‹ä»¶
+ *          ÅäÖÃÓ²¼şÇåÁãÊÂ¼ş
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtHwClear      ç¡¬ä»¶æ¸…é›¶äº‹ä»¶
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtHwClear      Ó²¼şÇåÁãÊÂ¼ş
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  *************************************************************************/
 en_result_t Adt_ConfigHwClear(en_adt_unit_t enAdtUnit, en_adt_hw_trig_t enAdtHwClear)
 {
@@ -613,12 +613,12 @@ en_result_t Adt_ConfigHwClear(en_adt_unit_t enAdtUnit, en_adt_hw_trig_t enAdtHwC
 
 /**************************************************************************
  * \brief   
- *          æ¸…é™¤ç¡¬ä»¶æ¸…é›¶äº‹ä»¶
+ *          Çå³ıÓ²¼şÇåÁãÊÂ¼ş
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  **************************************************************************/
 en_result_t Adt_ClearHwClear(en_adt_unit_t enAdtUnit)
 {
@@ -635,12 +635,12 @@ en_result_t Adt_ClearHwClear(en_adt_unit_t enAdtUnit)
 
 /***************************************************************************
  * \brief   
- *          ä½¿èƒ½ç¡¬ä»¶æ¸…é›¶
+ *          Ê¹ÄÜÓ²¼şÇåÁã
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  *************************************************************************/
 en_result_t Adt_EnableHwClear(en_adt_unit_t enAdtUnit)
 {
@@ -659,12 +659,12 @@ en_result_t Adt_EnableHwClear(en_adt_unit_t enAdtUnit)
 
 /************************************************************************
  * \brief   
- *          é™¤èƒ½ç¡¬ä»¶æ¸…é›¶
+ *          ³ıÄÜÓ²¼şÇåÁã
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  **********************************************************************/
 en_result_t Adt_DisableHwClear(en_adt_unit_t enAdtUnit)
 {
@@ -683,13 +683,13 @@ en_result_t Adt_DisableHwClear(en_adt_unit_t enAdtUnit)
 
 /*******************************************************************
  * \brief   
- *          é…ç½®ç¡¬ä»¶æ•è·Aäº‹ä»¶
+ *          ÅäÖÃÓ²¼ş²¶»ñAÊÂ¼ş
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtHwCaptureA   ç¡¬ä»¶æ•è·Aäº‹ä»¶é€‰æ‹©
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtHwCaptureA   Ó²¼ş²¶»ñAÊÂ¼şÑ¡Ôñ
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  *******************************************************************/
 en_result_t Adt_ConfigHwCaptureA(en_adt_unit_t enAdtUnit, en_adt_hw_trig_t enAdtHwCaptureA)
 {
@@ -709,12 +709,12 @@ en_result_t Adt_ConfigHwCaptureA(en_adt_unit_t enAdtUnit, en_adt_hw_trig_t enAdt
 
 /************************************************************************
  * \brief   
- *          æ¸…é™¤ç¡¬ä»¶æ•è·Aäº‹ä»¶
+ *          Çå³ıÓ²¼ş²¶»ñAÊÂ¼ş
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  ***********************************************************************/
 en_result_t Adt_ClearHwCaptureA(en_adt_unit_t enAdtUnit)
 {
@@ -731,13 +731,13 @@ en_result_t Adt_ClearHwCaptureA(en_adt_unit_t enAdtUnit)
 
 /*********************************************************************
  * \brief   
- *          é…ç½®ç¡¬ä»¶æ•è·Bäº‹ä»¶
+ *          ÅäÖÃÓ²¼ş²¶»ñBÊÂ¼ş
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtHwCaptureB   ç¡¬ä»¶æ•è·Bäº‹ä»¶é€‰æ‹©
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtHwCaptureB   Ó²¼ş²¶»ñBÊÂ¼şÑ¡Ôñ
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  ********************************************************************/
 en_result_t Adt_ConfigHwCaptureB(en_adt_unit_t enAdtUnit, en_adt_hw_trig_t enAdtHwCaptureB)
 {
@@ -757,12 +757,12 @@ en_result_t Adt_ConfigHwCaptureB(en_adt_unit_t enAdtUnit, en_adt_hw_trig_t enAdt
 
 /********************************************************************
  * \brief   
- *          æ¸…é™¤ç¡¬ä»¶æ•è·Bäº‹ä»¶
+ *          Çå³ıÓ²¼ş²¶»ñBÊÂ¼ş
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  *******************************************************************/
 en_result_t Adt_ClearHwCaptureB(en_adt_unit_t enAdtUnit)
 {
@@ -779,12 +779,12 @@ en_result_t Adt_ClearHwCaptureB(en_adt_unit_t enAdtUnit)
 
 /*****************************************************************
  * \brief   
- *          è½¯ä»¶åŒæ­¥å¼€å§‹
+ *          Èí¼şÍ¬²½¿ªÊ¼
  *
- * \param   [in]  pstcAdtSwSyncStart    è½¯ä»¶åŒæ­¥å¼€å§‹æŒ‡é’ˆ
+ * \param   [in]  pstcAdtSwSyncStart    Èí¼şÍ¬²½¿ªÊ¼Ö¸Õë
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  ***************************************************************/
 en_result_t Adt_SwSyncStart(stc_adt_sw_sync_t* pstcAdtSwSyncStart)
 {
@@ -814,12 +814,12 @@ en_result_t Adt_SwSyncStart(stc_adt_sw_sync_t* pstcAdtSwSyncStart)
 
 /***************************************************************
  * \brief   
- *          è½¯ä»¶åŒæ­¥åœæ­¢
+ *          Èí¼şÍ¬²½Í£Ö¹
  *
- * \param   [in]  pstcAdtSwSyncStop     è½¯ä»¶åŒæ­¥åœæ­¢æŒ‡é’ˆ
+ * \param   [in]  pstcAdtSwSyncStop     Èí¼şÍ¬²½Í£Ö¹Ö¸Õë
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  ***************************************************************/
 en_result_t Adt_SwSyncStop(stc_adt_sw_sync_t* pstcAdtSwSyncStop)
 {
@@ -849,12 +849,12 @@ en_result_t Adt_SwSyncStop(stc_adt_sw_sync_t* pstcAdtSwSyncStop)
 
 /*****************************************************************
  * \brief   
- *          è½¯ä»¶åŒæ­¥æ¸…é›¶
+ *          Èí¼şÍ¬²½ÇåÁã
  *
- * \param   [in]  pstcAdtSwSyncClear    è½¯ä»¶åŒæ­¥æ¸…é›¶æŒ‡é’ˆ
+ * \param   [in]  pstcAdtSwSyncClear    Èí¼şÍ¬²½ÇåÁãÖ¸Õë
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  *******************************************************************/
 en_result_t Adt_SwSyncClear(stc_adt_sw_sync_t* pstcAdtSwSyncClear)
 {
@@ -884,12 +884,12 @@ en_result_t Adt_SwSyncClear(stc_adt_sw_sync_t* pstcAdtSwSyncClear)
 
 /*******************************************************************
  * \brief   
- *          è·å–è½¯ä»¶åŒæ­¥è¿è¡ŒçŠ¶æ€
+ *          »ñÈ¡Èí¼şÍ¬²½ÔËĞĞ×´Ì¬
  *
- * \param   [in]  pstcAdtSwSyncState    ADV Timerè½¯ä»¶åŒæ­¥è¿è¡ŒçŠ¶æ€æŒ‡é’ˆ
+ * \param   [in]  pstcAdtSwSyncState    ADV TimerÈí¼şÍ¬²½ÔËĞĞ×´Ì¬Ö¸Õë
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  *******************************************************************/
 en_result_t Adt_GetSwSyncState(stc_adt_sw_sync_t* pstcAdtSwSyncState)
 {
@@ -927,12 +927,12 @@ en_result_t Adt_GetSwSyncState(stc_adt_sw_sync_t* pstcAdtSwSyncState)
 
 /************************************************************************
  * \brief   
- *          AOSè§¦å‘é…ç½®
+ *          AOS´¥·¢ÅäÖÃ
  *
- * \param   [in]  pstcAdtAosTrigCfg è§¦å‘é…ç½®æŒ‡é’ˆ
+ * \param   [in]  pstcAdtAosTrigCfg ´¥·¢ÅäÖÃÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ************************************************************************/
 en_result_t Adt_AosTrigConfig(stc_adt_aos_trig_cfg_t* pstcAdtAosTrigCfg)
 {
@@ -950,13 +950,13 @@ en_result_t Adt_AosTrigConfig(stc_adt_aos_trig_cfg_t* pstcAdtAosTrigCfg)
 
 /**********************************************************************
  * \brief   
- *          ä¸­æ–­è§¦å‘é…ç½®
+ *          ÖĞ¶Ï´¥·¢ÅäÖÃ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  pstcAdtIrqTrigCfg è§¦å‘é…ç½®æŒ‡é’ˆ
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  pstcAdtIrqTrigCfg ´¥·¢ÅäÖÃÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ***********************************************************************/
 en_result_t Adt_IrqTrigConfig(en_adt_unit_t enAdtUnit,
                               stc_adt_irq_trig_cfg_t* pstcAdtIrqTrigCfg)
@@ -988,13 +988,13 @@ en_result_t Adt_IrqTrigConfig(en_adt_unit_t enAdtUnit,
 
 /*************************************************************************
  * \brief   
- *          ç«¯å£è§¦å‘é…ç½®
+ *          ¶Ë¿Ú´¥·¢ÅäÖÃ
  *
- * \param   [in]  enAdtTrigPort         è§¦å‘ç«¯å£
- * \param   [in]  pstcAdtPortTrigCfg    è§¦å‘é…ç½®æŒ‡é’ˆ
+ * \param   [in]  enAdtTrigPort         ´¥·¢¶Ë¿Ú
+ * \param   [in]  pstcAdtPortTrigCfg    ´¥·¢ÅäÖÃÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  *************************************************************************/
 en_result_t Adt_PortTrigConfig(en_adt_trig_port_t enAdtTrigPort,
                                stc_adt_port_trig_cfg_t* pstcAdtPortTrigCfg)
@@ -1039,14 +1039,14 @@ en_result_t Adt_PortTrigConfig(en_adt_trig_port_t enAdtTrigPort,
 
 /***********************************************************************
  * \brief   
- *          CHxXç«¯å£é…ç½®
+ *          CHxX¶Ë¿ÚÅäÖÃ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtCHxXPort    CHxXç«¯å£
- * \param   [in]  pstcAdtCHxXCfg   CHxXç«¯å£é…ç½®æŒ‡é’ˆ
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtCHxXPort    CHxX¶Ë¿Ú
+ * \param   [in]  pstcAdtCHxXCfg   CHxX¶Ë¿ÚÅäÖÃÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  *********************************************************************/
 en_result_t Adt_CHxXPortConfig(en_adt_unit_t enAdtUnit,
                                 en_adt_CHxX_port_t enAdtCHxXPort,
@@ -1098,13 +1098,13 @@ en_result_t Adt_CHxXPortConfig(en_adt_unit_t enAdtUnit,
 
 /************************************************************************
  * \brief   
- *          ä½¿èƒ½ç«¯å£åˆ¹è½¦
+ *          Ê¹ÄÜ¶Ë¿ÚÉ²³µ
  *
- * \param   [in]  port              ç«¯å£
- * \param   [in]  pstcAdtBrkPtCfg   ç«¯å£åˆ¹è½¦é…ç½®æŒ‡é’ˆ
+ * \param   [in]  port              ¶Ë¿Ú
+ * \param   [in]  pstcAdtBrkPtCfg   ¶Ë¿ÚÉ²³µÅäÖÃÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ************************************************************************/
 en_result_t Adt_EnableBrakePort(uint8_t port, stc_adt_break_port_cfg_t* pstcAdtBrkPtCfg)
 {
@@ -1127,7 +1127,7 @@ en_result_t Adt_EnableBrakePort(uint8_t port, stc_adt_break_port_cfg_t* pstcAdtB
 
 /**********************************************************************
  * \brief   
- *          æ¸…é™¤ç«¯å£åˆ¹è½¦
+ *          Çå³ı¶Ë¿ÚÉ²³µ
  *
  * \param   none
  *
@@ -1140,12 +1140,12 @@ void Adt_ClearBrakePort(void)
 
 /*********************************************************************
  * \brief   
- *          æ— æ•ˆæ¡ä»¶3é…ç½®
+ *          ÎŞĞ§Ìõ¼ş3ÅäÖÃ
  *
- * \param   [in]  pstcAdtDisable3   æ— æ•ˆæ¡ä»¶3é…ç½®æŒ‡é’ˆ
+ * \param   [in]  pstcAdtDisable3   ÎŞĞ§Ìõ¼ş3ÅäÖÃÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ********************************************************************/
 en_result_t Adt_Disable3Cfg(stc_adt_disable_3_cfg_t* pstcAdtDisable3)
 {
@@ -1174,7 +1174,7 @@ en_result_t Adt_Disable3Cfg(stc_adt_disable_3_cfg_t* pstcAdtDisable3)
 
 /*******************************************************************
  * \brief   
- *          è·å–ç«¯å£åˆ¹è½¦æ ‡å¿—
+ *          »ñÈ¡¶Ë¿ÚÉ²³µ±êÖ¾
  *
  * \param   none
  *
@@ -1187,7 +1187,7 @@ boolean_t Adt_GetPortBrakeFlag(void)
 
 /******************************************************************
  * \brief   
- *          æ¸…é™¤ç«¯å£åˆ¹è½¦æ ‡å¿—
+ *          Çå³ı¶Ë¿ÚÉ²³µ±êÖ¾
  *
  * \param   none
  *
@@ -1200,12 +1200,12 @@ void Adt_ClearPortBrakeFlag(void)
 
 /********************************************************************
  * \brief   
- *          æ— æ•ˆæ¡ä»¶1é…ç½®
+ *          ÎŞĞ§Ìõ¼ş1ÅäÖÃ
  *
- * \param   [in]  pstcAdtDisable1   æ— æ•ˆæ¡ä»¶1é…ç½®æŒ‡é’ˆ
+ * \param   [in]  pstcAdtDisable1   ÎŞĞ§Ìõ¼ş1ÅäÖÃÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ********************************************************************/
 en_result_t Adt_Disable1Cfg(stc_adt_disable_1_cfg_t* pstcAdtDisable1)
 {
@@ -1227,7 +1227,7 @@ en_result_t Adt_Disable1Cfg(stc_adt_disable_1_cfg_t* pstcAdtDisable1)
 
 /********************************************************************
  * \brief   
- *          è·å–åŒé«˜åŒä½åˆ¹è½¦æ ‡å¿—
+ *          »ñÈ¡Í¬¸ßÍ¬µÍÉ²³µ±êÖ¾
  *
  * \param   none
  *
@@ -1240,7 +1240,7 @@ boolean_t Adt_GetSameBrakeFlag(void)
 
 /*********************************************************************
  * \brief   
- *          æ¸…é™¤åŒé«˜åŒä½åˆ¹è½¦æ ‡å¿—
+ *          Çå³ıÍ¬¸ßÍ¬µÍÉ²³µ±êÖ¾
  *
  * \param   none
  *
@@ -1253,12 +1253,12 @@ void Adt_ClearSameBrakeFlag(void)
 
 /********************************************************************
  * \brief   
- *          PWMå±•é¢‘é…ç½®
+ *          PWMÕ¹ÆµÅäÖÃ
  *
- * \param   [in]  pstcAdtPwmDitherCfg   PWMå±•é¢‘é…ç½®æŒ‡é’ˆ
+ * \param   [in]  pstcAdtPwmDitherCfg   PWMÕ¹ÆµÅäÖÃÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  *********************************************************************/
 en_result_t Adt_PwmDitherConfig(en_adt_unit_t enAdtUnit, stc_adt_pwm_dither_cfg_t* pstcAdtPwmDitherCfg)
 {
@@ -1278,13 +1278,13 @@ en_result_t Adt_PwmDitherConfig(en_adt_unit_t enAdtUnit, stc_adt_pwm_dither_cfg_
 
 /**********************************************************************
  * \brief   
- *          ADTåˆå§‹åŒ–
+ *          ADT³õÊ¼»¯
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  pstcAdtBaseCntCfg     è®¡æ•°é…ç½®æŒ‡é’ˆ
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  pstcAdtBaseCntCfg     ¼ÆÊıÅäÖÃÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  **********************************************************************/
 en_result_t Adt_Init(en_adt_unit_t enAdtUnit, stc_adt_basecnt_cfg_t* pstcAdtBaseCntCfg)
 {
@@ -1319,10 +1319,10 @@ en_result_t Adt_Init(en_adt_unit_t enAdtUnit, stc_adt_basecnt_cfg_t* pstcAdtBase
  * \brief   
  *          ADT Deinit
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ***********************************************************************/
 en_result_t Adt_DeInit(en_adt_unit_t enAdtUnit)
 {
@@ -1348,12 +1348,12 @@ en_result_t Adt_DeInit(en_adt_unit_t enAdtUnit)
 
 /***********************************************************************
  * \brief   
- *          å¼€å§‹è®¡æ•°
+ *          ¿ªÊ¼¼ÆÊı
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ***********************************************************************/
 en_result_t Adt_StartCount(en_adt_unit_t enAdtUnit)
 {
@@ -1371,12 +1371,12 @@ en_result_t Adt_StartCount(en_adt_unit_t enAdtUnit)
 
 /***********************************************************************
  * \brief   
- *          åœæ­¢è®¡æ•°
+ *          Í£Ö¹¼ÆÊı
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  **********************************************************************/
 en_result_t Adt_StopCount(en_adt_unit_t enAdtUnit)
 {
@@ -1394,13 +1394,13 @@ en_result_t Adt_StopCount(en_adt_unit_t enAdtUnit)
 
 /********************************************************************
  * \brief   
- *          è®¾ç½®è®¡æ•°å€¼
+ *          ÉèÖÃ¼ÆÊıÖµ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  u16Value          è®¡æ•°å€¼
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  u16Value          ¼ÆÊıÖµ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- *                       ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ *                       ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  *******************************************************************/
 en_result_t Adt_SetCount(en_adt_unit_t enAdtUnit, uint16_t u16Value)
 {
@@ -1417,13 +1417,13 @@ en_result_t Adt_SetCount(en_adt_unit_t enAdtUnit, uint16_t u16Value)
 
 /********************************************************************
  * \brief   
- *          è·å–è®¡æ•°å€¼
+ *          »ñÈ¡¼ÆÊıÖµ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  u16Value          è®¡æ•°å€¼
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  u16Value          ¼ÆÊıÖµ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- *                       ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ *                       ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  *******************************************************************/
 uint16_t Adt_GetCount(en_adt_unit_t enAdtUnit)
 {
@@ -1443,13 +1443,13 @@ uint16_t Adt_GetCount(en_adt_unit_t enAdtUnit)
 
 /**************************************************************************
  * \brief   
- *          æ¸…é™¤è®¡æ•°å€¼
+ *          Çå³ı¼ÆÊıÖµ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  u16Value          è®¡æ•°å€¼
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  u16Value          ¼ÆÊıÖµ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  **************************************************************************/
 en_result_t Adt_ClearCount(en_adt_unit_t enAdtUnit)
 {
@@ -1466,13 +1466,13 @@ en_result_t Adt_ClearCount(en_adt_unit_t enAdtUnit)
 
 /*************************************************************************
  * \brief   
- *          è·å–è®¡æ•°çŠ¶æ€
+ *          »ñÈ¡¼ÆÊı×´Ì¬
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  pstcAdtCntState   è®¡æ•°çŠ¶æ€æŒ‡é’ˆ 
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  pstcAdtCntState   ¼ÆÊı×´Ì¬Ö¸Õë 
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  *************************************************************************/
 en_result_t Adt_GetCntState(en_adt_unit_t enAdtUnit, stc_adt_cntstate_cfg_t* pstcAdtCntState)
 {
@@ -1503,13 +1503,13 @@ en_result_t Adt_GetCntState(en_adt_unit_t enAdtUnit, stc_adt_cntstate_cfg_t* pst
 
 /***********************************************************************
  * \brief   
- *          é…ç½®è®¡æ•°å‘¨æœŸ
+ *          ÅäÖÃ¼ÆÊıÖÜÆÚ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  u16Period         è®¡æ•°å‘¨æœŸå€¼
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  u16Period         ¼ÆÊıÖÜÆÚÖµ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ***********************************************************************/
 en_result_t Adt_SetPeriod(en_adt_unit_t enAdtUnit, uint16_t u16Period)
 {
@@ -1527,13 +1527,13 @@ en_result_t Adt_SetPeriod(en_adt_unit_t enAdtUnit, uint16_t u16Period)
 
 /***********************************************************************
  * \brief   
- *          é…ç½®è®¡æ•°å‘¨æœŸç¼“å†²
+ *          ÅäÖÃ¼ÆÊıÖÜÆÚ»º³å
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  u16PeriodBuf          è®¡æ•°å‘¨æœŸç¼“å†²å€¼
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  u16PeriodBuf          ¼ÆÊıÖÜÆÚ»º³åÖµ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ***********************************************************************/
 en_result_t Adt_SetPeriodBuf(en_adt_unit_t enAdtUnit, uint16_t u16PeriodBuf)
 {
@@ -1552,12 +1552,12 @@ en_result_t Adt_SetPeriodBuf(en_adt_unit_t enAdtUnit, uint16_t u16PeriodBuf)
 
 /**********************************************************************
  * \brief   
- *          æ¸…é™¤è®¡æ•°å‘¨æœŸç¼“å†²
+ *          Çå³ı¼ÆÊıÖÜÆÚ»º³å
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  **********************************************************************/
 en_result_t Adt_ClearPeriodBuf(en_adt_unit_t enAdtUnit)
 {
@@ -1576,13 +1576,13 @@ en_result_t Adt_ClearPeriodBuf(en_adt_unit_t enAdtUnit)
 
 /***********************************************************************
  * \brief   
- *          é…ç½®æœ‰æ•ˆè®¡æ•°å‘¨æœŸ
+ *          ÅäÖÃÓĞĞ§¼ÆÊıÖÜÆÚ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  pstcAdtValidPerCfg            æœ‰æ•ˆè®¡æ•°å‘¨æœŸé…ç½®æŒ‡é’ˆ
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  pstcAdtValidPerCfg            ÓĞĞ§¼ÆÊıÖÜÆÚÅäÖÃÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ***********************************************************************/
 en_result_t Adt_SetValidPeriod(en_adt_unit_t enAdtUnit,
                                stc_adt_validper_cfg_t* pstcAdtValidPerCfg)
@@ -1606,14 +1606,14 @@ en_result_t Adt_SetValidPeriod(en_adt_unit_t enAdtUnit,
 
 /************************************************************************
  * \brief   
- *          é…ç½®æ¯”è¾ƒè¾“å‡ºè®¡æ•°åŸºå‡†å€¼
+ *          ÅäÖÃ±È½ÏÊä³ö¼ÆÊı»ù×¼Öµ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtCompare      æ¯”è¾ƒåŸºå‡†
- * \param   [in]  u16Compare        æ¯”è¾ƒåŸºå‡†å€¼
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtCompare      ±È½Ï»ù×¼
+ * \param   [in]  u16Compare        ±È½Ï»ù×¼Öµ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  *************************************************************************/
 en_result_t Adt_SetCompareValue(en_adt_unit_t enAdtUnit,
                                 en_adt_compare_t enAdtCompare,
@@ -1652,14 +1652,14 @@ en_result_t Adt_SetCompareValue(en_adt_unit_t enAdtUnit,
 
 /************************************************************************
  * \brief   
- *          é…ç½®ä¸“ç”¨æ¯”è¾ƒè®¡æ•°åŸºå‡†å€¼
+ *          ÅäÖÃ×¨ÓÃ±È½Ï¼ÆÊı»ù×¼Öµ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtSpclCmp      ä¸“ç”¨æ¯”è¾ƒåŸºå‡†å€¼å¯„å­˜å™¨
- * \param   [in]  u16SpclCmp        æ¯”è¾ƒåŸºå‡†å€¼
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtSpclCmp      ×¨ÓÃ±È½Ï»ù×¼Öµ¼Ä´æÆ÷
+ * \param   [in]  u16SpclCmp        ±È½Ï»ù×¼Öµ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  *************************************************************************/
 en_result_t Adt_SetSpecilCompareValue(en_adt_unit_t enAdtUnit,
                                       en_adt_special_compare_t enAdtSpclCmp,
@@ -1690,14 +1690,14 @@ en_result_t Adt_SetSpecilCompareValue(en_adt_unit_t enAdtUnit,
 
 /**********************************************************************
  * \brief   
- *          é…ç½®é€šç”¨æ¯”è¾ƒå€¼/æ•è·å€¼ç¼“å­˜ä¼ é€
+ *          ÅäÖÃÍ¨ÓÃ±È½ÏÖµ/²¶»ñÖµ»º´æ´«ËÍ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtCHxXPort    TIMxXç«¯å£
- * \param   [in]  bCompareBufEn     é€šç”¨æ¯”è¾ƒå€¼ç¼“å­˜ä¼ é€ä½¿èƒ½
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtCHxXPort    TIMxX¶Ë¿Ú
+ * \param   [in]  bCompareBufEn     Í¨ÓÃ±È½ÏÖµ»º´æ´«ËÍÊ¹ÄÜ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  **********************************************************************/
 en_result_t Adt_EnableValueBuf(en_adt_unit_t enAdtUnit,
                                  en_adt_CHxX_port_t enAdtCHxXPort,
@@ -1728,13 +1728,13 @@ en_result_t Adt_EnableValueBuf(en_adt_unit_t enAdtUnit,
 
 /***********************************************************************
  * \brief   
- *          æ¸…é™¤æ¯”è¾ƒè¾“å‡ºè®¡æ•°å€¼/æ•è·å€¼ç¼“å­˜
+ *          Çå³ı±È½ÏÊä³ö¼ÆÊıÖµ/²¶»ñÖµ»º´æ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtCHxXPort    TIMxXç«¯å£
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtCHxXPort    TIMxX¶Ë¿Ú
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  **********************************************************************/
 en_result_t Adt_ClearValueBuf(en_adt_unit_t enAdtUnit,
                                      en_adt_CHxX_port_t enAdtCHxXPort)
@@ -1766,14 +1766,14 @@ en_result_t Adt_ClearValueBuf(en_adt_unit_t enAdtUnit,
 
 /***********************************************************************
  * \brief   
- *          è·å–æ•è·å€¼
+ *          »ñÈ¡²¶»ñÖµ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtCHxXPort    TIMxXç«¯å£
- * \param   [in]  pu16Capture       æ•è·å€¼æŒ‡é’ˆ
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtCHxXPort    TIMxX¶Ë¿Ú
+ * \param   [in]  pu16Capture       ²¶»ñÖµÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ***********************************************************************/
 en_result_t Adt_GetCaptureValue(en_adt_unit_t enAdtUnit,
                                 en_adt_CHxX_port_t enAdtCHxXPort,
@@ -1803,14 +1803,14 @@ en_result_t Adt_GetCaptureValue(en_adt_unit_t enAdtUnit,
 
 /**********************************************************************
  * \brief   
- *          è·å–æ•è·ç¼“å­˜å€¼
+ *          »ñÈ¡²¶»ñ»º´æÖµ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  enAdtCHxXPort    TIMxXç«¯å£
- * \param   [in]  pu16CaptureBuf    æ•è·ç¼“å­˜å€¼æŒ‡é’ˆ
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  enAdtCHxXPort    TIMxX¶Ë¿Ú
+ * \param   [in]  pu16CaptureBuf    ²¶»ñ»º´æÖµÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ***********************************************************************/
 en_result_t Adt_GetCaptureBuf(en_adt_unit_t enAdtUnit,
                                 en_adt_CHxX_port_t enAdtCHxXPort,
@@ -1840,13 +1840,13 @@ en_result_t Adt_GetCaptureBuf(en_adt_unit_t enAdtUnit,
 
 /***********************************************************************
  * \brief   
- *          è®¾ç½®æ­»åŒºæ—¶é—´ä¸ŠåŸºå‡†å€¼
+ *          ÉèÖÃËÀÇøÊ±¼äÉÏ»ù×¼Öµ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  u16Value          æ­»åŒºæ—¶é—´ä¸ŠåŸºå‡†å€¼
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  u16Value          ËÀÇøÊ±¼äÉÏ»ù×¼Öµ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ************************************************************************/
 en_result_t Adt_SetDTUA(en_adt_unit_t enAdtUnit,
                         uint16_t u16Value)
@@ -1866,13 +1866,13 @@ en_result_t Adt_SetDTUA(en_adt_unit_t enAdtUnit,
 
 /***********************************************************************
  * \brief   
- *          è®¾ç½®æ­»åŒºæ—¶é—´ä¸‹åŸºå‡†å€¼
+ *          ÉèÖÃËÀÇøÊ±¼äÏÂ»ù×¼Öµ
  *
- * \param   [in]  enAdtUnit         ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  u16Value          æ­»åŒºæ—¶é—´ä¸‹åŸºå‡†å€¼
+ * \param   [in]  enAdtUnit         ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  u16Value          ËÀÇøÊ±¼äÏÂ»ù×¼Öµ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  ***********************************************************************/
 en_result_t Adt_SetDTDA(en_adt_unit_t enAdtUnit,
                         uint16_t u16Value)
@@ -1892,14 +1892,14 @@ en_result_t Adt_SetDTDA(en_adt_unit_t enAdtUnit,
 
 /******************************************************************
  * \brief   
- *          é…ç½®æ­»åŒºæ—¶é—´åŠŸèƒ½
+ *          ÅäÖÃËÀÇøÊ±¼ä¹¦ÄÜ
  *
- * \param   [in]  enAdtUnit     ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  bDTEn         æ­»åŒºåŠŸèƒ½ä½¿èƒ½
- * \param   [in]  bEqual        DTDARçš„å€¼å’ŒDTUARçš„å€¼è‡ªåŠ¨ç›¸ç­‰
+ * \param   [in]  enAdtUnit     ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  bDTEn         ËÀÇø¹¦ÄÜÊ¹ÄÜ
+ * \param   [in]  bEqual        DTDARµÄÖµºÍDTUARµÄÖµ×Ô¶¯ÏàµÈ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  *****************************************************************/
 en_result_t Adt_ConfigDT(en_adt_unit_t enAdtUnit,
                          boolean_t bDTEn,
@@ -1920,13 +1920,13 @@ en_result_t Adt_ConfigDT(en_adt_unit_t enAdtUnit,
 
 /*************************************************************************
  * \brief   
- *          Zç›¸è¾“å…¥å±è”½è®¾ç½®
+ *          ZÏàÊäÈëÆÁ±ÎÉèÖÃ
  *
- * \param   [in]  enAdtUnit           ADV Timeré€šé“é€‰æ‹©ï¼ˆTIM4ã€TIM5ã€TIM6ï¼‰
- * \param   [in]  pstcAdtZMaskCfg     Zç›¸è¾“å…¥å±è”½åŠŸèƒ½é…ç½®æŒ‡é’ˆ
+ * \param   [in]  enAdtUnit           ADV TimerÍ¨µÀÑ¡Ôñ£¨TIM4¡¢TIM5¡¢TIM6£©
+ * \param   [in]  pstcAdtZMaskCfg     ZÏàÊäÈëÆÁ±Î¹¦ÄÜÅäÖÃÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  *************************************************************************/
 en_result_t Adt_ConfigZMask(en_adt_unit_t enAdtUnit, stc_adt_zmask_cfg_t* pstcAdtZMaskCfg)
 {

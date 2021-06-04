@@ -85,14 +85,14 @@
  ******************************************************************************/
 /**
  * \brief   
- *          ADCåˆå§‹åŒ–
+ *          ADC³õÊ¼»¯
  *
- * \param   [in]   pu32Data    å¾…åŠ å¯†æ•°æ®
- * \param   [in]   pu32Key     åŠ å¯†KEY
- * \param   [out]  pu32Cipher  åŠ å¯†åæ•°æ®
+ * \param   [in]   pu32Data    ´ı¼ÓÃÜÊı¾İ
+ * \param   [in]   pu32Key     ¼ÓÃÜKEY
+ * \param   [out]  pu32Cipher  ¼ÓÃÜºóÊı¾İ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  */
 en_result_t AES_Encrypt(uint32_t* pu32Data, uint32_t *pu32Key, uint32_t *pu32Cipher)
 {
@@ -129,14 +129,14 @@ en_result_t AES_Encrypt(uint32_t* pu32Data, uint32_t *pu32Key, uint32_t *pu32Cip
 
 /**
  * \brief   
- *          ADCåˆå§‹åŒ–
+ *          ADC³õÊ¼»¯
  *
- * \param   [in]   pu32Cipher  å¾…è§£å¯†æ•°æ®
- * \param   [in]   pu32Key     åŠ å¯†KEY
- * \param   [out]  pu32Data    è§£å¯†åæ•°æ®
+ * \param   [in]   pu32Cipher  ´ı½âÃÜÊı¾İ
+ * \param   [in]   pu32Key     ¼ÓÃÜKEY
+ * \param   [out]  pu32Data    ½âÃÜºóÊı¾İ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  */
 en_result_t AES_Decrypt(uint32_t *pu32Cipher,uint32_t *pu32Key, uint32_t* pu32Plaintext)
 {

@@ -86,22 +86,22 @@
 
 /**
  *******************************************************************************
- ** \brief GPIO åˆå§‹åŒ–
+ ** \brief GPIO ³õÊ¼»¯
  **
- ** \param [in]  enPort          IO Portå£
- ** \param [in]  enPin           IO Pinè„š
- ** \param [in]  pstcGpioCfg     IO é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enPort          IO Port¿Ú
+ ** \param [in]  enPin           IO Pin½Å
+ ** \param [in]  pstcGpioCfg     IO ÅäÖÃ½á¹¹ÌåÖ¸Õë
  **
- ** \retval Ok         è®¾ç½®æˆåŠŸ
- **         å…¶ä»–å€¼     è®¾ç½®å¤±è´¥
+ ** \retval Ok         ÉèÖÃ³É¹¦
+ **         ÆäËûÖµ     ÉèÖÃÊ§°Ü
  ******************************************************************************/
 en_result_t Gpio_Init(en_gpio_port_t enPort, en_gpio_pin_t enPin, stc_gpio_config_t  *pstcGpioCfg)
 {
-    //é…ç½®ä¸ºé»˜è®¤å€¼,GPIOåŠŸèƒ½
+    //ÅäÖÃÎªÄ¬ÈÏÖµ,GPIO¹¦ÄÜ
     setBit((uint32_t)&M0P_GPIO->PAADS + enPort, enPin, FALSE);
     *((uint32_t*)(((uint32_t)(&(M0P_GPIO->PA00_SEL)) + enPort) + (((uint32_t)enPin)<<2))) = GpioAf0;
     
-    //æ–¹å‘é…ç½®
+    //·½ÏòÅäÖÃ
     if(GpioDirIn == pstcGpioCfg->enDir)
     {
         setBit(((uint32_t)&M0P_GPIO->PADIR + enPort), enPin, TRUE);
@@ -111,7 +111,7 @@ en_result_t Gpio_Init(en_gpio_port_t enPort, en_gpio_pin_t enPin, stc_gpio_confi
         setBit(((uint32_t)&M0P_GPIO->PADIR + enPort), enPin, FALSE);
     }
     
-    //é©±åŠ¨èƒ½åŠ›é…ç½®
+    //Çı¶¯ÄÜÁ¦ÅäÖÃ
     if(GpioDrvH == pstcGpioCfg->enDrv)
     {
         setBit(((uint32_t)&M0P_GPIO->PADR + enPort), enPin, FALSE);
@@ -121,7 +121,7 @@ en_result_t Gpio_Init(en_gpio_port_t enPort, en_gpio_pin_t enPin, stc_gpio_confi
         setBit(((uint32_t)&M0P_GPIO->PADR + enPort), enPin, TRUE);
     }
     
-    //ä¸Šæ‹‰ä¸‹æ‹‰é…ç½®
+    //ÉÏÀ­ÏÂÀ­ÅäÖÃ
     if(GpioPu == pstcGpioCfg->enPuPd)
     {
         setBit(((uint32_t)&M0P_GPIO->PAPU + enPort), enPin, TRUE);
@@ -138,7 +138,7 @@ en_result_t Gpio_Init(en_gpio_port_t enPort, en_gpio_pin_t enPin, stc_gpio_confi
         setBit(((uint32_t)&M0P_GPIO->PAPD + enPort), enPin, FALSE);
     }
     
-    //å¼€æ¼è¾“å‡ºåŠŸèƒ½
+    //¿ªÂ©Êä³ö¹¦ÄÜ
     if(GpioOdDisable == pstcGpioCfg->enOD)
     {
         setBit(((uint32_t)&M0P_GPIO->PAOD + enPort), enPin, FALSE);
@@ -155,12 +155,12 @@ en_result_t Gpio_Init(en_gpio_port_t enPort, en_gpio_pin_t enPin, stc_gpio_confi
 
 /**
  *******************************************************************************
- ** \brief GPIO IOè¾“å…¥å€¼è·å–
+ ** \brief GPIO IOÊäÈëÖµ»ñÈ¡
  **
- ** \param [in]  enPort          IO Portå£
- ** \param [in]  enPin           IO Pinè„š
+ ** \param [in]  enPort          IO Port¿Ú
+ ** \param [in]  enPin           IO Pin½Å
  **
- ** \retval boolean_t            IOç”µå¹³é«˜ä½
+ ** \retval boolean_t            IOµçÆ½¸ßµÍ
  ******************************************************************************/
 boolean_t Gpio_GetInputIO(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 {
@@ -169,11 +169,11 @@ boolean_t Gpio_GetInputIO(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 
 /**
  *******************************************************************************
- ** \brief GPIO IO Portè¾“å…¥æ•°æ®è·å–
+ ** \brief GPIO IO PortÊäÈëÊı¾İ»ñÈ¡
  **
  ** \param [in]  enPort          IO Port
  **
- ** \retval boolean_t            IO Portæ•°æ®
+ ** \retval boolean_t            IO PortÊı¾İ
  ******************************************************************************/
 uint16_t    Gpio_GetInputData(en_gpio_port_t enPort)
 {
@@ -182,14 +182,14 @@ uint16_t    Gpio_GetInputData(en_gpio_port_t enPort)
 
 /**
  *******************************************************************************
- ** \brief GPIO IOè¾“å‡ºå€¼å†™å…¥
+ ** \brief GPIO IOÊä³öÖµĞ´Èë
  **
- ** \param [in]  enPort          IO Portå£
- ** \param [in]  enPin           IO Pinè„š
- ** \param [out] bVal            è¾“å‡ºå€¼
+ ** \param [in]  enPort          IO Port¿Ú
+ ** \param [in]  enPin           IO Pin½Å
+ ** \param [out] bVal            Êä³öÖµ
  **
- ** \retval en_result_t          Ok      è®¾ç½®æˆåŠŸ
- **                              å…¶ä»–å€¼  è®¾ç½®å¤±è´¥
+ ** \retval en_result_t          Ok      ÉèÖÃ³É¹¦
+ **                              ÆäËûÖµ  ÉèÖÃÊ§°Ü
  ******************************************************************************/
 en_result_t Gpio_WriteOutputIO(en_gpio_port_t enPort, en_gpio_pin_t enPin, boolean_t bVal)
 {
@@ -200,12 +200,12 @@ en_result_t Gpio_WriteOutputIO(en_gpio_port_t enPort, en_gpio_pin_t enPin, boole
 
 /**
  *******************************************************************************
- ** \brief GPIO IOè¾“å‡ºå€¼è·å–
+ ** \brief GPIO IOÊä³öÖµ»ñÈ¡
  **
- ** \param [in]  enPort          IO Portå£
- ** \param [in]  enPin           IO Pinè„š
+ ** \param [in]  enPort          IO Port¿Ú
+ ** \param [in]  enPin           IO Pin½Å
  **
- ** \retval boolean_t            IOç”µå¹³é«˜ä½
+ ** \retval boolean_t            IOµçÆ½¸ßµÍ
  ******************************************************************************/
 boolean_t   Gpio_ReadOutputIO(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 {
@@ -214,12 +214,12 @@ boolean_t   Gpio_ReadOutputIO(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 
 /**
  *******************************************************************************
- ** \brief GPIO IO Portè®¾ç½®ï¼Œå¯åŒæ—¶è®¾ç½®ä¸€ç»„Portä¸­çš„å¤šä¸ªPIN
+ ** \brief GPIO IO PortÉèÖÃ£¬¿ÉÍ¬Ê±ÉèÖÃÒ»×éPortÖĞµÄ¶à¸öPIN
  **
  ** \param [in]  enPort          IO Port
- ** \param [in]  u16ValMsk       è¯¥Portçš„16ä¸ªPINæ©ç å€¼,å°†éœ€è¦è®¾ç½®çš„PINå¯¹åº”çš„bitå†™1æœ‰æ•ˆ   
+ ** \param [in]  u16ValMsk       ¸ÃPortµÄ16¸öPINÑÚÂëÖµ,½«ĞèÒªÉèÖÃµÄPIN¶ÔÓ¦µÄbitĞ´1ÓĞĞ§   
  **
- ** \retval boolean_t            IO Portæ•°æ®
+ ** \retval boolean_t            IO PortÊı¾İ
  ******************************************************************************/
 en_result_t Gpio_SetPort(en_gpio_port_t enPort, uint16_t u16ValMsk)
 {
@@ -229,13 +229,13 @@ en_result_t Gpio_SetPort(en_gpio_port_t enPort, uint16_t u16ValMsk)
 
 /**
  *******************************************************************************
- ** \brief GPIO IOè®¾ç½®
+ ** \brief GPIO IOÉèÖÃ
  **
- ** \param [in]  enPort          IO Portå£
- ** \param [in]  enPin           IO Pinè„š
+ ** \param [in]  enPort          IO Port¿Ú
+ ** \param [in]  enPin           IO Pin½Å
  **
- ** \retval en_result_t          Ok      è®¾ç½®æˆåŠŸ
- **                              å…¶ä»–å€¼  è®¾ç½®å¤±è´¥
+ ** \retval en_result_t          Ok      ÉèÖÃ³É¹¦
+ **                              ÆäËûÖµ  ÉèÖÃÊ§°Ü
  ******************************************************************************/
 en_result_t Gpio_SetIO(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 {
@@ -246,12 +246,12 @@ en_result_t Gpio_SetIO(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 
 /**
  *******************************************************************************
- ** \brief GPIO IO Portæ¸…é›¶ï¼Œå¯åŒæ—¶æ¸…é›¶ä¸€ç»„Portä¸­çš„å¤šä¸ªPIN
+ ** \brief GPIO IO PortÇåÁã£¬¿ÉÍ¬Ê±ÇåÁãÒ»×éPortÖĞµÄ¶à¸öPIN
  **
  ** \param [in]  enPort          IO Port
- ** \param [in]  u16ValMsk       è¯¥Portçš„16ä¸ªPINæ©ç å€¼,å°†éœ€è¦æ¸…é›¶çš„PINå¯¹åº”çš„bitå†™1æœ‰æ•ˆ
+ ** \param [in]  u16ValMsk       ¸ÃPortµÄ16¸öPINÑÚÂëÖµ,½«ĞèÒªÇåÁãµÄPIN¶ÔÓ¦µÄbitĞ´1ÓĞĞ§
  **
- ** \retval boolean_t            IO Portæ•°æ®
+ ** \retval boolean_t            IO PortÊı¾İ
  ******************************************************************************/
 en_result_t Gpio_ClrPort(en_gpio_port_t enPort, uint16_t u16ValMsk)
 {
@@ -262,13 +262,13 @@ en_result_t Gpio_ClrPort(en_gpio_port_t enPort, uint16_t u16ValMsk)
 
 /**
  *******************************************************************************
- ** \brief GPIO IOæ¸…é›¶
+ ** \brief GPIO IOÇåÁã
  **
- ** \param [in]  enPort          IO Portå£
- ** \param [in]  enPin           IO Pinè„š
+ ** \param [in]  enPort          IO Port¿Ú
+ ** \param [in]  enPin           IO Pin½Å
  **
- ** \retval en_result_t          Ok      è®¾ç½®æˆåŠŸ
- **                              å…¶ä»–å€¼  è®¾ç½®å¤±è´¥
+ ** \retval en_result_t          Ok      ÉèÖÃ³É¹¦
+ **                              ÆäËûÖµ  ÉèÖÃÊ§°Ü
  ******************************************************************************/
 en_result_t Gpio_ClrIO(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 {
@@ -279,15 +279,15 @@ en_result_t Gpio_ClrIO(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 
 /**
  *******************************************************************************
- ** \brief GPIO IO Portç½®ä½/æ¸…é›¶ï¼Œå¯åŒæ—¶ç½®ä½/æ¸…é›¶ä¸€ç»„Portä¸­çš„å¤šä¸ªPIN
+ ** \brief GPIO IO PortÖÃÎ»/ÇåÁã£¬¿ÉÍ¬Ê±ÖÃÎ»/ÇåÁãÒ»×éPortÖĞµÄ¶à¸öPIN
  **
  ** \param [in]  enPort       IO Port
-** \param [in]  u32ValMsk     é«˜16bitsè¡¨ç¤ºè¯¥Portçš„16ä¸ªPINç½®ä½æ©ç å€¼,
- **                           ä½16bitsè¡¨ç¤ºè¯¥Portçš„16ä¸ªPINæ¸…é›¶æ©ç å€¼,
-**                            å°†éœ€è¦è®¾ç½®çš„PINå¯¹åº”çš„bitå†™1,åŒä¸€ä¸ªPINçš„æ©ç åŒæ—¶ä¸º1,åˆ™è¯¥PINæ¸…é›¶ã€‚                              
+** \param [in]  u32ValMsk     ¸ß16bits±íÊ¾¸ÃPortµÄ16¸öPINÖÃÎ»ÑÚÂëÖµ,
+ **                           µÍ16bits±íÊ¾¸ÃPortµÄ16¸öPINÇåÁãÑÚÂëÖµ,
+**                            ½«ĞèÒªÉèÖÃµÄPIN¶ÔÓ¦µÄbitĞ´1,Í¬Ò»¸öPINµÄÑÚÂëÍ¬Ê±Îª1,Ôò¸ÃPINÇåÁã¡£                              
  **
- ** \retval en_result_t       Ok      è®¾ç½®æˆåŠŸ
- **                           å…¶ä»–å€¼  è®¾ç½®å¤±è´¥
+ ** \retval en_result_t       Ok      ÉèÖÃ³É¹¦
+ **                           ÆäËûÖµ  ÉèÖÃÊ§°Ü
  ******************************************************************************/
 en_result_t Gpio_SetClrPort(en_gpio_port_t enPort, uint32_t u32ValMsk)
 {
@@ -298,13 +298,13 @@ en_result_t Gpio_SetClrPort(en_gpio_port_t enPort, uint32_t u32ValMsk)
 
 /**
  *******************************************************************************
- ** \brief GPIO IOé…ç½®ä¸ºæ¨¡æ‹ŸåŠŸèƒ½æ¨¡å¼
+ ** \brief GPIO IOÅäÖÃÎªÄ£Äâ¹¦ÄÜÄ£Ê½
  **
- ** \param [in]  enPort          IO Portå£
- ** \param [in]  enPin           IO Pinè„š
+ ** \param [in]  enPort          IO Port¿Ú
+ ** \param [in]  enPin           IO Pin½Å
  **
- ** \retval Ok         è®¾ç½®æˆåŠŸ
- **         å…¶ä»–å€¼     è®¾ç½®å¤±è´¥
+ ** \retval Ok         ÉèÖÃ³É¹¦
+ **         ÆäËûÖµ     ÉèÖÃÊ§°Ü
  ******************************************************************************/
 en_result_t Gpio_SetAnalogMode(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 {
@@ -315,13 +315,13 @@ en_result_t Gpio_SetAnalogMode(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 
 /**
  *******************************************************************************
-** \brief GPIO IOå¤ç”¨åŠŸèƒ½è®¾ç½®
+** \brief GPIO IO¸´ÓÃ¹¦ÄÜÉèÖÃ
  **
- ** \param [in]  enPort    IO Portå£
- ** \param [in]  enPin     IO Pinè„š
- ** \param [in]  enAf      å¤ç”¨åŠŸèƒ½æšä¸¾ç±»å‹é€‰æ‹©
- ** \retval Ok             è®¾ç½®æˆåŠŸ
- **         å…¶ä»–å€¼         è®¾ç½®å¤±è´¥
+ ** \param [in]  enPort    IO Port¿Ú
+ ** \param [in]  enPin     IO Pin½Å
+ ** \param [in]  enAf      ¸´ÓÃ¹¦ÄÜÃ¶¾ÙÀàĞÍÑ¡Ôñ
+ ** \retval Ok             ÉèÖÃ³É¹¦
+ **         ÆäËûÖµ         ÉèÖÃÊ§°Ü
  ******************************************************************************/
 en_result_t Gpio_SetAfMode(en_gpio_port_t enPort, en_gpio_pin_t enPin, en_gpio_af_t enAf)
 {
@@ -362,13 +362,13 @@ static en_result_t _GpioEnableIrq(en_gpio_port_t enPort,
 
 /**
  *******************************************************************************
- ** \brief GPIO IOä¸­æ–­ä½¿èƒ½
+ ** \brief GPIO IOÖĞ¶ÏÊ¹ÄÜ
  **
- ** \param [in]  enPort          IO Portå£
- ** \param [in]  enPin           IO Pinè„š
- ** \param [in]  enType          ä¸­æ–­ä½¿èƒ½ç±»å‹
+ ** \param [in]  enPort          IO Port¿Ú
+ ** \param [in]  enPin           IO Pin½Å
+ ** \param [in]  enType          ÖĞ¶ÏÊ¹ÄÜÀàĞÍ
  **
- ** \retval      Ok            è®¾ç½®æˆåŠŸ
+ ** \retval      Ok            ÉèÖÃ³É¹¦
  ******************************************************************************/
 en_result_t Gpio_EnableIrq(en_gpio_port_t enPort, en_gpio_pin_t enPin, en_gpio_irqtype_t enType)
 {
@@ -379,13 +379,13 @@ en_result_t Gpio_EnableIrq(en_gpio_port_t enPort, en_gpio_pin_t enPin, en_gpio_i
 
 /**
  *******************************************************************************
- ** \brief GPIO IOä¸­æ–­å…³é—­
+ ** \brief GPIO IOÖĞ¶Ï¹Ø±Õ
  **
- ** \param [in]  enPort          IO Portå£
- ** \param [in]  enPin           IO Pinè„š
- ** \param [in]  enType          ä¸­æ–­ä½¿èƒ½ç±»å‹
+ ** \param [in]  enPort          IO Port¿Ú
+ ** \param [in]  enPin           IO Pin½Å
+ ** \param [in]  enType          ÖĞ¶ÏÊ¹ÄÜÀàĞÍ
  **
- ** \retval      Ok            è®¾ç½®æˆåŠŸ
+ ** \retval      Ok            ÉèÖÃ³É¹¦
  ******************************************************************************/
 en_result_t Gpio_DisableIrq(en_gpio_port_t enPort, en_gpio_pin_t enPin, en_gpio_irqtype_t enType)
 {
@@ -397,12 +397,12 @@ en_result_t Gpio_DisableIrq(en_gpio_port_t enPort, en_gpio_pin_t enPin, en_gpio_
 
 /**
  *******************************************************************************
- ** \brief GPIO è·å¾—IOä¸­æ–­çŠ¶æ€
+ ** \brief GPIO »ñµÃIOÖĞ¶Ï×´Ì¬
  **
- ** \param [in]  u8Port          IO Portå£
- ** \param [in]  u8Pin           IO Pinè„š
+ ** \param [in]  u8Port          IO Port¿Ú
+ ** \param [in]  u8Pin           IO Pin½Å
  **
- ** \retval      IOä¸­æ–­çŠ¶æ€å¼€å…³
+ ** \retval      IOÖĞ¶Ï×´Ì¬¿ª¹Ø
  ******************************************************************************/
 boolean_t Gpio_GetIrqStatus(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 {
@@ -411,12 +411,12 @@ boolean_t Gpio_GetIrqStatus(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 
 /**
  *******************************************************************************
- ** \brief GPIO æ¸…é™¤IOä¸­æ–­çŠ¶æ€
+ ** \brief GPIO Çå³ıIOÖĞ¶Ï×´Ì¬
  **
- ** \param [in]  u8Port          IO Portå£
- ** \param [in]  u8Pin           IO Pinè„š
+ ** \param [in]  u8Port          IO Port¿Ú
+ ** \param [in]  u8Pin           IO Pin½Å
  **
- ** \retval    Ok       è®¾ç½®æˆåŠŸ
+ ** \retval    Ok       ÉèÖÃ³É¹¦
  ******************************************************************************/
 en_result_t Gpio_ClearIrq(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 {
@@ -427,11 +427,11 @@ en_result_t Gpio_ClearIrq(en_gpio_port_t enPort, en_gpio_pin_t enPin)
 
 /**
  *******************************************************************************
- ** \brief GPIO ç«¯å£è¾…åŠ©åŠŸèƒ½é…ç½®â€”â€”ä¸­æ–­æ¨¡å¼é…ç½®
+ ** \brief GPIO ¶Ë¿Ú¸¨Öú¹¦ÄÜÅäÖÃ¡ª¡ªÖĞ¶ÏÄ£Ê½ÅäÖÃ
  **
- ** \param [in]  enIrqMode          ç«¯å£ä¸­æ–­æ¨¡å¼ï¼ˆæ·±åº¦ä¼‘çœ æ˜¯å¦å“åº”ä¸­æ–­ï¼‰
+ ** \param [in]  enIrqMode          ¶Ë¿ÚÖĞ¶ÏÄ£Ê½£¨Éî¶ÈĞİÃßÊÇ·ñÏìÓ¦ÖĞ¶Ï£©
  **
- ** \retval    Ok       è®¾ç½®æˆåŠŸ
+ ** \retval    Ok       ÉèÖÃ³É¹¦
  ******************************************************************************/
 en_result_t Gpio_SfIrqModeConfig(en_gpio_sf_irqmode_t enIrqMode)
 {
@@ -442,11 +442,11 @@ en_result_t Gpio_SfIrqModeConfig(en_gpio_sf_irqmode_t enIrqMode)
 
 /**
  *******************************************************************************
- ** \brief GPIO ç«¯å£è¾…åŠ©åŠŸèƒ½é…ç½®â€”â€”IRè¾“å‡ºææ€§é…ç½®
+ ** \brief GPIO ¶Ë¿Ú¸¨Öú¹¦ÄÜÅäÖÃ¡ª¡ªIRÊä³ö¼«ĞÔÅäÖÃ
  **
- ** \param [in]  enIrPolMode          IRè¾“å‡ºææ€§é…ç½®æšä¸¾
+ ** \param [in]  enIrPolMode          IRÊä³ö¼«ĞÔÅäÖÃÃ¶¾Ù
  **
- ** \retval    Ok       è®¾ç½®æˆåŠŸ
+ ** \retval    Ok       ÉèÖÃ³É¹¦
  ******************************************************************************/
 en_result_t Gpio_SfIrPolConfig(en_gpio_sf_irpol_t enIrPolMode)
 {
@@ -457,12 +457,12 @@ en_result_t Gpio_SfIrPolConfig(en_gpio_sf_irpol_t enIrPolMode)
 
 /**
  *******************************************************************************
- ** \brief GPIO ç«¯å£è¾…åŠ©åŠŸèƒ½é…ç½®â€”â€”HCLKè¾“å‡ºé…ç½®
+ ** \brief GPIO ¶Ë¿Ú¸¨Öú¹¦ÄÜÅäÖÃ¡ª¡ªHCLKÊä³öÅäÖÃ
  **
- ** \param [in]  enGate         HCLKè¾“å‡ºä½¿èƒ½
- ** \param [in]  enDiv          è¾“å‡ºåˆ†é¢‘æšä¸¾å€¼
+ ** \param [in]  enGate         HCLKÊä³öÊ¹ÄÜ
+ ** \param [in]  enDiv          Êä³ö·ÖÆµÃ¶¾ÙÖµ
  **
- ** \retval    Ok       è®¾ç½®æˆåŠŸ
+ ** \retval    Ok       ÉèÖÃ³É¹¦
  ******************************************************************************/
 en_result_t Gpio_SfHClkOutputConfig(en_gpio_sf_hclkout_g_t enGate, en_gpio_sf_hclkout_div_t enDiv)
 {
@@ -474,12 +474,12 @@ en_result_t Gpio_SfHClkOutputConfig(en_gpio_sf_hclkout_g_t enGate, en_gpio_sf_hc
 
 /**
  *******************************************************************************
- ** \brief GPIO ç«¯å£è¾…åŠ©åŠŸèƒ½é…ç½®â€”â€”PCLKè¾“å‡ºé…ç½®
+ ** \brief GPIO ¶Ë¿Ú¸¨Öú¹¦ÄÜÅäÖÃ¡ª¡ªPCLKÊä³öÅäÖÃ
  **
- ** \param [in]  enGate         PCLKè¾“å‡ºä½¿èƒ½
- ** \param [in]  enDiv          è¾“å‡ºåˆ†é¢‘æšä¸¾å€¼
+ ** \param [in]  enGate         PCLKÊä³öÊ¹ÄÜ
+ ** \param [in]  enDiv          Êä³ö·ÖÆµÃ¶¾ÙÖµ
  **
- ** \retval    Ok       è®¾ç½®æˆåŠŸ
+ ** \retval    Ok       ÉèÖÃ³É¹¦
  ******************************************************************************/
 en_result_t Gpio_SfPClkOutputConfig(en_gpio_sf_pclkout_g_t enGate, en_gpio_sf_pclkout_div_t enDiv)
 {
@@ -491,11 +491,11 @@ en_result_t Gpio_SfPClkOutputConfig(en_gpio_sf_pclkout_g_t enGate, en_gpio_sf_pc
 
 /**
  *******************************************************************************
- ** \brief GPIO ç«¯å£è¾…åŠ©åŠŸèƒ½é…ç½®â€”â€”å¤–éƒ¨æ—¶é’Ÿè¾“å…¥æ¥æºé…ç½®
+ ** \brief GPIO ¶Ë¿Ú¸¨Öú¹¦ÄÜÅäÖÃ¡ª¡ªÍâ²¿Ê±ÖÓÊäÈëÀ´Ô´ÅäÖÃ
  **
- ** \param [in]  enExtClk         å¤–éƒ¨æ—¶é’Ÿä¿¡å·æ¥æºé€‰æ‹©æšä¸¾
+ ** \param [in]  enExtClk         Íâ²¿Ê±ÖÓĞÅºÅÀ´Ô´Ñ¡ÔñÃ¶¾Ù
  **
- ** \retval    Ok       è®¾ç½®æˆåŠŸ
+ ** \retval    Ok       ÉèÖÃ³É¹¦
  ******************************************************************************/
 en_result_t Gpio_SfExtClkConfig(en_gpio_sf_ssn_extclk_t enExtClk)
 {
@@ -506,12 +506,12 @@ en_result_t Gpio_SfExtClkConfig(en_gpio_sf_ssn_extclk_t enExtClk)
 
 /**
  *******************************************************************************
- ** \brief GPIO ç«¯å£è¾…åŠ©åŠŸèƒ½é…ç½®â€”â€”SSN é€šé“ä¿¡å·æ¥æºé…ç½®
+ ** \brief GPIO ¶Ë¿Ú¸¨Öú¹¦ÄÜÅäÖÃ¡ª¡ªSSN Í¨µÀĞÅºÅÀ´Ô´ÅäÖÃ
  **
- ** \param [in]  enSpi         SSN SPIé€šé“é€‰æ‹©æšä¸¾
- ** \param [in]  enSsn         SSN ä¿¡å·æ¥æºé€‰æ‹©æšä¸¾
+ ** \param [in]  enSpi         SSN SPIÍ¨µÀÑ¡ÔñÃ¶¾Ù
+ ** \param [in]  enSsn         SSN ĞÅºÅÀ´Ô´Ñ¡ÔñÃ¶¾Ù
  **
- ** \retval    Ok       è®¾ç½®æˆåŠŸ
+ ** \retval    Ok       ÉèÖÃ³É¹¦
  ******************************************************************************/
 en_result_t Gpio_SfSsnConfig(en_gpio_sf_ssnspi_t enSpi, en_gpio_sf_ssn_extclk_t enSsn)
 {
@@ -531,12 +531,12 @@ en_result_t Gpio_SfSsnConfig(en_gpio_sf_ssnspi_t enSpi, en_gpio_sf_ssn_extclk_t 
 
 /**
  *******************************************************************************
- ** \brief GPIO ç«¯å£è¾…åŠ©åŠŸèƒ½é…ç½®â€”â€”Timer é—¨æ§è¾“å…¥é…ç½®
+ ** \brief GPIO ¶Ë¿Ú¸¨Öú¹¦ÄÜÅäÖÃ¡ª¡ªTimer ÃÅ¿ØÊäÈëÅäÖÃ
  **
- ** \param [in]  enTimG       Timerç±»å‹é€‰æ‹©æšä¸¾
- ** \param [in]  enSf         Timeräº’è”åŠŸèƒ½é€‰æ‹©æšä¸¾
+ ** \param [in]  enTimG       TimerÀàĞÍÑ¡ÔñÃ¶¾Ù
+ ** \param [in]  enSf         Timer»¥Áª¹¦ÄÜÑ¡ÔñÃ¶¾Ù
  **
- ** \retval    Ok       è®¾ç½®æˆåŠŸ
+ ** \retval    Ok       ÉèÖÃ³É¹¦
  ******************************************************************************/
 en_result_t Gpio_SfTimGConfig(en_gpio_sf_tim_g_t enTimG, en_gpio_sf_t enSf)
 {
@@ -548,12 +548,12 @@ en_result_t Gpio_SfTimGConfig(en_gpio_sf_tim_g_t enTimG, en_gpio_sf_t enSf)
 
 /**
  *******************************************************************************
- ** \brief GPIO ç«¯å£è¾…åŠ©åŠŸèƒ½é…ç½®â€”â€”Timer ETRé€‰æ‹©é…ç½®
+ ** \brief GPIO ¶Ë¿Ú¸¨Öú¹¦ÄÜÅäÖÃ¡ª¡ªTimer ETRÑ¡ÔñÅäÖÃ
  **
- ** \param [in]  enTimE       Timerç±»å‹é€‰æ‹©æšä¸¾
- ** \param [in]  enSf         Timeräº’è”åŠŸèƒ½é€‰æ‹©æšä¸¾
+ ** \param [in]  enTimE       TimerÀàĞÍÑ¡ÔñÃ¶¾Ù
+ ** \param [in]  enSf         Timer»¥Áª¹¦ÄÜÑ¡ÔñÃ¶¾Ù
  **
- ** \retval    Ok       è®¾ç½®æˆåŠŸ
+ ** \retval    Ok       ÉèÖÃ³É¹¦
  ******************************************************************************/
 en_result_t Gpio_SfTimEConfig(en_gpio_sf_tim_e_t enTimE, en_gpio_sf_t enSf)
 {
@@ -565,12 +565,12 @@ en_result_t Gpio_SfTimEConfig(en_gpio_sf_tim_e_t enTimE, en_gpio_sf_t enSf)
 
 /**
  *******************************************************************************
- ** \brief GPIO ç«¯å£è¾…åŠ©åŠŸèƒ½é…ç½®â€”â€”Timer æ•è·è¾“å…¥é€‰æ‹©é…ç½®
+ ** \brief GPIO ¶Ë¿Ú¸¨Öú¹¦ÄÜÅäÖÃ¡ª¡ªTimer ²¶»ñÊäÈëÑ¡ÔñÅäÖÃ
  **
- ** \param [in]  enTimC       Timerç±»å‹é€‰æ‹©æšä¸¾
- ** \param [in]  enSf         Timeräº’è”åŠŸèƒ½é€‰æ‹©æšä¸¾
+ ** \param [in]  enTimC       TimerÀàĞÍÑ¡ÔñÃ¶¾Ù
+ ** \param [in]  enSf         Timer»¥Áª¹¦ÄÜÑ¡ÔñÃ¶¾Ù
  **
- ** \retval    Ok       è®¾ç½®æˆåŠŸ
+ ** \retval    Ok       ÉèÖÃ³É¹¦
  ******************************************************************************/
 en_result_t Gpio_SfTimCConfig(en_gpio_sf_tim_c_t enTimC, en_gpio_sf_t enSf)
 {
@@ -582,12 +582,12 @@ en_result_t Gpio_SfTimCConfig(en_gpio_sf_tim_c_t enTimC, en_gpio_sf_t enSf)
 
 /**
  *******************************************************************************
- ** \brief GPIO ç«¯å£è¾…åŠ©åŠŸèƒ½é…ç½®â€”â€”PCA æ•è·è¾“å…¥é€‰æ‹©é…ç½®
+ ** \brief GPIO ¶Ë¿Ú¸¨Öú¹¦ÄÜÅäÖÃ¡ª¡ªPCA ²¶»ñÊäÈëÑ¡ÔñÅäÖÃ
  **
- ** \param [in]  enPca        PCAç±»å‹é€‰æ‹©æšä¸¾
- ** \param [in]  enSf         PCAäº’è”åŠŸèƒ½é€‰æ‹©æšä¸¾
+ ** \param [in]  enPca        PCAÀàĞÍÑ¡ÔñÃ¶¾Ù
+ ** \param [in]  enSf         PCA»¥Áª¹¦ÄÜÑ¡ÔñÃ¶¾Ù
  **
- ** \retval    Ok       è®¾ç½®æˆåŠŸ
+ ** \retval    Ok       ÉèÖÃ³É¹¦
  ******************************************************************************/
 en_result_t Gpio_SfPcaConfig(en_gpio_sf_pca_t enPca, en_gpio_sf_t enSf)
 {

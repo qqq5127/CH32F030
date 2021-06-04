@@ -227,17 +227,17 @@ typedef struct stc_dma_irq
   } stc_dma_config_t;
   /**
  ******************************************************************************
- ** \brief  DMA涓柇鍥炶皟鍑芥暟
+ ** \brief  DMA中断回调函数
  *****************************************************************************/
 typedef struct stc_dma_irq_calbakfn_pt
 {
-    /*! Dma浼犺緭瀹屾垚涓柇鍥炶皟鍑芥暟鎸囬拡*/
+    /*! Dma传输完成中断回调函数指针*/
     func_ptr_t  pfnDma0TranferCompleteIrq;
-     /*! Dma浼犺緭瀹屾垚涓柇鍥炶皟鍑芥暟鎸囬拡*/
+     /*! Dma传输完成中断回调函数指针*/
     func_ptr_t  pfnDma1TranferCompleteIrq;
-    /*! Dma浼犺緭閿欒涓柇鍥炶皟鍑芥暟鎸囬拡*/
+    /*! Dma传输错误中断回调函数指针*/
     func_ptr_t  pfnDma0TranferErrIrq;
-    /*! Dma浼犺緭閿欒涓柇鍥炶皟鍑芥暟鎸囬拡*/
+    /*! Dma传输错误中断回调函数指针*/
     func_ptr_t  pfnDma1TranferErrIrq;
 }stc_dma_irq_calbakfn_pt_t;
   /*******************************************************************************

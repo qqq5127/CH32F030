@@ -90,10 +90,10 @@ static func_ptr_t pfnPcaCallback = NULL;
  ******************************************************************************/
 /**
  *****************************************************************************
- ** \brief PCAä¸­æ–­æ ‡å¿—è·å–
+ ** \brief PCAÖĞ¶Ï±êÖ¾»ñÈ¡
  **
  **
- ** \param [in]  enModule           PCAæ¨¡å—é€‰æ‹©ï¼ˆModule0ã€Module1ã€Module2ã€Module3ã€Module4ï¼‰
+ ** \param [in]  enModule           PCAÄ£¿éÑ¡Ôñ£¨Module0¡¢Module1¡¢Module2¡¢Module3¡¢Module4£©
  ** 
  ** \retval TRUE or FALSE                                      
  *****************************************************************************/
@@ -130,7 +130,7 @@ boolean_t Pca_GetIntFlag(en_pca_module_t enModule)
 
 /**
  *****************************************************************************
- ** \brief PCAè®¡æ•°ä¸­æ–­æ ‡å¿—è·å–
+ ** \brief PCA¼ÆÊıÖĞ¶Ï±êÖ¾»ñÈ¡
  **
  **
  ** 
@@ -147,10 +147,10 @@ boolean_t Pca_GetCntIntFlag(void)
 
 /**
  *****************************************************************************
- ** \brief PCAä¸­æ–­æ ‡å¿—æ¸…é™¤
+ ** \brief PCAÖĞ¶Ï±êÖ¾Çå³ı
  **
  **
- ** \param [in]  enModule           PCAæ¨¡å—é€‰æ‹©ï¼ˆModule0ã€Module1ã€Module2ã€Module3ã€Module4ï¼‰
+ ** \param [in]  enModule           PCAÄ£¿éÑ¡Ôñ£¨Module0¡¢Module1¡¢Module2¡¢Module3¡¢Module4£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -192,7 +192,7 @@ en_result_t Pca_ClearIntFlag(en_pca_module_t enModule)
 
 /**
  *****************************************************************************
- ** \brief PCAè®¡æ•°ä¸­æ–­æ ‡å¿—æ¸…é™¤
+ ** \brief PCA¼ÆÊıÖĞ¶Ï±êÖ¾Çå³ı
  **
  **
  ** 
@@ -210,7 +210,7 @@ en_result_t Pca_ClearCntIntFlag(void)
 
 /**
  *****************************************************************************
- ** \brief PCAä¸­æ–­æœåŠ¡ç¨‹åº
+ ** \brief PCAÖĞ¶Ï·şÎñ³ÌĞò
  **
  **
  ** \param [in]  u8Param           == 0
@@ -226,10 +226,10 @@ void Pca_IRQHandler(uint8_t u8Param)
 
 /**
  *****************************************************************************
- ** \brief PCAä¸­æ–­ä½¿èƒ½
+ ** \brief PCAÖĞ¶ÏÊ¹ÄÜ
  **
  **
- ** \param [in]  enModule           PCAæ¨¡å—é€‰æ‹©ï¼ˆModule0ã€Module1ã€Module2ã€Module3ã€Module4ï¼‰
+ ** \param [in]  enModule           PCAÄ£¿éÑ¡Ôñ£¨Module0¡¢Module1¡¢Module2¡¢Module3¡¢Module4£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -271,7 +271,7 @@ en_result_t Pca_EnableIrq(en_pca_module_t enModule)
 
 /**
  *****************************************************************************
- ** \brief PCAè®¡æ•°ä¸­æ–­ä½¿èƒ½
+ ** \brief PCA¼ÆÊıÖĞ¶ÏÊ¹ÄÜ
  **
  **
  ** 
@@ -290,10 +290,10 @@ en_result_t Pca_EnableCntIrq (void)
 
 /**
  *****************************************************************************
- ** \brief PCAä¸­æ–­ç¦æ­¢
+ ** \brief PCAÖĞ¶Ï½ûÖ¹
  **
  **
- ** \param [in]  enModule           PCAæ¨¡å—é€‰æ‹©ï¼ˆModule0ã€Module1ã€Module2ã€Module3ã€Module4ï¼‰
+ ** \param [in]  enModule           PCAÄ£¿éÑ¡Ôñ£¨Module0¡¢Module1¡¢Module2¡¢Module3¡¢Module4£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -335,7 +335,7 @@ en_result_t Pca_DisableIrq(en_pca_module_t enModule)
 
 /**
  *****************************************************************************
- ** \brief PCAè®¡æ•°ä¸­æ–­ç¦æ­¢
+ ** \brief PCA¼ÆÊıÖĞ¶Ï½ûÖ¹
  **
  **
  ** 
@@ -355,10 +355,10 @@ en_result_t Pca_DisableCntIrq(void)
 
 /**
  *****************************************************************************
- ** \brief PCAåˆå§‹åŒ–é…ç½®
+ ** \brief PCA³õÊ¼»¯ÅäÖÃ
  **
  **
- ** \param [in]  pstcConfig           PCAæ¨¡å—é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  pstcConfig           PCAÄ£¿éÅäÖÃ½á¹¹ÌåÖ¸Õë
  **  
  ** \retval Ok or Error
  *****************************************************************************/
@@ -379,11 +379,11 @@ en_result_t Pca_Init(stc_pca_config_t* pstcConfig)
 
 /**
  *****************************************************************************
- ** \brief PCAæ¨¡å¼é…ç½®
+ ** \brief PCAÄ£Ê½ÅäÖÃ
  **
  **
- ** \param [in]  enModule            PCAæ¨¡å—é€‰æ‹©ï¼ˆModule0ã€Module1ã€Module2ã€Module3ã€Module4ï¼‰
- ** \param [in]  pstcCapMod          PCAæ¨¡å¼é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enModule            PCAÄ£¿éÑ¡Ôñ£¨Module0¡¢Module1¡¢Module2¡¢Module3¡¢Module4£©
+ ** \param [in]  pstcCapMod          PCAÄ£Ê½ÅäÖÃ½á¹¹ÌåÖ¸Õë
  **  
  ** \retval Ok or Error
  *****************************************************************************/
@@ -460,7 +460,7 @@ en_result_t Pca_CapModConfig(en_pca_module_t enModule, stc_pca_capmodconfig_t* p
 
 /**
  *****************************************************************************
- ** \brief PCAå¯åŠ¨è¿è¡Œ
+ ** \brief PCAÆô¶¯ÔËĞĞ
  **
  **
  ** 
@@ -479,7 +479,7 @@ en_result_t Pca_Run(void)
 
 /**
  *****************************************************************************
- ** \brief PCAåœæ­¢è¿è¡Œ
+ ** \brief PCAÍ£Ö¹ÔËĞĞ
  **
  **
  ** 
@@ -498,11 +498,11 @@ en_result_t Pca_Stop(void)
 
 /**
  *****************************************************************************
- ** \brief PCA16ä½æ¯”è¾ƒæ•°æ®è®¾ç½®
+ ** \brief PCA16Î»±È½ÏÊı¾İÉèÖÃ
  **
  **
- ** \param [in]  enModule            PCAæ¨¡å—é€‰æ‹©ï¼ˆModule0ã€Module1ã€Module2ã€Module3ã€Module4ï¼‰
- ** \param [in]  u16Data             PCAæ•è·æ•°æ®
+ ** \param [in]  enModule            PCAÄ£¿éÑ¡Ôñ£¨Module0¡¢Module1¡¢Module2¡¢Module3¡¢Module4£©
+ ** \param [in]  u16Data             PCA²¶»ñÊı¾İ
  **  
  ** \retval Ok or Error
  *****************************************************************************/
@@ -545,10 +545,10 @@ en_result_t Pca_CmpData16Set(en_pca_module_t enModule, uint16_t u16Data)
 
 /**
  *****************************************************************************
- ** \brief PCA16ä½æ•è·æ•°æ®è·å–
+ ** \brief PCA16Î»²¶»ñÊı¾İ»ñÈ¡
  **
  **
- ** \param [in]  enModule            PCAæ¨¡å—é€‰æ‹©ï¼ˆModule0ã€Module1ã€Module2ã€Module3ã€Module4ï¼‰
+ ** \param [in]  enModule            PCAÄ£¿éÑ¡Ôñ£¨Module0¡¢Module1¡¢Module2¡¢Module3¡¢Module4£©
  **  
  ** \retval u16Data
  *****************************************************************************/
@@ -585,11 +585,11 @@ uint16_t Pca_CapData16Get(en_pca_module_t enModule)
 
 /**
  *****************************************************************************
- ** \brief PCAé«˜8ä½æ¯”è¾ƒæ•°æ®è®¾ç½®
+ ** \brief PCA¸ß8Î»±È½ÏÊı¾İÉèÖÃ
  **
  **
- ** \param [in]  enModule            PCAæ¨¡å—é€‰æ‹©ï¼ˆModule0ã€Module1ã€Module2ã€Module3ã€Module4ï¼‰
- ** \param [in]  u8Data             PCAé«˜8ä½æ•è·æ•°æ®
+ ** \param [in]  enModule            PCAÄ£¿éÑ¡Ôñ£¨Module0¡¢Module1¡¢Module2¡¢Module3¡¢Module4£©
+ ** \param [in]  u8Data             PCA¸ß8Î»²¶»ñÊı¾İ
  **  
  ** \retval Ok or Error
  *****************************************************************************/
@@ -631,11 +631,11 @@ en_result_t Pca_CmpDataHSet(en_pca_module_t enModule, uint8_t u8Data)
 
 /**
  *****************************************************************************
- ** \brief PCAä½8ä½æ¯”è¾ƒæ•°æ®è®¾ç½®
+ ** \brief PCAµÍ8Î»±È½ÏÊı¾İÉèÖÃ
  **
  **
- ** \param [in]  enModule            PCAæ¨¡å—é€‰æ‹©ï¼ˆModule0ã€Module1ã€Module2ã€Module3ã€Module4ï¼‰
- ** \param [in]  u8Data              PCAä½8ä½æ•è·æ•°æ®
+ ** \param [in]  enModule            PCAÄ£¿éÑ¡Ôñ£¨Module0¡¢Module1¡¢Module2¡¢Module3¡¢Module4£©
+ ** \param [in]  u8Data              PCAµÍ8Î»²¶»ñÊı¾İ
  **  
  ** \retval Ok or Error
  *****************************************************************************/
@@ -677,11 +677,11 @@ en_result_t Pca_CmpDataLSet(en_pca_module_t enModule, uint8_t u8Data)
 
 /**
  *****************************************************************************
- ** \brief PCAè®¡æ•°å™¨åˆå€¼è®¾ç½®
+ ** \brief PCA¼ÆÊıÆ÷³õÖµÉèÖÃ
  **
  **
  ** 
- ** \param [in]  u16Data              PCAè®¡æ•°å™¨åˆå€¼
+ ** \param [in]  u16Data              PCA¼ÆÊıÆ÷³õÖµ
  **  
  ** \retval Ok or Error
  *****************************************************************************/
@@ -697,11 +697,11 @@ en_result_t Pca_Cnt16Set(uint16_t u16Data)
 
 /**
  *****************************************************************************
- ** \brief PCA16ä½è®¡æ•°å™¨å€¼è·å–
+ ** \brief PCA16Î»¼ÆÊıÆ÷Öµ»ñÈ¡
  **
  **
  **  
- ** \retval 16ä½è®¡æ•°å™¨å€¼
+ ** \retval 16Î»¼ÆÊıÆ÷Öµ
  *****************************************************************************/
 uint16_t Pca_Cnt16Get(void)
 {
@@ -714,11 +714,11 @@ uint16_t Pca_Cnt16Get(void)
 
 /**
  *****************************************************************************
- ** \brief PCAå‘¨æœŸé‡è½½å€¼è®¾ç½®
+ ** \brief PCAÖÜÆÚÖØÔØÖµÉèÖÃ
  **
  **
  ** 
- ** \param [in]  u16Data              PCAå‘¨æœŸé‡è½½å€¼
+ ** \param [in]  u16Data              PCAÖÜÆÚÖØÔØÖµ
  **  
  ** \retval Ok or Error
  *****************************************************************************/
@@ -734,11 +734,11 @@ en_result_t Pca_CARRSet(uint16_t u16Data)
 
 /**
  *****************************************************************************
- ** \brief PCAå‘¨æœŸé‡è½½å€¼è·å–
+ ** \brief PCAÖÜÆÚÖØÔØÖµ»ñÈ¡
  **
  **
  **  
- ** \retval PCAå‘¨æœŸé‡è½½å€¼
+ ** \retval PCAÖÜÆÚÖØÔØÖµ
  *****************************************************************************/
 uint16_t Pca_CARRGet(void)
 {
@@ -751,7 +751,7 @@ uint16_t Pca_CARRGet(void)
 
 /**
  *****************************************************************************
- ** \brief PCAå¢å¼ºPWM ä½¿èƒ½
+ ** \brief PCAÔöÇ¿PWM Ê¹ÄÜ
  **
  **
  ** 
@@ -770,7 +770,7 @@ en_result_t Pca_Enable16bitPWM(void)
 
 /**
  *****************************************************************************
- ** \brief PCAå¢å¼ºPWM ç¦æ­¢
+ ** \brief PCAÔöÇ¿PWM ½ûÖ¹
  **
  **
  ** 
@@ -789,10 +789,10 @@ en_result_t Pca_Disable16bitPWM(void)
 
 /**
  *****************************************************************************
- ** \brief PCAæ¯”è¾ƒé«˜é€Ÿè¾“å‡ºæ ‡å¿—è·å–
+ ** \brief PCA±È½Ï¸ßËÙÊä³ö±êÖ¾»ñÈ¡
  **
  **
- ** \param [in]  enModule            PCAæ¨¡å—é€‰æ‹©ï¼ˆModule0ã€Module1ã€Module2ã€Module3ã€Module4ï¼‰
+ ** \param [in]  enModule            PCAÄ£¿éÑ¡Ôñ£¨Module0¡¢Module1¡¢Module2¡¢Module3¡¢Module4£©
  **  
  ** \retval TRUE or FALSE
  *****************************************************************************/

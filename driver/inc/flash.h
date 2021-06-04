@@ -42,7 +42,7 @@
 /******************************************************************************/
 /** \file flash.h
  **
- ** FLASH 鏁版嵁缁撴瀯鍙夾PI澹版槑.
+ ** FLASH 数据结构及API声明.
  **
  ** - 2017-05-02 LuX V1.0
  **
@@ -75,28 +75,30 @@ extern "C"
  ******************************************************************************/
 /**
  ******************************************************************************
-  ** \brief Flash涓柇绫诲瀷閲嶅畾涔? *****************************************************************************/
+  ** \brief Flash中断类型重定义
+ *****************************************************************************/
 typedef enum en_flash_int_type
 {
-    FlashPCInt    = 1u,          ///<鎿﹀啓PC鍦板潃鎶ヨ涓柇
-    FlashSlockInt = 0u,          ///<鎿﹀啓淇濇姢鎶ヨ涓柇
+    FlashPCInt    = 1u,          ///<擦写PC地址报警中断
+    FlashSlockInt = 0u,          ///<擦写保护报警中断
 } en_flash_int_type_t;
 
 
 /**
  ******************************************************************************
-  ** \brief Flash璇荤瓑寰呭懆鏈熺被鍨嬮噸瀹氫箟
+  ** \brief Flash读等待周期类型重定义
  *****************************************************************************/
 typedef enum en_flash_waitcycle
 {
-    FlashWaitCycle0 = 0u,       ///< 璇荤瓑寰呭懆鏈熻缃负0锛堝綋HCLK灏忎簬绛変簬24MHz鏃讹級
-    FlashWaitCycle1 = 1u,       ///< 璇荤瓑寰呭懆鏈熻缃负1锛堝綋HCLK澶т簬24MHz鏃跺繀椤昏嚦灏戜负1锛?    
-    FlashWaitCycle2 = 2u,       ///< 璇荤瓑寰呭懆鏈熻缃负2锛堝綋HCK澶т簬48MHz鏃跺繀椤昏嚦灏戜负2锛?
+    FlashWaitCycle0 = 0u,       ///< 读等待周期设置为0（当HCLK小于等于24MHz时）
+    FlashWaitCycle1 = 1u,       ///< 读等待周期设置为1（当HCLK大于24MHz时必须至少为1）
+    FlashWaitCycle2 = 2u,       ///< 读等待周期设置为2（当HCK大于48MHz时必须至少为2）
 } en_flash_waitcycle_t;
 
 /**
  ******************************************************************************
-  ** \brief Flash鎿﹀啓淇濇姢鑼冨洿閲嶅畾涔? *****************************************************************************/
+  ** \brief Flash擦写保护范围重定义
+ *****************************************************************************/
 typedef enum en_flash_sector_lock
 {
     FlashSector0_3     = 0x00000001u,           ///<Sector0_3    
@@ -154,30 +156,32 @@ typedef enum en_flash_sector_lock
 /******************************************************************************
  * Global function prototypes (definition in C source)                        
  ******************************************************************************/
-///<Flash 鍒濆鍖栭厤缃?涓柇鍑芥暟銆佺紪绋嬫椂闂村弬鏁板強浼戠湢妯″紡閰嶇疆锛?en_result_t Flash_Init(func_ptr_t pfnFlashCb, uint8_t u8FreqCfg, boolean_t bDpstbEn);
+///<Flash 初始化配置(中断函数、编程时间参数及休眠模式配置）
+en_result_t Flash_Init(func_ptr_t pfnFlashCb, uint8_t u8FreqCfg, boolean_t bDpstbEn);
 
-///<Flash 椤?鍏ㄧ墖鎿﹂櫎
+///<Flash 页/全片擦除
 en_result_t Flash_SectorErase(uint32_t u32SectorAddr);
 en_result_t Flash_ChipErase(void);
 
-///<Flash 瀛楄妭/鍗婂瓧/瀛楀啓
+///<Flash 字节/半字/字写
 en_result_t Flash_WriteByte(uint32_t u32Addr, uint8_t u8Data);
 en_result_t Flash_WriteHalfWord(uint32_t u32Addr, uint16_t u16Data);
 en_result_t Flash_WriteWord(uint32_t u32Addr, uint32_t u32Data);
 
-///<Flash 缂栫▼淇濇姢鍔犻攣/瑙ｉ攣
+///<Flash 编程保护加锁/解锁
 en_result_t Flash_Lock(en_flash_sector_lock_t enFlashSector);
 en_result_t Flash_Unlock(en_flash_sector_lock_t enFlashSector);
 
-///<Flash 璇荤瓑寰呭懆鏈熻瀹?en_result_t Flash_WaitCycle(en_flash_waitcycle_t enWaitCycle);
+///<Flash 读等待周期设定
+en_result_t Flash_WaitCycle(en_flash_waitcycle_t enWaitCycle);
 
-///<涓柇鐩稿叧鍑芥暟
-///<涓柇浣胯兘/绂佹
+///<中断相关函数
+///<中断使能/禁止
 en_result_t Flash_EnableIrq(en_flash_int_type_t enFlashIntType);
 en_result_t Flash_DisableIrq(en_flash_int_type_t enFlashIntType);
-///<涓柇鏍囧織鑾峰彇
+///<中断标志获取
 boolean_t Flash_GetIntFlag(en_flash_int_type_t enFlashIntType);
-///<涓柇鏍囧織娓呴櫎
+///<中断标志清除
 en_result_t Flash_ClearIntFlag(en_flash_int_type_t enFlashIntType);
 
 //@} // FlashGroup

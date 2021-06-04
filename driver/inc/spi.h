@@ -70,132 +70,132 @@ extern "C"
  *****************************************************************************/
  /**
  ******************************************************************************
- ** \brief SPI åŠŸèƒ½é€šé“é€‰æ‹©è®¾ç½®
+ ** \brief SPI ¹¦ÄÜÍ¨µÀÑ¡ÔñÉèÖÃ
  ******************************************************************************/ 
 typedef enum en_spi_channel
 {
-    Spi0     = 0u,  ///< SPIé€šé“0
-    Spi1     = 1u,  ///< SPIé€šé“1
+    Spi0     = 0u,  ///< SPIÍ¨µÀ0
+    Spi1     = 1u,  ///< SPIÍ¨µÀ1
 }en_spi_channel_t;
 /**
  ******************************************************************************
- ** \brief SPI åŠŸèƒ½ä½¿èƒ½è®¾ç½®
+ ** \brief SPI ¹¦ÄÜÊ¹ÄÜÉèÖÃ
  ******************************************************************************/ 
 typedef enum en_spi_en
 {
-    SpiEnable     = 1u,  ///< SPIæ¨¡å—ä½¿èƒ½
-    SpiDisable    = 0u,  ///< SPIæ¨¡å—ç¦æ­¢
+    SpiEnable     = 1u,  ///< SPIÄ£¿éÊ¹ÄÜ
+    SpiDisable    = 0u,  ///< SPIÄ£¿é½ûÖ¹
 }en_spi_en_t;
 /**
  ******************************************************************************
- ** \brief SPI æ¨¡å¼é…ç½®
+ ** \brief SPI Ä£Ê½ÅäÖÃ
  ******************************************************************************/ 
 typedef enum en_spi_mode
 {
-    SpiMaster = 1u,  ///<ä¸»æœº
-    SpiSlave  = 0u,  ///<ä»æœº
+    SpiMaster = 1u,  ///<Ö÷»ú
+    SpiSlave  = 0u,  ///<´Ó»ú
 }en_spi_mode_t;
 /**
  ******************************************************************************
- ** \brief SPI æ—¶é’Ÿææ€§è®¾ç½®
+ ** \brief SPI Ê±ÖÓ¼«ĞÔÉèÖÃ
  ******************************************************************************/ 
 typedef enum en_spi_cpol
 {
-    Spicpollow   = 0u,  ///<ææ€§ä¸ºä½
-    Spicpolhigh  = 1u,  ///<ææ€§ä¸ºé«˜
+    Spicpollow   = 0u,  ///<¼«ĞÔÎªµÍ
+    Spicpolhigh  = 1u,  ///<¼«ĞÔÎª¸ß
 }en_spi_cpol_t;
 /**
  ******************************************************************************
- ** \brief SPI æ—¶é’Ÿç›¸ä½è®¾ç½®
+ ** \brief SPI Ê±ÖÓÏàÎ»ÉèÖÃ
  ******************************************************************************/ 
 typedef enum en_spi_cpha
 {
-    Spicphafirst   = 0u,  ///<ç¬¬ä¸€è¾¹æ²¿é‡‡æ ·
-    Spicphasecond  = 1u,  ///<ç¬¬äºŒè¾¹æ²¿é‡‡æ ·
+    Spicphafirst   = 0u,  ///<µÚÒ»±ßÑØ²ÉÑù
+    Spicphasecond  = 1u,  ///<µÚ¶ş±ßÑØ²ÉÑù
 }en_spi_cpha_t;
 /**
  ******************************************************************************
- ** \brief SPI æ—¶é’Ÿåˆ†é¢‘é…ç½®
+ ** \brief SPI Ê±ÖÓ·ÖÆµÅäÖÃ
  *****************************************************************************/
 typedef enum en_spi_clk_div
 {
-    SpiClkDiv2   = 0u,   ///<2åˆ†é¢‘       
-    SpiClkDiv4   = 1u,   ///<4åˆ†é¢‘            
-    SpiClkDiv8   = 2u,   ///<8åˆ†é¢‘            
-    SpiClkDiv16  = 3u,   ///<16åˆ†é¢‘            
-    SpiClkDiv32  = 4u,   ///<32åˆ†é¢‘            
-    SpiClkDiv64  = 5u,   ///<64åˆ†é¢‘            
-    SpiClkDiv128 = 6u,   ///<128åˆ†é¢‘            
+    SpiClkDiv2   = 0u,   ///<2·ÖÆµ       
+    SpiClkDiv4   = 1u,   ///<4·ÖÆµ            
+    SpiClkDiv8   = 2u,   ///<8·ÖÆµ            
+    SpiClkDiv16  = 3u,   ///<16·ÖÆµ            
+    SpiClkDiv32  = 4u,   ///<32·ÖÆµ            
+    SpiClkDiv64  = 5u,   ///<64·ÖÆµ            
+    SpiClkDiv128 = 6u,   ///<128·ÖÆµ            
 }en_spi_clk_div_t;
 
 /**
  ******************************************************************************
- ** \brief SPI ç‰‡é€‰è„šç”µå¹³é€‰æ‹©
+ ** \brief SPI Æ¬Ñ¡½ÅµçÆ½Ñ¡Ôñ
  *****************************************************************************/
 typedef enum en_spi_cspin
 {
-    SpiCsLow  = 0u,      ///<ç‰‡é€‰ä½ç”µå¹³         
-    SpiCsHigh = 1u,      ///<ç‰‡é€‰é«˜ç”µå¹³            
+    SpiCsLow  = 0u,      ///<Æ¬Ñ¡µÍµçÆ½         
+    SpiCsHigh = 1u,      ///<Æ¬Ñ¡¸ßµçÆ½            
 }en_spi_cspin_t;
 
 /**
  ******************************************************************************
- ** \brief SPI çŠ¶æ€
+ ** \brief SPI ×´Ì¬
  *****************************************************************************/
 typedef enum en_spi_status
 {
-    SpiIf              = 0x80,   ///<ä¼ è¾“ç»“æŸä¸­æ–­æ ‡å¿—       
-    SpiSserr           = 0x20,   ///<ä»æœºæ¨¡å¼é”™è¯¯æ ‡å¿—    
-    SpiMdf             = 0x10,   ///<ä¸»æœºæ¨¡å¼é”™è¯¯æ ‡å¿— 
-    SpiBusy            = 0x08,   ///<SPIæ€»çº¿å¿™æ ‡å¿—
-    SpiTxe             = 0x04,   ///<å‘é€ç¼“å†²å™¨å™¨ç©ºæ ‡å¿—
-    SpiRxne            = 0x02,   ///<æ¥å—ç¼“å†²å™¨éç©ºæ ‡å¿—
+    SpiIf              = 0x80,   ///<´«Êä½áÊøÖĞ¶Ï±êÖ¾       
+    SpiSserr           = 0x20,   ///<´Ó»úÄ£Ê½´íÎó±êÖ¾    
+    SpiMdf             = 0x10,   ///<Ö÷»úÄ£Ê½´íÎó±êÖ¾ 
+    SpiBusy            = 0x08,   ///<SPI×ÜÏßÃ¦±êÖ¾
+    SpiTxe             = 0x04,   ///<·¢ËÍ»º³åÆ÷Æ÷¿Õ±êÖ¾
+    SpiRxne            = 0x02,   ///<½ÓÊÜ»º³åÆ÷·Ç¿Õ±êÖ¾
 }en_spi_status_t;
 /**
  ******************************************************************************
- ** \brief SPI åŠŸèƒ½å¼€å¯å‡½æ•°
+ ** \brief SPI ¹¦ÄÜ¿ªÆôº¯Êı
  *****************************************************************************/
 typedef enum en_spi_func
 {
-    SpiRxNeIe          = 0x40,   ///<æ¥æ”¶ç¼“å†²å™¨éç©ºä¸­æ–­ä½¿èƒ½       
-    SpiTxEIe           = 0x20,   ///<å‘é€ç¼“å†²å™¨ç©ºä¸­æ–­ä½¿èƒ½    
-    SpiDmaTxEn         = 0x10,   ///<DMAç¡¬ä»¶è®¿é—®å‘é€ä½¿èƒ½
-    SpiDmaRxEn         = 0x08,   ///<DMAç¡¬ä»¶è®¿é—®æ¥æ”¶ä½¿èƒ½
+    SpiRxNeIe          = 0x40,   ///<½ÓÊÕ»º³åÆ÷·Ç¿ÕÖĞ¶ÏÊ¹ÄÜ       
+    SpiTxEIe           = 0x20,   ///<·¢ËÍ»º³åÆ÷¿ÕÖĞ¶ÏÊ¹ÄÜ    
+    SpiDmaTxEn         = 0x10,   ///<DMAÓ²¼ş·ÃÎÊ·¢ËÍÊ¹ÄÜ
+    SpiDmaRxEn         = 0x08,   ///<DMAÓ²¼ş·ÃÎÊ½ÓÊÕÊ¹ÄÜ
 }en_spi_func_t;
 /**
  ******************************************************************************
- ** \brief SPI æ€»ä½“é…ç½®ç»“æ„ä½“
+ ** \brief SPI ×ÜÌåÅäÖÃ½á¹¹Ìå
  *****************************************************************************/
 typedef struct stc_spi_config
 {
-    boolean_t           bMasterMode;     ///< ä¸»ä»æ¨¡å¼é€‰æ‹©
-    uint8_t             u8BaudRate;      ///< æ³¢ç‰¹ç‡è®¾ç½®
-    boolean_t           bCPOL;           ///< æ—¶é’Ÿææ€§é€‰æ‹©
-    boolean_t           bCPHA;           ///< æ—¶é’Ÿç›¸ä½é€‰æ‹©
-    boolean_t           bIrqEn;          ///< ä¸­æ–­ä½¿èƒ½
-    func_ptr_t          pfnSpi0IrqCb;    ///< ä¸­æ–­å›è°ƒå‡½æ•°
-    func_ptr_t          pfnSpi1IrqCb;    ///< ä¸­æ–­å›è°ƒå‡½æ•°
+    boolean_t           bMasterMode;     ///< Ö÷´ÓÄ£Ê½Ñ¡Ôñ
+    uint8_t             u8BaudRate;      ///< ²¨ÌØÂÊÉèÖÃ
+    boolean_t           bCPOL;           ///< Ê±ÖÓ¼«ĞÔÑ¡Ôñ
+    boolean_t           bCPHA;           ///< Ê±ÖÓÏàÎ»Ñ¡Ôñ
+    boolean_t           bIrqEn;          ///< ÖĞ¶ÏÊ¹ÄÜ
+    func_ptr_t          pfnSpi0IrqCb;    ///< ÖĞ¶Ï»Øµ÷º¯Êı
+    func_ptr_t          pfnSpi1IrqCb;    ///< ÖĞ¶Ï»Øµ÷º¯Êı
 }stc_spi_config_t;
 
-//SPI ä¸­æ–­
+//SPI ÖĞ¶Ï
 void Spi_IRQHandler(en_spi_channel_t enCh);
 
-//SPI è·å–çŠ¶æ€  
+//SPI »ñÈ¡×´Ì¬  
 uint8_t Spi_GetState(en_spi_channel_t enCh);
 boolean_t Spi_GetStatus(en_spi_channel_t enCh,en_spi_status_t enStatus);
-//SPI æ¸…é™¤ä¸­æ–­æ ‡è®°
+//SPI Çå³ıÖĞ¶Ï±ê¼Ç
 en_result_t Spi_ClearStatus(en_spi_channel_t enCh);
-//SPIåˆå§‹åŒ–å‡½æ•°
+//SPI³õÊ¼»¯º¯Êı
 en_result_t Spi_Init(en_spi_channel_t enCh,stc_spi_config_t* pstcSpiConfig);
-//SPI åŠŸèƒ½ä½¿èƒ½ç¦æ­¢å‡½æ•°
+//SPI ¹¦ÄÜÊ¹ÄÜ½ûÖ¹º¯Êı
 en_result_t Spi_FuncEn(en_spi_channel_t enCh,en_spi_func_t enFunc,boolean_t bFlag);
-//SPIå…³é—­å‡½æ•°
+//SPI¹Ø±Õº¯Êı
 en_result_t Spi_DeInit(en_spi_channel_t enCh);
-//SPI é…ç½®ä¸»å‘é€çš„ç”µå¹³
+//SPI ÅäÖÃÖ÷·¢ËÍµÄµçÆ½
 void Spi_SetCS(en_spi_channel_t enCh,boolean_t bFlag);
-//SPI å‘é€æ•°æ®
+//SPI ·¢ËÍÊı¾İ
 en_result_t Spi_SendData(en_spi_channel_t enCh,uint8_t u8Data);
-//SPI ä¸»æœºæ¥æ”¶æ•°æ®
+//SPI Ö÷»ú½ÓÊÕÊı¾İ
 uint8_t Spi_ReceiveData(en_spi_channel_t enCh,boolean_t bMasterOrSlave);
 
 //@} // Spi Group

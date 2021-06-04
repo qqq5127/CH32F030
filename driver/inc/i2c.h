@@ -71,48 +71,48 @@
  ******************************************************************************/
  /**
  ******************************************************************************
- ** \brief I2Cé€šé“é€‰æ‹©
+ ** \brief I2CÍ¨µÀÑ¡Ôñ
  *****************************************************************************/
  typedef enum en_i2c_channel
  {
-    I2C0 = 0,///<é€šé“0
-    I2C1 = 1,///<é€šé“1  
+    I2C0 = 0,///<Í¨µÀ0
+    I2C1 = 1,///<Í¨µÀ1  
  }en_i2c_channel_t;
  /**
  ******************************************************************************
- ** \brief I2CåŠŸèƒ½é…ç½®
+ ** \brief I2C¹¦ÄÜÅäÖÃ
  *****************************************************************************/
 typedef enum en_i2c_func
 {
-    I2cMode_En  = 0, ///<I2Cæ¨¡å—ä½¿èƒ½
-    I2cStart_En = 1, ///<å¼€å§‹ä¿¡å·
-    I2cStop_En  = 2, ///<ç»“æŸä¿¡å·
-    I2cAck_En   = 3, ///<åº”ç­”ä¿¡å·
-    I2cHlm_En   = 4, ///<é«˜é€Ÿä½¿èƒ½
-    I2cBaud_En  = 5, ///<æ³¢ç‰¹ç‡ä½¿èƒ½
+    I2cMode_En  = 0, ///<I2CÄ£¿éÊ¹ÄÜ
+    I2cStart_En = 1, ///<¿ªÊ¼ĞÅºÅ
+    I2cStop_En  = 2, ///<½áÊøĞÅºÅ
+    I2cAck_En   = 3, ///<Ó¦´ğĞÅºÅ
+    I2cHlm_En   = 4, ///<¸ßËÙÊ¹ÄÜ
+    I2cBaud_En  = 5, ///<²¨ÌØÂÊÊ¹ÄÜ
 }en_i2c_func_t; 
 /**
  ******************************************************************************
- ** \brief I2Cä»æœºåœ°å€é…ç½®
+ ** \brief I2C´Ó»úµØÖ·ÅäÖÃ
  *****************************************************************************/
 typedef struct stc_i2c_addr
 {
-    uint8_t Addr;       ///<ä»æœºæ¨¡å¼åœ°å€
-    uint8_t Gc;         ///<å¹¿æ’­åœ°å€ä½¿èƒ½
+    uint8_t Addr;       ///<´Ó»úÄ£Ê½µØÖ·
+    uint8_t Gc;         ///<¹ã²¥µØÖ·Ê¹ÄÜ
 
 }stc_i2c_addr_t;
 /**
  ******************************************************************************
- ** \brief I2Cåˆå§‹åŒ–é…ç½®ç»“æ„
+ ** \brief I2C³õÊ¼»¯ÅäÖÃ½á¹¹
  *****************************************************************************/
 typedef struct stc_i2c_config
 {
-    en_i2c_func_t   enFunc;      ///<åŠŸèƒ½ä½¿èƒ½
-    uint8_t         u8Tm;        ///<æ³¢ç‰¹ç‡è®¡æ•°å™¨é…ç½®
-    stc_i2c_addr_t  stcSlaveAddr;///<ä»æœºåœ°å€
-    func_ptr_t      pfnI2c0Cb;    ///<ä¸­æ–­æœåŠ¡å‡½æ•°æŒ‡é’ˆ
+    en_i2c_func_t   enFunc;      ///<¹¦ÄÜÊ¹ÄÜ
+    uint8_t         u8Tm;        ///<²¨ÌØÂÊ¼ÆÊıÆ÷ÅäÖÃ
+    stc_i2c_addr_t  stcSlaveAddr;///<´Ó»úµØÖ·
+    func_ptr_t      pfnI2c0Cb;    ///<ÖĞ¶Ï·şÎñº¯ÊıÖ¸Õë
     func_ptr_t      pfnI2c1Cb;
-    boolean_t       bTouchNvic;  ///<æ˜¯å¦ä½¿èƒ½NVIC
+    boolean_t       bTouchNvic;  ///<ÊÇ·ñÊ¹ÄÜNVIC
 }stc_i2c_config_t;
 
 /******************************************************************************
@@ -122,33 +122,33 @@ typedef struct stc_i2c_config
 /******************************************************************************
  * Global function prototypes (definition in C source)
  *****************************************************************************/
- //I2Cåˆå§‹åŒ–å‡½æ•°
+ //I2C³õÊ¼»¯º¯Êı
  en_result_t I2C_Init(en_i2c_channel_t enCh,stc_i2c_config_t *pstcI2CCfg);
-  //I2Cæ¨¡å—å…³é—­å‡½æ•°
+  //I2CÄ£¿é¹Ø±Õº¯Êı
  en_result_t I2C_DeInit(en_i2c_channel_t enCh);
- //è®¾ç½®æ³¢ç‰¹ç‡é…ç½®å¯„å­˜å™¨
+ //ÉèÖÃ²¨ÌØÂÊÅäÖÃ¼Ä´æÆ÷
  en_result_t I2C_SetBaud(en_i2c_channel_t enCh,uint8_t u8Tm);
- //I2CåŠŸèƒ½è®¾ç½®å‡½æ•°
+ //I2C¹¦ÄÜÉèÖÃº¯Êı
  en_result_t I2C_SetFunc(en_i2c_channel_t enCh,en_i2c_func_t enFunc);
-  //I2CåŠŸèƒ½æ¸…é™¤å‡½æ•°
+  //I2C¹¦ÄÜÇå³ıº¯Êı
  en_result_t I2C_ClearFunc(en_i2c_channel_t enCh,en_i2c_func_t enFunc);
- //è·å–ä¸­æ–­æ ‡è®°SI
+ //»ñÈ¡ÖĞ¶Ï±ê¼ÇSI
  boolean_t I2C_GetIrq(en_i2c_channel_t enCh);
-  //æ¸…é™¤ä¸­æ–­æ ‡è®°SI
+  //Çå³ıÖĞ¶Ï±ê¼ÇSI
  en_result_t I2C_ClearIrq(en_i2c_channel_t enCh);
- //è·å–çŠ¶æ€
+ //»ñÈ¡×´Ì¬
  uint8_t I2C_GetState(en_i2c_channel_t enCh);
- //å†™ä»æœºåœ°å€å‡½æ•°
+ //Ğ´´Ó»úµØÖ·º¯Êı
  en_result_t I2C_WriteSlaveAddr(en_i2c_channel_t enCh,stc_i2c_addr_t *pstcSlaveAddr);
 
-  //ä»å‘é€å‡½æ•°
+  //´Ó·¢ËÍº¯Êı
  en_result_t I2C_SlaveWriteData(en_i2c_channel_t enCh,uint8_t *pu8Data,uint32_t *u32Len);
- //å­—èŠ‚å†™å‡½æ•°
+ //×Ö½ÚĞ´º¯Êı
  en_result_t I2C_WriteByte(en_i2c_channel_t enCh,uint8_t u8Data);
 
-  //ä¸»æ¥æ”¶å‡½æ•°
+  //Ö÷½ÓÊÕº¯Êı
  en_result_t I2C_SlaveReadData(en_i2c_channel_t enCh,uint8_t *pu8Data,uint32_t *pu32Len);
-  //å­—èŠ‚è¯»å‡½æ•°
+  //×Ö½Ú¶Áº¯Êı
 uint8_t I2C_ReadByte(en_i2c_channel_t enCh);
  
 //@} // I2cGroup

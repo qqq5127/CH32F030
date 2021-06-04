@@ -86,14 +86,14 @@
 ******************************************************************************/
 /**
 * \brief   
-*          HDIV æœ‰ç¬¦å·é™¤æ³•
+*          HDIV ÓĞ·ûºÅ³ı·¨
 *
-* \param   [in]   Dividend      è¢«é™¤æ•°
-* \param   [in]   Dividsor      é™¤æ•°
-* \param   [out]  stcDivResult  å•†å’Œä½™æ•°
+* \param   [in]   Dividend      ±»³ıÊı
+* \param   [in]   Dividsor      ³ıÊı
+* \param   [out]  stcDivResult  ÉÌºÍÓàÊı
 *
-* \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
-* \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+* \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+* \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
 */
 en_result_t Hdiv_Unsigned(uint32_t Dividend,uint16_t Divisor,stc_div_unsigned_result_t* stcDivResult)
 {
@@ -123,14 +123,14 @@ en_result_t Hdiv_Unsigned(uint32_t Dividend,uint16_t Divisor,stc_div_unsigned_re
 
 /**
 * \brief   
-*          HDIV æ— ç¬¦å·é™¤æ³•
+*          HDIV ÎŞ·ûºÅ³ı·¨
 *
-* \param   [in]   Dividend      è¢«é™¤æ•°
-* \param   [in]   Dividsor      é™¤æ•°
-* \param   [out]  stcDivResult  å•†å’Œä½™æ•°
+* \param   [in]   Dividend      ±»³ıÊı
+* \param   [in]   Dividsor      ³ıÊı
+* \param   [out]  stcDivResult  ÉÌºÍÓàÊı
 *
-* \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
-* \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+* \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+* \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
 */
 en_result_t Hdiv_Signed(int32_t Dividend,int16_t Divisor,stc_div_signed_result_t* stcDivResult)
 {

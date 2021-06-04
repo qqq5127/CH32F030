@@ -1383,11 +1383,11 @@ en_result_t Dma_DisableChannelErrIrq(en_dma_channel_t enCh)
 
 /**
  * \brief   
- *          Dmaä¸­æ–­æœåŠ¡ç¨‹åº
+ *          DmaÖĞ¶Ï·şÎñ³ÌĞò
  *
- * \param   [in]  u8Param  æœªä½¿ç”¨
+ * \param   [in]  u8Param  Î´Ê¹ÓÃ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 
 void Dma_IRQHandler(uint8_t u8Param)
@@ -1428,12 +1428,12 @@ void Dma_IRQHandler(uint8_t u8Param)
 }
 /**
  * \brief   
- *          é…ç½®ADCä¸­æ–­å‡½æ•°å…¥å£
+ *          ÅäÖÃADCÖĞ¶Ïº¯ÊıÈë¿Ú
  *
- * \param   [in]  pstcAdcIrqCfg  ADCä¸­æ–­é…ç½®æŒ‡é’ˆ
- * \param   [in]  pstcAdcIrqCalbaks  ADCä¸­æ–­å›è°ƒå‡½æ•°æŒ‡é’ˆ
+ * \param   [in]  pstcAdcIrqCfg  ADCÖĞ¶ÏÅäÖÃÖ¸Õë
+ * \param   [in]  pstcAdcIrqCalbaks  ADCÖĞ¶Ï»Øµ÷º¯ÊıÖ¸Õë
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 en_result_t Dma_ConfigIrq(en_dma_channel_t enCh,stc_dma_irq_sel_t* stcDmaIrqCfg,stc_dma_irq_calbakfn_pt_t* pstcDmaIrqCalbaks)
 {
@@ -1482,14 +1482,14 @@ en_result_t Dma_ConfigIrq(en_dma_channel_t enCh,stc_dma_irq_sel_t* stcDmaIrqCfg,
 }
 /**
 ** \brief   
-**          è·å–DMAçŠ¶æ€
+**          »ñÈ¡DMA×´Ì¬
 **
 ** \param  [in] enCh                   The specified dma channel.
 **
 ** \retval en_dma_stat_t              
 ** 
 **
-** \retval  æ— 
+** \retval  ÎŞ
 **/
 en_dma_stat_t Dma_GetStat(en_dma_channel_t enCh)
 {
@@ -1509,14 +1509,14 @@ en_dma_stat_t Dma_GetStat(en_dma_channel_t enCh)
 }
 /**
 ** \brief   
-**          è·å–DMAçŠ¶æ€
+**          »ñÈ¡DMA×´Ì¬
 **
 ** \param  [in] enCh                   The specified dma channel.
 **
 ** \retval en_dma_stat_t              
 ** 
 **
-** \retval  æ— 
+** \retval  ÎŞ
 **/
 void Dma_ClrStat(en_dma_channel_t enCh)
 {

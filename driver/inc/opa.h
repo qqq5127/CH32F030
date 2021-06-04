@@ -76,7 +76,7 @@ extern "C"
  ******************************************************************************/
 /**
  *******************************************************************************
- ** \brief OPAé€šé“é€‰æ‹©
+ ** \brief OPAÍ¨µÀÑ¡Ôñ
  ** \note
  ******************************************************************************/
 typedef enum en_opa_channel
@@ -88,41 +88,41 @@ typedef enum en_opa_channel
 
 /**
  *******************************************************************************
- ** \brief OPAåå‘å¢ç›Šé€‰æ‹©
+ ** \brief OPA·´ÏòÔöÒæÑ¡Ôñ
  ** \note
  ******************************************************************************/
 typedef enum en_opa_invert_pagagain
 {
-    Gain15         = 0u,               ///< åå‘å¢ç›Š15å€
-    Gain07         = 1u,               ///< åå‘å¢ç›Š7å€
-    Gain13_3       = 2u,               ///< åå‘å¢ç›Š13/3å€
-    Gain03         = 3u,               ///< åå‘å¢ç›Š3å€
-    Gain05_3       = 4u,               ///< åå‘å¢ç›Š5/3å€
-    Gain01         = 5u,               ///< åå‘å¢ç›Š1å€
-    Gain01_3        = 6u,               ///< åå‘å¢ç›Š1/3å€
-    Gain11_5       = 7u,               ///< åå‘å¢ç›Š11/5å€   
+    Gain15         = 0u,               ///< ·´ÏòÔöÒæ15±¶
+    Gain07         = 1u,               ///< ·´ÏòÔöÒæ7±¶
+    Gain13_3       = 2u,               ///< ·´ÏòÔöÒæ13/3±¶
+    Gain03         = 3u,               ///< ·´ÏòÔöÒæ3±¶
+    Gain05_3       = 4u,               ///< ·´ÏòÔöÒæ5/3±¶
+    Gain01         = 5u,               ///< ·´ÏòÔöÒæ1±¶
+    Gain01_3        = 6u,               ///< ·´ÏòÔöÒæ1/3±¶
+    Gain11_5       = 7u,               ///< ·´ÏòÔöÒæ11/5±¶   
 }en_opa_invert_pagagain_t;
 
 /**
  *******************************************************************************
- ** \brief OPAæ­£å‘å¢ç›Šé€‰æ‹©
+ ** \brief OPAÕıÏòÔöÒæÑ¡Ôñ
  ** \note
  ******************************************************************************/
 typedef enum en_opa_noinvert_pagagain
 {
-    Gain16         = 0u,               ///< æ­£å‘å¢ç›Š16å€
-    Gain08         = 1u,               ///< æ­£å‘å¢ç›Š8å€
-    Gain16_3       = 2u,               ///< æ­£å‘å¢ç›Š16/3å€
-    Gain04         = 3u,               ///< æ­£å‘å¢ç›Š4å€
-    Gain08_3       = 4u,               ///< æ­£å‘å¢ç›Š8/3å€
-    Gain02         = 5u,               ///< æ­£å‘å¢ç›Š2å€
-    Gain04_3       = 6u,               ///< æ­£å‘å¢ç›Š4/3å€
-    Gain16_5       = 7u,               ///< æ­£å‘å¢ç›Š16/5å€   
+    Gain16         = 0u,               ///< ÕıÏòÔöÒæ16±¶
+    Gain08         = 1u,               ///< ÕıÏòÔöÒæ8±¶
+    Gain16_3       = 2u,               ///< ÕıÏòÔöÒæ16/3±¶
+    Gain04         = 3u,               ///< ÕıÏòÔöÒæ4±¶
+    Gain08_3       = 4u,               ///< ÕıÏòÔöÒæ8/3±¶
+    Gain02         = 5u,               ///< ÕıÏòÔöÒæ2±¶
+    Gain04_3       = 6u,               ///< ÕıÏòÔöÒæ4/3±¶
+    Gain16_5       = 7u,               ///< ÕıÏòÔöÒæ16/5±¶   
 }en_opa_noinvert_pagagain_t;
 
 /**
  *******************************************************************************
- ** \brief ä»ªè¡¨å¢ç›Šé…ç½®
+ ** \brief ÒÇ±íÔöÒæÅäÖÃ
  ******************************************************************************/
 typedef enum opa_metergain
 {
@@ -134,39 +134,39 @@ typedef enum opa_metergain
 
 /**
  *******************************************************************************
- ** \brief opa æ¨¡å¼é€‰æ‹©
+ ** \brief opa Ä£Ê½Ñ¡Ôñ
  ******************************************************************************/
 typedef enum opa_modesel
 {
-    OpaUintMode     = 0u,           ///< PGAå•ä½å¢ç›Š        
-    OpaForWardMode  = 1u,           ///< æ­£å‘è¾“å…¥PGA            
-    OpaOppositeMode = 2u,           ///< åå‘è¾“å…¥PGA              
-    OpaThreeOppMode = 3u,           ///< 3ä¸ªOPAçº§è”åå‘è¾“å…¥PGA
-    OpaThreeForMode = 4u,           ///< 3ä¸ªOPAçº§è”æ­£å‘è¾“å…¥PGA
-    OpaDiffMode     = 5u,           ///< ä¸¤è¿æ”¾å·®åˆ†è¾“å…¥PGA
-    OpaMeterMode    = 6u,           ///< ä»ªè¡¨æ”¾å¤§å™¨
-    OpaGpMode       = 7u,           ///< é€šç”¨è¿æ”¾       
+    OpaUintMode     = 0u,           ///< PGAµ¥Î»ÔöÒæ        
+    OpaForWardMode  = 1u,           ///< ÕıÏòÊäÈëPGA            
+    OpaOppositeMode = 2u,           ///< ·´ÏòÊäÈëPGA              
+    OpaThreeOppMode = 3u,           ///< 3¸öOPA¼¶Áª·´ÏòÊäÈëPGA
+    OpaThreeForMode = 4u,           ///< 3¸öOPA¼¶ÁªÕıÏòÊäÈëPGA
+    OpaDiffMode     = 5u,           ///< Á½ÔË·Å²î·ÖÊäÈëPGA
+    OpaMeterMode    = 6u,           ///< ÒÇ±í·Å´óÆ÷
+    OpaGpMode       = 7u,           ///< Í¨ÓÃÔË·Å       
 }en_opa_modesel_t;
 
 /**
  *******************************************************************************
- ** \brief opa æ ¡æ­£æ¨¡å¼
+ ** \brief opa Ğ£ÕıÄ£Ê½
  ******************************************************************************/
 typedef enum opa_calsel
 {
-    OpaSoftMode         = 0u,           ///< è½¯ä»¶æ§åˆ¶     
-    OpaSoftTriggerMode  = 1u,           ///< è½¯ä»¶è§¦å‘      
-    OpaADCTriggerMode   = 2u,           ///< ADCè§¦å‘                  
+    OpaSoftMode         = 0u,           ///< Èí¼ş¿ØÖÆ     
+    OpaSoftTriggerMode  = 1u,           ///< Èí¼ş´¥·¢      
+    OpaADCTriggerMode   = 2u,           ///< ADC´¥·¢                  
 }en_opa_calsel_t;
 
 /**
  ******************************************************************************
- ** \brief OPAå¢ç›Šé…ç½®
+ ** \brief OPAÔöÒæÅäÖÃ
  *****************************************************************************/
 typedef struct stc_opa_gain_config
 {
-    en_opa_invert_pagagain_t     enInGain;  ///< åå‘å¢ç›Š
-    en_opa_noinvert_pagagain_t   enNoInGain;  ///< æ­£å‘å¢ç›Š
+    en_opa_invert_pagagain_t     enInGain;  ///< ·´ÏòÔöÒæ
+    en_opa_noinvert_pagagain_t   enNoInGain;  ///< ÕıÏòÔöÒæ
 }stc_opa_gain_config_t;
 
 
@@ -177,17 +177,17 @@ typedef struct stc_opa_gain_config
 /******************************************************************************
  * Global function prototypes (definition in C source)
  ******************************************************************************/
-///< OPAåˆå§‹åŒ–
+///< OPA³õÊ¼»¯
 en_result_t OPA_Init(void);
-///< OPAå»åˆå§‹åŒ–
+///< OPAÈ¥³õÊ¼»¯
 en_result_t OPA_DeInit(void);
-///< OPAåŸºæœ¬åŠŸèƒ½è®¾ç½®
+///< OPA»ù±¾¹¦ÄÜÉèÖÃ
 en_result_t OPA_Operate(en_opa_channel_t enchannel ,en_opa_modesel_t enMode,stc_opa_gain_config_t *pstrGain);
-///< OPAä¸‰çº§è”è®¾ç½®
+///< OPAÈı¼¶ÁªÉèÖÃ
 en_result_t OPA_ThreeOperate(en_opa_modesel_t enMode,stc_opa_gain_config_t *pstrGain0,stc_opa_gain_config_t *pstrGain1,stc_opa_gain_config_t *pstrGain2);
-///< OPA ä»ªè¡¨æ¨¡å¼
+///< OPA ÒÇ±íÄ£Ê½
 en_result_t OPA_MeterOperate(en_opa_metergain_t enGainMode);
-///< OPAæ ¡æ­£æ¨¡å¼
+///< OPAĞ£ÕıÄ£Ê½
 en_result_t OPA_Cal(en_opa_calsel_t enCalMode);
 
 

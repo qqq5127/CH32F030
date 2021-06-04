@@ -113,13 +113,13 @@ static func_ptr_t pfnVc1IrqCb = NULL;
 
 /**
  * \brief   
- *          æŒ‡å®šVCé€šé“ä¸­æ–­ä½¿èƒ½/é™¤èƒ½
+ *          Ö¸¶¨VCÍ¨µÀÖĞ¶ÏÊ¹ÄÜ/³ıÄÜ
  *
- * \param   [in]  enChannel  VCé€šé“å·
- * \param   [in]  bFlag      ä½¿èƒ½/é™¤èƒ½æ ‡å¿—
+ * \param   [in]  enChannel  VCÍ¨µÀºÅ
+ * \param   [in]  bFlag      Ê¹ÄÜ/³ıÄÜ±êÖ¾
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  */
 static en_result_t VcEnableIrq(en_vc_channel_t enChannel, boolean_t bFlag)
 {
@@ -159,11 +159,11 @@ static en_result_t VcEnableIrq(en_vc_channel_t enChannel, boolean_t bFlag)
 
 /**
  * \brief   
- *          ä½¿èƒ½NVICä¸­VCä¸­æ–­
+ *          Ê¹ÄÜNVICÖĞVCÖĞ¶Ï
  *
- * \param   [in]  enIrqn  ä¸­æ–­å·
+ * \param   [in]  enIrqn  ÖĞ¶ÏºÅ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 static void VcEnableNvic(IRQn_Type enIrqn)
 {
@@ -174,11 +174,11 @@ static void VcEnableNvic(IRQn_Type enIrqn)
 
 /**
  * \brief   
- *          é™¤èƒ½NVICä¸­VCä¸­æ–­
+ *          ³ıÄÜNVICÖĞVCÖĞ¶Ï
  *
- * \param   [in]  enIrqn  ä¸­æ–­å·
+ * \param   [in]  enIrqn  ÖĞ¶ÏºÅ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 static void VcDisableNvic(IRQn_Type enIrqn)
 {
@@ -189,11 +189,11 @@ static void VcDisableNvic(IRQn_Type enIrqn)
 
 /**
  * \brief   
- *          VCä¸­æ–­æœåŠ¡ç¨‹åº
+ *          VCÖĞ¶Ï·şÎñ³ÌĞò
  *
- * \param   [in]  u8Param  VCé€šé“å·
+ * \param   [in]  u8Param  VCÍ¨µÀºÅ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 void Vc_IRQHandler(uint8_t u8Param)
 {
@@ -227,13 +227,13 @@ void Vc_IRQHandler(uint8_t u8Param)
 
 /**
  * \brief   
- *          é…ç½®VCä¸­æ–­è§¦å‘æ–¹å¼
+ *          ÅäÖÃVCÖĞ¶Ï´¥·¢·½Ê½
  *
- * \param   [in]  enChannel  VCé€šé“å·
- * \param   [in]  enSel      ä¸­æ–­è§¦å‘æ–¹å¼é€‰æ‹©
+ * \param   [in]  enChannel  VCÍ¨µÀºÅ
+ * \param   [in]  enSel      ÖĞ¶Ï´¥·¢·½Ê½Ñ¡Ôñ
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  */
 en_result_t Vc_ConfigIrq(en_vc_channel_t enChannel, en_vc_irq_sel_t enSel)
 {
@@ -275,13 +275,13 @@ en_result_t Vc_ConfigIrq(en_vc_channel_t enChannel, en_vc_irq_sel_t enSel)
 
 /**
  * \brief   
- *          è·å–VCçŠ¶æ€
+ *          »ñÈ¡VC×´Ì¬
  *
- * \param   [in]  enChannel  VCé€šé“å·
- * \param   [in]  enStat     VCçŠ¶æ€ç±»å‹
+ * \param   [in]  enChannel  VCÍ¨µÀºÅ
+ * \param   [in]  enStat     VC×´Ì¬ÀàĞÍ
  *
- * \retval  boolean_t  TRUE:   çŠ¶æ€ä¸ºé«˜
- * \retval  boolean_t  FALSE:  çŠ¶æ€ä¸ºä½
+ * \retval  boolean_t  TRUE:   ×´Ì¬Îª¸ß
+ * \retval  boolean_t  FALSE:  ×´Ì¬ÎªµÍ
  */
 boolean_t Vc_GetStat(en_vc_channel_t enChannel, en_vc_stat_t enStat)
 {
@@ -324,11 +324,11 @@ boolean_t Vc_GetStat(en_vc_channel_t enChannel, en_vc_stat_t enStat)
 
 /**
  * \brief   
- *          æ¸…é™¤VCä¸­æ–­æ ‡å¿—
+ *          Çå³ıVCÖĞ¶Ï±êÖ¾
  *
- * \param   [in]  enChannel  VCé€šé“å·
+ * \param   [in]  enChannel  VCÍ¨µÀºÅ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 void Vc_ClearIrq(en_vc_channel_t enChannel)
 {
@@ -346,12 +346,12 @@ void Vc_ClearIrq(en_vc_channel_t enChannel)
 
 /**
  * \brief   
- *          æŒ‡å®šVCé€šé“ä¸­æ–­ä½¿èƒ½
+ *          Ö¸¶¨VCÍ¨µÀÖĞ¶ÏÊ¹ÄÜ
  *
- * \param   [in]  enChannel  VCé€šé“å·
+ * \param   [in]  enChannel  VCÍ¨µÀºÅ
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t    ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t    ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  */
 en_result_t Vc_EnableIrq(en_vc_channel_t enChannel)
 {
@@ -360,12 +360,12 @@ en_result_t Vc_EnableIrq(en_vc_channel_t enChannel)
 
 /**
  * \brief   
- *          æŒ‡å®šVCé€šé“ä¸­æ–­é™¤èƒ½
+ *          Ö¸¶¨VCÍ¨µÀÖĞ¶Ï³ıÄÜ
  *
- * \param   [in]  enChannel  VCé€šé“å·
+ * \param   [in]  enChannel  VCÍ¨µÀºÅ
  *
- * \retval  en_result_t    Ok:  è®¾ç½®æˆåŠŸ
- *                         ErrorInvalidParameter:  æ— æ•ˆå‚æ•°
+ * \retval  en_result_t    Ok:  ÉèÖÃ³É¹¦
+ *                         ErrorInvalidParameter:  ÎŞĞ§²ÎÊı
  */
 en_result_t Vc_DisableIrq(en_vc_channel_t enChannel)
 {
@@ -374,12 +374,12 @@ en_result_t Vc_DisableIrq(en_vc_channel_t enChannel)
 
 /**
  * \brief   
- *          VCæ¨¡å—åˆå§‹åŒ–
+ *          VCÄ£¿é³õÊ¼»¯
  *
- * \param   [in]  pstcGeneralConfig  VCæ¨¡å—é…ç½®æŒ‡é’ˆ
+ * \param   [in]  pstcGeneralConfig  VCÄ£¿éÅäÖÃÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  */
 en_result_t Vc_DACInit(stc_vc_dac_config_t *pstcDacConfig)
 {
@@ -405,11 +405,11 @@ en_result_t Vc_DACInit(stc_vc_dac_config_t *pstcDacConfig)
 
 /**
  * \brief   
- *          VCæ¨¡å—deinit
+ *          VCÄ£¿édeinit
  *
- * \param   æ— 
+ * \param   ÎŞ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 void Vc_DACDeInit(void)
 {
@@ -420,13 +420,13 @@ void Vc_DACDeInit(void)
 
 /**
  * \brief   
- *          VCé€šé“åˆå§‹åŒ–
+ *          VCÍ¨µÀ³õÊ¼»¯
  *
- * \param   [in]  enChannel  VCé€šé“å·
- * \param   [in]  pstcChannelConfig  VCé€šé“é…ç½®æŒ‡é’ˆ
+ * \param   [in]  enChannel  VCÍ¨µÀºÅ
+ * \param   [in]  pstcChannelConfig  VCÍ¨µÀÅäÖÃÖ¸Õë
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  */
 en_result_t Vc_ChannelInit(en_vc_channel_t enChannel,
                             stc_vc_channel_config_t *pstcChannelConfig)
@@ -508,12 +508,12 @@ en_result_t Vc_ChannelInit(en_vc_channel_t enChannel,
 
 /**
  * \brief   
- *          VCé€šé“Deinit
+ *          VCÍ¨µÀDeinit
  *
- * \param   [in]  enChannel  VCé€šé“å·
+ * \param   [in]  enChannel  VCÍ¨µÀºÅ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  */
 en_result_t Vc_ChannelDeInit(en_vc_channel_t enChannel)
 {
@@ -559,12 +559,12 @@ en_result_t Vc_ChannelDeInit(en_vc_channel_t enChannel)
 
 /**
  * \brief   
- *          VCé€šé“ä½¿èƒ½
+ *          VCÍ¨µÀÊ¹ÄÜ
  *
- * \param   [in]  enChannel  VCé€šé“å·
+ * \param   [in]  enChannel  VCÍ¨µÀºÅ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  */
 en_result_t Vc_EnableChannel(en_vc_channel_t enChannel)
 {
@@ -586,12 +586,12 @@ en_result_t Vc_EnableChannel(en_vc_channel_t enChannel)
 
 /**
  * \brief   
- *          VCé€šé“é™¤èƒ½
+ *          VCÍ¨µÀ³ıÄÜ
  *
- * \param   [in]  enChannel  VCé€šé“å·
+ * \param   [in]  enChannel  VCÍ¨µÀºÅ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  */
 en_result_t Vc_DisableChannel(en_vc_channel_t enChannel)
 {
@@ -613,12 +613,12 @@ en_result_t Vc_DisableChannel(en_vc_channel_t enChannel)
 
 /**
  * \brief   
- *          VCè¾“å‡ºæ»¤æ³¢ä½¿èƒ½
+ *          VCÊä³öÂË²¨Ê¹ÄÜ
  *
- * \param   [in]  enChannel  VCé€šé“å·
+ * \param   [in]  enChannel  VCÍ¨µÀºÅ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  */
 en_result_t Vc_EnableFilter(en_vc_channel_t enChannel)
 {
@@ -640,12 +640,12 @@ en_result_t Vc_EnableFilter(en_vc_channel_t enChannel)
 
 /**
  * \brief   
- *          VCè¾“å‡ºæ»¤æ³¢é™¤èƒ½
+ *          VCÊä³öÂË²¨³ıÄÜ
  *
- * \param   [in]  enChannel  VCé€šé“å·
+ * \param   [in]  enChannel  VCÍ¨µÀºÅ
  *
- * \retval  en_result_t  Ok:  é…ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter: æ— æ•ˆå‚æ•°
+ * \retval  en_result_t  Ok:  ÅäÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter: ÎŞĞ§²ÎÊı
  */
 en_result_t Vc_DisableFilter(en_vc_channel_t enChannel)
 {

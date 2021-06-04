@@ -110,13 +110,13 @@
 
 /**
  * \brief   
- *          OPA åˆå§‹åŒ–
+ *          OPA ³õÊ¼»¯
  *
- * \param   æ— 
- * \param   æ— 
+ * \param   ÎŞ
+ * \param   ÎŞ
  *
- * \retval  æ— 
- * \retval  æ— 
+ * \retval  ÎŞ
+ * \retval  ÎŞ
  */
 en_result_t OPA_Init(void)
 {
@@ -138,13 +138,13 @@ en_result_t OPA_Init(void)
 
 /**
  * \brief   
- *          OPA å»åˆå§‹åŒ–
+ *          OPA È¥³õÊ¼»¯
  *
- * \param   æ— 
- * \param   æ— 
+ * \param   ÎŞ
+ * \param   ÎŞ
  *
- * \retval  æ— 
- * \retval  æ— 
+ * \retval  ÎŞ
+ * \retval  ÎŞ
  */
 en_result_t OPA_DeInit(void)
 {
@@ -160,13 +160,13 @@ en_result_t OPA_DeInit(void)
 
 /**
  * \brief   
- *          OPA åŸºæœ¬åŠŸèƒ½è®¾ç½®
+ *          OPA »ù±¾¹¦ÄÜÉèÖÃ
  *
- * \param   [in]  en_opa_channel_t  ä½¿ç”¨é‚£ä¸ªé€šé“çš„OPA
- * \param   [in]  en_opa_modesel_t  OPAæ¨¡å¼é€‰æ‹©
-  * \param  [in]  stc_opa_gain_config_t  OPAå¢ç›Šé€‰æ‹©
+ * \param   [in]  en_opa_channel_t  Ê¹ÓÃÄÇ¸öÍ¨µÀµÄOPA
+ * \param   [in]  en_opa_modesel_t  OPAÄ£Ê½Ñ¡Ôñ
+  * \param  [in]  stc_opa_gain_config_t  OPAÔöÒæÑ¡Ôñ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 en_result_t OPA_Operate(en_opa_channel_t enchannel ,en_opa_modesel_t enMode,stc_opa_gain_config_t *pstrGain)
 {
@@ -267,11 +267,11 @@ en_result_t OPA_Operate(en_opa_channel_t enchannel ,en_opa_modesel_t enMode,stc_
 
 /**
  * \brief   
- *          OPA åŸºæœ¬åŠŸèƒ½è®¾ç½®  (çº§è”æ­£å‘å’Œåå‘æ¨¡å¼ä»¥åŠä»ªè¡¨æ¨¡å¼)
- * \param   [in]  en_opa_modesel_t  OPAæ¨¡å¼é€‰æ‹©
-  * \param  [in]  stc_opa_gain_config_t  OPAå¢ç›Šé€‰æ‹©
+ *          OPA »ù±¾¹¦ÄÜÉèÖÃ  (¼¶ÁªÕıÏòºÍ·´ÏòÄ£Ê½ÒÔ¼°ÒÇ±íÄ£Ê½)
+ * \param   [in]  en_opa_modesel_t  OPAÄ£Ê½Ñ¡Ôñ
+  * \param  [in]  stc_opa_gain_config_t  OPAÔöÒæÑ¡Ôñ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 en_result_t OPA_ThreeOperate(en_opa_modesel_t enMode,stc_opa_gain_config_t *pstrGain0,stc_opa_gain_config_t *pstrGain1,stc_opa_gain_config_t *pstrGain2)
 {
@@ -346,10 +346,10 @@ en_result_t OPA_ThreeOperate(en_opa_modesel_t enMode,stc_opa_gain_config_t *pstr
 
 /**
  * \brief   
- *          OPA ä»ªè¡¨æ¨¡å¼
-  * \param  [in]  en_opa_metergain_t  OPAå¢ç›Šé€‰æ‹©
+ *          OPA ÒÇ±íÄ£Ê½
+  * \param  [in]  en_opa_metergain_t  OPAÔöÒæÑ¡Ôñ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 en_result_t OPA_MeterOperate(en_opa_metergain_t enGainMode)
 {
@@ -402,10 +402,10 @@ en_result_t OPA_MeterOperate(en_opa_metergain_t enGainMode)
 }
 /**
  * \brief   
- *          OPA æ ¡æ­£æ¨¡å¼
-  * \param  [in]  en_opa_calsel_t  OPAæ ¡æ­£æ¨¡å¼é€‰æ‹©
+ *          OPA Ğ£ÕıÄ£Ê½
+  * \param  [in]  en_opa_calsel_t  OPAĞ£ÕıÄ£Ê½Ñ¡Ôñ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 en_result_t OPA_Cal(en_opa_calsel_t enCalMode)
 {

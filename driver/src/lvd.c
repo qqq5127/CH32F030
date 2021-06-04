@@ -99,11 +99,11 @@ static func_ptr_t    pfnLvdIrqCbk = NULL;
 
  /**
  * \brief   
- *          LVDä¸­æ–­æœåŠ¡ç¨‹åº
+ *          LVDÖĞ¶Ï·şÎñ³ÌĞò
  *
- * \param   [in]  u8Param  æœªä½¿ç”¨
+ * \param   [in]  u8Param  Î´Ê¹ÓÃ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 void Lvd_IRQHandler(uint8_t u8Param)
 {
@@ -116,11 +116,11 @@ void Lvd_IRQHandler(uint8_t u8Param)
 
 /**
  * \brief   
- *          ä½¿èƒ½NVICä¸­LVDä¸­æ–­
+ *          Ê¹ÄÜNVICÖĞLVDÖĞ¶Ï
  *
- * \param   æ— 
+ * \param   ÎŞ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 static void LvdEnableNvic(void)
 {
@@ -131,11 +131,11 @@ static void LvdEnableNvic(void)
 
 /**
  * \brief   
- *          é™¤èƒ½NVICä¸­LVDä¸­æ–­
+ *          ³ıÄÜNVICÖĞLVDÖĞ¶Ï
  *
- * \param   æ— 
+ * \param   ÎŞ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 static void LvdDisableNvic(void)
 {
@@ -146,12 +146,12 @@ static void LvdDisableNvic(void)
 
 /**
  * \brief   
- *          ä½¿èƒ½LVDä¸­æ–­
+ *          Ê¹ÄÜLVDÖĞ¶Ï
  *
- * \param   [in]  enType  LVDä¸­æ–­ç±»å‹
+ * \param   [in]  enType  LVDÖĞ¶ÏÀàĞÍ
  *
- * \retval  en_result_t  Ok:  è®¾ç½®æˆåŠŸ
- * \retval  en_result_t  ErrorInvalidParameter:  æ— æ•ˆç±»å‹
+ * \retval  en_result_t  Ok:  ÉèÖÃ³É¹¦
+ * \retval  en_result_t  ErrorInvalidParameter:  ÎŞĞ§ÀàĞÍ
  */
 en_result_t Lvd_EnableIrq(en_lvd_irq_type_t enType)
 {
@@ -191,11 +191,11 @@ en_result_t Lvd_EnableIrq(en_lvd_irq_type_t enType)
 
 /**
  * \brief   
- *          é™¤èƒ½LVDä¸­æ–­
+ *          ³ıÄÜLVDÖĞ¶Ï
  *
- * \param   æ— 
+ * \param   ÎŞ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 void Lvd_DisableIrq(void)
 {
@@ -208,11 +208,11 @@ void Lvd_DisableIrq(void)
 
 /**
  * \brief   
- *          LVDåˆå§‹åŒ–
+ *          LVD³õÊ¼»¯
  *
- * \param   [in]  pstcConfig  LVDé…ç½®æŒ‡é’ˆ
+ * \param   [in]  pstcConfig  LVDÅäÖÃÖ¸Õë
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 void Lvd_Init(stc_lvd_config_t *pstcConfig)
 {
@@ -240,9 +240,9 @@ void Lvd_Init(stc_lvd_config_t *pstcConfig)
  * \brief   
  *          LVD deinit
  *
- * \param   æ— 
+ * \param   ÎŞ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 void Lvd_DeInit(void)
 {
@@ -255,11 +255,11 @@ void Lvd_DeInit(void)
 
 /**
  * \brief   
- *          ä½¿èƒ½LVD
+ *          Ê¹ÄÜLVD
  *
- * \param   æ— 
+ * \param   ÎŞ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  *
  */
 void Lvd_Enable(void)
@@ -269,11 +269,11 @@ void Lvd_Enable(void)
 
 /**
  * \brief   
- *          é™¤èƒ½LVD
+ *          ³ıÄÜLVD
  *
- * \param   æ— 
+ * \param   ÎŞ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 void Lvd_Disable(void)
 {
@@ -282,11 +282,11 @@ void Lvd_Disable(void)
 
 /**
  * \brief   
- *          è·å–LVDä¸­æ–­æ ‡å¿—
+ *          »ñÈ¡LVDÖĞ¶Ï±êÖ¾
  *
- * \param   æ— 
+ * \param   ÎŞ
  *
- * \retval  boolean_t  ä¸­æ–­æ ‡å¿—
+ * \retval  boolean_t  ÖĞ¶Ï±êÖ¾
  */
 boolean_t Lvd_GetIrqStat(void)
 {
@@ -296,11 +296,11 @@ boolean_t Lvd_GetIrqStat(void)
 
 /**
  * \brief   
- *          æ¸…é™¤LVDä¸­æ–­æ ‡å¿—
+ *          Çå³ıLVDÖĞ¶Ï±êÖ¾
  *
- * \param   æ— 
+ * \param   ÎŞ
  *
- * \retval  æ— 
+ * \retval  ÎŞ
  */
 void Lvd_ClearIrq(void)
 {
@@ -309,11 +309,11 @@ void Lvd_ClearIrq(void)
 
 /**
  * \brief   
- *          è·å–Filterç»“æœ
+ *          »ñÈ¡Filter½á¹û
  *
- * \param   æ— 
+ * \param   ÎŞ
  *
- * \retval  boolean_t Fliterç»“æœ
+ * \retval  boolean_t Fliter½á¹û
  */
 boolean_t Lvd_GetFilterResult(void)
 {

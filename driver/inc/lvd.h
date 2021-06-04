@@ -75,7 +75,7 @@ extern "C"
 
 /**
  ******************************************************************************
- ** \brief LVDè¾“å…¥ç”µå‹æº
+ ** \brief LVDÊäÈëµçÑ¹Ô´
  **
  ** \note
  ******************************************************************************/
@@ -89,7 +89,7 @@ typedef enum en_lvd_input
 
 /**
  ******************************************************************************
- ** \brief LVDç›‘æµ‹ç”µå‹é€‰æ‹©
+ ** \brief LVD¼à²âµçÑ¹Ñ¡Ôñ
  **
  ** \note
  ******************************************************************************/
@@ -103,7 +103,7 @@ typedef enum en_lvd_threshold
     LvdTH2p3V = 5u,                  ///< 2.3V
     LvdTH2p4V = 6u,                  ///< 2.4V
     LvdTH2p5V = 7u,                  ///< 2.5V
-    LvdTH2p6V = 8u,                  ///< 2.6V é»˜è®¤ç”µå‹
+    LvdTH2p6V = 8u,                  ///< 2.6V Ä¬ÈÏµçÑ¹
     LvdTH2p7V = 9u,                  ///< 2.7V
     LvdTH2p8V = 10u,                  ///< 2.8V
     LvdTH2p9V = 11u,                  ///< 2.9V
@@ -115,7 +115,7 @@ typedef enum en_lvd_threshold
 
 /**
  ******************************************************************************
- ** \brief LVDè¾“å‡ºæ»¤æ³¢æ—¶é—´
+ ** \brief LVDÊä³öÂË²¨Ê±¼ä
  **
  ** \note
  ******************************************************************************/
@@ -133,31 +133,31 @@ typedef enum en_lvd_filter_time
 
 /**
  ******************************************************************************
- ** \brief LVDä¸­æ–­è§¦å‘æ–¹å¼
+ ** \brief LVDÖĞ¶Ï´¥·¢·½Ê½
  **
  ** \note
  ******************************************************************************/
 typedef enum en_lvd_irq_type
 {
-    LvdIrqHigh  = 0u,                 ///< é«˜ç”µå¹³è§¦å‘
-    LvdIrqRise  = 1u,                 ///< ä¸Šå‡æ²¿è§¦å‘
-    LvdIrqFall  = 2u,                 ///< ä¸‹é™æ²¿è§¦å‘
+    LvdIrqHigh  = 0u,                 ///< ¸ßµçÆ½´¥·¢
+    LvdIrqRise  = 1u,                 ///< ÉÏÉıÑØ´¥·¢
+    LvdIrqFall  = 2u,                 ///< ÏÂ½µÑØ´¥·¢
 }en_lvd_irq_type_t;
 
 /**
  ******************************************************************************
- ** \brief LVDé…ç½®
+ ** \brief LVDÅäÖÃ
  ** \note
  ******************************************************************************/
 typedef struct stc_lvd_config
 {
-    boolean_t               bLvdReset;      ///< TRUE-é‡å¯,FALSE-ä¸­æ–­
-    en_lvd_input_t          enInput;        ///< LVDè¾“å…¥ç”µå‹æº
-    en_lvd_threshold_t      enThreshold;    ///< LVDç›‘æµ‹ç”µå‹
-    boolean_t               bFilter;        ///< æ˜¯å¦ä½¿ç”¨è¾“å‡ºæ»¤æ³¢
-    en_lvd_filter_time_t    enFilterTime;   ///< è¾“å‡ºæ»¤æ³¢æ—¶é—´
-    en_lvd_irq_type_t       enIrqType;      ///< ä¸­æ–­è§¦å‘æ–¹å¼
-    func_ptr_t              pfnIrqCbk;      ///< ä¸­æ–­å›è°ƒå‡½æ•°
+    boolean_t               bLvdReset;      ///< TRUE-ÖØÆô,FALSE-ÖĞ¶Ï
+    en_lvd_input_t          enInput;        ///< LVDÊäÈëµçÑ¹Ô´
+    en_lvd_threshold_t      enThreshold;    ///< LVD¼à²âµçÑ¹
+    boolean_t               bFilter;        ///< ÊÇ·ñÊ¹ÓÃÊä³öÂË²¨
+    en_lvd_filter_time_t    enFilterTime;   ///< Êä³öÂË²¨Ê±¼ä
+    en_lvd_irq_type_t       enIrqType;      ///< ÖĞ¶Ï´¥·¢·½Ê½
+    func_ptr_t              pfnIrqCbk;      ///< ÖĞ¶Ï»Øµ÷º¯Êı
 }stc_lvd_config_t;
 
 

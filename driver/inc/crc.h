@@ -42,7 +42,7 @@
 /******************************************************************************/
 /** \file crc.h
  **
- ** CRC æ•°æ®ç»“æ„åŠAPIå£°æ˜.
+ ** CRC Êı¾İ½á¹¹¼°APIÉùÃ÷.
  **
  **   - 2016-05-04  LuX V1.0.
  **
@@ -89,21 +89,21 @@ extern "C"
 /******************************************************************************
  * Global function prototypes (definition in C source)                        
  ******************************************************************************/
-//CRC16 ç¼–ç å€¼è·å–
+//CRC16 ±àÂëÖµ»ñÈ¡
 uint16_t CRC16_Get8(uint8_t* pu8Data, uint32_t u32Len);
 uint16_t CRC16_Get16(uint16_t* pu16Data, uint32_t u32Len);
 uint16_t CRC16_Get32(uint32_t* pu32Data, uint32_t u32Len);
-//CRC16 æ ¡éªŒ
+//CRC16 Ğ£Ñé
 en_result_t CRC16_Check8(uint8_t* pu8Data, uint32_t u32Len, uint16_t u16CRC);
 en_result_t CRC16_Check16(uint16_t* pu16Data, uint32_t u32Len, uint16_t u16CRC);
 en_result_t CRC16_Check32(uint32_t* pu32Data, uint32_t u32Len, uint16_t u16CRC);
 
 
-//CRC32 ç¼–ç å€¼è·å–
+//CRC32 ±àÂëÖµ»ñÈ¡
 uint32_t CRC32_Get8(uint8_t* pu8Data, uint32_t u32Len);
 uint32_t CRC32_Get16(uint16_t* pu16Data, uint32_t u32Len);
 uint32_t CRC32_Get32(uint32_t* pu32Data, uint32_t u32Len);
-//CRC32 æ ¡éªŒ
+//CRC32 Ğ£Ñé
 en_result_t CRC32_Check8(uint8_t* pu8Data, uint32_t u32Len, uint32_t u32CRC);
 en_result_t CRC32_Check16(uint16_t* pu16Data, uint32_t u32Len, uint32_t u32CRC);
 en_result_t CRC32_Check32(uint32_t* pu32Data, uint32_t u32Len, uint32_t u32CRC);

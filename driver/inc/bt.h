@@ -42,7 +42,7 @@
 /******************************************************************************/
 /** \file bt.h
  **
- ** åŸºæœ¬å®šæ—¶å™¨æ•°æ®ç»“æ„åŠAPIå£°æ˜
+ ** »ù±¾¶¨Ê±Æ÷Êı¾İ½á¹¹¼°APIÉùÃ÷
  ** @link BT Group Some description @endlink
  **
  ** History:
@@ -80,7 +80,7 @@ extern "C"
 
 /**
  ******************************************************************************
- ** \brief å®šæ—¶å™¨é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰
+ ** \brief ¶¨Ê±Æ÷Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå
  *****************************************************************************/
 typedef enum en_bt_unit
 {
@@ -91,29 +91,29 @@ typedef enum en_bt_unit
 
 /**
  ******************************************************************************
- ** \brief å·¥ä½œæ¨¡å¼é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (MODE)(æ¨¡å¼0/1/23)
+ ** \brief ¹¤×÷Ä£Ê½Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (MODE)(Ä£Ê½0/1/23)
  *****************************************************************************/
 typedef enum en_bt_work_mode
 {
-    BtWorkMode0  = 0u,         ///< å®šæ—¶å™¨æ¨¡å¼
-    BtWorkMode1  = 1u,         ///< PWCæ¨¡å¼
-    BtWorkMode2  = 2u,         ///< é”¯é½¿æ³¢æ¨¡å¼
-    BtWorkMode3  = 3u,         ///< ä¸‰è§’æ³¢æ¨¡å¼
+    BtWorkMode0  = 0u,         ///< ¶¨Ê±Æ÷Ä£Ê½
+    BtWorkMode1  = 1u,         ///< PWCÄ£Ê½
+    BtWorkMode2  = 2u,         ///< ¾â³İ²¨Ä£Ê½
+    BtWorkMode3  = 3u,         ///< Èı½Ç²¨Ä£Ê½
 }en_bt_work_mode_t;
 
 /**
  ******************************************************************************
- ** \brief ææ€§æ§åˆ¶æ•°æ®ç±»å‹é‡å®šä¹‰ (GATE_P)(æ¨¡å¼0)
+ ** \brief ¼«ĞÔ¿ØÖÆÊı¾İÀàĞÍÖØ¶¨Òå (GATE_P)(Ä£Ê½0)
  *****************************************************************************/
 typedef enum en_bt_m0_gatep
 {
-    BtGatePositive = 0u,            ///< é«˜ç”µå¹³æœ‰æ•ˆ
-    BtGateOpposite = 1u,            ///< ä½ç”µå¹³æœ‰æ•ˆ
+    BtGatePositive = 0u,            ///< ¸ßµçÆ½ÓĞĞ§
+    BtGateOpposite = 1u,            ///< µÍµçÆ½ÓĞĞ§
 }en_bt_m0_gatep_t;
 
 /**
  ******************************************************************************
- ** \brief TIM é¢„é™¤é¢‘é€‰æ‹© (PRS)(æ¨¡å¼0/1/23)
+ ** \brief TIM Ô¤³ıÆµÑ¡Ôñ (PRS)(Ä£Ê½0/1/23)
  *****************************************************************************/
 typedef enum en_bt_cr_timclkdiv
 {
@@ -129,513 +129,513 @@ typedef enum en_bt_cr_timclkdiv
 
 /**
  ******************************************************************************
- ** \brief è®¡æ•°/å®šæ—¶å™¨åŠŸèƒ½é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (CT)(æ¨¡å¼0/1/23)
+ ** \brief ¼ÆÊı/¶¨Ê±Æ÷¹¦ÄÜÑ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (CT)(Ä£Ê½0/1/23)
  *****************************************************************************/
 typedef enum en_bt_cr_ct
 {
-    BtTimer   = 0u,            ///< å®šæ—¶å™¨åŠŸèƒ½ï¼Œè®¡æ•°æ—¶é’Ÿä¸ºå†…éƒ¨PCLK
-    BtCounter = 1u,            ///< è®¡æ•°å™¨åŠŸèƒ½ï¼Œè®¡æ•°æ—¶é’Ÿä¸ºå¤–éƒ¨ETR
+    BtTimer   = 0u,            ///< ¶¨Ê±Æ÷¹¦ÄÜ£¬¼ÆÊıÊ±ÖÓÎªÄÚ²¿PCLK
+    BtCounter = 1u,            ///< ¼ÆÊıÆ÷¹¦ÄÜ£¬¼ÆÊıÊ±ÖÓÎªÍâ²¿ETR
 }en_bt_cr_ct_t;
 
 
 /**
  ******************************************************************************
- ** \brief å®šæ—¶å™¨å·¥ä½œæ¨¡å¼æ•°æ®ç±»å‹é‡å®šä¹‰ (MD)(æ¨¡å¼0)
+ ** \brief ¶¨Ê±Æ÷¹¤×÷Ä£Ê½Êı¾İÀàĞÍÖØ¶¨Òå (MD)(Ä£Ê½0)
  *****************************************************************************/
 typedef enum en_bt_m0cr_md
 {
-    Bt32bitFreeMode  = 0u,         ///< 32ä½è®¡æ•°å™¨/å®šæ—¶å™¨
-    Bt16bitArrMode  = 1u,         ///< è‡ªåŠ¨é‡è½½16ä½è®¡æ•°å™¨/å®šæ—¶å™¨
+    Bt32bitFreeMode  = 0u,         ///< 32Î»¼ÆÊıÆ÷/¶¨Ê±Æ÷
+    Bt16bitArrMode  = 1u,         ///< ×Ô¶¯ÖØÔØ16Î»¼ÆÊıÆ÷/¶¨Ê±Æ÷
 }en_bt_m0cr_md_t;
 
 /**
  ******************************************************************************
-** \brief BT0/BT1/BT2ä¸­æ–­ç±»å‹æ•°æ®ç±»å‹é‡å®šä¹‰(æ¨¡å¼0/1/23)
+** \brief BT0/BT1/BT2ÖĞ¶ÏÀàĞÍÊı¾İÀàĞÍÖØ¶¨Òå(Ä£Ê½0/1/23)
  *****************************************************************************/
 typedef enum en_bt_irq_type
 {
-    BtUevIrq   = 0u,         ///< æº¢å‡º/äº‹ä»¶æ›´æ–°ä¸­æ–­
-    BtCA0Irq   = 2u,         ///< æ•è·/æ¯”è¾ƒä¸­æ–­A(ä»…æ¨¡å¼1/23å­˜åœ¨)
-    BtCB0Irq   = 5u,         ///< æ•è·/æ¯”è¾ƒä¸­æ–­B(ä»…æ¨¡å¼23å­˜åœ¨)
-    BtCA0E     = 8u,         ///< CH0Aæ•è·æ•°æ®ä¸¢å¤±æ ‡å¿—(ä»…æ¨¡å¼23å­˜åœ¨),ä¸æ˜¯ä¸­æ–­
-    BtCB0E     = 11u,        ///< CH0Bæ•è·æ•°æ®ä¸¢å¤±æ ‡å¿—(ä»…æ¨¡å¼23å­˜åœ¨),ä¸æ˜¯ä¸­æ–­
-    BtBkIrq    = 14u,        ///< åˆ¹è½¦ä¸­æ–­(ä»…æ¨¡å¼23å­˜åœ¨)
-    BtTrigIrq  = 15u,        ///< è§¦å‘ä¸­æ–­(ä»…æ¨¡å¼23å­˜åœ¨)   
+    BtUevIrq   = 0u,         ///< Òç³ö/ÊÂ¼ş¸üĞÂÖĞ¶Ï
+    BtCA0Irq   = 2u,         ///< ²¶»ñ/±È½ÏÖĞ¶ÏA(½öÄ£Ê½1/23´æÔÚ)
+    BtCB0Irq   = 5u,         ///< ²¶»ñ/±È½ÏÖĞ¶ÏB(½öÄ£Ê½23´æÔÚ)
+    BtCA0E     = 8u,         ///< CH0A²¶»ñÊı¾İ¶ªÊ§±êÖ¾(½öÄ£Ê½23´æÔÚ),²»ÊÇÖĞ¶Ï
+    BtCB0E     = 11u,        ///< CH0B²¶»ñÊı¾İ¶ªÊ§±êÖ¾(½öÄ£Ê½23´æÔÚ),²»ÊÇÖĞ¶Ï
+    BtBkIrq    = 14u,        ///< É²³µÖĞ¶Ï(½öÄ£Ê½23´æÔÚ)
+    BtTrigIrq  = 15u,        ///< ´¥·¢ÖĞ¶Ï(½öÄ£Ê½23´æÔÚ)   
 }en_bt_irq_type_t;
 
 /**
  ******************************************************************************
- ** \brief æµ‹é‡å¼€å§‹ç»“æŸæ•°æ®ç±»å‹é‡å®šä¹‰ (Edg1stEdg2nd)(æ¨¡å¼1)
+ ** \brief ²âÁ¿¿ªÊ¼½áÊøÊı¾İÀàĞÍÖØ¶¨Òå (Edg1stEdg2nd)(Ä£Ê½1)
  *****************************************************************************/
 typedef enum en_bt_m1cr_Edge
 {
-    BtPwcRiseToRise  = 0u,            ///< ä¸Šå‡æ²¿åˆ°ä¸Šå‡æ²¿(å‘¨æœŸ)
-    BtPwcFallToRise  = 1u,            ///< ä¸‹é™æ²¿åˆ°ä¸Šå‡æ²¿(ä½ç”µå¹³)
-    BtPwcRiseToFall  = 2u,            ///< ä¸Šå‡æ²¿åˆ°ä¸‹é™æ²¿(é«˜ç”µå¹³)
-    BtPwcFallToFall  = 3u,            ///< ä¸‹é™æ²¿åˆ°ä¸‹é™æ²¿(å‘¨æœŸ)
+    BtPwcRiseToRise  = 0u,            ///< ÉÏÉıÑØµ½ÉÏÉıÑØ(ÖÜÆÚ)
+    BtPwcFallToRise  = 1u,            ///< ÏÂ½µÑØµ½ÉÏÉıÑØ(µÍµçÆ½)
+    BtPwcRiseToFall  = 2u,            ///< ÉÏÉıÑØµ½ÏÂ½µÑØ(¸ßµçÆ½)
+    BtPwcFallToFall  = 3u,            ///< ÏÂ½µÑØµ½ÏÂ½µÑØ(ÖÜÆÚ)
 }en_bt_m1cr_Edge_t;
 
 /**
  ******************************************************************************
- ** \brief PWCæµ‹é‡æµ‹è¯•æ¨¡å¼é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (Oneshot)(æ¨¡å¼1)
+ ** \brief PWC²âÁ¿²âÊÔÄ£Ê½Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (Oneshot)(Ä£Ê½1)
  *****************************************************************************/
 typedef enum en_bt_m1cr_oneshot
 {
-    BtPwcCycleDetect    = 0u,         ///< PWCå¾ªç¯æµ‹é‡
-    BtPwcOneShotDetect  = 1u,         ///< PWCå•æ¬¡æµ‹é‡
+    BtPwcCycleDetect    = 0u,         ///< PWCÑ­»·²âÁ¿
+    BtPwcOneShotDetect  = 1u,         ///< PWCµ¥´Î²âÁ¿
 }en_bt_m1cr_oneshot_t;
 
 /**
  ******************************************************************************
- ** \brief PWC IA0é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (IA0S)(æ¨¡å¼1)
+ ** \brief PWC IA0Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (IA0S)(Ä£Ê½1)
  *****************************************************************************/
 typedef enum en_bt_m1_mscr_ia0s
 {
-    BtIA0Input    = 0u,         ///< IAOè¾“å…¥
+    BtIA0Input    = 0u,         ///< IAOÊäÈë
     BtXORInput    = 1u,         ///< IA0 ETR GATE XOR(TIM0/1/2)/IA0 IA1 IA2 XOR(TIM3)
 }en_bt_m1_mscr_ia0s_t;
 
 /**
  ******************************************************************************
- ** \brief PWC IB0é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (IA0S)(æ¨¡å¼1)
+ ** \brief PWC IB0Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (IA0S)(Ä£Ê½1)
  *****************************************************************************/
 typedef enum en_bt_m1_mscr_ib0s
 {
-    BtIB0Input    = 0u,         ///< IBOè¾“å…¥
-    BtTsInput     = 1u,         ///< å†…éƒ¨è§¦å‘TSé€‰æ‹©ä¿¡å·
+    BtIB0Input    = 0u,         ///< IBOÊäÈë
+    BtTsInput     = 1u,         ///< ÄÚ²¿´¥·¢TSÑ¡ÔñĞÅºÅ
 }en_bt_m1_mscr_ib0s_t;
 
 /**
  ******************************************************************************
- ** \brief è¾“å‡ºææ€§ã€è¾“å…¥ç›¸ä½ æ•°æ®ç±»å‹é‡å®šä¹‰ (CCPA0/CCPB0/ETP/BKP)(æ¨¡å¼1/23)
+ ** \brief Êä³ö¼«ĞÔ¡¢ÊäÈëÏàÎ» Êı¾İÀàĞÍÖØ¶¨Òå (CCPA0/CCPB0/ETP/BKP)(Ä£Ê½1/23)
  *****************************************************************************/
 typedef enum en_bt_port_polarity
 {
-    BtPortPositive      = 0u,         ///< æ­£å¸¸è¾“å…¥è¾“å‡º
-    BtPortOpposite      = 1u,         ///< åå‘è¾“å…¥è¾“å‡º
+    BtPortPositive      = 0u,         ///< Õı³£ÊäÈëÊä³ö
+    BtPortOpposite      = 1u,         ///< ·´ÏòÊäÈëÊä³ö
 }en_bt_port_polarity_t;
 
 /**
  ******************************************************************************
- ** \brief æ»¤æ³¢é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (FLTET/FLTA0/FLAB0)(æ¨¡å¼1/23)
+ ** \brief ÂË²¨Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (FLTET/FLTA0/FLAB0)(Ä£Ê½1/23)
  *****************************************************************************/
 typedef enum en_bt_flt
 {
-    BtFltNone          = 0u,         ///< æ— æ»¤æ³¢
-    BtFltPCLKCnt3      = 4u,         ///< PCLK 3ä¸ªè¿ç»­æœ‰æ•ˆ
-    BtFltPCLKDiv4Cnt3  = 5u,         ///< PCLK/4 3ä¸ªè¿ç»­æœ‰æ•ˆ
-    BtFltPCLKDiv16Cnt3 = 6u,         ///< PCLK/16 3ä¸ªè¿ç»­æœ‰æ•ˆ
-    BtFltPCLKDiv64Cnt3 = 7u,         ///< PCLK/64 3ä¸ªè¿ç»­æœ‰æ•ˆ
+    BtFltNone          = 0u,         ///< ÎŞÂË²¨
+    BtFltPCLKCnt3      = 4u,         ///< PCLK 3¸öÁ¬ĞøÓĞĞ§
+    BtFltPCLKDiv4Cnt3  = 5u,         ///< PCLK/4 3¸öÁ¬ĞøÓĞĞ§
+    BtFltPCLKDiv16Cnt3 = 6u,         ///< PCLK/16 3¸öÁ¬ĞøÓĞĞ§
+    BtFltPCLKDiv64Cnt3 = 7u,         ///< PCLK/64 3¸öÁ¬ĞøÓĞĞ§
 }en_bt_flt_t;
 
 /**
  ******************************************************************************
- ** \brief é€šé“æ¯”è¾ƒæ§åˆ¶ æ•°æ®ç±»å‹é‡å®šä¹‰ (OCMA/OCMB)(æ¨¡å¼23)
+ ** \brief Í¨µÀ±È½Ï¿ØÖÆ Êı¾İÀàĞÍÖØ¶¨Òå (OCMA/OCMB)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_bt_m23_fltr_ocm
 {
-    BtForceLow      = 0u,         ///< å¼ºåˆ¶ä¸º0
-    BtForceHigh     = 1u,         ///< å¼ºåˆ¶ä¸º1
-    BtCMPForceLow   = 2u,         ///< æ¯”è¾ƒåŒ¹é…æ—¶å¼ºåˆ¶ä¸º0
-    BtCMPForceHigh  = 3u,         ///< æ¯”è¾ƒåŒ¹é…æ—¶å¼ºåˆ¶ä¸º1
-    BtCMPInverse    = 4u,         ///< æ¯”è¾ƒåŒ¹é…æ—¶ç¿»è½¬ç”µå¹³
-    BtCMPOnePrdHigh = 5u,         ///< æ¯”è¾ƒåŒ¹é…æ—¶è¾“å‡ºä¸€ä¸ªè®¡æ•°å‘¨æœŸçš„é«˜ç”µå¹³
-    BtPWMMode1      = 6u,         ///< é€šé“æ§åˆ¶ä¸ºPWM mode 1
-    BtPWMMode2      = 7u,         ///< é€šé“æ§åˆ¶ä¸ºPWM mode 2
+    BtForceLow      = 0u,         ///< Ç¿ÖÆÎª0
+    BtForceHigh     = 1u,         ///< Ç¿ÖÆÎª1
+    BtCMPForceLow   = 2u,         ///< ±È½ÏÆ¥ÅäÊ±Ç¿ÖÆÎª0
+    BtCMPForceHigh  = 3u,         ///< ±È½ÏÆ¥ÅäÊ±Ç¿ÖÆÎª1
+    BtCMPInverse    = 4u,         ///< ±È½ÏÆ¥ÅäÊ±·­×ªµçÆ½
+    BtCMPOnePrdHigh = 5u,         ///< ±È½ÏÆ¥ÅäÊ±Êä³öÒ»¸ö¼ÆÊıÖÜÆÚµÄ¸ßµçÆ½
+    BtPWMMode1      = 6u,         ///< Í¨µÀ¿ØÖÆÎªPWM mode 1
+    BtPWMMode2      = 7u,         ///< Í¨µÀ¿ØÖÆÎªPWM mode 2
 }en_bt_m23_fltr_ocm_t;
 
 /**
  ******************************************************************************
- ** \brief ä¸»ä»æ¨¡å¼TSæ•°æ®ç±»å‹é‡å®šä¹‰ (TS)(æ¨¡å¼1/23)
+ ** \brief Ö÷´ÓÄ£Ê½TSÊı¾İÀàĞÍÖØ¶¨Òå (TS)(Ä£Ê½1/23)
  *****************************************************************************/
 typedef enum en_bt_mscr_ts
 {
-    BtTs0ETR        = 0u,         ///< ETRå¤–éƒ¨è¾“å…¥æ»¤æ³¢åçš„ç›¸ä½é€‰æ‹©ä¿¡å·
-    BtTs1TIM0TRGO   = 1u,         ///< Timer0çš„TRGOè¾“å‡ºä¿¡å·
-    BtTs2TIM1TRGO   = 2u,         ///< Timer1çš„TRGOè¾“å‡ºä¿¡å·
-    BtTs3TIM2TRGO   = 3u,         ///< Timer2çš„TRGOè¾“å‡ºä¿¡å·
-    BtTs4TIM3TRGO   = 4u,         ///< Timer3çš„TRGOè¾“å‡ºä¿¡å·
-    //BtTs5IA0ED    = 5u,         ///< æ— æ•ˆ
-    BtTs6IAFP       = 6u,         ///< CH0A å¤–éƒ¨è¾“è¾“å…¥æ»¤æ³¢åçš„ç›¸ä½é€‰æ‹©ä¿¡å·
-    BtTs7IBFP       = 7u,         ///< CH0B å¤–éƒ¨è¾“è¾“å…¥æ»¤æ³¢åçš„ç›¸ä½é€‰æ‹©ä¿¡
+    BtTs0ETR        = 0u,         ///< ETRÍâ²¿ÊäÈëÂË²¨ºóµÄÏàÎ»Ñ¡ÔñĞÅºÅ
+    BtTs1TIM0TRGO   = 1u,         ///< Timer0µÄTRGOÊä³öĞÅºÅ
+    BtTs2TIM1TRGO   = 2u,         ///< Timer1µÄTRGOÊä³öĞÅºÅ
+    BtTs3TIM2TRGO   = 3u,         ///< Timer2µÄTRGOÊä³öĞÅºÅ
+    BtTs4TIM3TRGO   = 4u,         ///< Timer3µÄTRGOÊä³öĞÅºÅ
+    //BtTs5IA0ED    = 5u,         ///< ÎŞĞ§
+    BtTs6IAFP       = 6u,         ///< CH0A Íâ²¿ÊäÊäÈëÂË²¨ºóµÄÏàÎ»Ñ¡ÔñĞÅºÅ
+    BtTs7IBFP       = 7u,         ///< CH0B Íâ²¿ÊäÊäÈëÂË²¨ºóµÄÏàÎ»Ñ¡ÔñĞÅ
 }en_bt_mscr_ts_t;
 
 /**
  ******************************************************************************
- ** \brief PWMè¾“å‡ºæ¨¡å¼é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (COMP)(æ¨¡å¼23)
+ ** \brief PWMÊä³öÄ£Ê½Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (COMP)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_bt_m23cr_comp
 {
-    BtIndependentPWM      = 0u,         ///< ç‹¬ç«‹PWMè¾“å‡º
-    BtComplementaryPWM    = 1u,         ///< äº’è¡¥PWMè¾“å‡º
+    BtIndependentPWM      = 0u,         ///< ¶ÀÁ¢PWMÊä³ö
+    BtComplementaryPWM    = 1u,         ///< »¥²¹PWMÊä³ö
 }en_bt_m23cr_comp_t;
 
 /**
  ******************************************************************************
- ** \brief è®¡æ•°æ–¹å‘é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (DIR)(æ¨¡å¼23)
+ ** \brief ¼ÆÊı·½ÏòÑ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (DIR)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_bt_m23cr_dir
 {
-    BtCntUp      = 0u,         ///< å‘ä¸Šè®¡æ•°
-    BtCntDown    = 1u,         ///< å‘ä¸‹è®¡æ•°
+    BtCntUp      = 0u,         ///< ÏòÉÏ¼ÆÊı
+    BtCntDown    = 1u,         ///< ÏòÏÂ¼ÆÊı
 }en_bt_m23cr_dir_t;
 
 /**
  ******************************************************************************
- ** \brief è®¡æ•°æ–¹å‘é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (PWM2S)(æ¨¡å¼23)
+ ** \brief ¼ÆÊı·½ÏòÑ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (PWM2S)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_bt_m23cr_pwm2s
 {
-    BtDoublePointCmp      = 0u,         ///< åŒç‚¹æ¯”è¾ƒä½¿èƒ½ï¼Œä½¿ç”¨CCRA,CCRBæ¯”è¾ƒæ§åˆ¶OCREFAè¾“å‡º
-    BtSinglePointCmp      = 1u,         ///< å•ç‚¹æ¯”è¾ƒä½¿èƒ½ï¼Œä½¿ç”¨CCRAæ¯”è¾ƒæ§åˆ¶OCREFAè¾“å‡º
+    BtDoublePointCmp      = 0u,         ///< Ë«µã±È½ÏÊ¹ÄÜ£¬Ê¹ÓÃCCRA,CCRB±È½Ï¿ØÖÆOCREFAÊä³ö
+    BtSinglePointCmp      = 1u,         ///< µ¥µã±È½ÏÊ¹ÄÜ£¬Ê¹ÓÃCCRA±È½Ï¿ØÖÆOCREFAÊä³ö
 }en_bt_m23cr_pwm2s_t;
 
 /**
  ******************************************************************************
- ** \brief GATEåœ¨PWMäº’è¡¥æ¨¡å¼ä¸‹æ•è·æˆ–æ¯”è¾ƒåŠŸèƒ½ é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (CSG)(æ¨¡å¼23)
+ ** \brief GATEÔÚPWM»¥²¹Ä£Ê½ÏÂ²¶»ñ»ò±È½Ï¹¦ÄÜ Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (CSG)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_bt_m23cr_csg
 {
-     BtPWMCompGateCmpOut    = 0u,         ///< åœ¨PWMäº’è¡¥æ¨¡å¼ä¸‹ï¼ŒGateä½œä¸ºæ¯”è¾ƒè¾“å‡º
-     BtPWMCompGateCapIn     = 1u,         ///< åœ¨PWMäº’è¡¥æ¨¡å¼ä¸‹ï¼ŒGateä½œä¸ºæ•è·è¾“å…¥
+     BtPWMCompGateCmpOut    = 0u,         ///< ÔÚPWM»¥²¹Ä£Ê½ÏÂ£¬Gate×÷Îª±È½ÏÊä³ö
+     BtPWMCompGateCapIn     = 1u,         ///< ÔÚPWM»¥²¹Ä£Ê½ÏÂ£¬Gate×÷Îª²¶»ñÊäÈë
 }en_bt_m23cr_csg_t;
 
 
 /**
  ******************************************************************************
- ** \brief æ¯”è¾ƒæ•è·å¯„å­˜å™¨ æ•°æ®ç±»å‹é‡å®šä¹‰ (CCR0A,CCR0B)(æ¨¡å¼23)
+ ** \brief ±È½Ï²¶»ñ¼Ä´æÆ÷ Êı¾İÀàĞÍÖØ¶¨Òå (CCR0A,CCR0B)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_bt_m23_ccrx
 {
-     BtCCR0A    = 0u,         ///< CCR0Aæ¯”è¾ƒæ•è·å¯„å­˜å™¨
-     BtCCR0B    = 1u,         ///< CCR0Bæ¯”è¾ƒæ•è·å¯„å­˜å™¨
+     BtCCR0A    = 0u,         ///< CCR0A±È½Ï²¶»ñ¼Ä´æÆ÷
+     BtCCR0B    = 1u,         ///< CCR0B±È½Ï²¶»ñ¼Ä´æÆ÷
 }en_bt_m23_ccrx_t;
 
 /**
  ******************************************************************************
- ** \brief  OCREFæ¸…é™¤æº é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (OCCS)(æ¨¡å¼23)
+ ** \brief  OCREFÇå³ıÔ´ Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (OCCS)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_bt_m23ce_occs
 {
-     BtOC_Ref_Clr  = 0u,         ///< æ¥è‡ªVCçš„OC_Ref_Clr
-     BtETRf        = 1u,         ///< å¤–éƒ¨ETRf
+     BtOC_Ref_Clr  = 0u,         ///< À´×ÔVCµÄOC_Ref_Clr
+     BtETRf        = 1u,         ///< Íâ²¿ETRf
 }en_bt_m23ce_occs_t;
 
 /**
  ******************************************************************************
- ** \brief  æ¯”è¾ƒåŒ¹é…ä¸­æ–­æ¨¡å¼ é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (CIS/CISB)(æ¨¡å¼23)
+ ** \brief  ±È½ÏÆ¥ÅäÖĞ¶ÏÄ£Ê½ Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (CIS/CISB)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_bt_m23_cisa_cisb
 {
-     BtCmpIntNone        = 0u,         ///< æ— æ¯”è¾ƒåŒ¹é…ä¸­æ–­
-     BtCmpIntRise        = 1u,         ///< æ¯”è¾ƒåŒ¹é…ä¸Šå‡æ²¿ä¸­æ–­
-     BtCmpIntFall        = 2u,         ///< æ¯”è¾ƒåŒ¹é…ä¸‹é™æ²¿ä¸­æ–­
-     BtCmpIntRiseFall    = 3u,         ///< æ¯”è¾ƒåŒ¹é…ä¸Šå‡æ²¿ä¸‹é™æ²¿ä¸­æ–­
+     BtCmpIntNone        = 0u,         ///< ÎŞ±È½ÏÆ¥ÅäÖĞ¶Ï
+     BtCmpIntRise        = 1u,         ///< ±È½ÏÆ¥ÅäÉÏÉıÑØÖĞ¶Ï
+     BtCmpIntFall        = 2u,         ///< ±È½ÏÆ¥ÅäÏÂ½µÑØÖĞ¶Ï
+     BtCmpIntRiseFall    = 3u,         ///< ±È½ÏÆ¥ÅäÉÏÉıÑØÏÂ½µÑØÖĞ¶Ï
 }en_bt_m23_cisa_cisb_t;
 
 /**
  ******************************************************************************
- ** \brief BTç«¯å£æ§åˆ¶ - åˆ¹è½¦æ—¶CHxè¾“å‡ºçŠ¶æ€æ§åˆ¶(BKSA/BKSB)(æ¨¡å¼23)
+ ** \brief BT¶Ë¿Ú¿ØÖÆ - É²³µÊ±CHxÊä³ö×´Ì¬¿ØÖÆ(BKSA/BKSB)(Ä£Ê½23)
  **
  ** \note
  ******************************************************************************/
 typedef enum en_bt_m23_crch0_bks
 {
-    BtCHxBksHiZ         = 0u,         ///< åˆ¹è½¦ä½¿èƒ½æ—¶ï¼ŒCHxç«¯å£è¾“å‡ºé«˜é˜»æ€
-    BtCHxBksNorm        = 1u,         ///< åˆ¹è½¦ä½¿èƒ½æ—¶ï¼ŒCHxç«¯å£æ­£å¸¸è¾“å‡º
-    BtCHxBksLow         = 2u,         ///< åˆ¹è½¦ä½¿èƒ½æ—¶ï¼ŒCHxç«¯å£è¾“å‡ºä½ç”µå¹³
-    BtCHxBksHigh        = 3u,         ///< åˆ¹è½¦ä½¿èƒ½æ—¶ï¼ŒCHxç«¯å£è¾“å‡ºé«˜ç”µå¹³
+    BtCHxBksHiZ         = 0u,         ///< É²³µÊ¹ÄÜÊ±£¬CHx¶Ë¿ÚÊä³ö¸ß×èÌ¬
+    BtCHxBksNorm        = 1u,         ///< É²³µÊ¹ÄÜÊ±£¬CHx¶Ë¿ÚÕı³£Êä³ö
+    BtCHxBksLow         = 2u,         ///< É²³µÊ¹ÄÜÊ±£¬CHx¶Ë¿ÚÊä³öµÍµçÆ½
+    BtCHxBksHigh        = 3u,         ///< É²³µÊ¹ÄÜÊ±£¬CHx¶Ë¿ÚÊä³ö¸ßµçÆ½
 }en_bt_m23_crch0_bks_t;
 
 /**
  ******************************************************************************
-** \brief BTç«¯å£æ§åˆ¶ - CHxä¸Šå‡æ²¿ä¸‹é™æ²¿æ•è·(CRx/CFx)(æ¨¡å¼23)
+** \brief BT¶Ë¿Ú¿ØÖÆ - CHxÉÏÉıÑØÏÂ½µÑØ²¶»ñ(CRx/CFx)(Ä£Ê½23)
  **
  ** \note
  ******************************************************************************/
 typedef enum en_bt_m23_crch0_cfx_crx
 {
-    BtCHxCapNone        = 0u,         ///< CHxé€šé“æ•è·ç¦æ­¢
-    BtCHxCapRise        = 1u,         ///< CHxé€šé“ä¸Šå‡æ²¿æ•è·ä½¿èƒ½
-    BtCHxCapFall        = 2u,         ///< CHxé€šé“ä¸‹é™æ²¿æ•è·ä½¿èƒ½
-    BtCHxCapFallRise    = 3u,         ///< CHxé€šé“ä¸Šå‡æ²¿ä¸‹é™æ²¿æ•è·éƒ½ä½¿èƒ½
+    BtCHxCapNone        = 0u,         ///< CHxÍ¨µÀ²¶»ñ½ûÖ¹
+    BtCHxCapRise        = 1u,         ///< CHxÍ¨µÀÉÏÉıÑØ²¶»ñÊ¹ÄÜ
+    BtCHxCapFall        = 2u,         ///< CHxÍ¨µÀÏÂ½µÑØ²¶»ñÊ¹ÄÜ
+    BtCHxCapFallRise    = 3u,         ///< CHxÍ¨µÀÉÏÉıÑØÏÂ½µÑØ²¶»ñ¶¼Ê¹ÄÜ
 }en_bt_m23_crch0_cfx_crx_t;
 
 /**
  ******************************************************************************
-** \brief BTç«¯å£æ§åˆ¶ - CHxæ¯”è¾ƒæ•è·æ¨¡å¼(CSA/CSB)(æ¨¡å¼23)
+** \brief BT¶Ë¿Ú¿ØÖÆ - CHx±È½Ï²¶»ñÄ£Ê½(CSA/CSB)(Ä£Ê½23)
  **
  ** \note
  ******************************************************************************/
 typedef enum en_bt_m23_crch0_csa_csb
 {
-    BtCHxCmpMode        = 0u,         ///< CHxé€šé“è®¾ç½®ä¸ºæ¯”è¾ƒæ¨¡å¼
-    BtCHxCapMode        = 1u,         ///< CHxé€šé“è®¾ç½®ä¸ºæ•è·æ¨¡å¼
+    BtCHxCmpMode        = 0u,         ///< CHxÍ¨µÀÉèÖÃÎª±È½ÏÄ£Ê½
+    BtCHxCapMode        = 1u,         ///< CHxÍ¨µÀÉèÖÃÎª²¶»ñÄ£Ê½
 }en_bt_m23_crch0_csa_csb_t;
 
 /**
  ******************************************************************************
- ** \brief  æ¯”è¾ƒæ¨¡å¼ä¸‹ DMAæ¯”è¾ƒè§¦å‘é€‰æ‹© æ•°æ®ç±»å‹é‡å®šä¹‰ (CCDS)(æ¨¡å¼23)
+ ** \brief  ±È½ÏÄ£Ê½ÏÂ DMA±È½Ï´¥·¢Ñ¡Ôñ Êı¾İÀàĞÍÖØ¶¨Òå (CCDS)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_bt_m23_mscr_ccds
 {
-     BtCmpTrigDMA  = 0u,         ///< æ¯”è¾ƒåŒ¹é…è§¦å‘DMA
-     BtUEVTrigDMA  = 1u,         ///< äº‹ä»¶æ›´æ–°ä»£æ›¿æ¯”è¾ƒåŒ¹é…è§¦å‘DMA
+     BtCmpTrigDMA  = 0u,         ///< ±È½ÏÆ¥Åä´¥·¢DMA
+     BtUEVTrigDMA  = 1u,         ///< ÊÂ¼ş¸üĞÂ´úÌæ±È½ÏÆ¥Åä´¥·¢DMA
 }en_bt_m23_mscr_ccds_t;
 
 /**
  ******************************************************************************
- ** \brief  ä¸»ä»æ¨¡å¼é€‰æ‹© æ•°æ®ç±»å‹é‡å®šä¹‰ (MSM)(æ¨¡å¼23)
+ ** \brief  Ö÷´ÓÄ£Ê½Ñ¡Ôñ Êı¾İÀàĞÍÖØ¶¨Òå (MSM)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_bt_m23_mscr_msm
 {
-     BtSlaveMode    = 0u,         ///< ä»æ¨¡å¼
-     BtMasterMode   = 1u,         ///< ä¸»æ¨¡å¼
+     BtSlaveMode    = 0u,         ///< ´ÓÄ£Ê½
+     BtMasterMode   = 1u,         ///< Ö÷Ä£Ê½
 }en_bt_m23_mscr_msm_t;
 
 /**
  ******************************************************************************
- ** \brief  è§¦å‘ä¸»æ¨¡å¼è¾“å‡ºæº æ•°æ®ç±»å‹é‡å®šä¹‰ (MMS)(æ¨¡å¼23)
+ ** \brief  ´¥·¢Ö÷Ä£Ê½Êä³öÔ´ Êı¾İÀàĞÍÖØ¶¨Òå (MMS)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_bt_m23_mscr_mms
 {
-     BtMasterUG         = 0u,         ///< UG(è½¯ä»¶æ›´æ–°)æº
-     BtMasterCTEN       = 1u,         ///< CTENæº
-     BtMasterUEV        = 2u,         ///< UEVæ›´æ–°æº
-     BtMasterCMPSO      = 3u,         ///< æ¯”è¾ƒåŒ¹é…é€‰æ‹©è¾“å‡ºæº
-     BtMasterOCA0Ref    = 4u,         ///< OCA0_Refæº
-     BtMasterOCB0Ref    = 5u,         ///< OCB0_Refæº
+     BtMasterUG         = 0u,         ///< UG(Èí¼ş¸üĞÂ)Ô´
+     BtMasterCTEN       = 1u,         ///< CTENÔ´
+     BtMasterUEV        = 2u,         ///< UEV¸üĞÂÔ´
+     BtMasterCMPSO      = 3u,         ///< ±È½ÏÆ¥ÅäÑ¡ÔñÊä³öÔ´
+     BtMasterOCA0Ref    = 4u,         ///< OCA0_RefÔ´
+     BtMasterOCB0Ref    = 5u,         ///< OCB0_RefÔ´
      //BtMasterOCB0Ref  = 6u,
      //BtMasterOCB0Ref  = 7u,
 }en_bt_m23_mscr_mms_t;
 
 /**
  ******************************************************************************
- ** \brief  è§¦å‘ä»æ¨¡å¼é€‰æ‹© æ•°æ®ç±»å‹é‡å®šä¹‰ (SMS)(æ¨¡å¼23)
+ ** \brief  ´¥·¢´ÓÄ£Ê½Ñ¡Ôñ Êı¾İÀàĞÍÖØ¶¨Òå (SMS)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_bt_m23_mscr_sms
 {
-     BtSlaveIClk        = 0u,         ///< ä½¿ç”¨å†…éƒ¨æ—¶é’Ÿ
-     BtSlaveResetTIM    = 1u,         ///< å¤ä½åŠŸèƒ½
-     BtSlaveTrigMode    = 2u,         ///< è§¦å‘æ¨¡å¼
-     BtSlaveEClk        = 3u,         ///< å¤–éƒ¨æ—¶é’Ÿæ¨¡å¼
-     BtSlaveCodeCnt1    = 4u,         ///< æ­£äº¤ç¼–ç è®¡æ•°æ¨¡å¼1
-     BtSlaveCodeCnt2    = 5u,         ///< æ­£äº¤ç¼–ç è®¡æ•°æ¨¡å¼2
-     BtSlaveCodeCnt3    = 6u,         ///< æ­£äº¤ç¼–ç è®¡æ•°æ¨¡å¼3
-     BtSlaveGateCtrl    = 7u,         ///< é—¨æ§åŠŸèƒ½
+     BtSlaveIClk        = 0u,         ///< Ê¹ÓÃÄÚ²¿Ê±ÖÓ
+     BtSlaveResetTIM    = 1u,         ///< ¸´Î»¹¦ÄÜ
+     BtSlaveTrigMode    = 2u,         ///< ´¥·¢Ä£Ê½
+     BtSlaveEClk        = 3u,         ///< Íâ²¿Ê±ÖÓÄ£Ê½
+     BtSlaveCodeCnt1    = 4u,         ///< Õı½»±àÂë¼ÆÊıÄ£Ê½1
+     BtSlaveCodeCnt2    = 5u,         ///< Õı½»±àÂë¼ÆÊıÄ£Ê½2
+     BtSlaveCodeCnt3    = 6u,         ///< Õı½»±àÂë¼ÆÊıÄ£Ê½3
+     BtSlaveGateCtrl    = 7u,         ///< ÃÅ¿Ø¹¦ÄÜ
 }en_bt_m23_mscr_sms_t;
 
 /**
  ******************************************************************************
- ** \brief å®šæ—¶å™¨è¿è¡Œæ§åˆ¶æ•°æ®ç±»å‹é‡å®šä¹‰ (CTEN)
+ ** \brief ¶¨Ê±Æ÷ÔËĞĞ¿ØÖÆÊı¾İÀàĞÍÖØ¶¨Òå (CTEN)
  *****************************************************************************/
 typedef enum en_bt_start
 {
-    BtCTENDisable = 0u,            ///< åœæ­¢
-    BtCTENEnable  = 1u,            ///< è¿è¡Œ
+    BtCTENDisable = 0u,            ///< Í£Ö¹
+    BtCTENEnable  = 1u,            ///< ÔËĞĞ
 }en_bt_start_t;
 
 /**
  ******************************************************************************
- ** \brief BaseTimer mode0 é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼0)
+ ** \brief BaseTimer mode0 ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½0)
  *****************************************************************************/
 typedef struct stc_bt_mode0_config
 {
-    en_bt_work_mode_t     enWorkMode;       ///< å·¥ä½œæ¨¡å¼è®¾ç½®
-    en_bt_m0_gatep_t      enGateP;          ///< é—¨æ§ææ€§æ§åˆ¶
-    boolean_t             bEnGate;          ///< é—¨æ§ä½¿èƒ½
-    en_bt_cr_timclkdiv_t  enPRS;            ///< é¢„é™¤é¢‘é…ç½®
-    boolean_t             bEnTog;           ///< ç¿»è½¬è¾“å‡ºä½¿èƒ½
-    en_bt_cr_ct_t         enCT;             ///< å®šæ—¶/è®¡æ•°åŠŸèƒ½é€‰æ‹©
-    en_bt_m0cr_md_t       enCntMode;        ///< è®¡æ•°æ¨¡å¼é…ç½®
+    en_bt_work_mode_t     enWorkMode;       ///< ¹¤×÷Ä£Ê½ÉèÖÃ
+    en_bt_m0_gatep_t      enGateP;          ///< ÃÅ¿Ø¼«ĞÔ¿ØÖÆ
+    boolean_t             bEnGate;          ///< ÃÅ¿ØÊ¹ÄÜ
+    en_bt_cr_timclkdiv_t  enPRS;            ///< Ô¤³ıÆµÅäÖÃ
+    boolean_t             bEnTog;           ///< ·­×ªÊä³öÊ¹ÄÜ
+    en_bt_cr_ct_t         enCT;             ///< ¶¨Ê±/¼ÆÊı¹¦ÄÜÑ¡Ôñ
+    en_bt_m0cr_md_t       enCntMode;        ///< ¼ÆÊıÄ£Ê½ÅäÖÃ
     
-    func_ptr_t            pfnTim0Cb;        ///< Timer0ä¸­æ–­æœåŠ¡å›è°ƒå‡½æ•°[void function(void)]
-    func_ptr_t            pfnTim1Cb;        ///< Timer1ä¸­æ–­æœåŠ¡å›è°ƒå‡½æ•°[void function(void)]
-    func_ptr_t            pfnTim2Cb;        ///< Timer2ä¸­æ–­æœåŠ¡å›è°ƒå‡½æ•°[void function(void)]
+    func_ptr_t            pfnTim0Cb;        ///< Timer0ÖĞ¶Ï·şÎñ»Øµ÷º¯Êı[void function(void)]
+    func_ptr_t            pfnTim1Cb;        ///< Timer1ÖĞ¶Ï·şÎñ»Øµ÷º¯Êı[void function(void)]
+    func_ptr_t            pfnTim2Cb;        ///< Timer2ÖĞ¶Ï·şÎñ»Øµ÷º¯Êı[void function(void)]
 }stc_bt_mode0_config_t;
 
 /**
  ******************************************************************************
- ** \brief BaseTimer mode1 é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼1)
+ ** \brief BaseTimer mode1 ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½1)
  *****************************************************************************/
 typedef struct stc_bt_mode1_config
 {
-    en_bt_work_mode_t     enWorkMode;       ///< å·¥ä½œæ¨¡å¼è®¾ç½®
-    en_bt_cr_timclkdiv_t  enPRS;            ///< é¢„é™¤é¢‘é…ç½®
-    en_bt_cr_ct_t         enCT;             ///< å®šæ—¶/è®¡æ•°åŠŸèƒ½é€‰æ‹©
-    en_bt_m1cr_oneshot_t  enOneShot;        ///< å•æ¬¡æµ‹é‡/å¾ªç¯æµ‹é‡é€‰æ‹©
+    en_bt_work_mode_t     enWorkMode;       ///< ¹¤×÷Ä£Ê½ÉèÖÃ
+    en_bt_cr_timclkdiv_t  enPRS;            ///< Ô¤³ıÆµÅäÖÃ
+    en_bt_cr_ct_t         enCT;             ///< ¶¨Ê±/¼ÆÊı¹¦ÄÜÑ¡Ôñ
+    en_bt_m1cr_oneshot_t  enOneShot;        ///< µ¥´Î²âÁ¿/Ñ­»·²âÁ¿Ñ¡Ôñ
     
     
-    func_ptr_t          pfnTim0Cb;        ///< Timer0ä¸­æ–­æœåŠ¡å›è°ƒå‡½æ•°[void function(void)]
-    func_ptr_t          pfnTim1Cb;        ///< Timer1ä¸­æ–­æœåŠ¡å›è°ƒå‡½æ•°[void function(void)]
-    func_ptr_t          pfnTim2Cb;        ///< Timer2ä¸­æ–­æœåŠ¡å›è°ƒå‡½æ•°[void function(void)]
+    func_ptr_t          pfnTim0Cb;        ///< Timer0ÖĞ¶Ï·şÎñ»Øµ÷º¯Êı[void function(void)]
+    func_ptr_t          pfnTim1Cb;        ///< Timer1ÖĞ¶Ï·şÎñ»Øµ÷º¯Êı[void function(void)]
+    func_ptr_t          pfnTim2Cb;        ///< Timer2ÖĞ¶Ï·şÎñ»Øµ÷º¯Êı[void function(void)]
 }stc_bt_mode1_config_t;
 
 /**
  ******************************************************************************
- ** \brief PWCè¾“å…¥é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼1)
+ ** \brief PWCÊäÈëÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½1)
  *****************************************************************************/
 typedef struct stc_bt_pwc_input_config
 {
-    en_bt_mscr_ts_t          enTsSel;       ///< è§¦å‘è¾“å…¥æºé€‰æ‹©
-    en_bt_m1_mscr_ia0s_t     enIA0Sel;      ///< CHA0è¾“å…¥é€‰æ‹©
-    en_bt_m1_mscr_ib0s_t     enIB0Sel;      ///< CHB0è¾“å…¥é€‰æ‹©
-    en_bt_port_polarity_t    enETRPhase;    ///< ETRç›¸ä½é€‰æ‹©
-    en_bt_flt_t              enFltETR;      ///< ETRæ»¤æ³¢è®¾ç½®
-    en_bt_flt_t              enFltIA0;      ///< CHA0æ»¤æ³¢è®¾ç½®
-    en_bt_flt_t              enFltIB0;      ///< CHB0æ»¤æ³¢è®¾ç½®
+    en_bt_mscr_ts_t          enTsSel;       ///< ´¥·¢ÊäÈëÔ´Ñ¡Ôñ
+    en_bt_m1_mscr_ia0s_t     enIA0Sel;      ///< CHA0ÊäÈëÑ¡Ôñ
+    en_bt_m1_mscr_ib0s_t     enIB0Sel;      ///< CHB0ÊäÈëÑ¡Ôñ
+    en_bt_port_polarity_t    enETRPhase;    ///< ETRÏàÎ»Ñ¡Ôñ
+    en_bt_flt_t              enFltETR;      ///< ETRÂË²¨ÉèÖÃ
+    en_bt_flt_t              enFltIA0;      ///< CHA0ÂË²¨ÉèÖÃ
+    en_bt_flt_t              enFltIB0;      ///< CHB0ÂË²¨ÉèÖÃ
 }stc_bt_pwc_input_config_t;
 
 /**
  ******************************************************************************
- ** \brief BaseTimer mode23 é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief BaseTimer mode23 ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_bt_mode23_config
 {
-    en_bt_work_mode_t         enWorkMode;       ///< å·¥ä½œæ¨¡å¼è®¾ç½®
-    en_bt_m23cr_dir_t         enCntDir;         ///< è®¡æ•°æ–¹å‘
-    en_bt_cr_timclkdiv_t      enPRS;            ///< æ—¶é’Ÿé¢„é™¤é¢‘é…ç½®
-    en_bt_cr_ct_t             enCT;             ///< å®šæ—¶/è®¡æ•°åŠŸèƒ½é€‰æ‹©
-    en_bt_m23cr_comp_t        enPWMTypeSel;     ///< PWMæ¨¡å¼é€‰æ‹©ï¼ˆç‹¬ç«‹/äº’è¡¥ï¼‰
-    en_bt_m23cr_pwm2s_t       enPWM2sSel;       ///< OCREFAåŒç‚¹æ¯”è¾ƒåŠŸèƒ½é€‰æ‹©
-    boolean_t                 bOneShot;         ///< å•æ¬¡è§¦å‘æ¨¡å¼ä½¿èƒ½/ç¦æ­¢
-    boolean_t                 bURSSel;          ///< æ›´æ–°æºé€‰æ‹©
+    en_bt_work_mode_t         enWorkMode;       ///< ¹¤×÷Ä£Ê½ÉèÖÃ
+    en_bt_m23cr_dir_t         enCntDir;         ///< ¼ÆÊı·½Ïò
+    en_bt_cr_timclkdiv_t      enPRS;            ///< Ê±ÖÓÔ¤³ıÆµÅäÖÃ
+    en_bt_cr_ct_t             enCT;             ///< ¶¨Ê±/¼ÆÊı¹¦ÄÜÑ¡Ôñ
+    en_bt_m23cr_comp_t        enPWMTypeSel;     ///< PWMÄ£Ê½Ñ¡Ôñ£¨¶ÀÁ¢/»¥²¹£©
+    en_bt_m23cr_pwm2s_t       enPWM2sSel;       ///< OCREFAË«µã±È½Ï¹¦ÄÜÑ¡Ôñ
+    boolean_t                 bOneShot;         ///< µ¥´Î´¥·¢Ä£Ê½Ê¹ÄÜ/½ûÖ¹
+    boolean_t                 bURSSel;          ///< ¸üĞÂÔ´Ñ¡Ôñ
     
-    func_ptr_t                pfnTim0Cb;        ///< Timer0ä¸­æ–­æœåŠ¡å›è°ƒå‡½æ•°[void function(void)]
-    func_ptr_t                pfnTim1Cb;        ///< Timer1ä¸­æ–­æœåŠ¡å›è°ƒå‡½æ•°[void function(void)]
-    func_ptr_t                pfnTim2Cb;        ///< Timer2ä¸­æ–­æœåŠ¡å›è°ƒå‡½æ•°[void function(void)]
+    func_ptr_t                pfnTim0Cb;        ///< Timer0ÖĞ¶Ï·şÎñ»Øµ÷º¯Êı[void function(void)]
+    func_ptr_t                pfnTim1Cb;        ///< Timer1ÖĞ¶Ï·şÎñ»Øµ÷º¯Êı[void function(void)]
+    func_ptr_t                pfnTim2Cb;        ///< Timer2ÖĞ¶Ï·şÎñ»Øµ÷º¯Êı[void function(void)]
 }stc_bt_mode23_config_t;
 
 /**
  ******************************************************************************
- ** \brief GATEåœ¨PWMäº’è¡¥æ¨¡å¼ä¸‹æ•è·æˆ–æ¯”è¾ƒåŠŸèƒ½ é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief GATEÔÚPWM»¥²¹Ä£Ê½ÏÂ²¶»ñ»ò±È½Ï¹¦ÄÜ ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_bt_m23_gate_config
 {
-    en_bt_m23cr_csg_t        enGateFuncSel;      ///< Gateæ¯”è¾ƒã€æ•è·åŠŸèƒ½é€‰æ‹©
-    boolean_t                bGateRiseCap;       ///< GATEä½œä¸ºæ•è·åŠŸèƒ½æ—¶ï¼Œä¸Šæ²¿æ•è·æœ‰æ•ˆæ§åˆ¶
-    boolean_t                bGateFallCap;       ///< GATEä½œä¸ºæ•è·åŠŸèƒ½æ—¶ï¼Œä¸‹æ²¿æ•è·æœ‰æ•ˆæ§åˆ¶
+    en_bt_m23cr_csg_t        enGateFuncSel;      ///< Gate±È½Ï¡¢²¶»ñ¹¦ÄÜÑ¡Ôñ
+    boolean_t                bGateRiseCap;       ///< GATE×÷Îª²¶»ñ¹¦ÄÜÊ±£¬ÉÏÑØ²¶»ñÓĞĞ§¿ØÖÆ
+    boolean_t                bGateFallCap;       ///< GATE×÷Îª²¶»ñ¹¦ÄÜÊ±£¬ÏÂÑØ²¶»ñÓĞĞ§¿ØÖÆ
 }stc_bt_m23_gate_config_t;
 
 /**
  ******************************************************************************
- ** \brief CHA/CHBé€šé“æ¯”è¾ƒæ§åˆ¶ é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief CHA/CHBÍ¨µÀ±È½Ï¿ØÖÆ ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_bt_m23_compare_config
 {
-    en_bt_m23_crch0_csa_csb_t  enCh0ACmpCap;     ///< CH0Aæ¯”è¾ƒ/æ•è·åŠŸèƒ½é€‰æ‹©
-    en_bt_m23_fltr_ocm_t       enCH0ACmpCtrl;    ///< CH0Aé€šé“æ¯”è¾ƒæ§åˆ¶
-    en_bt_port_polarity_t      enCH0APolarity;   ///< CH0Aè¾“å‡ºææ€§æ§åˆ¶
-    boolean_t                  bCh0ACmpBufEn;    ///< æ¯”è¾ƒAç¼“å­˜åŠŸèƒ½ ä½¿èƒ½/ç¦æ­¢
-    en_bt_m23_cisa_cisb_t      enCh0ACmpIntSel;  ///< CHAæ¯”è¾ƒåŒ¹é…ä¸­æ–­é€‰æ‹©
+    en_bt_m23_crch0_csa_csb_t  enCh0ACmpCap;     ///< CH0A±È½Ï/²¶»ñ¹¦ÄÜÑ¡Ôñ
+    en_bt_m23_fltr_ocm_t       enCH0ACmpCtrl;    ///< CH0AÍ¨µÀ±È½Ï¿ØÖÆ
+    en_bt_port_polarity_t      enCH0APolarity;   ///< CH0AÊä³ö¼«ĞÔ¿ØÖÆ
+    boolean_t                  bCh0ACmpBufEn;    ///< ±È½ÏA»º´æ¹¦ÄÜ Ê¹ÄÜ/½ûÖ¹
+    en_bt_m23_cisa_cisb_t      enCh0ACmpIntSel;  ///< CHA±È½ÏÆ¥ÅäÖĞ¶ÏÑ¡Ôñ
     
-    en_bt_m23_crch0_csa_csb_t  enCh0BCmpCap;     ///< CH0Bæ¯”è¾ƒ/æ•è·åŠŸèƒ½é€‰æ‹©
-    en_bt_m23_fltr_ocm_t       enCH0BCmpCtrl;    ///< CH0Bé€šé“æ¯”è¾ƒæ§åˆ¶
-    en_bt_port_polarity_t      enCH0BPolarity;   ///< CH0Bè¾“å‡ºææ€§æ§åˆ¶
-    boolean_t                  bCH0BCmpBufEn;    ///< æ¯”è¾ƒBç¼“å­˜åŠŸèƒ½ ä½¿èƒ½/ç¦æ­¢
-    en_bt_m23_cisa_cisb_t      enCH0BCmpIntSel;  ///< CHB0æ¯”è¾ƒåŒ¹é…ä¸­æ–­é€‰æ‹©
+    en_bt_m23_crch0_csa_csb_t  enCh0BCmpCap;     ///< CH0B±È½Ï/²¶»ñ¹¦ÄÜÑ¡Ôñ
+    en_bt_m23_fltr_ocm_t       enCH0BCmpCtrl;    ///< CH0BÍ¨µÀ±È½Ï¿ØÖÆ
+    en_bt_port_polarity_t      enCH0BPolarity;   ///< CH0BÊä³ö¼«ĞÔ¿ØÖÆ
+    boolean_t                  bCH0BCmpBufEn;    ///< ±È½ÏB»º´æ¹¦ÄÜ Ê¹ÄÜ/½ûÖ¹
+    en_bt_m23_cisa_cisb_t      enCH0BCmpIntSel;  ///< CHB0±È½ÏÆ¥ÅäÖĞ¶ÏÑ¡Ôñ
 }stc_bt_m23_compare_config_t;
 
 /**
  ******************************************************************************
- ** \brief CHA/CHBé€šé“æ•è·æ§åˆ¶ é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief CHA/CHBÍ¨µÀ²¶»ñ¿ØÖÆ ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_bt_m23_input_config
 {
-    en_bt_m23_crch0_csa_csb_t  enCh0ACmpCap;     ///< CH0Aæ¯”è¾ƒ/æ•è·åŠŸèƒ½é€‰æ‹©
-    en_bt_m23_crch0_cfx_crx_t  enCH0ACapSel;     ///< CH0Aæ•è·è¾¹æ²¿é€‰æ‹©
-    en_bt_flt_t                enCH0AInFlt;      ///< CH0Aé€šé“æ•è·æ»¤æ³¢æ§åˆ¶
-    en_bt_port_polarity_t      enCH0APolarity;   ///< CH0Aè¾“å…¥ç›¸ä½
+    en_bt_m23_crch0_csa_csb_t  enCh0ACmpCap;     ///< CH0A±È½Ï/²¶»ñ¹¦ÄÜÑ¡Ôñ
+    en_bt_m23_crch0_cfx_crx_t  enCH0ACapSel;     ///< CH0A²¶»ñ±ßÑØÑ¡Ôñ
+    en_bt_flt_t                enCH0AInFlt;      ///< CH0AÍ¨µÀ²¶»ñÂË²¨¿ØÖÆ
+    en_bt_port_polarity_t      enCH0APolarity;   ///< CH0AÊäÈëÏàÎ»
     
-    en_bt_m23_crch0_csa_csb_t  enCh0BCmpCap;     ///< CH0Bæ¯”è¾ƒ/æ•è·åŠŸèƒ½é€‰æ‹©
-    en_bt_m23_crch0_cfx_crx_t  enCH0BCapSel;     ///< HC0Bæ•è·è¾¹æ²¿é€‰æ‹©
-    en_bt_flt_t                enCH0BInFlt;      ///< CH0Bé€šé“æ•è·æ»¤æ³¢æ§åˆ¶
-    en_bt_port_polarity_t      enCH0BPolarity;   ///< CH0Bè¾“å…¥ç›¸ä½
+    en_bt_m23_crch0_csa_csb_t  enCh0BCmpCap;     ///< CH0B±È½Ï/²¶»ñ¹¦ÄÜÑ¡Ôñ
+    en_bt_m23_crch0_cfx_crx_t  enCH0BCapSel;     ///< HC0B²¶»ñ±ßÑØÑ¡Ôñ
+    en_bt_flt_t                enCH0BInFlt;      ///< CH0BÍ¨µÀ²¶»ñÂË²¨¿ØÖÆ
+    en_bt_port_polarity_t      enCH0BPolarity;   ///< CH0BÊäÈëÏàÎ»
     
 }stc_bt_m23_input_config_t;   
 
 /**
  ******************************************************************************
- ** \brief ETRè¾“å…¥ç›¸ä½æ»¤æ³¢é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief ETRÊäÈëÏàÎ»ÂË²¨ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_bt_m23_etr_input_config
 {
-    en_bt_port_polarity_t     enETRPolarity;  ///< ETRè¾“å…¥ææ€§è®¾ç½®
-    en_bt_flt_t               enETRFlt;       ///< ETRæ»¤æ³¢è®¾ç½®
+    en_bt_port_polarity_t     enETRPolarity;  ///< ETRÊäÈë¼«ĞÔÉèÖÃ
+    en_bt_flt_t               enETRFlt;       ///< ETRÂË²¨ÉèÖÃ
 }stc_bt_m23_etr_input_config_t;
 
 /**
  ******************************************************************************
- ** \brief åˆ¹è½¦BKè¾“å…¥ç›¸ä½æ»¤æ³¢é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief É²³µBKÊäÈëÏàÎ»ÂË²¨ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_bt_m23_bk_input_config
 {
-    boolean_t                 bEnBrake;         ///< åˆ¹è½¦ä½¿èƒ½
-    boolean_t                 bEnVC0Brake;      ///< ä½¿èƒ½VC0åˆ¹è½¦
-    boolean_t                 bEnVC1Brake;      ///< ä½¿èƒ½VC1åˆ¹è½¦
-    boolean_t                 bEnSafetyBk;      ///< ä½¿èƒ½safetyåˆ¹è½¦
-    boolean_t                 bEnBKSync;        ///< TIM0/TIM1/TIM2åˆ¹è½¦åŒæ­¥ä½¿èƒ½
-    en_bt_m23_crch0_bks_t     enBkCH0AStat;     ///< åˆ¹è½¦æ—¶CHAç«¯å£çŠ¶æ€è®¾ç½®
-    en_bt_m23_crch0_bks_t     enBkCH0BStat;     ///< åˆ¹è½¦æ—¶CHBç«¯å£çŠ¶æ€è®¾ç½®
-    en_bt_port_polarity_t     enBrakePolarity;  ///< åˆ¹è½¦BKè¾“å…¥ææ€§è®¾ç½®
-    en_bt_flt_t               enBrakeFlt;       ///< åˆ¹è½¦BKæ»¤æ³¢è®¾ç½®
+    boolean_t                 bEnBrake;         ///< É²³µÊ¹ÄÜ
+    boolean_t                 bEnVC0Brake;      ///< Ê¹ÄÜVC0É²³µ
+    boolean_t                 bEnVC1Brake;      ///< Ê¹ÄÜVC1É²³µ
+    boolean_t                 bEnSafetyBk;      ///< Ê¹ÄÜsafetyÉ²³µ
+    boolean_t                 bEnBKSync;        ///< TIM0/TIM1/TIM2É²³µÍ¬²½Ê¹ÄÜ
+    en_bt_m23_crch0_bks_t     enBkCH0AStat;     ///< É²³µÊ±CHA¶Ë¿Ú×´Ì¬ÉèÖÃ
+    en_bt_m23_crch0_bks_t     enBkCH0BStat;     ///< É²³µÊ±CHB¶Ë¿Ú×´Ì¬ÉèÖÃ
+    en_bt_port_polarity_t     enBrakePolarity;  ///< É²³µBKÊäÈë¼«ĞÔÉèÖÃ
+    en_bt_flt_t               enBrakeFlt;       ///< É²³µBKÂË²¨ÉèÖÃ
 }stc_bt_m23_bk_input_config_t;
 
 /**
  ******************************************************************************
-** \brief æ­»åŒºåŠŸèƒ½é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+** \brief ËÀÇø¹¦ÄÜÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_bt_m23_dt_config
 {
-    boolean_t       bEnDeadTime;      ///< åˆ¹è½¦æ—¶CHAç«¯å£çŠ¶æ€è®¾ç½®
-    uint8_t         u8DeadTimeValue;  ///< åˆ¹è½¦æ—¶CHAç«¯å£çŠ¶æ€è®¾ç½®
+    boolean_t       bEnDeadTime;      ///< É²³µÊ±CHA¶Ë¿Ú×´Ì¬ÉèÖÃ
+    uint8_t         u8DeadTimeValue;  ///< É²³µÊ±CHA¶Ë¿Ú×´Ì¬ÉèÖÃ
 }stc_bt_m23_dt_config_t;
 
 /**
  ******************************************************************************
- ** \brief è§¦å‘ADCé…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief ´¥·¢ADCÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_bt_m23_adc_trig_config
 {
-    boolean_t     bEnTrigADC;          ///< è§¦å‘ADCå…¨å±€æ§åˆ¶
-    boolean_t     bEnUevTrigADC;       ///< äº‹ä»¶æ›´æ–°è§¦å‘ADC
-    boolean_t     bEnCH0ACmpTrigADC;   ///< CH0Aæ¯”è¾ƒåŒ¹é…è§¦å‘ADC
-    boolean_t     bEnCH0BCmpTrigADC;   ///< CH0Bæ¯”è¾ƒåŒ¹é…è§¦å‘ADC
+    boolean_t     bEnTrigADC;          ///< ´¥·¢ADCÈ«¾Ö¿ØÖÆ
+    boolean_t     bEnUevTrigADC;       ///< ÊÂ¼ş¸üĞÂ´¥·¢ADC
+    boolean_t     bEnCH0ACmpTrigADC;   ///< CH0A±È½ÏÆ¥Åä´¥·¢ADC
+    boolean_t     bEnCH0BCmpTrigADC;   ///< CH0B±È½ÏÆ¥Åä´¥·¢ADC
 }stc_bt_m23_adc_trig_config_t;
 
 /**
  ******************************************************************************
- ** \brief  DMAè§¦å‘ é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief  DMA´¥·¢ ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_bt_m23_trig_dma_config
 {
-    boolean_t              bUevTrigDMA;      ///< æ›´æ–° è§¦å‘DMAä½¿èƒ½
-    boolean_t              bTITrigDMA;       ///< Trig è§¦å‘DMAåŠŸèƒ½
-    boolean_t              bCmpATrigDMA;     ///< Aæ•è·æ¯”è¾ƒè§¦å‘DMAä½¿èƒ½
-    boolean_t              bCmpBTrigDMA;     ///< Bæ•è·æ¯”è¾ƒè§¦å‘DMAä½¿èƒ½
-    en_bt_m23_mscr_ccds_t  enCmpUevTrigDMA;  ///< æ¯”è¾ƒæ¨¡å¼ä¸‹DMAæ¯”è¾ƒè§¦å‘é€‰æ‹©
+    boolean_t              bUevTrigDMA;      ///< ¸üĞÂ ´¥·¢DMAÊ¹ÄÜ
+    boolean_t              bTITrigDMA;       ///< Trig ´¥·¢DMA¹¦ÄÜ
+    boolean_t              bCmpATrigDMA;     ///< A²¶»ñ±È½Ï´¥·¢DMAÊ¹ÄÜ
+    boolean_t              bCmpBTrigDMA;     ///< B²¶»ñ±È½Ï´¥·¢DMAÊ¹ÄÜ
+    en_bt_m23_mscr_ccds_t  enCmpUevTrigDMA;  ///< ±È½ÏÄ£Ê½ÏÂDMA±È½Ï´¥·¢Ñ¡Ôñ
 }stc_bt_m23_trig_dma_config_t;
 
 /**
  ******************************************************************************
- ** \brief  ä¸»ä»æ¨¡å¼ é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief  Ö÷´ÓÄ£Ê½ ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_bt_m23_master_slave_config
 {
-    en_bt_m23_mscr_msm_t      enMasterSlaveSel;  ///< ä¸»ä»æ¨¡å¼é€‰æ‹©
-    en_bt_m23_mscr_mms_t      enMasterSrc;       ///< ä¸»æ¨¡å¼è§¦å‘æºé€‰æ‹©
-    en_bt_m23_mscr_sms_t      enSlaveModeSel;    ///< ä»æ¨¡å¼é€‰æ‹©
-    en_bt_mscr_ts_t           enTsSel;           ///< è§¦å‘è¾“å…¥æºé€‰æ‹©
+    en_bt_m23_mscr_msm_t      enMasterSlaveSel;  ///< Ö÷´ÓÄ£Ê½Ñ¡Ôñ
+    en_bt_m23_mscr_mms_t      enMasterSrc;       ///< Ö÷Ä£Ê½´¥·¢Ô´Ñ¡Ôñ
+    en_bt_m23_mscr_sms_t      enSlaveModeSel;    ///< ´ÓÄ£Ê½Ñ¡Ôñ
+    en_bt_mscr_ts_t           enTsSel;           ///< ´¥·¢ÊäÈëÔ´Ñ¡Ôñ
 }stc_bt_m23_master_slave_config_t;
 
 /**
  ******************************************************************************
- ** \brief  OCREFæ¸…é™¤åŠŸèƒ½ é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief  OCREFÇå³ı¹¦ÄÜ ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_bt_m23_OCREF_Clr_config
 {
-    en_bt_m23ce_occs_t       enOCRefClrSrcSel;  ///< OCREFæ¸…é™¤æºé€‰æ‹©
-    boolean_t                bVCClrEn;          ///< æ˜¯å¦ä½¿èƒ½æ¥è‡ªVCçš„OCREF_Clr
+    en_bt_m23ce_occs_t       enOCRefClrSrcSel;  ///< OCREFÇå³ıÔ´Ñ¡Ôñ
+    boolean_t                bVCClrEn;          ///< ÊÇ·ñÊ¹ÄÜÀ´×ÔVCµÄOCREF_Clr
 }stc_bt_m23_OCREF_Clr_config_t;
 
 /******************************************************************************
@@ -645,113 +645,113 @@ typedef struct stc_bt_m23_OCREF_Clr_config
 /******************************************************************************
  * Global function prototypes (definition in C source)
  *****************************************************************************/
-//ä¸­æ–­ç›¸å…³å‡½æ•°
+//ÖĞ¶ÏÏà¹Øº¯Êı
 
-//ä¸­æ–­æ ‡å¿—è·å–
+//ÖĞ¶Ï±êÖ¾»ñÈ¡
 boolean_t Bt_GetIntFlag(en_bt_unit_t enUnit, en_bt_irq_type_t enBtIrq);
-//ä¸­æ–­æ ‡å¿—æ¸…é™¤
+//ÖĞ¶Ï±êÖ¾Çå³ı
 en_result_t Bt_ClearIntFlag(en_bt_unit_t enUnit, en_bt_irq_type_t enBtIrq);
-//æ‰€æœ‰ä¸­æ–­æ ‡å¿—æ¸…é™¤
+//ËùÓĞÖĞ¶Ï±êÖ¾Çå³ı
 en_result_t Bt_ClearAllIntFlag(en_bt_unit_t enUnit);
-//æ¨¡å¼0ä¸­æ–­ä½¿èƒ½
+//Ä£Ê½0ÖĞ¶ÏÊ¹ÄÜ
 en_result_t Bt_Mode0_EnableIrq(en_bt_unit_t enUnit);
-//æ¨¡å¼1ä¸­æ–­ä½¿èƒ½
+//Ä£Ê½1ÖĞ¶ÏÊ¹ÄÜ
 en_result_t Bt_Mode1_EnableIrq (en_bt_unit_t enUnit, en_bt_irq_type_t enBtIrq);
-//æ¨¡å¼2ä¸­æ–­ä½¿èƒ½
+//Ä£Ê½2ÖĞ¶ÏÊ¹ÄÜ
 en_result_t Bt_Mode23_EnableIrq (en_bt_unit_t enUnit, en_bt_irq_type_t enBtIrq);
-//æ¨¡å¼0ä¸­æ–­ç¦æ­¢
+//Ä£Ê½0ÖĞ¶Ï½ûÖ¹
 en_result_t Bt_Mode0_DisableIrq(en_bt_unit_t enUnit);
-//æ¨¡å¼1ä¸­æ–­ç¦æ­¢
+//Ä£Ê½1ÖĞ¶Ï½ûÖ¹
 en_result_t Bt_Mode1_DisableIrq (en_bt_unit_t enUnit, en_bt_irq_type_t enBtIrq);
-//æ¨¡å¼2ä¸­æ–­ç¦æ­¢
+//Ä£Ê½2ÖĞ¶Ï½ûÖ¹
 en_result_t Bt_Mode23_DisableIrq (en_bt_unit_t enUnit, en_bt_irq_type_t enBtIrq);
 
 
-//æ¨¡å¼0åˆå§‹åŒ–åŠç›¸å…³åŠŸèƒ½æ“ä½œ
+//Ä£Ê½0³õÊ¼»¯¼°Ïà¹Ø¹¦ÄÜ²Ù×÷
 
-//timeré…ç½®åŠåˆå§‹åŒ–
+//timerÅäÖÃ¼°³õÊ¼»¯
 en_result_t Bt_Mode0_Init(en_bt_unit_t enUnit, stc_bt_mode0_config_t* pstcConfig);
-//timer å¯åŠ¨/åœæ­¢
+//timer Æô¶¯/Í£Ö¹
 en_result_t Bt_M0_Run(en_bt_unit_t enUnit);
 en_result_t Bt_M0_Stop(en_bt_unit_t enUnit);
-//é‡è½½å€¼è®¾ç½®
+//ÖØÔØÖµÉèÖÃ
 en_result_t Bt_M0_ARRSet(en_bt_unit_t enUnit, uint16_t u16Data);
-//16ä½è®¡æ•°å€¼è®¾ç½®/è·å–
+//16Î»¼ÆÊıÖµÉèÖÃ/»ñÈ¡
 en_result_t Bt_M0_Cnt16Set(en_bt_unit_t enUnit, uint16_t u16Data);
 uint16_t Bt_M0_Cnt16Get(en_bt_unit_t enUnit);
-//32ä½è®¡æ•°å€¼è®¾ç½®/è·å–
+//32Î»¼ÆÊıÖµÉèÖÃ/»ñÈ¡
 en_result_t Bt_M0_Cnt32Set(en_bt_unit_t enUnit, uint32_t u32Data);
 uint32_t Bt_M0_Cnt32Get(en_bt_unit_t enUnit);
-//ç¿»è½¬è¾“å‡ºä½¿èƒ½/ç¦æ­¢è®¾å®š
+//·­×ªÊä³öÊ¹ÄÜ/½ûÖ¹Éè¶¨
 en_result_t Bt_M0_EnTOG_Output(en_bt_unit_t enUnit, boolean_t bEnOutput);
 
 
-//æ¨¡å¼1åˆå§‹åŒ–åŠç›¸å…³åŠŸèƒ½æ“ä½œ
+//Ä£Ê½1³õÊ¼»¯¼°Ïà¹Ø¹¦ÄÜ²Ù×÷
 
-//timeré…ç½®åŠåˆå§‹åŒ–
+//timerÅäÖÃ¼°³õÊ¼»¯
 en_result_t Bt_Mode1_Init(en_bt_unit_t enUnit, stc_bt_mode1_config_t* pstcConfig);
-//PWC è¾“å…¥é…ç½®
+//PWC ÊäÈëÅäÖÃ
 en_result_t Bt_M1_Input_Config(en_bt_unit_t enUnit, stc_bt_pwc_input_config_t* pstcConfig);
-//PWCæµ‹é‡è¾¹æ²¿èµ·å§‹ç»“æŸé€‰æ‹©
+//PWC²âÁ¿±ßÑØÆğÊ¼½áÊøÑ¡Ôñ
 en_result_t Bt_M1_PWC_Edge_Sel(en_bt_unit_t enUnit,en_bt_m1cr_Edge_t enEdgeSel);
-//timer å¯åŠ¨/åœæ­¢
+//timer Æô¶¯/Í£Ö¹
 en_result_t Bt_M1_Run(en_bt_unit_t enUnit);
 en_result_t Bt_M1_Stop(en_bt_unit_t enUnit);
-//16ä½è®¡æ•°å€¼è®¾ç½®/è·å–
+//16Î»¼ÆÊıÖµÉèÖÃ/»ñÈ¡
 en_result_t Bt_M1_Cnt16Set(en_bt_unit_t enUnit, uint16_t u16Data);
 uint16_t Bt_M1_Cnt16Get(en_bt_unit_t enUnit);
-//è„‰å†²å®½åº¦æµ‹é‡ç»“æœæ•°å€¼è·å–
+//Âö³å¿í¶È²âÁ¿½á¹ûÊıÖµ»ñÈ¡
 uint16_t Bt_M1_PWC_CapValueGet(en_bt_unit_t enUnit);
 
 
-//æ¨¡å¼23åˆå§‹åŒ–åŠç›¸å…³åŠŸèƒ½æ“ä½œ
+//Ä£Ê½23³õÊ¼»¯¼°Ïà¹Ø¹¦ÄÜ²Ù×÷
 
-//timeré…ç½®åŠåˆå§‹åŒ–
+//timerÅäÖÃ¼°³õÊ¼»¯
 en_result_t Bt_Mode23_Init(en_bt_unit_t enUnit, stc_bt_mode23_config_t* pstcConfig);
-//timer å¯åŠ¨/åœæ­¢
+//timer Æô¶¯/Í£Ö¹
 en_result_t Bt_M23_Run(en_bt_unit_t enUnit);
 en_result_t Bt_M23_Stop(en_bt_unit_t enUnit);
-//PWMè¾“å‡ºä½¿èƒ½
+//PWMÊä³öÊ¹ÄÜ
 en_result_t Bt_M23_EnPWM_Output(en_bt_unit_t enUnit, boolean_t bEnOutput, boolean_t bEnAutoOutput);
-//é‡è½½å€¼è®¾ç½®
+//ÖØÔØÖµÉèÖÃ
 en_result_t Bt_M23_ARRSet(en_bt_unit_t enUnit, uint16_t u16Data, boolean_t bArrBufEn);
-//16ä½è®¡æ•°å€¼è®¾ç½®/è·å–
+//16Î»¼ÆÊıÖµÉèÖÃ/»ñÈ¡
 en_result_t Bt_M23_Cnt16Set(en_bt_unit_t enUnit, uint16_t u16Data);
 uint16_t Bt_M23_Cnt16Get(en_bt_unit_t enUnit);
-//æ¯”è¾ƒæ•è·å¯„å­˜å™¨CCR0A/CCR0Bè®¾ç½®/è¯»å–
+//±È½Ï²¶»ñ¼Ä´æÆ÷CCR0A/CCR0BÉèÖÃ/¶ÁÈ¡
 en_result_t Bt_M23_CCR_Set(en_bt_unit_t enUnit, en_bt_m23_ccrx_t enCCRSel, uint16_t u16Data);
 uint16_t Bt_M23_CCR_Get(en_bt_unit_t enUnit, en_bt_m23_ccrx_t enCCRSel);
-//PWMäº’è¡¥è¾“å‡ºæ¨¡å¼ä¸‹ï¼ŒGATEåŠŸèƒ½é€‰æ‹©
+//PWM»¥²¹Êä³öÄ£Ê½ÏÂ£¬GATE¹¦ÄÜÑ¡Ôñ
 en_result_t Bt_M23_GateFuncSel(en_bt_unit_t enUnit,stc_bt_m23_gate_config_t* pstcConfig);
-//ä¸»ä»æ¨¡å¼é…ç½®
+//Ö÷´ÓÄ£Ê½ÅäÖÃ
 en_result_t Bt_M23_MasterSlave_Set(en_bt_unit_t enUnit, stc_bt_m23_master_slave_config_t* pstcConfig);
-//CH0A/CH0Bæ¯”è¾ƒé€šé“æ§åˆ¶
+//CH0A/CH0B±È½ÏÍ¨µÀ¿ØÖÆ
 en_result_t Bt_M23_PortOutput_Config(en_bt_unit_t enUnit, stc_bt_m23_compare_config_t* pstcConfig);
-//CH0A/CH0Bè¾“å…¥æ§åˆ¶
+//CH0A/CH0BÊäÈë¿ØÖÆ
 en_result_t Bt_M23_PortInput_Config(en_bt_unit_t enUnit, stc_bt_m23_input_config_t* pstcConfig);
-//ERTè¾“å…¥æ§åˆ¶
+//ERTÊäÈë¿ØÖÆ
 en_result_t Bt_M23_ETRInput_Config(en_bt_unit_t enUnit, stc_bt_m23_etr_input_config_t* pstcConfig);
-//åˆ¹è½¦BKè¾“å…¥æ§åˆ¶
+//É²³µBKÊäÈë¿ØÖÆ
 en_result_t Bt_M23_BrakeInput_Config(en_bt_unit_t enUnit, stc_bt_m23_bk_input_config_t* pstcConfig);
-//è§¦å‘ADCæ§åˆ¶
+//´¥·¢ADC¿ØÖÆ
 en_result_t Bt_M23_TrigADC_Config(en_bt_unit_t enUnit, stc_bt_m23_adc_trig_config_t* pstcConfig);
-//æ­»åŒºåŠŸèƒ½
+//ËÀÇø¹¦ÄÜ
 en_result_t Bt_M23_DT_Config(en_bt_unit_t enUnit, stc_bt_m23_dt_config_t* pstcConfig);
-//é‡å¤å‘¨æœŸè®¾ç½®
+//ÖØ¸´ÖÜÆÚÉèÖÃ
 en_result_t Bt_M23_SetValidPeriod(en_bt_unit_t enUnit, uint8_t u8ValidPeriod);
-//OCREFæ¸…é™¤åŠŸèƒ½
+//OCREFÇå³ı¹¦ÄÜ
 en_result_t Bt_M23_OCRefClr(en_bt_unit_t enUnit, stc_bt_m23_OCREF_Clr_config_t* pstcConfig);
-//ä½¿èƒ½DMAä¼ è¾“
+//Ê¹ÄÜDMA´«Êä
 en_result_t Bt_M23_EnDMA(en_bt_unit_t enUnit, stc_bt_m23_trig_dma_config_t* pstcConfig);
-//æ•è·æ¯”è¾ƒAè½¯ä»¶è§¦å‘
+//²¶»ñ±È½ÏAÈí¼ş´¥·¢
 en_result_t Bt_M23_EnSwTrigCapCmpA(en_bt_unit_t enUnit);
-//æ•è·æ¯”è¾ƒBè½¯ä»¶è§¦å‘
+//²¶»ñ±È½ÏBÈí¼ş´¥·¢
 en_result_t Bt_M23_EnSwTrigCapCmpB(en_bt_unit_t enUnit);
-//è½¯ä»¶æ›´æ–°ä½¿èƒ½
+//Èí¼ş¸üĞÂÊ¹ÄÜ
 en_result_t Bt_M23_EnSwUev(en_bt_unit_t enUnit);
-//è½¯ä»¶è§¦å‘ä½¿èƒ½
+//Èí¼ş´¥·¢Ê¹ÄÜ
 en_result_t Bt_M23_EnSwTrig(en_bt_unit_t enUnit);
-//è½¯ä»¶åˆ¹è½¦ä½¿èƒ½
+//Èí¼şÉ²³µÊ¹ÄÜ
 en_result_t Bt_M23_EnSwBk(en_bt_unit_t enUnit);
 
 

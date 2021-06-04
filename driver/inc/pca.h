@@ -42,7 +42,7 @@
 /*****************************************************************************/
 /** \file pca.h
  **
- ** PCAï¼ˆå¯ç¼–ç¨‹è®¡æ•°é˜µåˆ—ï¼‰æ•°æ®ç»“æž„åŠAPIå£°æ˜Ž
+ ** PCA£¨¿É±à³Ì¼ÆÊýÕóÁÐ£©Êý¾Ý½á¹¹¼°APIÉùÃ÷
  **  
  **
  ** History:
@@ -80,50 +80,50 @@ extern "C"
 
  /**
  ******************************************************************************
- ** \brief PCA æ¨¡å—é€‰æ‹©æ•°æ®ç±»åž‹é‡å®šä¹‰
+ ** \brief PCA Ä£¿éÑ¡ÔñÊý¾ÝÀàÐÍÖØ¶¨Òå
  *****************************************************************************/
 typedef enum en_pca_module
 {
-    Module0    = 0u,        ///< æ¨¡å—0
-    Module1    = 1u,        ///< æ¨¡å—1
-    Module2    = 2u,        ///< æ¨¡å—2
-    Module3    = 3u,        ///< æ¨¡å—3
-    Module4    = 4u,        ///< æ¨¡å—4
+    Module0    = 0u,        ///< Ä£¿é0
+    Module1    = 1u,        ///< Ä£¿é1
+    Module2    = 2u,        ///< Ä£¿é2
+    Module3    = 3u,        ///< Ä£¿é3
+    Module4    = 4u,        ///< Ä£¿é4
 }en_pca_module_t;
 
 /**
  ******************************************************************************
- ** \brief PCA è®¡æ•°å¯/åœæŽ§åˆ¶æ•°æ®ç±»åž‹é‡å®šä¹‰ (CR)
+ ** \brief PCA ¼ÆÊýÆô/Í£¿ØÖÆÊý¾ÝÀàÐÍÖØ¶¨Òå (CR)
  *****************************************************************************/
 typedef enum en_pca_start
 {
-    CRStop  = 0u,            ///< åœæ­¢è®¡æ•°
-    CRStart = 1u,            ///< å¼€å§‹è®¡æ•°
+    CRStop  = 0u,            ///< Í£Ö¹¼ÆÊý
+    CRStart = 1u,            ///< ¿ªÊ¼¼ÆÊý
 }en_pca_start_t;
 
 /**
  ******************************************************************************
- ** \brief PCA IDLE æ¨¡å¼ä¸‹å¯/åœæŽ§åˆ¶æ•°æ®ç±»åž‹é‡å®šä¹‰ (CIDL)
+ ** \brief PCA IDLE Ä£Ê½ÏÂÆô/Í£¿ØÖÆÊý¾ÝÀàÐÍÖØ¶¨Òå (CIDL)
  *****************************************************************************/
 typedef enum en_pca_cidl
 {
-    IdleGoOn = 0u,            ///< ä¼‘çœ æ¨¡å¼ä¸‹ PCAç»§ç»­å·¥ä½œ
-    IdleStop = 1u,            ///< ä¼‘çœ æ¨¡å¼ä¸‹ PCAåœæ­¢å·¥ä½œ 
+    IdleGoOn = 0u,            ///< ÐÝÃßÄ£Ê½ÏÂ PCA¼ÌÐø¹¤×÷
+    IdleStop = 1u,            ///< ÐÝÃßÄ£Ê½ÏÂ PCAÍ£Ö¹¹¤×÷ 
 }en_pca_cidl_t;
 
 /**
  ******************************************************************************
- ** \brief PCA æ¨¡å—4 WDTåŠŸèƒ½æŽ§åˆ¶æ•°æ®ç±»åž‹é‡å®šä¹‰ (WDTE)
+ ** \brief PCA Ä£¿é4 WDT¹¦ÄÜ¿ØÖÆÊý¾ÝÀàÐÍÖØ¶¨Òå (WDTE)
  *****************************************************************************/
 typedef enum en_pca_wdte
 {
-    PCAWDTDisable = 0u,            ///< å…³é—­ PCAæ¨¡å—4 WDTåŠŸèƒ½
-    PCAWDTEnable  = 1u,            ///< å¯åŠ¨ PCAæ¨¡å—4 WDTåŠŸèƒ½
+    PCAWDTDisable = 0u,            ///< ¹Ø±Õ PCAÄ£¿é4 WDT¹¦ÄÜ
+    PCAWDTEnable  = 1u,            ///< Æô¶¯ PCAÄ£¿é4 WDT¹¦ÄÜ
 }en_pca_wdte_t;
 
 /**
  ******************************************************************************
- ** \brief PCA æ—¶é’Ÿåˆ†é¢‘åŠæ—¶é’Ÿæºé€‰æ‹©åŠŸèƒ½æ•°æ®ç±»åž‹é‡å®šä¹‰ (CPS)
+ ** \brief PCA Ê±ÖÓ·ÖÆµ¼°Ê±ÖÓÔ´Ñ¡Ôñ¹¦ÄÜÊý¾ÝÀàÐÍÖØ¶¨Òå (CPS)
  *****************************************************************************/
 typedef enum en_pca_clksel
 {
@@ -134,104 +134,104 @@ typedef enum en_pca_clksel
     PCAPCLKDiv2   = 4u,         ///< PCLK/2
     PCATimer0Over = 5u,         ///< timer0 overflow
     PCATimer1Over = 6u,         ///< timer1 overflow
-    PCAECI        = 7u,         ///< ECI å¤–éƒ¨æ—¶é’Ÿ,æ—¶é’ŸPCLKå››åˆ†é¢‘é‡‡æ ·
+    PCAECI        = 7u,         ///< ECI Íâ²¿Ê±ÖÓ,Ê±ÖÓPCLKËÄ·ÖÆµ²ÉÑù
 }en_pca_clksel_t;
 
 /**
  ******************************************************************************
- ** \brief PCA å…è®¸æ¯”è¾ƒå™¨åŠŸèƒ½æŽ§åˆ¶æ•°æ®ç±»åž‹é‡å®šä¹‰ (ECOM)
+ ** \brief PCA ÔÊÐí±È½ÏÆ÷¹¦ÄÜ¿ØÖÆÊý¾ÝÀàÐÍÖØ¶¨Òå (ECOM)
  *****************************************************************************/
 typedef enum en_pca_ecom
 {
-    ECOMDisable = 0u,            ///< ç¦æ­¢æ¯”è¾ƒå™¨åŠŸèƒ½
-    ECOMEnable  = 1u,            ///< å…è®¸æ¯”è¾ƒå™¨åŠŸèƒ½
+    ECOMDisable = 0u,            ///< ½ûÖ¹±È½ÏÆ÷¹¦ÄÜ
+    ECOMEnable  = 1u,            ///< ÔÊÐí±È½ÏÆ÷¹¦ÄÜ
 }en_pca_ecom_t;
 
 /**
  ******************************************************************************
- ** \brief PCA æ­£æ²¿æ•èŽ·æŽ§åˆ¶ä½æ•°æ®ç±»åž‹é‡å®šä¹‰ (CAPP)
+ ** \brief PCA ÕýÑØ²¶»ñ¿ØÖÆÎ»Êý¾ÝÀàÐÍÖØ¶¨Òå (CAPP)
  *****************************************************************************/
 typedef enum en_pca_capp
 {
-    CAPPDisable = 0u,            ///< ç¦æ­¢ä¸Šå‡æ²¿æ•èŽ·
-    CAPPEnable  = 1u,            ///< å…è®¸ä¸Šå‡æ²¿æ•èŽ·
+    CAPPDisable = 0u,            ///< ½ûÖ¹ÉÏÉýÑØ²¶»ñ
+    CAPPEnable  = 1u,            ///< ÔÊÐíÉÏÉýÑØ²¶»ñ
 }en_pca_capp_t;
 
 /**
  ******************************************************************************
- ** \brief PCA è´Ÿæ²¿æ•èŽ·æŽ§åˆ¶ä½æ•°æ®ç±»åž‹é‡å®šä¹‰ (CAPN)
+ ** \brief PCA ¸ºÑØ²¶»ñ¿ØÖÆÎ»Êý¾ÝÀàÐÍÖØ¶¨Òå (CAPN)
  *****************************************************************************/
 typedef enum en_pca_capn
 {
-    CAPNDisable = 0u,            ///< ç¦æ­¢ä¸‹é™æ²¿æ•èŽ·
-    CAPNEnable  = 1u,            ///< å…è®¸ä¸‹é™æ²¿æ•èŽ·
+    CAPNDisable = 0u,            ///< ½ûÖ¹ÏÂ½µÑØ²¶»ñ
+    CAPNEnable  = 1u,            ///< ÔÊÐíÏÂ½µÑØ²¶»ñ
 }en_pca_capn_t;
 
 /**
  ******************************************************************************
- ** \brief PCA åŒ¹é…æŽ§åˆ¶ä½æ•°æ®ç±»åž‹é‡å®šä¹‰ (MAT)
+ ** \brief PCA Æ¥Åä¿ØÖÆÎ»Êý¾ÝÀàÐÍÖØ¶¨Òå (MAT)
  *****************************************************************************/
 typedef enum en_pca_mat
 {
-    MATDisable = 0u,            ///< ç¦æ­¢åŒ¹é…
-    MATEnable  = 1u,            ///< å…è®¸åŒ¹é…
+    MATDisable = 0u,            ///< ½ûÖ¹Æ¥Åä
+    MATEnable  = 1u,            ///< ÔÊÐíÆ¥Åä
 }en_pca_mat_t;
 
 /**
  ******************************************************************************
- ** \brief PCA ç¿»è½¬æŽ§åˆ¶ä½æ•°æ®ç±»åž‹é‡å®šä¹‰ (TOG)
+ ** \brief PCA ·­×ª¿ØÖÆÎ»Êý¾ÝÀàÐÍÖØ¶¨Òå (TOG)
  *****************************************************************************/
 typedef enum en_pca_tog
 {
-    TOGDisable = 0u,            ///< ç¦æ­¢ç¿»è½¬åŠŸèƒ½
-    TOGEnable  = 1u,            ///< å…è®¸ç¿»è½¬åŠŸèƒ½
+    TOGDisable = 0u,            ///< ½ûÖ¹·­×ª¹¦ÄÜ
+    TOGEnable  = 1u,            ///< ÔÊÐí·­×ª¹¦ÄÜ
 }en_pca_tog_t;
 
 /**
  ******************************************************************************
- ** \brief PCA 8bitè„‰å®½è°ƒåˆ¶æŽ§åˆ¶æ•°æ®ç±»åž‹é‡å®šä¹‰ (8bitPWM)
+ ** \brief PCA 8bitÂö¿íµ÷ÖÆ¿ØÖÆÊý¾ÝÀàÐÍÖØ¶¨Òå (8bitPWM)
  *****************************************************************************/
 typedef enum en_pca_pwm_8_bit
 {
-    PCA8bitPWMDisable = 0u,            ///< ç¦æ­¢ PWMåŠŸèƒ½
-    PCA8bitPWMEnable  = 1u,            ///< å…è®¸CCPxå¼•è„šä½œä¸ºPWMè¾“å‡º
+    PCA8bitPWMDisable = 0u,            ///< ½ûÖ¹ PWM¹¦ÄÜ
+    PCA8bitPWMEnable  = 1u,            ///< ÔÊÐíCCPxÒý½Å×÷ÎªPWMÊä³ö
 }en_pca_8bit_pwm_t;
 
 /**
  ******************************************************************************
- ** \brief PCA 16bitè„‰å®½è°ƒåˆ¶æŽ§åˆ¶æ•°æ®ç±»åž‹é‡å®šä¹‰ (16bitPWM)
+ ** \brief PCA 16bitÂö¿íµ÷ÖÆ¿ØÖÆÊý¾ÝÀàÐÍÖØ¶¨Òå (16bitPWM)
  *****************************************************************************/
 typedef enum en_pca_pwm_16_bit
 {
-    PCA16bitPWMDisable = 0u,            ///< 16bitPWM ç¦æ­¢
-    PCA16bitPWMEnable  = 1u,            ///< 16bitPWM ä½¿èƒ½
+    PCA16bitPWMDisable = 0u,            ///< 16bitPWM ½ûÖ¹
+    PCA16bitPWMEnable  = 1u,            ///< 16bitPWM Ê¹ÄÜ
 }en_pca_16bit_pwm_t;
 
 /**
  ******************************************************************************
- ** \brief PCA é…ç½®ç»“æž„ä½“å®šä¹‰ 
+ ** \brief PCA ÅäÖÃ½á¹¹Ìå¶¨Òå 
  *****************************************************************************/
 typedef struct stc_pca_config
 {
-    en_pca_cidl_t     enCIDL;       ///< æ¨¡å¼ä¸‹å¯/åœæŽ§åˆ¶
-    en_pca_wdte_t     enWDTE;       ///< WDTåŠŸèƒ½æŽ§åˆ¶
-    en_pca_clksel_t   enCPS;        ///< æ—¶é’Ÿåˆ†é¢‘åŠæ—¶é’Ÿæºé€‰æ‹©åŠŸèƒ½
+    en_pca_cidl_t     enCIDL;       ///< Ä£Ê½ÏÂÆô/Í£¿ØÖÆ
+    en_pca_wdte_t     enWDTE;       ///< WDT¹¦ÄÜ¿ØÖÆ
+    en_pca_clksel_t   enCPS;        ///< Ê±ÖÓ·ÖÆµ¼°Ê±ÖÓÔ´Ñ¡Ôñ¹¦ÄÜ
     
-    func_ptr_t        pfnPcaCb;     ///< Pcaä¸­æ–­æœåŠ¡å›žè°ƒå‡½æ•°[void function(void)]
+    func_ptr_t        pfnPcaCb;     ///< PcaÖÐ¶Ï·þÎñ»Øµ÷º¯Êý[void function(void)]
 }stc_pca_config_t;
 
 /**
  ******************************************************************************
- ** \brief PCA æ•èŽ·æ¨¡å¼é…ç½®ç»“æž„ä½“å®šä¹‰ 
+ ** \brief PCA ²¶»ñÄ£Ê½ÅäÖÃ½á¹¹Ìå¶¨Òå 
  *****************************************************************************/
 typedef struct stc_pca_capmodconfig
 {
-    en_pca_ecom_t enECOM;                ///< å…è®¸æ¯”è¾ƒå™¨åŠŸèƒ½æŽ§åˆ¶
-    en_pca_capp_t enCAPP;                ///< æ­£æ²¿æ•èŽ·æŽ§åˆ¶
-    en_pca_capn_t enCAPN;                ///< è´Ÿæ²¿æ•èŽ·æŽ§åˆ¶
-    en_pca_mat_t  enMAT;                 ///< åŒ¹é…æŽ§åˆ¶
-    en_pca_tog_t  enTOG;                 ///< ç¿»è½¬æŽ§åˆ¶
-    en_pca_8bit_pwm_t  en8bitPWM;        ///< 8ä½è„‰å®½è°ƒåˆ¶æŽ§åˆ¶
+    en_pca_ecom_t enECOM;                ///< ÔÊÐí±È½ÏÆ÷¹¦ÄÜ¿ØÖÆ
+    en_pca_capp_t enCAPP;                ///< ÕýÑØ²¶»ñ¿ØÖÆ
+    en_pca_capn_t enCAPN;                ///< ¸ºÑØ²¶»ñ¿ØÖÆ
+    en_pca_mat_t  enMAT;                 ///< Æ¥Åä¿ØÖÆ
+    en_pca_tog_t  enTOG;                 ///< ·­×ª¿ØÖÆ
+    en_pca_8bit_pwm_t  en8bitPWM;        ///< 8Î»Âö¿íµ÷ÖÆ¿ØÖÆ
 }stc_pca_capmodconfig_t;
 
 /******************************************************************************
@@ -242,49 +242,49 @@ typedef struct stc_pca_capmodconfig
  * Global function prototypes (definition in C source)
  *****************************************************************************/
 //Interrupt related
-//PCAä¸­æ–­æ ‡å¿—èŽ·å–
+//PCAÖÐ¶Ï±êÖ¾»ñÈ¡
 boolean_t Pca_GetIntFlag(en_pca_module_t enModule);
-//PCAè®¡æ•°å™¨ä¸­æ–­æ ‡å¿—èŽ·å–
+//PCA¼ÆÊýÆ÷ÖÐ¶Ï±êÖ¾»ñÈ¡
 boolean_t Pca_GetCntIntFlag(void);
-//PCAä¸­æ–­æ ‡å¿—æ¸…é™¤
+//PCAÖÐ¶Ï±êÖ¾Çå³ý
 en_result_t Pca_ClearIntFlag(en_pca_module_t enModule);
-//PCAè®¡æ•°å™¨ä¸­æ–­æ ‡å¿—æ¸…é™¤
+//PCA¼ÆÊýÆ÷ÖÐ¶Ï±êÖ¾Çå³ý
 en_result_t Pca_ClearCntIntFlag(void);
-//PCAä¸­æ–­ä½¿èƒ½
+//PCAÖÐ¶ÏÊ¹ÄÜ
 en_result_t Pca_EnableIrq (en_pca_module_t enModule);
-//PCAè®¡æ•°å™¨ä¸­æ–­ä½¿èƒ½
+//PCA¼ÆÊýÆ÷ÖÐ¶ÏÊ¹ÄÜ
 en_result_t Pca_EnableCntIrq (void);
-//PCAä¸­æ–­å…³é—­
+//PCAÖÐ¶Ï¹Ø±Õ
 en_result_t Pca_DisableIrq(en_pca_module_t enModule);
-//PCAè®¡æ•°å™¨ä¸­æ–­å…³é—­
+//PCA¼ÆÊýÆ÷ÖÐ¶Ï¹Ø±Õ
 en_result_t Pca_DisableCntIrq(void);
 
-//PCAé…ç½®åŠæ“ä½œ
-//PCAåˆå§‹åŒ–
+//PCAÅäÖÃ¼°²Ù×÷
+//PCA³õÊ¼»¯
 en_result_t Pca_Init(stc_pca_config_t* pstcConfig);
-//PCAæ•èŽ·æ¨¡å¼é…ç½®
+//PCA²¶»ñÄ£Ê½ÅäÖÃ
 en_result_t Pca_CapModConfig(en_pca_module_t enModule, stc_pca_capmodconfig_t* pstcCapMod);
-//PCAè®¡æ•°å™¨å¯åŠ¨/åœæ­¢
+//PCA¼ÆÊýÆ÷Æô¶¯/Í£Ö¹
 en_result_t Pca_Run(void);
 en_result_t Pca_Stop(void);
-//PCA16ä½æ¯”è¾ƒæ•°æ®è®¾ç½®
+//PCA16Î»±È½ÏÊý¾ÝÉèÖÃ
 en_result_t Pca_CmpData16Set(en_pca_module_t enModule, uint16_t u16Data);
-//PCAæ•èŽ·16ä½æ•°æ®èŽ·å–
+//PCA²¶»ñ16Î»Êý¾Ý»ñÈ¡
 uint16_t Pca_CapData16Get(en_pca_module_t enModule);
-//PCAæ¯”è¾ƒæ•°æ®é«˜8ä½è®¾ç½®
+//PCA±È½ÏÊý¾Ý¸ß8Î»ÉèÖÃ
 en_result_t Pca_CmpDataHSet(en_pca_module_t enModule, uint8_t u8Data);
-//PCAæ¯”è¾ƒæ•°æ®ä½Ž8ä½è®¾ç½®
+//PCA±È½ÏÊý¾ÝµÍ8Î»ÉèÖÃ
 en_result_t Pca_CmpDataLSet(en_pca_module_t enModule, uint8_t u8Data);
-//PCAè®¡æ•°å€¼è®¾ç½®/èŽ·å–
+//PCA¼ÆÊýÖµÉèÖÃ/»ñÈ¡
 en_result_t Pca_Cnt16Set(uint16_t u16Data);
 uint16_t Pca_Cnt16Get(void);
-//PCAå‘¨æœŸé‡è½½å€¼è®¾ç½®/èŽ·å–
+//PCAÖÜÆÚÖØÔØÖµÉèÖÃ/»ñÈ¡
 en_result_t Pca_CARRSet(uint16_t u16Data);
 uint16_t Pca_CARRGet(void);
-//PCA å¢žå¼ºPWMåŠŸèƒ½ä½¿èƒ½/ç¦æ­¢
+//PCA ÔöÇ¿PWM¹¦ÄÜÊ¹ÄÜ/½ûÖ¹
 en_result_t Pca_Enable16bitPWM(void);
 en_result_t Pca_Disable16bitPWM(void);
-//PCAæ¯”è¾ƒé«˜é€Ÿè¾“å‡ºæ ‡å¿—èŽ·å–
+//PCA±È½Ï¸ßËÙÊä³ö±êÖ¾»ñÈ¡
 boolean_t Pca_GetCmpHighFlag(en_pca_module_t enModule);
 //@} // PcaGroup
 

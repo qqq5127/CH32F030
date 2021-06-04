@@ -42,7 +42,7 @@
 /******************************************************************************/
 /** \file bt.h
  **
- ** åŸºæœ¬å®šæ—¶å™¨æ•°æ®ç»“æ„åŠAPIå£°æ˜
+ ** »ù±¾¶¨Ê±Æ÷Êı¾İ½á¹¹¼°APIÉùÃ÷
  ** @link BT Timer3 Group Some description @endlink
  **
  ** History:
@@ -80,40 +80,40 @@ extern "C"
 
 /**
  ******************************************************************************
- ** \brief Timer3 é€šé“å®šä¹‰
+ ** \brief Timer3 Í¨µÀ¶¨Òå
  *****************************************************************************/
 typedef enum en_tim3_channel
 {
-    Tim3CH0  = 0u,        ///< Timer3é€šé“0
-    Tim3CH1  = 1u,        ///< Timer3é€šé“1
-    Tim3CH2  = 2u,        ///< Timer3é€šé“2
+    Tim3CH0  = 0u,        ///< Timer3Í¨µÀ0
+    Tim3CH1  = 1u,        ///< Timer3Í¨µÀ1
+    Tim3CH2  = 2u,        ///< Timer3Í¨µÀ2
 }en_tim3_channel_t;
 
 /**
  ******************************************************************************
- ** \brief å·¥ä½œæ¨¡å¼é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (MODE)(æ¨¡å¼0/1/23)
+ ** \brief ¹¤×÷Ä£Ê½Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (MODE)(Ä£Ê½0/1/23)
  *****************************************************************************/
 typedef enum en_tim3_work_mode
 {
-    Tim3WorkMode0  = 0u,         ///< å®šæ—¶å™¨æ¨¡å¼
-    Tim3WorkMode1  = 1u,         ///< PWCæ¨¡å¼
-    Tim3WorkMode2  = 2u,         ///< é”¯é½¿æ³¢æ¨¡å¼
-    Tim3WorkMode3  = 3u,         ///< ä¸‰è§’æ³¢æ¨¡å¼
+    Tim3WorkMode0  = 0u,         ///< ¶¨Ê±Æ÷Ä£Ê½
+    Tim3WorkMode1  = 1u,         ///< PWCÄ£Ê½
+    Tim3WorkMode2  = 2u,         ///< ¾â³İ²¨Ä£Ê½
+    Tim3WorkMode3  = 3u,         ///< Èı½Ç²¨Ä£Ê½
 }en_tim3_work_mode_t;
 
 /**
  ******************************************************************************
- ** \brief ææ€§æ§åˆ¶æ•°æ®ç±»å‹é‡å®šä¹‰ (GATE_P)(æ¨¡å¼0)
+ ** \brief ¼«ĞÔ¿ØÖÆÊı¾İÀàĞÍÖØ¶¨Òå (GATE_P)(Ä£Ê½0)
  *****************************************************************************/
 typedef enum en_tim3_m0cr_gatep
 {
-    Tim3GatePositive = 0u,            ///< é«˜ç”µå¹³æœ‰æ•ˆ
-    Tim3GateOpposite = 1u,            ///< ä½ç”µå¹³æœ‰æ•ˆ
+    Tim3GatePositive = 0u,            ///< ¸ßµçÆ½ÓĞĞ§
+    Tim3GateOpposite = 1u,            ///< µÍµçÆ½ÓĞĞ§
 }en_tim3_m0cr_gatep_t;
 
 /**
  ******************************************************************************
- ** \brief TIM3 é¢„é™¤é¢‘é€‰æ‹© (PRS)(æ¨¡å¼0/1/23)
+ ** \brief TIM3 Ô¤³ıÆµÑ¡Ôñ (PRS)(Ä£Ê½0/1/23)
  *****************************************************************************/
 typedef enum en_tim3_cr_timclkdiv
 {
@@ -129,531 +129,531 @@ typedef enum en_tim3_cr_timclkdiv
 
 /**
  ******************************************************************************
- ** \brief è®¡æ•°/å®šæ—¶å™¨åŠŸèƒ½é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (CT)(æ¨¡å¼0/1/23)
+ ** \brief ¼ÆÊı/¶¨Ê±Æ÷¹¦ÄÜÑ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (CT)(Ä£Ê½0/1/23)
  *****************************************************************************/
 typedef enum en_tim3_cr_ct
 {
-    Tim3Timer   = 0u,            ///< å®šæ—¶å™¨åŠŸèƒ½ï¼Œè®¡æ•°æ—¶é’Ÿä¸ºå†…éƒ¨PCLK
-    Tim3Counter = 1u,            ///< è®¡æ•°å™¨åŠŸèƒ½ï¼Œè®¡æ•°æ—¶é’Ÿä¸ºå¤–éƒ¨ETR
+    Tim3Timer   = 0u,            ///< ¶¨Ê±Æ÷¹¦ÄÜ£¬¼ÆÊıÊ±ÖÓÎªÄÚ²¿PCLK
+    Tim3Counter = 1u,            ///< ¼ÆÊıÆ÷¹¦ÄÜ£¬¼ÆÊıÊ±ÖÓÎªÍâ²¿ETR
 }en_tim3_cr_ct_t;
 
 
 /**
  ******************************************************************************
- ** \brief å®šæ—¶å™¨å·¥ä½œæ¨¡å¼æ•°æ®ç±»å‹é‡å®šä¹‰ (MD)(æ¨¡å¼0)
+ ** \brief ¶¨Ê±Æ÷¹¤×÷Ä£Ê½Êı¾İÀàĞÍÖØ¶¨Òå (MD)(Ä£Ê½0)
  *****************************************************************************/
 typedef enum en_tim3_m0cr_md
 {
-    Tim332bitFreeMode  = 0u,         ///< 32ä½è®¡æ•°å™¨/å®šæ—¶å™¨
-    Tim316bitArrMode  = 1u,         ///< è‡ªåŠ¨é‡è£…è½½16ä½è®¡æ•°å™¨/å®šæ—¶å™¨
+    Tim332bitFreeMode  = 0u,         ///< 32Î»¼ÆÊıÆ÷/¶¨Ê±Æ÷
+    Tim316bitArrMode  = 1u,         ///< ×Ô¶¯ÖØ×°ÔØ16Î»¼ÆÊıÆ÷/¶¨Ê±Æ÷
 }en_tim3_m0cr_md_t;
 
 /**
  ******************************************************************************
-** \brief TIM3ä¸­æ–­ç±»å‹æ•°æ®ç±»å‹é‡å®šä¹‰(æ¨¡å¼0/1/23)
+** \brief TIM3ÖĞ¶ÏÀàĞÍÊı¾İÀàĞÍÖØ¶¨Òå(Ä£Ê½0/1/23)
  *****************************************************************************/
 typedef enum en_tim3_irq_type
 {
-    Tim3UevIrq   = 0u,         ///< æº¢å‡º/äº‹ä»¶æ›´æ–°ä¸­æ–­
-    Tim3CA0Irq   = 2u,         ///< CH0Aæ•è·/æ¯”è¾ƒä¸­æ–­(ä»…æ¨¡å¼1/23å­˜åœ¨)
-    Tim3CA1Irq   = 3u,         ///< CH1Aæ•è·/æ¯”è¾ƒä¸­æ–­(ä»…æ¨¡å¼23å­˜åœ¨)
-    Tim3CA2Irq   = 4u,         ///< CH2Aæ•è·/æ¯”è¾ƒä¸­æ–­(ä»…æ¨¡å¼23å­˜åœ¨)
-    Tim3CB0Irq   = 5u,         ///< CH0Bæ•è·/æ¯”è¾ƒä¸­æ–­(ä»…æ¨¡å¼23å­˜åœ¨)
-    Tim3CB1Irq   = 6u,         ///< CH1Bæ•è·/æ¯”è¾ƒä¸­æ–­(ä»…æ¨¡å¼23å­˜åœ¨)
-    Tim3CB2Irq   = 7u,         ///< CH2Bæ•è·/æ¯”è¾ƒä¸­æ–­(ä»…æ¨¡å¼23å­˜åœ¨)
-    Tim3CA0E     = 8u,         ///< CH0Aæ•è·æ•°æ®ä¸¢å¤±æ ‡å¿—(ä»…æ¨¡å¼23å­˜åœ¨)(ä¸æ˜¯ä¸­æ–­)
-    Tim3CA1E     = 9u,         ///< CH1Aæ•è·æ•°æ®ä¸¢å¤±æ ‡å¿—(ä»…æ¨¡å¼23å­˜åœ¨)(ä¸æ˜¯ä¸­æ–­)
-    Tim3CA2E     = 10u,        ///< CH2Aæ•è·æ•°æ®ä¸¢å¤±æ ‡å¿—(ä»…æ¨¡å¼23å­˜åœ¨)(ä¸æ˜¯ä¸­æ–­)
-    Tim3CB0E     = 11u,        ///< CH0Bæ•è·æ•°æ®ä¸¢å¤±æ ‡å¿—(ä»…æ¨¡å¼23å­˜åœ¨)(ä¸æ˜¯ä¸­æ–­)
-    Tim3CB1E     = 12u,        ///< CH1Bæ•è·æ•°æ®ä¸¢å¤±æ ‡å¿—(ä»…æ¨¡å¼23å­˜åœ¨)(ä¸æ˜¯ä¸­æ–­)
-    Tim3CB2E     = 13u,        ///< CH2Bæ•è·æ•°æ®ä¸¢å¤±æ ‡å¿—(ä»…æ¨¡å¼23å­˜åœ¨)(ä¸æ˜¯ä¸­æ–­)
-    Tim3BkIrq    = 14u,        ///< åˆ¹è½¦ä¸­æ–­(ä»…æ¨¡å¼23å­˜åœ¨ï¼‰
-    Tim3TrigIrq  = 15u,        ///< è§¦å‘ä¸­æ–­(ä»…æ¨¡å¼23å­˜åœ¨ï¼‰   
+    Tim3UevIrq   = 0u,         ///< Òç³ö/ÊÂ¼ş¸üĞÂÖĞ¶Ï
+    Tim3CA0Irq   = 2u,         ///< CH0A²¶»ñ/±È½ÏÖĞ¶Ï(½öÄ£Ê½1/23´æÔÚ)
+    Tim3CA1Irq   = 3u,         ///< CH1A²¶»ñ/±È½ÏÖĞ¶Ï(½öÄ£Ê½23´æÔÚ)
+    Tim3CA2Irq   = 4u,         ///< CH2A²¶»ñ/±È½ÏÖĞ¶Ï(½öÄ£Ê½23´æÔÚ)
+    Tim3CB0Irq   = 5u,         ///< CH0B²¶»ñ/±È½ÏÖĞ¶Ï(½öÄ£Ê½23´æÔÚ)
+    Tim3CB1Irq   = 6u,         ///< CH1B²¶»ñ/±È½ÏÖĞ¶Ï(½öÄ£Ê½23´æÔÚ)
+    Tim3CB2Irq   = 7u,         ///< CH2B²¶»ñ/±È½ÏÖĞ¶Ï(½öÄ£Ê½23´æÔÚ)
+    Tim3CA0E     = 8u,         ///< CH0A²¶»ñÊı¾İ¶ªÊ§±êÖ¾(½öÄ£Ê½23´æÔÚ)(²»ÊÇÖĞ¶Ï)
+    Tim3CA1E     = 9u,         ///< CH1A²¶»ñÊı¾İ¶ªÊ§±êÖ¾(½öÄ£Ê½23´æÔÚ)(²»ÊÇÖĞ¶Ï)
+    Tim3CA2E     = 10u,        ///< CH2A²¶»ñÊı¾İ¶ªÊ§±êÖ¾(½öÄ£Ê½23´æÔÚ)(²»ÊÇÖĞ¶Ï)
+    Tim3CB0E     = 11u,        ///< CH0B²¶»ñÊı¾İ¶ªÊ§±êÖ¾(½öÄ£Ê½23´æÔÚ)(²»ÊÇÖĞ¶Ï)
+    Tim3CB1E     = 12u,        ///< CH1B²¶»ñÊı¾İ¶ªÊ§±êÖ¾(½öÄ£Ê½23´æÔÚ)(²»ÊÇÖĞ¶Ï)
+    Tim3CB2E     = 13u,        ///< CH2B²¶»ñÊı¾İ¶ªÊ§±êÖ¾(½öÄ£Ê½23´æÔÚ)(²»ÊÇÖĞ¶Ï)
+    Tim3BkIrq    = 14u,        ///< É²³µÖĞ¶Ï(½öÄ£Ê½23´æÔÚ£©
+    Tim3TrigIrq  = 15u,        ///< ´¥·¢ÖĞ¶Ï(½öÄ£Ê½23´æÔÚ£©   
 }en_tim3_irq_type_t;
 
 /**
  ******************************************************************************
- ** \brief æµ‹é‡å¼€å§‹ç»“æŸæ•°æ®ç±»å‹é‡å®šä¹‰ (Edg1stEdg2nd)(æ¨¡å¼1)
+ ** \brief ²âÁ¿¿ªÊ¼½áÊøÊı¾İÀàĞÍÖØ¶¨Òå (Edg1stEdg2nd)(Ä£Ê½1)
  *****************************************************************************/
 typedef enum en_tim3_m1cr_Edge
 {
-    Tim3PwcRiseToRise  = 0u,            ///< ä¸Šå‡æ²¿åˆ°ä¸Šå‡æ²¿(å‘¨æœŸ)
-    Tim3PwcFallToRise  = 1u,            ///< ä¸‹é™æ²¿åˆ°ä¸Šå‡æ²¿(ä½ç”µå¹³)
-    Tim3PwcRiseToFall  = 2u,            ///< ä¸Šå‡æ²¿åˆ°ä¸‹é™æ²¿(é«˜ç”µå¹³)
-    Tim3PwcFallToFall  = 3u,            ///< ä¸‹é™æ²¿åˆ°ä¸‹é™æ²¿(å‘¨æœŸ)
+    Tim3PwcRiseToRise  = 0u,            ///< ÉÏÉıÑØµ½ÉÏÉıÑØ(ÖÜÆÚ)
+    Tim3PwcFallToRise  = 1u,            ///< ÏÂ½µÑØµ½ÉÏÉıÑØ(µÍµçÆ½)
+    Tim3PwcRiseToFall  = 2u,            ///< ÉÏÉıÑØµ½ÏÂ½µÑØ(¸ßµçÆ½)
+    Tim3PwcFallToFall  = 3u,            ///< ÏÂ½µÑØµ½ÏÂ½µÑØ(ÖÜÆÚ)
 }en_tim3_m1cr_Edge_t;
 
 /**
  ******************************************************************************
- ** \brief PWCæµ‹é‡æµ‹è¯•æ¨¡å¼é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (Oneshot)(æ¨¡å¼1)
+ ** \brief PWC²âÁ¿²âÊÔÄ£Ê½Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (Oneshot)(Ä£Ê½1)
  *****************************************************************************/
 typedef enum en_tim3_m1cr_oneshot
 {
-    Tim3PwcCycleDetect    = 0u,         ///< PWCå¾ªç¯æµ‹é‡
-    Tim3PwcOneShotDetect  = 1u,         ///< PWCå•æ¬¡æµ‹é‡
+    Tim3PwcCycleDetect    = 0u,         ///< PWCÑ­»·²âÁ¿
+    Tim3PwcOneShotDetect  = 1u,         ///< PWCµ¥´Î²âÁ¿
 }en_tim3_m1cr_oneshot_t;
 
 /**
  ******************************************************************************
- ** \brief PWC IA0é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (IA0S)(æ¨¡å¼1)
+ ** \brief PWC IA0Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (IA0S)(Ä£Ê½1)
  *****************************************************************************/
 typedef enum en_tim3_m1_mscr_ia0s
 {
-    Tim3IA0Input    = 0u,         ///< IAOè¾“å…¥
+    Tim3IA0Input    = 0u,         ///< IAOÊäÈë
     Tim3XORInput    = 1u,         ///< IA0 ETR GATE XOR(TIM0/1/2)/IA0 IA1 IA2 XOR(TIM3)
 }en_tim3_m1_mscr_ia0s_t;
 
 /**
  ******************************************************************************
- ** \brief PWC IB0é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (IA0S)(æ¨¡å¼1)
+ ** \brief PWC IB0Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (IA0S)(Ä£Ê½1)
  *****************************************************************************/
 typedef enum en_tim3_m1_mscr_ib0s
 {
-    Tim3IB0Input    = 0u,         ///< IBOè¾“å…¥
-    Tim3TsInput     = 1u,         ///< å†…éƒ¨è§¦å‘TSé€‰æ‹©ä¿¡å·
+    Tim3IB0Input    = 0u,         ///< IBOÊäÈë
+    Tim3TsInput     = 1u,         ///< ÄÚ²¿´¥·¢TSÑ¡ÔñĞÅºÅ
 }en_tim3_m1_mscr_ib0s_t;
 
 /**
  ******************************************************************************
- ** \brief è¾“å‡ºææ€§ã€è¾“å…¥ç›¸ä½ æ•°æ®ç±»å‹é‡å®šä¹‰ (CCPA0/CCPB0/ETP/BKP)(æ¨¡å¼1/23)
+ ** \brief Êä³ö¼«ĞÔ¡¢ÊäÈëÏàÎ» Êı¾İÀàĞÍÖØ¶¨Òå (CCPA0/CCPB0/ETP/BKP)(Ä£Ê½1/23)
  *****************************************************************************/
 typedef enum en_tim3_port_polarity
 {
-    Tim3PortPositive      = 0u,         ///< æ­£å¸¸è¾“å…¥è¾“å‡º
-    Tim3PortOpposite      = 1u,         ///< åå‘è¾“å…¥è¾“å‡º
+    Tim3PortPositive      = 0u,         ///< Õı³£ÊäÈëÊä³ö
+    Tim3PortOpposite      = 1u,         ///< ·´ÏòÊäÈëÊä³ö
 }en_tim3_port_polarity_t;
 
 /**
  ******************************************************************************
- ** \brief æ»¤æ³¢é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (FLTET/FLTA0/FLAB0)(æ¨¡å¼1/23)
+ ** \brief ÂË²¨Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (FLTET/FLTA0/FLAB0)(Ä£Ê½1/23)
  *****************************************************************************/
 typedef enum en_tim3_flt
 {
-    Tim3FltNone          = 0u,         ///< æ— æ»¤æ³¢
-    Tim3FltPCLKCnt3      = 4u,         ///< PCLK 3ä¸ªè¿ç»­æœ‰æ•ˆ
-    Tim3FltPCLKDiv4Cnt3  = 5u,         ///< PCLK/4 3ä¸ªè¿ç»­æœ‰æ•ˆ
-    Tim3FltPCLKDiv16Cnt3 = 6u,         ///< PCLK/16 3ä¸ªè¿ç»­æœ‰æ•ˆ
-    Tim3FltPCLKDiv64Cnt3 = 7u,         ///< PCLK/64 3ä¸ªè¿ç»­æœ‰æ•ˆ
+    Tim3FltNone          = 0u,         ///< ÎŞÂË²¨
+    Tim3FltPCLKCnt3      = 4u,         ///< PCLK 3¸öÁ¬ĞøÓĞĞ§
+    Tim3FltPCLKDiv4Cnt3  = 5u,         ///< PCLK/4 3¸öÁ¬ĞøÓĞĞ§
+    Tim3FltPCLKDiv16Cnt3 = 6u,         ///< PCLK/16 3¸öÁ¬ĞøÓĞĞ§
+    Tim3FltPCLKDiv64Cnt3 = 7u,         ///< PCLK/64 3¸öÁ¬ĞøÓĞĞ§
 }en_tim3_flt_t;
 
 /**
  ******************************************************************************
- ** \brief é€šé“æ¯”è¾ƒæ§åˆ¶ æ•°æ®ç±»å‹é‡å®šä¹‰ (OCMA/OCMB)(æ¨¡å¼23)
+ ** \brief Í¨µÀ±È½Ï¿ØÖÆ Êı¾İÀàĞÍÖØ¶¨Òå (OCMA/OCMB)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_tim3_m23_fltr_ocm
 {
-    Tim3ForceLow      = 0u,         ///< å¼ºåˆ¶ä¸º0
-    Tim3ForceHigh     = 1u,         ///< å¼ºåˆ¶ä¸º1
-    Tim3CMPForceLow   = 2u,         ///< æ¯”è¾ƒåŒ¹é…æ—¶å¼ºåˆ¶ä¸º0
-    Tim3CMPForceHigh  = 3u,         ///< æ¯”è¾ƒåŒ¹é…æ—¶å¼ºåˆ¶ä¸º1
-    Tim3CMPInverse    = 4u,         ///< æ¯”è¾ƒåŒ¹é…æ—¶ç¿»è½¬ç”µå¹³
-    Tim3CMPOnePrdHigh = 5u,         ///< æ¯”è¾ƒåŒ¹é…æ—¶è¾“å‡ºä¸€ä¸ªè®¡æ•°å‘¨æœŸçš„é«˜ç”µå¹³
-    Tim3PWMMode1      = 6u,         ///< é€šé“æ§åˆ¶ä¸ºPWM mode 1
-    Tim3PWMMode2      = 7u,         ///< é€šé“æ§åˆ¶ä¸ºPWM mode 2
+    Tim3ForceLow      = 0u,         ///< Ç¿ÖÆÎª0
+    Tim3ForceHigh     = 1u,         ///< Ç¿ÖÆÎª1
+    Tim3CMPForceLow   = 2u,         ///< ±È½ÏÆ¥ÅäÊ±Ç¿ÖÆÎª0
+    Tim3CMPForceHigh  = 3u,         ///< ±È½ÏÆ¥ÅäÊ±Ç¿ÖÆÎª1
+    Tim3CMPInverse    = 4u,         ///< ±È½ÏÆ¥ÅäÊ±·­×ªµçÆ½
+    Tim3CMPOnePrdHigh = 5u,         ///< ±È½ÏÆ¥ÅäÊ±Êä³öÒ»¸ö¼ÆÊıÖÜÆÚµÄ¸ßµçÆ½
+    Tim3PWMMode1      = 6u,         ///< Í¨µÀ¿ØÖÆÎªPWM mode 1
+    Tim3PWMMode2      = 7u,         ///< Í¨µÀ¿ØÖÆÎªPWM mode 2
 }en_tim3_m23_fltr_ocm_t;
 
 /**
  ******************************************************************************
- ** \brief ä¸»ä»æ¨¡å¼TSæ•°æ®ç±»å‹é‡å®šä¹‰ (TS)(æ¨¡å¼1/23)
+ ** \brief Ö÷´ÓÄ£Ê½TSÊı¾İÀàĞÍÖØ¶¨Òå (TS)(Ä£Ê½1/23)
  *****************************************************************************/
 typedef enum en_tim3_mscr_ts
 {
-    Tim3Ts0ETR        = 0u,         ///< ETRå¤–éƒ¨è¾“å…¥æ»¤æ³¢åçš„ç›¸ä½é€‰æ‹©ä¿¡å·
-    Tim3Ts1TIM0TRGO   = 1u,         ///< Timer0çš„TRGOè¾“å‡ºä¿¡å·
-    Tim3Ts2TIM1TRGO   = 2u,         ///< Timer1çš„TRGOè¾“å‡ºä¿¡å·
-    Tim3Ts3TIM2TRGO   = 3u,         ///< Timer2çš„TRGOè¾“å‡ºä¿¡å·
-    Tim3Ts4TIM3TRGO   = 4u,         ///< Timer3çš„TRGOè¾“å‡ºä¿¡å·
-    //Tim3Ts5IA0ED    = 5u,         ///< æ— æ•ˆ
-    Tim3Ts6IAFP       = 6u,         ///< CH0A å¤–éƒ¨è¾“è¾“å…¥æ»¤æ³¢åçš„ç›¸ä½é€‰æ‹©ä¿¡å·
-    Tim3Ts7IBFP       = 7u,         ///< CH0B å¤–éƒ¨è¾“è¾“å…¥æ»¤æ³¢åçš„ç›¸ä½é€‰æ‹©ä¿¡
+    Tim3Ts0ETR        = 0u,         ///< ETRÍâ²¿ÊäÈëÂË²¨ºóµÄÏàÎ»Ñ¡ÔñĞÅºÅ
+    Tim3Ts1TIM0TRGO   = 1u,         ///< Timer0µÄTRGOÊä³öĞÅºÅ
+    Tim3Ts2TIM1TRGO   = 2u,         ///< Timer1µÄTRGOÊä³öĞÅºÅ
+    Tim3Ts3TIM2TRGO   = 3u,         ///< Timer2µÄTRGOÊä³öĞÅºÅ
+    Tim3Ts4TIM3TRGO   = 4u,         ///< Timer3µÄTRGOÊä³öĞÅºÅ
+    //Tim3Ts5IA0ED    = 5u,         ///< ÎŞĞ§
+    Tim3Ts6IAFP       = 6u,         ///< CH0A Íâ²¿ÊäÊäÈëÂË²¨ºóµÄÏàÎ»Ñ¡ÔñĞÅºÅ
+    Tim3Ts7IBFP       = 7u,         ///< CH0B Íâ²¿ÊäÊäÈëÂË²¨ºóµÄÏàÎ»Ñ¡ÔñĞÅ
 }en_tim3_mscr_ts_t;
 
 /**
  ******************************************************************************
- ** \brief PWMè¾“å‡ºæ¨¡å¼é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (COMP)(æ¨¡å¼23)
+ ** \brief PWMÊä³öÄ£Ê½Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (COMP)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_tim3_m23cr_comp
 {
-    Tim3IndependentPWM      = 0u,         ///< ç‹¬ç«‹PWMè¾“å‡º
-    Tim3ComplementaryPWM    = 1u,         ///< äº’è¡¥PWMè¾“å‡º
+    Tim3IndependentPWM      = 0u,         ///< ¶ÀÁ¢PWMÊä³ö
+    Tim3ComplementaryPWM    = 1u,         ///< »¥²¹PWMÊä³ö
 }en_tim3_m23cr_comp_t;
 
 /**
  ******************************************************************************
- ** \brief è®¡æ•°æ–¹å‘é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (DIR)(æ¨¡å¼23)
+ ** \brief ¼ÆÊı·½ÏòÑ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (DIR)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_tim3_m23cr_dir
 {
-    Tim3CntUp      = 0u,         ///< å‘ä¸Šè®¡æ•°
-    Tim3CntDown    = 1u,         ///< å‘ä¸‹è®¡æ•°
+    Tim3CntUp      = 0u,         ///< ÏòÉÏ¼ÆÊı
+    Tim3CntDown    = 1u,         ///< ÏòÏÂ¼ÆÊı
 }en_tim3_m23cr_dir_t;
 
 /**
  ******************************************************************************
- ** \brief è®¡æ•°æ–¹å‘é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (PWM2S)(æ¨¡å¼23)
+ ** \brief ¼ÆÊı·½ÏòÑ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (PWM2S)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_tim3_m23cr_pwm2s
 {
-    Tim3DoublePointCmp      = 0u,         ///< åŒç‚¹æ¯”è¾ƒä½¿èƒ½ï¼Œä½¿ç”¨CCRA,CCRBæ¯”è¾ƒæ§åˆ¶OCREFAè¾“å‡º
-    Tim3SinglePointCmp      = 1u,         ///< å•ç‚¹æ¯”è¾ƒä½¿èƒ½ï¼Œä½¿ç”¨CCRAæ¯”è¾ƒæ§åˆ¶OCREFAè¾“å‡º
+    Tim3DoublePointCmp      = 0u,         ///< Ë«µã±È½ÏÊ¹ÄÜ£¬Ê¹ÓÃCCRA,CCRB±È½Ï¿ØÖÆOCREFAÊä³ö
+    Tim3SinglePointCmp      = 1u,         ///< µ¥µã±È½ÏÊ¹ÄÜ£¬Ê¹ÓÃCCRA±È½Ï¿ØÖÆOCREFAÊä³ö
 }en_tim3_m23cr_pwm2s_t;
 
 /**
  ******************************************************************************
- ** \brief GATEåœ¨PWMäº’è¡¥æ¨¡å¼ä¸‹æ•è·æˆ–æ¯”è¾ƒåŠŸèƒ½ é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (CSG)(æ¨¡å¼23)
+ ** \brief GATEÔÚPWM»¥²¹Ä£Ê½ÏÂ²¶»ñ»ò±È½Ï¹¦ÄÜ Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (CSG)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_tim3_m23cr_csg
 {
-     Tim3PWMCompGateCmpOut    = 0u,         ///< åœ¨PWMäº’è¡¥æ¨¡å¼ä¸‹ï¼ŒGateä½œä¸ºæ¯”è¾ƒè¾“å‡º
-     Tim3PWMCompGateCapIn     = 1u,         ///< åœ¨PWMäº’è¡¥æ¨¡å¼ä¸‹ï¼ŒGateä½œä¸ºæ•è·è¾“å…¥
+     Tim3PWMCompGateCmpOut    = 0u,         ///< ÔÚPWM»¥²¹Ä£Ê½ÏÂ£¬Gate×÷Îª±È½ÏÊä³ö
+     Tim3PWMCompGateCapIn     = 1u,         ///< ÔÚPWM»¥²¹Ä£Ê½ÏÂ£¬Gate×÷Îª²¶»ñÊäÈë
 }en_tim3_m23cr_csg_t;
 
 
 /**
  ******************************************************************************
- ** \brief æ¯”è¾ƒæ•è·å¯„å­˜å™¨ æ•°æ®ç±»å‹é‡å®šä¹‰ (CCR0A,CCR0B)(æ¨¡å¼23)
+ ** \brief ±È½Ï²¶»ñ¼Ä´æÆ÷ Êı¾İÀàĞÍÖØ¶¨Òå (CCR0A,CCR0B)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_tim3_m23_ccrx
 {
-     Tim3CCR0A    = 0u,         ///< CCR0Aæ¯”è¾ƒæ•è·å¯„å­˜å™¨
-     Tim3CCR0B    = 1u,         ///< CCR0Bæ¯”è¾ƒæ•è·å¯„å­˜å™¨
-     Tim3CCR1A    = 2u,         ///< CCR1Aæ¯”è¾ƒæ•è·å¯„å­˜å™¨
-     Tim3CCR1B    = 3u,         ///< CCR1Bæ¯”è¾ƒæ•è·å¯„å­˜å™¨
-     Tim3CCR2A    = 4u,         ///< CCR2Aæ¯”è¾ƒæ•è·å¯„å­˜å™¨
-     Tim3CCR2B    = 5u,         ///< CCR2Bæ¯”è¾ƒæ•è·å¯„å­˜å™¨
+     Tim3CCR0A    = 0u,         ///< CCR0A±È½Ï²¶»ñ¼Ä´æÆ÷
+     Tim3CCR0B    = 1u,         ///< CCR0B±È½Ï²¶»ñ¼Ä´æÆ÷
+     Tim3CCR1A    = 2u,         ///< CCR1A±È½Ï²¶»ñ¼Ä´æÆ÷
+     Tim3CCR1B    = 3u,         ///< CCR1B±È½Ï²¶»ñ¼Ä´æÆ÷
+     Tim3CCR2A    = 4u,         ///< CCR2A±È½Ï²¶»ñ¼Ä´æÆ÷
+     Tim3CCR2B    = 5u,         ///< CCR2B±È½Ï²¶»ñ¼Ä´æÆ÷
 }en_tim3_m23_ccrx_t;
 
 /**
  ******************************************************************************
- ** \brief  OCREFæ¸…é™¤æº é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (OCCS)(æ¨¡å¼23)
+ ** \brief  OCREFÇå³ıÔ´ Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (OCCS)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_tim3_m23ce_occs
 {
-     Tim3OC_Ref_Clr  = 0u,         ///< æ¥è‡ªVCçš„OC_Ref_Clr
-     Tim3ETRf        = 1u,         ///< å¤–éƒ¨ETRf
+     Tim3OC_Ref_Clr  = 0u,         ///< À´×ÔVCµÄOC_Ref_Clr
+     Tim3ETRf        = 1u,         ///< Íâ²¿ETRf
 }en_tim3_m23ce_occs_t;
 
 /**
  ******************************************************************************
- ** \brief  æ¯”è¾ƒåŒ¹é…ä¸­æ–­æ¨¡å¼ é€‰æ‹©æ•°æ®ç±»å‹é‡å®šä¹‰ (CIS/CISB)(æ¨¡å¼23)
+ ** \brief  ±È½ÏÆ¥ÅäÖĞ¶ÏÄ£Ê½ Ñ¡ÔñÊı¾İÀàĞÍÖØ¶¨Òå (CIS/CISB)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_tim3_m23_cisa_cisb
 {
-     Tim3CmpIntNone        = 0u,         ///< æ— æ¯”è¾ƒåŒ¹é…ä¸­æ–­
-     Tim3CmpIntRise        = 1u,         ///< æ¯”è¾ƒåŒ¹é…ä¸Šå‡æ²¿ä¸­æ–­
-     Tim3CmpIntFall        = 2u,         ///< æ¯”è¾ƒåŒ¹é…ä¸‹é™æ²¿ä¸­æ–­
-     Tim3CmpIntRiseFall    = 3u,         ///< æ¯”è¾ƒåŒ¹é…ä¸Šå‡æ²¿ä¸‹é™æ²¿ä¸­æ–­
+     Tim3CmpIntNone        = 0u,         ///< ÎŞ±È½ÏÆ¥ÅäÖĞ¶Ï
+     Tim3CmpIntRise        = 1u,         ///< ±È½ÏÆ¥ÅäÉÏÉıÑØÖĞ¶Ï
+     Tim3CmpIntFall        = 2u,         ///< ±È½ÏÆ¥ÅäÏÂ½µÑØÖĞ¶Ï
+     Tim3CmpIntRiseFall    = 3u,         ///< ±È½ÏÆ¥ÅäÉÏÉıÑØÏÂ½µÑØÖĞ¶Ï
 }en_tim3_m23_cisa_cisb_t;
 
 /**
  ******************************************************************************
- ** \brief TIM3ç«¯å£æ§åˆ¶ - åˆ¹è½¦æ—¶CHxè¾“å‡ºçŠ¶æ€æ§åˆ¶(BKSA/BKSB)(æ¨¡å¼23)
+ ** \brief TIM3¶Ë¿Ú¿ØÖÆ - É²³µÊ±CHxÊä³ö×´Ì¬¿ØÖÆ(BKSA/BKSB)(Ä£Ê½23)
  **
  ** \note
  ******************************************************************************/
 typedef enum en_tim3_m23_crchx_bks
 {
-    Tim3CHxBksHiZ         = 0u,         ///< åˆ¹è½¦ä½¿èƒ½æ—¶ï¼ŒCHxç«¯å£è¾“å‡ºé«˜é˜»æ€
-    Tim3CHxBksNorm        = 1u,         ///< åˆ¹è½¦ä½¿èƒ½æ—¶ï¼ŒCHxç«¯å£æ­£å¸¸è¾“å‡º
-    Tim3CHxBksLow         = 2u,         ///< åˆ¹è½¦ä½¿èƒ½æ—¶ï¼ŒCHxç«¯å£è¾“å‡ºä½ç”µå¹³
-    Tim3CHxBksHigh        = 3u,         ///< åˆ¹è½¦ä½¿èƒ½æ—¶ï¼ŒCHxç«¯å£è¾“å‡ºé«˜ç”µå¹³
+    Tim3CHxBksHiZ         = 0u,         ///< É²³µÊ¹ÄÜÊ±£¬CHx¶Ë¿ÚÊä³ö¸ß×èÌ¬
+    Tim3CHxBksNorm        = 1u,         ///< É²³µÊ¹ÄÜÊ±£¬CHx¶Ë¿ÚÕı³£Êä³ö
+    Tim3CHxBksLow         = 2u,         ///< É²³µÊ¹ÄÜÊ±£¬CHx¶Ë¿ÚÊä³öµÍµçÆ½
+    Tim3CHxBksHigh        = 3u,         ///< É²³µÊ¹ÄÜÊ±£¬CHx¶Ë¿ÚÊä³ö¸ßµçÆ½
 }en_tim3_m23_crchx_bks_t;
 
 /**
  ******************************************************************************
-** \brief TIM3ç«¯å£æ§åˆ¶ - CHxä¸Šå‡æ²¿ä¸‹é™æ²¿æ•è·(CRx/CFx)(æ¨¡å¼23)
+** \brief TIM3¶Ë¿Ú¿ØÖÆ - CHxÉÏÉıÑØÏÂ½µÑØ²¶»ñ(CRx/CFx)(Ä£Ê½23)
  **
  ** \note
  ******************************************************************************/
 typedef enum en_tim3_m23_crch0_cfx_crx
 {
-    Tim3CHxCapNone        = 0u,         ///< CHxé€šé“æ•è·ç¦æ­¢
-    Tim3CHxCapRise        = 1u,         ///< CHxé€šé“ä¸Šå‡æ²¿æ•è·ä½¿èƒ½
-    Tim3CHxCapFall        = 2u,         ///< CHxé€šé“ä¸‹é™æ²¿æ•è·ä½¿èƒ½
-    Tim3CHxCapFallRise    = 3u,         ///< CHxé€šé“ä¸Šå‡æ²¿ä¸‹é™æ²¿æ•è·éƒ½ä½¿èƒ½
+    Tim3CHxCapNone        = 0u,         ///< CHxÍ¨µÀ²¶»ñ½ûÖ¹
+    Tim3CHxCapRise        = 1u,         ///< CHxÍ¨µÀÉÏÉıÑØ²¶»ñÊ¹ÄÜ
+    Tim3CHxCapFall        = 2u,         ///< CHxÍ¨µÀÏÂ½µÑØ²¶»ñÊ¹ÄÜ
+    Tim3CHxCapFallRise    = 3u,         ///< CHxÍ¨µÀÉÏÉıÑØÏÂ½µÑØ²¶»ñ¶¼Ê¹ÄÜ
 }en_tim3_m23_crch0_cfx_crx_t;
 
 /**
  ******************************************************************************
-** \brief TIM3ç«¯å£æ§åˆ¶ - CHxæ¯”è¾ƒæ•è·æ¨¡å¼(CSA/CSB)(æ¨¡å¼23)
+** \brief TIM3¶Ë¿Ú¿ØÖÆ - CHx±È½Ï²¶»ñÄ£Ê½(CSA/CSB)(Ä£Ê½23)
  **
  ** \note
  ******************************************************************************/
 typedef enum en_tim3_m23_crch0_csa_csb
 {
-    Tim3CHxCmpMode        = 0u,         ///< CHxé€šé“è®¾ç½®ä¸ºæ¯”è¾ƒæ¨¡å¼
-    Tim3CHxCapMode        = 1u,         ///< CHxé€šé“è®¾ç½®ä¸ºæ•è·æ¨¡å¼
+    Tim3CHxCmpMode        = 0u,         ///< CHxÍ¨µÀÉèÖÃÎª±È½ÏÄ£Ê½
+    Tim3CHxCapMode        = 1u,         ///< CHxÍ¨µÀÉèÖÃÎª²¶»ñÄ£Ê½
 }en_tim3_m23_crch0_csa_csb_t;
 
 /**
  ******************************************************************************
- ** \brief  æ¯”è¾ƒæ¨¡å¼ä¸‹ DMAæ¯”è¾ƒè§¦å‘é€‰æ‹© æ•°æ®ç±»å‹é‡å®šä¹‰ (CCDS)(æ¨¡å¼23)
+ ** \brief  ±È½ÏÄ£Ê½ÏÂ DMA±È½Ï´¥·¢Ñ¡Ôñ Êı¾İÀàĞÍÖØ¶¨Òå (CCDS)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_tim3_m23_mscr_ccds
 {
-     Tim3CmpTrigDMA  = 0u,         ///< æ¯”è¾ƒåŒ¹é…è§¦å‘DMA
-     Tim3UEVTrigDMA  = 1u,         ///< äº‹ä»¶æ›´æ–°ä»£æ›¿æ¯”è¾ƒåŒ¹é…è§¦å‘DMA
+     Tim3CmpTrigDMA  = 0u,         ///< ±È½ÏÆ¥Åä´¥·¢DMA
+     Tim3UEVTrigDMA  = 1u,         ///< ÊÂ¼ş¸üĞÂ´úÌæ±È½ÏÆ¥Åä´¥·¢DMA
 }en_tim3_m23_mscr_ccds_t;
 
 /**
  ******************************************************************************
- ** \brief  ä¸»ä»æ¨¡å¼é€‰æ‹© æ•°æ®ç±»å‹é‡å®šä¹‰ (MSM)(æ¨¡å¼23)
+ ** \brief  Ö÷´ÓÄ£Ê½Ñ¡Ôñ Êı¾İÀàĞÍÖØ¶¨Òå (MSM)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_tim3_m23_mscr_msm
 {
-     Tim3SlaveMode    = 0u,         ///< ä»æ¨¡å¼
-     Tim3MasterMode   = 1u,         ///< ä¸»æ¨¡å¼
+     Tim3SlaveMode    = 0u,         ///< ´ÓÄ£Ê½
+     Tim3MasterMode   = 1u,         ///< Ö÷Ä£Ê½
 }en_tim3_m23_mscr_msm_t;
 
 /**
  ******************************************************************************
- ** \brief  è§¦å‘ä¸»æ¨¡å¼è¾“å‡ºæº æ•°æ®ç±»å‹é‡å®šä¹‰ (MMS)(æ¨¡å¼23)
+ ** \brief  ´¥·¢Ö÷Ä£Ê½Êä³öÔ´ Êı¾İÀàĞÍÖØ¶¨Òå (MMS)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_tim3_m23_mscr_mms
 {
-     Tim3MasterUG         = 0u,         ///< UG(è½¯ä»¶æ›´æ–°)æº
-     Tim3MasterCTEN       = 1u,         ///< CTENæº
-     Tim3MasterUEV        = 2u,         ///< UEVæ›´æ–°æº
-     Tim3MasterCMPSO      = 3u,         ///< æ¯”è¾ƒåŒ¹é…é€‰æ‹©è¾“å‡ºæº
-     Tim3MasterOCA0Ref    = 4u,         ///< OCA0_Refæº
-     Tim3MasterOCB0Ref    = 5u,         ///< OCB0_Refæº
+     Tim3MasterUG         = 0u,         ///< UG(Èí¼ş¸üĞÂ)Ô´
+     Tim3MasterCTEN       = 1u,         ///< CTENÔ´
+     Tim3MasterUEV        = 2u,         ///< UEV¸üĞÂÔ´
+     Tim3MasterCMPSO      = 3u,         ///< ±È½ÏÆ¥ÅäÑ¡ÔñÊä³öÔ´
+     Tim3MasterOCA0Ref    = 4u,         ///< OCA0_RefÔ´
+     Tim3MasterOCB0Ref    = 5u,         ///< OCB0_RefÔ´
      //Tim3MasterOCB0Ref  = 6u,
      //Tim3MasterOCB0Ref  = 7u,
 }en_tim3_m23_mscr_mms_t;
 
 /**
  ******************************************************************************
- ** \brief  è§¦å‘ä»æ¨¡å¼é€‰æ‹© æ•°æ®ç±»å‹é‡å®šä¹‰ (SMS)(æ¨¡å¼23)
+ ** \brief  ´¥·¢´ÓÄ£Ê½Ñ¡Ôñ Êı¾İÀàĞÍÖØ¶¨Òå (SMS)(Ä£Ê½23)
  *****************************************************************************/
 typedef enum en_tim3_m23_mscr_sms
 {
-     Tim3SlaveIClk        = 0u,         ///< ä½¿ç”¨å†…éƒ¨æ—¶é’Ÿ
-     Tim3SlaveResetTIM    = 1u,         ///< å¤ä½åŠŸèƒ½
-     Tim3SlaveTrigMode    = 2u,         ///< è§¦å‘æ¨¡å¼
-     Tim3SlaveEClk        = 3u,         ///< å¤–éƒ¨æ—¶é’Ÿæ¨¡å¼
-     Tim3SlaveCodeCnt1    = 4u,         ///< æ­£äº¤ç¼–ç è®¡æ•°æ¨¡å¼1
-     Tim3SlaveCodeCnt2    = 5u,         ///< æ­£äº¤ç¼–ç è®¡æ•°æ¨¡å¼2
-     Tim3SlaveCodeCnt3    = 6u,         ///< æ­£äº¤ç¼–ç è®¡æ•°æ¨¡å¼3
-     Tim3SlaveGateCtrl    = 7u,         ///< é—¨æ§åŠŸèƒ½
+     Tim3SlaveIClk        = 0u,         ///< Ê¹ÓÃÄÚ²¿Ê±ÖÓ
+     Tim3SlaveResetTIM    = 1u,         ///< ¸´Î»¹¦ÄÜ
+     Tim3SlaveTrigMode    = 2u,         ///< ´¥·¢Ä£Ê½
+     Tim3SlaveEClk        = 3u,         ///< Íâ²¿Ê±ÖÓÄ£Ê½
+     Tim3SlaveCodeCnt1    = 4u,         ///< Õı½»±àÂë¼ÆÊıÄ£Ê½1
+     Tim3SlaveCodeCnt2    = 5u,         ///< Õı½»±àÂë¼ÆÊıÄ£Ê½2
+     Tim3SlaveCodeCnt3    = 6u,         ///< Õı½»±àÂë¼ÆÊıÄ£Ê½3
+     Tim3SlaveGateCtrl    = 7u,         ///< ÃÅ¿Ø¹¦ÄÜ
 }en_tim3_m23_mscr_sms_t;
 
 /**
  ******************************************************************************
- ** \brief å®šæ—¶å™¨è¿è¡Œæ§åˆ¶æ•°æ®ç±»å‹é‡å®šä¹‰ (CTEN)
+ ** \brief ¶¨Ê±Æ÷ÔËĞĞ¿ØÖÆÊı¾İÀàĞÍÖØ¶¨Òå (CTEN)
  *****************************************************************************/
 typedef enum en_tim3_start
 {
-    Tim3CTENDisable = 0u,            ///< åœæ­¢
-    Tim3CTENEnable  = 1u,            ///< è¿è¡Œ
+    Tim3CTENDisable = 0u,            ///< Í£Ö¹
+    Tim3CTENEnable  = 1u,            ///< ÔËĞĞ
 }en_tim3_start_t;
 
 /**
  ******************************************************************************
- ** \brief TIM3 mode0 é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼0)
+ ** \brief TIM3 mode0 ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½0)
  *****************************************************************************/
 typedef struct stc_tim3_mode0_config
 {
-    en_tim3_work_mode_t     enWorkMode;       ///< å·¥ä½œæ¨¡å¼è®¾ç½®
-    en_tim3_m0cr_gatep_t    enGateP;          ///< é—¨æ§ææ€§æ§åˆ¶
-    boolean_t               bEnGate;          ///< é—¨æ§ä½¿èƒ½
-    en_tim3_cr_timclkdiv_t  enPRS;            ///< é¢„é™¤é¢‘é…ç½®
-    boolean_t               bEnTog;           ///< ç¿»è½¬è¾“å‡ºä½¿èƒ½
-    en_tim3_cr_ct_t         enCT;             ///< å®šæ—¶/è®¡æ•°åŠŸèƒ½é€‰æ‹©
-    en_tim3_m0cr_md_t       enCntMode;        ///< è®¡æ•°æ¨¡å¼é…ç½®
+    en_tim3_work_mode_t     enWorkMode;       ///< ¹¤×÷Ä£Ê½ÉèÖÃ
+    en_tim3_m0cr_gatep_t    enGateP;          ///< ÃÅ¿Ø¼«ĞÔ¿ØÖÆ
+    boolean_t               bEnGate;          ///< ÃÅ¿ØÊ¹ÄÜ
+    en_tim3_cr_timclkdiv_t  enPRS;            ///< Ô¤³ıÆµÅäÖÃ
+    boolean_t               bEnTog;           ///< ·­×ªÊä³öÊ¹ÄÜ
+    en_tim3_cr_ct_t         enCT;             ///< ¶¨Ê±/¼ÆÊı¹¦ÄÜÑ¡Ôñ
+    en_tim3_m0cr_md_t       enCntMode;        ///< ¼ÆÊıÄ£Ê½ÅäÖÃ
     
-    func_ptr_t              pfnTim3Cb;        ///< Timer3ä¸­æ–­æœåŠ¡å›è°ƒå‡½æ•°[void function(void)]
+    func_ptr_t              pfnTim3Cb;        ///< Timer3ÖĞ¶Ï·şÎñ»Øµ÷º¯Êı[void function(void)]
 }stc_tim3_mode0_config_t;
 
 /**
  ******************************************************************************
- ** \brief TIM3 mode1 é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼1)
+ ** \brief TIM3 mode1 ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½1)
  *****************************************************************************/
 typedef struct stc_tim3_mode1_config
 {
-    en_tim3_work_mode_t     enWorkMode;       ///< å·¥ä½œæ¨¡å¼è®¾ç½®
-    en_tim3_cr_timclkdiv_t  enPRS;            ///< é¢„é™¤é¢‘é…ç½®
-    en_tim3_cr_ct_t         enCT;             ///< å®šæ—¶/è®¡æ•°åŠŸèƒ½é€‰æ‹©
-    en_tim3_m1cr_oneshot_t  enOneShot;        ///< å•æ¬¡æµ‹é‡/å¾ªç¯æµ‹é‡é€‰æ‹©
+    en_tim3_work_mode_t     enWorkMode;       ///< ¹¤×÷Ä£Ê½ÉèÖÃ
+    en_tim3_cr_timclkdiv_t  enPRS;            ///< Ô¤³ıÆµÅäÖÃ
+    en_tim3_cr_ct_t         enCT;             ///< ¶¨Ê±/¼ÆÊı¹¦ÄÜÑ¡Ôñ
+    en_tim3_m1cr_oneshot_t  enOneShot;        ///< µ¥´Î²âÁ¿/Ñ­»·²âÁ¿Ñ¡Ôñ
     
-    func_ptr_t              pfnTim3Cb;        ///< Timer3ä¸­æ–­æœåŠ¡å›è°ƒå‡½æ•°[void function(void)]
+    func_ptr_t              pfnTim3Cb;        ///< Timer3ÖĞ¶Ï·şÎñ»Øµ÷º¯Êı[void function(void)]
 
 }stc_tim3_mode1_config_t;
 
 /**
  ******************************************************************************
- ** \brief PWCè¾“å…¥é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼1)
+ ** \brief PWCÊäÈëÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½1)
  *****************************************************************************/
 typedef struct stc_tim3_pwc_input_config
 {
-    en_tim3_mscr_ts_t          enTsSel;       ///< è§¦å‘è¾“å…¥æºé€‰æ‹©
-    en_tim3_m1_mscr_ia0s_t     enIA0Sel;      ///< CHA0è¾“å…¥é€‰æ‹©
-    en_tim3_m1_mscr_ib0s_t     enIB0Sel;      ///< CHB0è¾“å…¥é€‰æ‹©
-    en_tim3_port_polarity_t    enETRPhase;    ///< ETRç›¸ä½é€‰æ‹©
-    en_tim3_flt_t              enFltETR;      ///< ETRæ»¤æ³¢è®¾ç½®
-    en_tim3_flt_t              enFltIA0;      ///< CHA0æ»¤æ³¢è®¾ç½®
-    en_tim3_flt_t              enFltIB0;      ///< CHB0æ»¤æ³¢è®¾ç½®
+    en_tim3_mscr_ts_t          enTsSel;       ///< ´¥·¢ÊäÈëÔ´Ñ¡Ôñ
+    en_tim3_m1_mscr_ia0s_t     enIA0Sel;      ///< CHA0ÊäÈëÑ¡Ôñ
+    en_tim3_m1_mscr_ib0s_t     enIB0Sel;      ///< CHB0ÊäÈëÑ¡Ôñ
+    en_tim3_port_polarity_t    enETRPhase;    ///< ETRÏàÎ»Ñ¡Ôñ
+    en_tim3_flt_t              enFltETR;      ///< ETRÂË²¨ÉèÖÃ
+    en_tim3_flt_t              enFltIA0;      ///< CHA0ÂË²¨ÉèÖÃ
+    en_tim3_flt_t              enFltIB0;      ///< CHB0ÂË²¨ÉèÖÃ
 }stc_tim3_pwc_input_config_t;
 
 /**
  ******************************************************************************
- ** \brief TIM3 mode23 é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief TIM3 mode23 ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_tim3_mode23_config
 {
-    en_tim3_work_mode_t         enWorkMode;       ///< å·¥ä½œæ¨¡å¼è®¾ç½®
-    en_tim3_m23cr_dir_t         enCntDir;         ///< è®¡æ•°æ–¹å‘
-    en_tim3_cr_timclkdiv_t      enPRS;            ///< æ—¶é’Ÿé¢„é™¤é¢‘é…ç½®
-    en_tim3_cr_ct_t             enCT;             ///< å®šæ—¶/è®¡æ•°åŠŸèƒ½é€‰æ‹©
-    en_tim3_m23cr_comp_t        enPWMTypeSel;     ///< PWMæ¨¡å¼é€‰æ‹©ï¼ˆç‹¬ç«‹/äº’è¡¥ï¼‰
-    en_tim3_m23cr_pwm2s_t       enPWM2sSel;       ///< OCREFAåŒç‚¹æ¯”è¾ƒåŠŸèƒ½é€‰æ‹©
-    boolean_t                   bOneShot;         ///< å•æ¬¡è§¦å‘æ¨¡å¼ä½¿èƒ½/ç¦æ­¢
-    boolean_t                   bURSSel;          ///< æ›´æ–°æºé€‰æ‹©
+    en_tim3_work_mode_t         enWorkMode;       ///< ¹¤×÷Ä£Ê½ÉèÖÃ
+    en_tim3_m23cr_dir_t         enCntDir;         ///< ¼ÆÊı·½Ïò
+    en_tim3_cr_timclkdiv_t      enPRS;            ///< Ê±ÖÓÔ¤³ıÆµÅäÖÃ
+    en_tim3_cr_ct_t             enCT;             ///< ¶¨Ê±/¼ÆÊı¹¦ÄÜÑ¡Ôñ
+    en_tim3_m23cr_comp_t        enPWMTypeSel;     ///< PWMÄ£Ê½Ñ¡Ôñ£¨¶ÀÁ¢/»¥²¹£©
+    en_tim3_m23cr_pwm2s_t       enPWM2sSel;       ///< OCREFAË«µã±È½Ï¹¦ÄÜÑ¡Ôñ
+    boolean_t                   bOneShot;         ///< µ¥´Î´¥·¢Ä£Ê½Ê¹ÄÜ/½ûÖ¹
+    boolean_t                   bURSSel;          ///< ¸üĞÂÔ´Ñ¡Ôñ
     
-    func_ptr_t                  pfnTim3Cb;        ///< Timer3ä¸­æ–­æœåŠ¡å›è°ƒå‡½æ•°[void function(void)]
+    func_ptr_t                  pfnTim3Cb;        ///< Timer3ÖĞ¶Ï·şÎñ»Øµ÷º¯Êı[void function(void)]
 }stc_tim3_mode23_config_t;
 
 /**
  ******************************************************************************
- ** \brief GATEåœ¨PWMäº’è¡¥æ¨¡å¼ä¸‹æ•è·æˆ–æ¯”è¾ƒåŠŸèƒ½ é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief GATEÔÚPWM»¥²¹Ä£Ê½ÏÂ²¶»ñ»ò±È½Ï¹¦ÄÜ ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_tim3_m23_gate_config
 {
-    en_tim3_m23cr_csg_t        enGateFuncSel;      ///< Gateæ¯”è¾ƒã€æ•è·åŠŸèƒ½é€‰æ‹©
-    boolean_t                  bGateRiseCap;       ///< GATEä½œä¸ºæ•è·åŠŸèƒ½æ—¶ï¼Œä¸Šæ²¿æ•è·æœ‰æ•ˆæ§åˆ¶
-    boolean_t                  bGateFallCap;       ///< GATEä½œä¸ºæ•è·åŠŸèƒ½æ—¶ï¼Œä¸‹æ²¿æ•è·æœ‰æ•ˆæ§åˆ¶
+    en_tim3_m23cr_csg_t        enGateFuncSel;      ///< Gate±È½Ï¡¢²¶»ñ¹¦ÄÜÑ¡Ôñ
+    boolean_t                  bGateRiseCap;       ///< GATE×÷Îª²¶»ñ¹¦ÄÜÊ±£¬ÉÏÑØ²¶»ñÓĞĞ§¿ØÖÆ
+    boolean_t                  bGateFallCap;       ///< GATE×÷Îª²¶»ñ¹¦ÄÜÊ±£¬ÏÂÑØ²¶»ñÓĞĞ§¿ØÖÆ
 }stc_tim3_m23_gate_config_t;
 
 /**
  ******************************************************************************
- ** \brief CHA/CHBé€šé“æ¯”è¾ƒæ§åˆ¶ é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief CHA/CHBÍ¨µÀ±È½Ï¿ØÖÆ ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_tim3_m23_compare_config
 {
-    en_tim3_m23_crch0_csa_csb_t  enCHxACmpCap;     ///< CH0Aæ¯”è¾ƒ/æ•è·åŠŸèƒ½é€‰æ‹©
-    en_tim3_m23_fltr_ocm_t       enCHxACmpCtrl;    ///< CH0Aé€šé“æ¯”è¾ƒæ§åˆ¶
-    en_tim3_port_polarity_t      enCHxAPolarity;   ///< CH0Aè¾“å‡ºææ€§æ§åˆ¶
-    boolean_t                    bCHxACmpBufEn;    ///< æ¯”è¾ƒAç¼“å­˜åŠŸèƒ½ ä½¿èƒ½/ç¦æ­¢
-    en_tim3_m23_cisa_cisb_t      enCHxACmpIntSel;  ///< CHAæ¯”è¾ƒåŒ¹é…ä¸­æ–­é€‰æ‹©
+    en_tim3_m23_crch0_csa_csb_t  enCHxACmpCap;     ///< CH0A±È½Ï/²¶»ñ¹¦ÄÜÑ¡Ôñ
+    en_tim3_m23_fltr_ocm_t       enCHxACmpCtrl;    ///< CH0AÍ¨µÀ±È½Ï¿ØÖÆ
+    en_tim3_port_polarity_t      enCHxAPolarity;   ///< CH0AÊä³ö¼«ĞÔ¿ØÖÆ
+    boolean_t                    bCHxACmpBufEn;    ///< ±È½ÏA»º´æ¹¦ÄÜ Ê¹ÄÜ/½ûÖ¹
+    en_tim3_m23_cisa_cisb_t      enCHxACmpIntSel;  ///< CHA±È½ÏÆ¥ÅäÖĞ¶ÏÑ¡Ôñ
     
-    en_tim3_m23_crch0_csa_csb_t  enCHxBCmpCap;     ///< CH0Bæ¯”è¾ƒ/æ•è·åŠŸèƒ½é€‰æ‹©
-    en_tim3_m23_fltr_ocm_t       enCHxBCmpCtrl;    ///< CH0Bé€šé“æ¯”è¾ƒæ§åˆ¶
-    en_tim3_port_polarity_t      enCHxBPolarity;   ///< CH0Bè¾“å‡ºææ€§æ§åˆ¶
-    boolean_t                    bCHxBCmpBufEn;    ///< æ¯”è¾ƒBç¼“å­˜åŠŸèƒ½ ä½¿èƒ½/ç¦æ­¢
-    en_tim3_m23_cisa_cisb_t      enCHxBCmpIntSel;  ///< CHB0æ¯”è¾ƒåŒ¹é…ä¸­æ–­é€‰æ‹©
+    en_tim3_m23_crch0_csa_csb_t  enCHxBCmpCap;     ///< CH0B±È½Ï/²¶»ñ¹¦ÄÜÑ¡Ôñ
+    en_tim3_m23_fltr_ocm_t       enCHxBCmpCtrl;    ///< CH0BÍ¨µÀ±È½Ï¿ØÖÆ
+    en_tim3_port_polarity_t      enCHxBPolarity;   ///< CH0BÊä³ö¼«ĞÔ¿ØÖÆ
+    boolean_t                    bCHxBCmpBufEn;    ///< ±È½ÏB»º´æ¹¦ÄÜ Ê¹ÄÜ/½ûÖ¹
+    en_tim3_m23_cisa_cisb_t      enCHxBCmpIntSel;  ///< CHB0±È½ÏÆ¥ÅäÖĞ¶ÏÑ¡Ôñ
 }stc_tim3_m23_compare_config_t;
 
 /**
  ******************************************************************************
- ** \brief CHA/CHBé€šé“æ•è·æ§åˆ¶ é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief CHA/CHBÍ¨µÀ²¶»ñ¿ØÖÆ ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_tim3_m23_input_config
 {
-    en_tim3_m23_crch0_csa_csb_t  enCHxACmpCap;     ///< CH0Aæ¯”è¾ƒ/æ•è·åŠŸèƒ½é€‰æ‹©
-    en_tim3_m23_crch0_cfx_crx_t  enCHxACapSel;     ///< CH0Aæ•è·è¾¹æ²¿é€‰æ‹©
-    en_tim3_flt_t                enCHxAInFlt;      ///< CH0Aé€šé“æ•è·æ»¤æ³¢æ§åˆ¶
-    en_tim3_port_polarity_t      enCHxAPolarity;   ///< CH0Aè¾“å…¥ç›¸ä½
+    en_tim3_m23_crch0_csa_csb_t  enCHxACmpCap;     ///< CH0A±È½Ï/²¶»ñ¹¦ÄÜÑ¡Ôñ
+    en_tim3_m23_crch0_cfx_crx_t  enCHxACapSel;     ///< CH0A²¶»ñ±ßÑØÑ¡Ôñ
+    en_tim3_flt_t                enCHxAInFlt;      ///< CH0AÍ¨µÀ²¶»ñÂË²¨¿ØÖÆ
+    en_tim3_port_polarity_t      enCHxAPolarity;   ///< CH0AÊäÈëÏàÎ»
     
-    en_tim3_m23_crch0_csa_csb_t  enCHxBCmpCap;     ///< CH0Aæ¯”è¾ƒ/æ•è·åŠŸèƒ½é€‰æ‹©
-    en_tim3_m23_crch0_cfx_crx_t  enCHxBCapSel;     ///< CH0Bæ•è·è¾¹æ²¿é€‰æ‹©
-    en_tim3_flt_t                enCHxBInFlt;      ///< CH0Bé€šé“æ•è·æ»¤æ³¢æ§åˆ¶
-    en_tim3_port_polarity_t      enCHxBPolarity;   ///< CH0Bè¾“å…¥ç›¸ä½
+    en_tim3_m23_crch0_csa_csb_t  enCHxBCmpCap;     ///< CH0A±È½Ï/²¶»ñ¹¦ÄÜÑ¡Ôñ
+    en_tim3_m23_crch0_cfx_crx_t  enCHxBCapSel;     ///< CH0B²¶»ñ±ßÑØÑ¡Ôñ
+    en_tim3_flt_t                enCHxBInFlt;      ///< CH0BÍ¨µÀ²¶»ñÂË²¨¿ØÖÆ
+    en_tim3_port_polarity_t      enCHxBPolarity;   ///< CH0BÊäÈëÏàÎ»
     
 }stc_tim3_m23_input_config_t;   
 
 /**
  ******************************************************************************
- ** \brief ETRè¾“å…¥ç›¸ä½æ»¤æ³¢é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief ETRÊäÈëÏàÎ»ÂË²¨ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_tim3_m23_etr_input_config
 {
-    en_tim3_port_polarity_t     enETRPolarity;  ///< ETRè¾“å…¥ææ€§è®¾ç½®
-    en_tim3_flt_t               enETRFlt;       ///< ETRæ»¤æ³¢è®¾ç½®
+    en_tim3_port_polarity_t     enETRPolarity;  ///< ETRÊäÈë¼«ĞÔÉèÖÃ
+    en_tim3_flt_t               enETRFlt;       ///< ETRÂË²¨ÉèÖÃ
 }stc_tim3_m23_etr_input_config_t;
 
 /**
  ******************************************************************************
- ** \brief åˆ¹è½¦BKè¾“å…¥ç›¸ä½æ»¤æ³¢é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief É²³µBKÊäÈëÏàÎ»ÂË²¨ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_tim3_m23_bk_input_config
 {
-    boolean_t                   bEnBrake;         ///< åˆ¹è½¦ä½¿èƒ½
-    boolean_t                   bEnVC0Brake;      ///< ä½¿èƒ½VC0åˆ¹è½¦
-    boolean_t                   bEnVC1Brake;      ///< ä½¿èƒ½VC1åˆ¹è½¦
-    boolean_t                   bEnSafetyBk;      ///< ä½¿èƒ½safetyåˆ¹è½¦
-    boolean_t                   bEnBKSync;        ///< TIM0/TIM1/TIM2åˆ¹è½¦åŒæ­¥ä½¿èƒ½
-    en_tim3_m23_crchx_bks_t     enBkCH0AStat;     ///< åˆ¹è½¦æ—¶CHAç«¯å£çŠ¶æ€è®¾ç½®
-    en_tim3_m23_crchx_bks_t     enBkCH0BStat;     ///< åˆ¹è½¦æ—¶CHBç«¯å£çŠ¶æ€è®¾ç½®
-    en_tim3_m23_crchx_bks_t     enBkCH1AStat;     ///< åˆ¹è½¦æ—¶CHAç«¯å£çŠ¶æ€è®¾ç½®
-    en_tim3_m23_crchx_bks_t     enBkCH1BStat;     ///< åˆ¹è½¦æ—¶CHBç«¯å£çŠ¶æ€è®¾ç½®
-    en_tim3_m23_crchx_bks_t     enBkCH2AStat;     ///< åˆ¹è½¦æ—¶CHAç«¯å£çŠ¶æ€è®¾ç½®
-    en_tim3_m23_crchx_bks_t     enBkCH2BStat;     ///< åˆ¹è½¦æ—¶CHBç«¯å£çŠ¶æ€è®¾ç½®
-    en_tim3_port_polarity_t     enBrakePolarity;  ///< åˆ¹è½¦BKè¾“å…¥ææ€§è®¾ç½®
-    en_tim3_flt_t               enBrakeFlt;       ///< åˆ¹è½¦BKæ»¤æ³¢è®¾ç½®
+    boolean_t                   bEnBrake;         ///< É²³µÊ¹ÄÜ
+    boolean_t                   bEnVC0Brake;      ///< Ê¹ÄÜVC0É²³µ
+    boolean_t                   bEnVC1Brake;      ///< Ê¹ÄÜVC1É²³µ
+    boolean_t                   bEnSafetyBk;      ///< Ê¹ÄÜsafetyÉ²³µ
+    boolean_t                   bEnBKSync;        ///< TIM0/TIM1/TIM2É²³µÍ¬²½Ê¹ÄÜ
+    en_tim3_m23_crchx_bks_t     enBkCH0AStat;     ///< É²³µÊ±CHA¶Ë¿Ú×´Ì¬ÉèÖÃ
+    en_tim3_m23_crchx_bks_t     enBkCH0BStat;     ///< É²³µÊ±CHB¶Ë¿Ú×´Ì¬ÉèÖÃ
+    en_tim3_m23_crchx_bks_t     enBkCH1AStat;     ///< É²³µÊ±CHA¶Ë¿Ú×´Ì¬ÉèÖÃ
+    en_tim3_m23_crchx_bks_t     enBkCH1BStat;     ///< É²³µÊ±CHB¶Ë¿Ú×´Ì¬ÉèÖÃ
+    en_tim3_m23_crchx_bks_t     enBkCH2AStat;     ///< É²³µÊ±CHA¶Ë¿Ú×´Ì¬ÉèÖÃ
+    en_tim3_m23_crchx_bks_t     enBkCH2BStat;     ///< É²³µÊ±CHB¶Ë¿Ú×´Ì¬ÉèÖÃ
+    en_tim3_port_polarity_t     enBrakePolarity;  ///< É²³µBKÊäÈë¼«ĞÔÉèÖÃ
+    en_tim3_flt_t               enBrakeFlt;       ///< É²³µBKÂË²¨ÉèÖÃ
 }stc_tim3_m23_bk_input_config_t;
 
 /**
  ******************************************************************************
-** \brief æ­»åŒºåŠŸèƒ½é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+** \brief ËÀÇø¹¦ÄÜÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_tim3_m23_dt_config
 {
-    boolean_t       bEnDeadTime;      ///< åˆ¹è½¦æ—¶CHAç«¯å£çŠ¶æ€è®¾ç½®
-    uint8_t         u8DeadTimeValue;  ///< åˆ¹è½¦æ—¶CHAç«¯å£çŠ¶æ€è®¾ç½®
+    boolean_t       bEnDeadTime;      ///< É²³µÊ±CHA¶Ë¿Ú×´Ì¬ÉèÖÃ
+    uint8_t         u8DeadTimeValue;  ///< É²³µÊ±CHA¶Ë¿Ú×´Ì¬ÉèÖÃ
 }stc_tim3_m23_dt_config_t;
 
 /**
  ******************************************************************************
- ** \brief è§¦å‘ADCé…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief ´¥·¢ADCÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_tim3_m23_adc_trig_config
 {
-    boolean_t     bEnTrigADC;          ///< è§¦å‘ADCå…¨å±€æ§åˆ¶
-    boolean_t     bEnUevTrigADC;       ///< äº‹ä»¶æ›´æ–°è§¦å‘ADC
-    boolean_t     bEnCH0ACmpTrigADC;   ///< CH0Aæ¯”è¾ƒåŒ¹é…è§¦å‘ADC
-    boolean_t     bEnCH0BCmpTrigADC;   ///< CH0Bæ¯”è¾ƒåŒ¹é…è§¦å‘ADC
-    boolean_t     bEnCH1ACmpTrigADC;   ///< CH0Aæ¯”è¾ƒåŒ¹é…è§¦å‘ADC
-    boolean_t     bEnCH1BCmpTrigADC;   ///< CH0Bæ¯”è¾ƒåŒ¹é…è§¦å‘ADC
-    boolean_t     bEnCH2ACmpTrigADC;   ///< CH0Aæ¯”è¾ƒåŒ¹é…è§¦å‘ADC
-    boolean_t     bEnCH2BCmpTrigADC;   ///< CH0Bæ¯”è¾ƒåŒ¹é…è§¦å‘ADC
+    boolean_t     bEnTrigADC;          ///< ´¥·¢ADCÈ«¾Ö¿ØÖÆ
+    boolean_t     bEnUevTrigADC;       ///< ÊÂ¼ş¸üĞÂ´¥·¢ADC
+    boolean_t     bEnCH0ACmpTrigADC;   ///< CH0A±È½ÏÆ¥Åä´¥·¢ADC
+    boolean_t     bEnCH0BCmpTrigADC;   ///< CH0B±È½ÏÆ¥Åä´¥·¢ADC
+    boolean_t     bEnCH1ACmpTrigADC;   ///< CH0A±È½ÏÆ¥Åä´¥·¢ADC
+    boolean_t     bEnCH1BCmpTrigADC;   ///< CH0B±È½ÏÆ¥Åä´¥·¢ADC
+    boolean_t     bEnCH2ACmpTrigADC;   ///< CH0A±È½ÏÆ¥Åä´¥·¢ADC
+    boolean_t     bEnCH2BCmpTrigADC;   ///< CH0B±È½ÏÆ¥Åä´¥·¢ADC
 }stc_tim3_m23_adc_trig_config_t;
 
 /**
  ******************************************************************************
- ** \brief  DMAè§¦å‘ é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief  DMA´¥·¢ ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_tim3_m23_trig_dma_config
 {
-    boolean_t                bUevTrigDMA;      ///< æ›´æ–° è§¦å‘DMAä½¿èƒ½
-    boolean_t                bTITrigDMA;       ///< Trig è§¦å‘DMAåŠŸèƒ½
-    boolean_t                bCmpA0TrigDMA;    ///< CH0Aæ•è·æ¯”è¾ƒè§¦å‘DMAä½¿èƒ½
-    boolean_t                bCmpB0TrigDMA;    ///< CH0Bæ•è·æ¯”è¾ƒè§¦å‘DMAä½¿èƒ½
-    boolean_t                bCmpA1TrigDMA;    ///< CH1Aæ•è·æ¯”è¾ƒè§¦å‘DMAä½¿èƒ½
-    boolean_t                bCmpB1TrigDMA;    ///< CH1Bæ•è·æ¯”è¾ƒè§¦å‘DMAä½¿èƒ½
-    boolean_t                bCmpA2TrigDMA;    ///< CH2Aæ•è·æ¯”è¾ƒè§¦å‘DMAä½¿èƒ½
-    boolean_t                bCmpB2TrigDMA;    ///< CH2Bæ•è·æ¯”è¾ƒè§¦å‘DMAä½¿èƒ½
-    en_tim3_m23_mscr_ccds_t  enCmpUevTrigDMA;  ///< æ¯”è¾ƒæ¨¡å¼ä¸‹DMAæ¯”è¾ƒè§¦å‘é€‰æ‹©
+    boolean_t                bUevTrigDMA;      ///< ¸üĞÂ ´¥·¢DMAÊ¹ÄÜ
+    boolean_t                bTITrigDMA;       ///< Trig ´¥·¢DMA¹¦ÄÜ
+    boolean_t                bCmpA0TrigDMA;    ///< CH0A²¶»ñ±È½Ï´¥·¢DMAÊ¹ÄÜ
+    boolean_t                bCmpB0TrigDMA;    ///< CH0B²¶»ñ±È½Ï´¥·¢DMAÊ¹ÄÜ
+    boolean_t                bCmpA1TrigDMA;    ///< CH1A²¶»ñ±È½Ï´¥·¢DMAÊ¹ÄÜ
+    boolean_t                bCmpB1TrigDMA;    ///< CH1B²¶»ñ±È½Ï´¥·¢DMAÊ¹ÄÜ
+    boolean_t                bCmpA2TrigDMA;    ///< CH2A²¶»ñ±È½Ï´¥·¢DMAÊ¹ÄÜ
+    boolean_t                bCmpB2TrigDMA;    ///< CH2B²¶»ñ±È½Ï´¥·¢DMAÊ¹ÄÜ
+    en_tim3_m23_mscr_ccds_t  enCmpUevTrigDMA;  ///< ±È½ÏÄ£Ê½ÏÂDMA±È½Ï´¥·¢Ñ¡Ôñ
 }stc_tim3_m23_trig_dma_config_t;
 
 /**
  ******************************************************************************
- ** \brief  ä¸»ä»æ¨¡å¼ é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief  Ö÷´ÓÄ£Ê½ ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_tim3_m23_master_slave_config
 {
-    en_tim3_m23_mscr_msm_t      enMasterSlaveSel;  ///< ä¸»ä»æ¨¡å¼é€‰æ‹©
-    en_tim3_m23_mscr_mms_t      enMasterSrc;       ///< ä¸»æ¨¡å¼è§¦å‘æºé€‰æ‹©
-    en_tim3_m23_mscr_sms_t      enSlaveModeSel;    ///< ä»æ¨¡å¼é€‰æ‹©
-    en_tim3_mscr_ts_t           enTsSel;           ///< è§¦å‘è¾“å…¥æºé€‰æ‹©
+    en_tim3_m23_mscr_msm_t      enMasterSlaveSel;  ///< Ö÷´ÓÄ£Ê½Ñ¡Ôñ
+    en_tim3_m23_mscr_mms_t      enMasterSrc;       ///< Ö÷Ä£Ê½´¥·¢Ô´Ñ¡Ôñ
+    en_tim3_m23_mscr_sms_t      enSlaveModeSel;    ///< ´ÓÄ£Ê½Ñ¡Ôñ
+    en_tim3_mscr_ts_t           enTsSel;           ///< ´¥·¢ÊäÈëÔ´Ñ¡Ôñ
 }stc_tim3_m23_master_slave_config_t;
 
 /**
  ******************************************************************************
- ** \brief  OCREFæ¸…é™¤åŠŸèƒ½ é…ç½®ç»“æ„ä½“å®šä¹‰(æ¨¡å¼23)
+ ** \brief  OCREFÇå³ı¹¦ÄÜ ÅäÖÃ½á¹¹Ìå¶¨Òå(Ä£Ê½23)
  *****************************************************************************/
 typedef struct stc_tim3_m23_OCREF_Clr_config
 {
-    en_tim3_m23ce_occs_t       enOCRefClrSrcSel;  ///< OCREFæ¸…é™¤æºé€‰æ‹©
-    boolean_t                  bVCClrEn;          ///< æ˜¯å¦ä½¿èƒ½æ¥è‡ªVCçš„OCREF_Clr
+    en_tim3_m23ce_occs_t       enOCRefClrSrcSel;  ///< OCREFÇå³ıÔ´Ñ¡Ôñ
+    boolean_t                  bVCClrEn;          ///< ÊÇ·ñÊ¹ÄÜÀ´×ÔVCµÄOCREF_Clr
 }stc_tim3_m23_OCREF_Clr_config_t;
 
 /******************************************************************************
@@ -663,113 +663,113 @@ typedef struct stc_tim3_m23_OCREF_Clr_config
 /******************************************************************************
  * Global function prototypes (definition in C source)
  *****************************************************************************/
-//ä¸­æ–­ç›¸å…³å‡½æ•°
+//ÖĞ¶ÏÏà¹Øº¯Êı
 
-//ä¸­æ–­æ ‡å¿—è·å–
+//ÖĞ¶Ï±êÖ¾»ñÈ¡
 boolean_t Tim3_GetIntFlag(en_tim3_irq_type_t enTim3Irq);
-//ä¸­æ–­æ ‡å¿—æ¸…é™¤
+//ÖĞ¶Ï±êÖ¾Çå³ı
 en_result_t Tim3_ClearIntFlag(en_tim3_irq_type_t enTim3Irq);
-//æ‰€æœ‰ä¸­æ–­æ ‡å¿—æ¸…é™¤
+//ËùÓĞÖĞ¶Ï±êÖ¾Çå³ı
 en_result_t Tim3_ClearAllIntFlag(void);
-//æ¨¡å¼0ä¸­æ–­ä½¿èƒ½
+//Ä£Ê½0ÖĞ¶ÏÊ¹ÄÜ
 en_result_t Tim3_Mode0_EnableIrq(void);
-//æ¨¡å¼1ä¸­æ–­ä½¿èƒ½
+//Ä£Ê½1ÖĞ¶ÏÊ¹ÄÜ
 en_result_t Tim3_Mode1_EnableIrq (en_tim3_irq_type_t enTim3Irq);
-//æ¨¡å¼2ä¸­æ–­ä½¿èƒ½
+//Ä£Ê½2ÖĞ¶ÏÊ¹ÄÜ
 en_result_t Tim3_Mode23_EnableIrq (en_tim3_irq_type_t enTim3Irq);
-//æ¨¡å¼0ä¸­æ–­ç¦æ­¢
+//Ä£Ê½0ÖĞ¶Ï½ûÖ¹
 en_result_t Tim3_Mode0_DisableIrq(void);
-//æ¨¡å¼1ä¸­æ–­ç¦æ­¢
+//Ä£Ê½1ÖĞ¶Ï½ûÖ¹
 en_result_t Tim3_Mode1_DisableIrq (en_tim3_irq_type_t enTim3Irq);
-//æ¨¡å¼2ä¸­æ–­ç¦æ­¢
+//Ä£Ê½2ÖĞ¶Ï½ûÖ¹
 en_result_t Tim3_Mode23_DisableIrq (en_tim3_irq_type_t enTim3Irq);
 
 
-//æ¨¡å¼0åˆå§‹åŒ–åŠç›¸å…³åŠŸèƒ½æ“ä½œ
+//Ä£Ê½0³õÊ¼»¯¼°Ïà¹Ø¹¦ÄÜ²Ù×÷
 
-//timeré…ç½®åŠåˆå§‹åŒ–
+//timerÅäÖÃ¼°³õÊ¼»¯
 en_result_t Tim3_Mode0_Init(stc_tim3_mode0_config_t* pstcConfig);
-//timer å¯åŠ¨/åœæ­¢
+//timer Æô¶¯/Í£Ö¹
 en_result_t Tim3_M0_Run(void);
 en_result_t Tim3_M0_Stop(void);
-//é‡è½½å€¼è®¾ç½®
+//ÖØÔØÖµÉèÖÃ
 en_result_t Tim3_M0_ARRSet(uint16_t u16Data);
-//16ä½è®¡æ•°å€¼è®¾ç½®/è·å–
+//16Î»¼ÆÊıÖµÉèÖÃ/»ñÈ¡
 en_result_t Tim3_M0_Cnt16Set(uint16_t u16Data);
 uint16_t Tim3_M0_Cnt16Get(void);
-//32ä½è®¡æ•°å€¼è®¾ç½®/è·å–
+//32Î»¼ÆÊıÖµÉèÖÃ/»ñÈ¡
 en_result_t Tim3_M0_Cnt32Set(uint32_t u32Data);
 uint32_t Tim3_M0_Cnt32Get(void);
-//ç¿»è½¬è¾“å‡ºä½¿èƒ½/ç¦æ­¢è®¾å®š
+//·­×ªÊä³öÊ¹ÄÜ/½ûÖ¹Éè¶¨
 en_result_t Tim3_M0_EnTOG_Output(boolean_t bEnOutput);
 
 
-//æ¨¡å¼1åˆå§‹åŒ–åŠç›¸å…³åŠŸèƒ½æ“ä½œ
+//Ä£Ê½1³õÊ¼»¯¼°Ïà¹Ø¹¦ÄÜ²Ù×÷
 
-//timeré…ç½®åŠåˆå§‹åŒ–
+//timerÅäÖÃ¼°³õÊ¼»¯
 en_result_t Tim3_Mode1_Init(stc_tim3_mode1_config_t* pstcConfig);
-//PWC è¾“å…¥é…ç½®
+//PWC ÊäÈëÅäÖÃ
 en_result_t Tim3_M1_Input_Config(stc_tim3_pwc_input_config_t* pstcConfig);
-//PWCæµ‹é‡è¾¹æ²¿èµ·å§‹ç»“æŸé€‰æ‹©
+//PWC²âÁ¿±ßÑØÆğÊ¼½áÊøÑ¡Ôñ
 en_result_t Tim3_M1_PWC_Edge_Sel(en_tim3_m1cr_Edge_t enEdgeSel);
-//timer å¯åŠ¨/åœæ­¢
+//timer Æô¶¯/Í£Ö¹
 en_result_t Tim3_M1_Run(void);
 en_result_t Tim3_M1_Stop(void);
-//16ä½è®¡æ•°å€¼è®¾ç½®/è·å–
+//16Î»¼ÆÊıÖµÉèÖÃ/»ñÈ¡
 en_result_t Tim3_M1_Cnt16Set(uint16_t u16Data);
 uint16_t Tim3_M1_Cnt16Get(void);
-//è„‰å†²å®½åº¦æµ‹é‡ç»“æœæ•°å€¼è·å–
+//Âö³å¿í¶È²âÁ¿½á¹ûÊıÖµ»ñÈ¡
 uint16_t Tim3_M1_PWC_CapValueGet(void);
 
 
-//æ¨¡å¼1åˆå§‹åŒ–åŠç›¸å…³åŠŸèƒ½æ“ä½œ
+//Ä£Ê½1³õÊ¼»¯¼°Ïà¹Ø¹¦ÄÜ²Ù×÷
 
-//timeré…ç½®åŠåˆå§‹åŒ–
+//timerÅäÖÃ¼°³õÊ¼»¯
 en_result_t Tim3_Mode23_Init(stc_tim3_mode23_config_t* pstcConfig);
-//timer å¯åŠ¨/åœæ­¢
+//timer Æô¶¯/Í£Ö¹
 en_result_t Tim3_M23_Run(void);
 en_result_t Tim3_M23_Stop(void);
-//PWMè¾“å‡ºä½¿èƒ½
+//PWMÊä³öÊ¹ÄÜ
 en_result_t Tim3_M23_EnPWM_Output(boolean_t bEnOutput, boolean_t bEnAutoOutput);
-//é‡è½½å€¼è®¾ç½®
+//ÖØÔØÖµÉèÖÃ
 en_result_t Tim3_M23_ARRSet(uint16_t u16Data, boolean_t bArrBufEn);
-//16ä½è®¡æ•°å€¼è®¾ç½®/è·å–
+//16Î»¼ÆÊıÖµÉèÖÃ/»ñÈ¡
 en_result_t Tim3_M23_Cnt16Set(uint16_t u16Data);
 uint16_t Tim3_M23_Cnt16Get(void);
-//æ¯”è¾ƒæ•è·å¯„å­˜å™¨CCR0A/CCR0Bè®¾ç½®/è¯»å–
+//±È½Ï²¶»ñ¼Ä´æÆ÷CCR0A/CCR0BÉèÖÃ/¶ÁÈ¡
 en_result_t Tim3_M23_CCR_Set(en_tim3_m23_ccrx_t enCCRSel, uint16_t u16Data);
 uint16_t Tim3_M23_CCR_Get(en_tim3_m23_ccrx_t enCCRSel);
-//PWMäº’è¡¥è¾“å‡ºæ¨¡å¼ä¸‹ï¼ŒGATEåŠŸèƒ½é€‰æ‹©
+//PWM»¥²¹Êä³öÄ£Ê½ÏÂ£¬GATE¹¦ÄÜÑ¡Ôñ
 en_result_t Tim3_M23_GateFuncSel(stc_tim3_m23_gate_config_t* pstcConfig);
-//ä¸»ä»æ¨¡å¼é…ç½®
+//Ö÷´ÓÄ£Ê½ÅäÖÃ
 en_result_t Tim3_M23_MasterSlave_Set(stc_tim3_m23_master_slave_config_t* pstcConfig);
-//CH0A/CH0Bæ¯”è¾ƒé€šé“æ§åˆ¶
+//CH0A/CH0B±È½ÏÍ¨µÀ¿ØÖÆ
 en_result_t Tim3_M23_PortOutput_Config(en_tim3_channel_t enTim3Chx, stc_tim3_m23_compare_config_t* pstcConfig);
-//CH0A/CH0Bè¾“å…¥æ§åˆ¶
+//CH0A/CH0BÊäÈë¿ØÖÆ
 en_result_t Tim3_M23_PortInput_Config(en_tim3_channel_t enTim3Chx, stc_tim3_m23_input_config_t* pstcConfig);
-//ERTè¾“å…¥æ§åˆ¶
+//ERTÊäÈë¿ØÖÆ
 en_result_t Tim3_M23_ETRInput_Config(stc_tim3_m23_etr_input_config_t* pstcConfig);
-//åˆ¹è½¦BKè¾“å…¥æ§åˆ¶
+//É²³µBKÊäÈë¿ØÖÆ
 en_result_t Tim3_M23_BrakeInput_Config(stc_tim3_m23_bk_input_config_t* pstcConfig);
-//è§¦å‘ADCæ§åˆ¶
+//´¥·¢ADC¿ØÖÆ
 en_result_t Tim3_M23_TrigADC_Config(stc_tim3_m23_adc_trig_config_t* pstcConfig);
-//æ­»åŒºåŠŸèƒ½
+//ËÀÇø¹¦ÄÜ
 en_result_t Tim3_M23_DT_Config(stc_tim3_m23_dt_config_t* pstcConfig);
-//é‡å¤å‘¨æœŸè®¾ç½®
+//ÖØ¸´ÖÜÆÚÉèÖÃ
 en_result_t Tim3_M23_SetValidPeriod(uint8_t u8ValidPeriod);
-//OCREFæ¸…é™¤åŠŸèƒ½
+//OCREFÇå³ı¹¦ÄÜ
 en_result_t Tim3_M23_OCRefClr(stc_tim3_m23_OCREF_Clr_config_t* pstcConfig);
-//ä½¿èƒ½DMAä¼ è¾“
+//Ê¹ÄÜDMA´«Êä
 en_result_t Tim3_M23_EnDMA(stc_tim3_m23_trig_dma_config_t* pstcConfig);
-//æ•è·æ¯”è¾ƒAè½¯ä»¶è§¦å‘
+//²¶»ñ±È½ÏAÈí¼ş´¥·¢
 en_result_t Tim3_M23_EnSwTrigCapCmpA(en_tim3_channel_t enTim3Chx);
-//æ•è·æ¯”è¾ƒBè½¯ä»¶è§¦å‘
+//²¶»ñ±È½ÏBÈí¼ş´¥·¢
 en_result_t Tim3_M23_EnSwTrigCapCmpB(en_tim3_channel_t enTim3Chx);
-//è½¯ä»¶æ›´æ–°ä½¿èƒ½
+//Èí¼ş¸üĞÂÊ¹ÄÜ
 en_result_t Tim3_M23_EnSwUev(void);
-//è½¯ä»¶è§¦å‘ä½¿èƒ½
+//Èí¼ş´¥·¢Ê¹ÄÜ
 en_result_t Tim3_M23_EnSwTrig(void);
-//è½¯ä»¶åˆ¹è½¦ä½¿èƒ½
+//Èí¼şÉ²³µÊ¹ÄÜ
 en_result_t Tim3_M23_EnSwBk(void);
 
 

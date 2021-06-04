@@ -92,11 +92,11 @@ static func_ptr_t pfnTim2Callback = NULL;
 
 /**
  *****************************************************************************
- ** \brief Base Timer ä¸­æ–­æ ‡å¿—è·å–(æ¨¡å¼0/1/23)
+ ** \brief Base Timer ÖĞ¶Ï±êÖ¾»ñÈ¡(Ä£Ê½0/1/23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  enTim3Irq        ä¸­æ–­ç±»å‹
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  enTim3Irq        ÖĞ¶ÏÀàĞÍ
  ** 
  ** \retval TRUE or FALSE                                      
  *****************************************************************************/
@@ -116,11 +116,11 @@ boolean_t Bt_GetIntFlag(en_bt_unit_t enUnit, en_bt_irq_type_t enBtIrq)
 
 /**
  *****************************************************************************
- ** \brief Base Timer ä¸­æ–­æ ‡å¿—æ¸…é™¤(æ¨¡å¼0/1/23)
+ ** \brief Base Timer ÖĞ¶Ï±êÖ¾Çå³ı(Ä£Ê½0/1/23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  enTim3Irq        ä¸­æ–­ç±»å‹
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  enTim3Irq        ÖĞ¶ÏÀàĞÍ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -138,10 +138,10 @@ en_result_t Bt_ClearIntFlag(en_bt_unit_t enUnit, en_bt_irq_type_t enBtIrq)
 
 /**
  *****************************************************************************
- ** \brief Base Timer ä¸­æ–­æ‰€æœ‰æ ‡å¿—æ¸…é™¤(æ¨¡å¼23)
+ ** \brief Base Timer ÖĞ¶ÏËùÓĞ±êÖ¾Çå³ı(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** 
  ** \retval Ok or Error                                      
@@ -167,10 +167,10 @@ en_result_t Bt_ClearAllIntFlag(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer ä¸­æ–­ä½¿èƒ½(æ¨¡å¼0)
+ ** \brief Base Timer ÖĞ¶ÏÊ¹ÄÜ(Ä£Ê½0)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -187,10 +187,10 @@ en_result_t Bt_Mode0_EnableIrq(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer ä¸­æ–­ç¦æ­¢(æ¨¡å¼0)
+ ** \brief Base Timer ÖĞ¶Ï½ûÖ¹(Ä£Ê½0)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -207,11 +207,11 @@ en_result_t Bt_Mode0_DisableIrq(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer ä¸­æ–­ä½¿èƒ½(æ¨¡å¼1)
+ ** \brief Base Timer ÖĞ¶ÏÊ¹ÄÜ(Ä£Ê½1)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  enTim3Irq        ä¸­æ–­ç±»å‹
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  enTim3Irq        ÖĞ¶ÏÀàĞÍ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -239,11 +239,11 @@ en_result_t Bt_Mode1_EnableIrq (en_bt_unit_t enUnit, en_bt_irq_type_t enBtIrq)
 
 /**
  *****************************************************************************
- ** \brief Base Timer ä¸­æ–­ç¦æ­¢(æ¨¡å¼1)
+ ** \brief Base Timer ÖĞ¶Ï½ûÖ¹(Ä£Ê½1)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  enTim3Irq        ä¸­æ–­ç±»å‹
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  enTim3Irq        ÖĞ¶ÏÀàĞÍ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -272,11 +272,11 @@ en_result_t Bt_Mode1_DisableIrq (en_bt_unit_t enUnit, en_bt_irq_type_t enBtIrq)
 
 /**
  *****************************************************************************
- ** \brief Base Timer ä¸­æ–­ä½¿èƒ½(æ¨¡å¼23)
+ ** \brief Base Timer ÖĞ¶ÏÊ¹ÄÜ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
-  ** \param [in]  enTim3Irq       ä¸­æ–­ç±»å‹
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+  ** \param [in]  enTim3Irq       ÖĞ¶ÏÀàĞÍ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -314,11 +314,11 @@ en_result_t Bt_Mode23_EnableIrq (en_bt_unit_t enUnit, en_bt_irq_type_t enBtIrq)
 
 /**
  *****************************************************************************
- ** \brief Base Timer ä¸­æ–­ç¦æ­¢(æ¨¡å¼23)
+ ** \brief Base Timer ÖĞ¶Ï½ûÖ¹(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  enTim3Irq        ä¸­æ–­ç±»å‹
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  enTim3Irq        ÖĞ¶ÏÀàĞÍ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -356,10 +356,10 @@ en_result_t Bt_Mode23_DisableIrq (en_bt_unit_t enUnit, en_bt_irq_type_t enBtIrq)
 
 /**
  *****************************************************************************
- ** \brief Base Timer ä¸­æ–­æœåŠ¡å‡½æ•°
+ ** \brief Base Timer ÖĞ¶Ï·şÎñº¯Êı
  **
  **
- ** \param [in]  u8Param           Timeré€šé“é€‰æ‹©ï¼ˆ0 - TIM0ã€1 - TIM1ã€2 - TIM2ï¼‰
+ ** \param [in]  u8Param           TimerÍ¨µÀÑ¡Ôñ£¨0 - TIM0¡¢1 - TIM1¡¢2 - TIM2£©
  ** 
  ** \retval NULL                                     
  *****************************************************************************/
@@ -395,11 +395,11 @@ void Tim_IRQHandler(uint8_t u8Param)
 
 /**
  *****************************************************************************
- ** \brief Base Timer åˆå§‹åŒ–é…ç½®(æ¨¡å¼0)
+ ** \brief Base Timer ³õÊ¼»¯ÅäÖÃ(Ä£Ê½0)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -461,10 +461,10 @@ en_result_t Bt_Mode0_Init(en_bt_unit_t enUnit, stc_bt_mode0_config_t* pstcConfig
 
 /**
  *****************************************************************************
- ** \brief Base Timer å¯åŠ¨è¿è¡Œ(æ¨¡å¼0)
+ ** \brief Base Timer Æô¶¯ÔËĞĞ(Ä£Ê½0)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -481,10 +481,10 @@ en_result_t Bt_M0_Run(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer åœæ­¢è¿è¡Œ(æ¨¡å¼0)
+ ** \brief Base Timer Í£Ö¹ÔËĞĞ(Ä£Ê½0)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -501,11 +501,11 @@ en_result_t Bt_M0_Stop(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer ç¿»è½¬è¾“å‡ºä½¿èƒ½/ç¦æ­¢è®¾å®š(æ¨¡å¼0)
+ ** \brief Base Timer ·­×ªÊä³öÊ¹ÄÜ/½ûÖ¹Éè¶¨(Ä£Ê½0)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  bEnOutput        ç¿»è½¬è¾“å‡ºè®¾å®š TRUE:ä½¿èƒ½, FALSE:ç¦æ­¢
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  bEnOutput        ·­×ªÊä³öÉè¶¨ TRUE:Ê¹ÄÜ, FALSE:½ûÖ¹
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -522,11 +522,11 @@ en_result_t Bt_M0_EnTOG_Output(en_bt_unit_t enUnit, boolean_t bEnOutput)
 
 /**
  *****************************************************************************
- ** \brief Base Timer 16ä½è®¡æ•°å™¨åˆå€¼è®¾ç½®(æ¨¡å¼0)
+ ** \brief Base Timer 16Î»¼ÆÊıÆ÷³õÖµÉèÖÃ(Ä£Ê½0)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  u16Data          16ä½åˆå€¼
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  u16Data          16Î»³õÖµ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -557,12 +557,12 @@ en_result_t Bt_M0_Cnt16Set(en_bt_unit_t enUnit, uint16_t u16Data)
 
 /**
  *****************************************************************************
- ** \brief Base Timer 16ä½è®¡æ•°å€¼è·å–(æ¨¡å¼0)
+ ** \brief Base Timer 16Î»¼ÆÊıÖµ»ñÈ¡(Ä£Ê½0)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
- ** \retval 16bitsè®¡æ•°å€¼                                      
+ ** \retval 16bits¼ÆÊıÖµ                                      
  *****************************************************************************/
 uint16_t Bt_M0_Cnt16Get(en_bt_unit_t enUnit)
 {
@@ -591,11 +591,11 @@ uint16_t Bt_M0_Cnt16Get(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer é‡è½½å€¼è®¾ç½®(æ¨¡å¼0)
+ ** \brief Base Timer ÖØÔØÖµÉèÖÃ(Ä£Ê½0)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  u16Data          16bitsé‡è½½å€¼
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  u16Data          16bitsÖØÔØÖµ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -626,11 +626,11 @@ en_result_t Bt_M0_ARRSet(en_bt_unit_t enUnit, uint16_t u16Data)
 
 /**
  *****************************************************************************
- ** \brief Base Timer 32ä½è®¡æ•°å™¨åˆå€¼è®¾ç½®(æ¨¡å¼0)
+ ** \brief Base Timer 32Î»¼ÆÊıÆ÷³õÖµÉèÖÃ(Ä£Ê½0)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  u32Data          32ä½åˆå€¼
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  u32Data          32Î»³õÖµ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -661,12 +661,12 @@ en_result_t Bt_M0_Cnt32Set(en_bt_unit_t enUnit, uint32_t u32Data)
 
 /**
  *****************************************************************************
- ** \brief Base Timer 32ä½è®¡æ•°å€¼è·å–(æ¨¡å¼0)
+ ** \brief Base Timer 32Î»¼ÆÊıÖµ»ñÈ¡(Ä£Ê½0)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
- ** \retval 32bitsè®¡æ•°å€¼                                      
+ ** \retval 32bits¼ÆÊıÖµ                                      
  *****************************************************************************/
 uint32_t Bt_M0_Cnt32Get(en_bt_unit_t enUnit)
 {
@@ -695,11 +695,11 @@ uint32_t Bt_M0_Cnt32Get(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer åˆå§‹åŒ–é…ç½®(æ¨¡å¼1)
+ ** \brief Base Timer ³õÊ¼»¯ÅäÖÃ(Ä£Ê½1)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -751,11 +751,11 @@ en_result_t Bt_Mode1_Init(en_bt_unit_t enUnit, stc_bt_mode1_config_t* pstcConfig
 
 /**
  *****************************************************************************
- ** \brief Base Timer PWC è¾“å…¥é…ç½®(æ¨¡å¼1)
+ ** \brief Base Timer PWC ÊäÈëÅäÖÃ(Ä£Ê½1)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -778,11 +778,11 @@ en_result_t Bt_M1_Input_Config(en_bt_unit_t enUnit, stc_bt_pwc_input_config_t* p
 
 /**
  *****************************************************************************
- ** \brief Base Timer PWCæµ‹é‡è¾¹æ²¿èµ·å§‹ç»“æŸé€‰æ‹©(æ¨¡å¼1)
+ ** \brief Base Timer PWC²âÁ¿±ßÑØÆğÊ¼½áÊøÑ¡Ôñ(Ä£Ê½1)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  enEdgeSel        pwcæµ‹é‡èµ·å§‹ç»ˆæ­¢ç”µå¹³
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  enEdgeSel        pwc²âÁ¿ÆğÊ¼ÖÕÖ¹µçÆ½
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -794,21 +794,21 @@ en_result_t Bt_M1_PWC_Edge_Sel(en_bt_unit_t enUnit,en_bt_m1cr_Edge_t enEdgeSel)
     
     switch (enEdgeSel)
     {
-        case 0:                            ///< ä¸Šå‡æ²¿åˆ°ä¸Šå‡æ²¿(å‘¨æœŸ)
-            pstcM0PBt->M1CR_f.EDG1ST = 0;  //ä¸Šå‡æ²¿
-            pstcM0PBt->M1CR_f.EDG2ND = 0;  //ä¸Šå‡æ²¿
+        case 0:                            ///< ÉÏÉıÑØµ½ÉÏÉıÑØ(ÖÜÆÚ)
+            pstcM0PBt->M1CR_f.EDG1ST = 0;  //ÉÏÉıÑØ
+            pstcM0PBt->M1CR_f.EDG2ND = 0;  //ÉÏÉıÑØ
             break;
-        case 1:                            ///< ä¸‹é™æ²¿åˆ°ä¸Šå‡æ²¿(ä½ç”µå¹³)
-            pstcM0PBt->M1CR_f.EDG1ST = 1;  //ä¸‹é™æ²¿
-            pstcM0PBt->M1CR_f.EDG2ND = 0;  //ä¸Šå‡æ²¿
+        case 1:                            ///< ÏÂ½µÑØµ½ÉÏÉıÑØ(µÍµçÆ½)
+            pstcM0PBt->M1CR_f.EDG1ST = 1;  //ÏÂ½µÑØ
+            pstcM0PBt->M1CR_f.EDG2ND = 0;  //ÉÏÉıÑØ
             break;
-        case 2:                            ///< ä¸Šå‡æ²¿åˆ°ä¸‹é™æ²¿(é«˜ç”µå¹³)
-            pstcM0PBt->M1CR_f.EDG1ST = 0;  //ä¸Šå‡æ²¿
-            pstcM0PBt->M1CR_f.EDG2ND = 1;  //ä¸‹é™æ²¿
+        case 2:                            ///< ÉÏÉıÑØµ½ÏÂ½µÑØ(¸ßµçÆ½)
+            pstcM0PBt->M1CR_f.EDG1ST = 0;  //ÉÏÉıÑØ
+            pstcM0PBt->M1CR_f.EDG2ND = 1;  //ÏÂ½µÑØ
             break;
-        case 3:                            ///< ä¸‹é™æ²¿åˆ°ä¸‹é™æ²¿(å‘¨æœŸ)
-            pstcM0PBt->M1CR_f.EDG1ST = 1;  //ä¸‹é™æ²¿
-            pstcM0PBt->M1CR_f.EDG2ND = 1;  //ä¸‹é™æ²¿
+        case 3:                            ///< ÏÂ½µÑØµ½ÏÂ½µÑØ(ÖÜÆÚ)
+            pstcM0PBt->M1CR_f.EDG1ST = 1;  //ÏÂ½µÑØ
+            pstcM0PBt->M1CR_f.EDG2ND = 1;  //ÏÂ½µÑØ
             break;
         default:
             ;
@@ -820,10 +820,10 @@ en_result_t Bt_M1_PWC_Edge_Sel(en_bt_unit_t enUnit,en_bt_m1cr_Edge_t enEdgeSel)
 
 /**
  *****************************************************************************
- ** \brief Base Timer å¯åŠ¨è¿è¡Œ(æ¨¡å¼1)
+ ** \brief Base Timer Æô¶¯ÔËĞĞ(Ä£Ê½1)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -840,10 +840,10 @@ en_result_t Bt_M1_Run(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer åœæ­¢è¿è¡Œ(æ¨¡å¼1)
+ ** \brief Base Timer Í£Ö¹ÔËĞĞ(Ä£Ê½1)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -860,11 +860,11 @@ en_result_t Bt_M1_Stop(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer 16ä½è®¡æ•°å™¨åˆå€¼è®¾ç½®(æ¨¡å¼1)
+ ** \brief Base Timer 16Î»¼ÆÊıÆ÷³õÖµÉèÖÃ(Ä£Ê½1)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  u16Data          16ä½åˆå€¼
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  u16Data          16Î»³õÖµ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -895,12 +895,12 @@ en_result_t Bt_M1_Cnt16Set(en_bt_unit_t enUnit, uint16_t u16Data)
 
 /**
  *****************************************************************************
- ** \brief Base Timer 16ä½è®¡æ•°å€¼è·å–(æ¨¡å¼1)
+ ** \brief Base Timer 16Î»¼ÆÊıÖµ»ñÈ¡(Ä£Ê½1)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
- ** \retval 16bitsè®¡æ•°å€¼                                      
+ ** \retval 16bits¼ÆÊıÖµ                                      
  *****************************************************************************/
 uint16_t Bt_M1_Cnt16Get(en_bt_unit_t enUnit)
 {
@@ -929,12 +929,12 @@ uint16_t Bt_M1_Cnt16Get(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer è„‰å†²å®½åº¦æµ‹é‡ç»“æœæ•°å€¼è·å–(æ¨¡å¼1)
+ ** \brief Base Timer Âö³å¿í¶È²âÁ¿½á¹ûÊıÖµ»ñÈ¡(Ä£Ê½1)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
- ** \retval 16bitsè„‰å†²å®½åº¦æµ‹é‡ç»“æœ                                      
+ ** \retval 16bitsÂö³å¿í¶È²âÁ¿½á¹û                                      
  *****************************************************************************/
 uint16_t Bt_M1_PWC_CapValueGet(en_bt_unit_t enUnit)
 {
@@ -963,11 +963,11 @@ uint16_t Bt_M1_PWC_CapValueGet(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer åˆå§‹åŒ–é…ç½®(æ¨¡å¼23)
+ ** \brief Base Timer ³õÊ¼»¯ÅäÖÃ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1034,12 +1034,12 @@ en_result_t Bt_Mode23_Init(en_bt_unit_t enUnit, stc_bt_mode23_config_t* pstcConf
 
 /**
  *****************************************************************************
- ** \brief Base Timer PWMè¾“å‡ºä½¿èƒ½/ç¦æ­¢(æ¨¡å¼23)
+ ** \brief Base Timer PWMÊä³öÊ¹ÄÜ/½ûÖ¹(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  bEnOutput        PWMè¾“å‡ºä½¿èƒ½/ç¦æ­¢è®¾å®š
- ** \param [in]  bEnAutoOutput    PWMè‡ªåŠ¨è¾“å‡ºä½¿èƒ½/ç¦æ­¢è®¾å®š
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  bEnOutput        PWMÊä³öÊ¹ÄÜ/½ûÖ¹Éè¶¨
+ ** \param [in]  bEnAutoOutput    PWM×Ô¶¯Êä³öÊ¹ÄÜ/½ûÖ¹Éè¶¨
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1058,10 +1058,10 @@ en_result_t Bt_M23_EnPWM_Output(en_bt_unit_t enUnit, boolean_t bEnOutput, boolea
 
 /**
  *****************************************************************************
- ** \brief Base Timer å¯åŠ¨è¿è¡Œ(æ¨¡å¼23)
+ ** \brief Base Timer Æô¶¯ÔËĞĞ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1078,10 +1078,10 @@ en_result_t Bt_M23_Run(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer åœæ­¢è¿è¡Œ(æ¨¡å¼23)
+ ** \brief Base Timer Í£Ö¹ÔËĞĞ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1098,12 +1098,12 @@ en_result_t Bt_M23_Stop(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer é‡è½½å€¼è®¾ç½®(æ¨¡å¼23)
+ ** \brief Base Timer ÖØÔØÖµÉèÖÃ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  u16Data          16bitsé‡è½½å€¼
- ** \param [in]  bArrBufEn        ARRé‡è½½ç¼“å­˜ä½¿èƒ½TRUE/ç¦æ­¢FALSE
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  u16Data          16bitsÖØÔØÖµ
+ ** \param [in]  bArrBufEn        ARRÖØÔØ»º´æÊ¹ÄÜTRUE/½ûÖ¹FALSE
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1121,11 +1121,11 @@ en_result_t Bt_M23_ARRSet(en_bt_unit_t enUnit, uint16_t u16Data, boolean_t bArrB
 
 /**
  *****************************************************************************
- ** \brief Base Timer 16ä½è®¡æ•°å™¨åˆå€¼è®¾ç½®(æ¨¡å¼23)
+ ** \brief Base Timer 16Î»¼ÆÊıÆ÷³õÖµÉèÖÃ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  u16Data          16ä½åˆå€¼
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  u16Data          16Î»³õÖµ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1142,12 +1142,12 @@ en_result_t Bt_M23_Cnt16Set(en_bt_unit_t enUnit, uint16_t u16Data)
 
 /**
  *****************************************************************************
- ** \brief Base Timer 16ä½è®¡æ•°å€¼è·å–(æ¨¡å¼23)
+ ** \brief Base Timer 16Î»¼ÆÊıÖµ»ñÈ¡(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
- ** \retval 16bitsè®¡æ•°å€¼                                      
+ ** \retval 16bits¼ÆÊıÖµ                                      
  *****************************************************************************/
 uint16_t Bt_M23_Cnt16Get(en_bt_unit_t enUnit)
 {
@@ -1162,12 +1162,12 @@ uint16_t Bt_M23_Cnt16Get(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer æ¯”è¾ƒæ•è·å¯„å­˜å™¨CCR0A/CCR0Bè®¾ç½®(æ¨¡å¼23)
+ ** \brief Base Timer ±È½Ï²¶»ñ¼Ä´æÆ÷CCR0A/CCR0BÉèÖÃ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  enCCRSel         CCR0A/CCR0Bè®¾å®š
- ** \param [in]  u16Data          CCR0A/CCR0B 16ä½åˆå§‹å€¼
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  enCCRSel         CCR0A/CCR0BÉè¶¨
+ ** \param [in]  u16Data          CCR0A/CCR0B 16Î»³õÊ¼Öµ
  ** 
  ** \retval Ok or Error                                     
  *****************************************************************************/
@@ -1195,13 +1195,13 @@ en_result_t Bt_M23_CCR_Set(en_bt_unit_t enUnit, en_bt_m23_ccrx_t enCCRSel, uint1
 
 /**
  *****************************************************************************
- ** \brief Base Timer æ¯”è¾ƒæ•è·å¯„å­˜å™¨CCR0A/CCR0Bè¯»å–(æ¨¡å¼23)
+ ** \brief Base Timer ±È½Ï²¶»ñ¼Ä´æÆ÷CCR0A/CCR0B¶ÁÈ¡(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  enCCRSel         CCR0A/CCR0Bè®¾å®š
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  enCCRSel         CCR0A/CCR0BÉè¶¨
  ** 
- ** \retval 16bitsCCR0Aæ•è·å€¼                                     
+ ** \retval 16bitsCCR0A²¶»ñÖµ                                     
  *****************************************************************************/
 uint16_t Bt_M23_CCR_Get(en_bt_unit_t enUnit, en_bt_m23_ccrx_t enCCRSel)
 {
@@ -1227,11 +1227,11 @@ uint16_t Bt_M23_CCR_Get(en_bt_unit_t enUnit, en_bt_m23_ccrx_t enCCRSel)
 
 /**
  *****************************************************************************
- ** \brief Base Timer PWMäº’è¡¥è¾“å‡ºæ¨¡å¼ä¸‹ï¼ŒGATEåŠŸèƒ½é€‰æ‹©(æ¨¡å¼23)
+ ** \brief Base Timer PWM»¥²¹Êä³öÄ£Ê½ÏÂ£¬GATE¹¦ÄÜÑ¡Ôñ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1250,11 +1250,11 @@ en_result_t Bt_M23_GateFuncSel(en_bt_unit_t enUnit,stc_bt_m23_gate_config_t* pst
 
 /**
  *****************************************************************************
- ** \brief Base Timer ä¸»ä»æ¨¡å¼é…ç½®(æ¨¡å¼23)
+ ** \brief Base Timer Ö÷´ÓÄ£Ê½ÅäÖÃ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1274,11 +1274,11 @@ en_result_t Bt_M23_MasterSlave_Set(en_bt_unit_t enUnit, stc_bt_m23_master_slave_
 
 /**
  *****************************************************************************
- ** \brief Base Timer CH0A/CH0Bæ¯”è¾ƒé€šé“è¾“å‡ºæ§åˆ¶(æ¨¡å¼23)
+ ** \brief Base Timer CH0A/CH0B±È½ÏÍ¨µÀÊä³ö¿ØÖÆ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1305,11 +1305,11 @@ en_result_t Bt_M23_PortOutput_Config(en_bt_unit_t enUnit, stc_bt_m23_compare_con
 
 /**
  *****************************************************************************
- ** \brief Base Timer CH0A/CH0Bè¾“å…¥æ§åˆ¶(æ¨¡å¼23)
+ ** \brief Base Timer CH0A/CH0BÊäÈë¿ØÖÆ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1334,11 +1334,11 @@ en_result_t Bt_M23_PortInput_Config(en_bt_unit_t enUnit, stc_bt_m23_input_config
 
 /**
  *****************************************************************************
- ** \brief Base Timer ERTè¾“å…¥æ§åˆ¶(æ¨¡å¼23)
+ ** \brief Base Timer ERTÊäÈë¿ØÖÆ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1356,11 +1356,11 @@ en_result_t Bt_M23_ETRInput_Config(en_bt_unit_t enUnit, stc_bt_m23_etr_input_con
 
 /**
  *****************************************************************************
- ** \brief Base Timer åˆ¹è½¦BKè¾“å…¥æ§åˆ¶(æ¨¡å¼23)
+ ** \brief Base Timer É²³µBKÊäÈë¿ØÖÆ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1385,11 +1385,11 @@ en_result_t Bt_M23_BrakeInput_Config(en_bt_unit_t enUnit, stc_bt_m23_bk_input_co
 
 /**
  *****************************************************************************
- ** \brief Base Timer è§¦å‘ADCæ§åˆ¶(æ¨¡å¼23)
+ ** \brief Base Timer ´¥·¢ADC¿ØÖÆ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1409,11 +1409,11 @@ en_result_t Bt_M23_TrigADC_Config(en_bt_unit_t enUnit, stc_bt_m23_adc_trig_confi
 
 /**
  *****************************************************************************
-** \brief Base Timer æ­»åŒºåŠŸèƒ½(æ¨¡å¼23)
+** \brief Base Timer ËÀÇø¹¦ÄÜ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1431,11 +1431,11 @@ en_result_t Bt_M23_DT_Config(en_bt_unit_t enUnit, stc_bt_m23_dt_config_t* pstcCo
 
 /**
  *****************************************************************************
-** \brief Base Timer é‡å¤å‘¨æœŸè®¾ç½®(æ¨¡å¼23)
+** \brief Base Timer ÖØ¸´ÖÜÆÚÉèÖÃ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  u8ValidPeriod    é‡å¤å‘¨æœŸå€¼
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  u8ValidPeriod    ÖØ¸´ÖÜÆÚÖµ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1452,11 +1452,11 @@ en_result_t Bt_M23_SetValidPeriod(en_bt_unit_t enUnit, uint8_t u8ValidPeriod)
 
 /**
  *****************************************************************************
- ** \brief Base Timer OCREFæ¸…é™¤åŠŸèƒ½(æ¨¡å¼23)
+ ** \brief Base Timer OCREFÇå³ı¹¦ÄÜ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1474,11 +1474,11 @@ en_result_t Bt_M23_OCRefClr(en_bt_unit_t enUnit, stc_bt_m23_OCREF_Clr_config_t* 
 
 /**
  *****************************************************************************
- ** \brief Base Timer ä½¿èƒ½DMAä¼ è¾“(æ¨¡å¼23)
+ ** \brief Base Timer Ê¹ÄÜDMA´«Êä(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1499,10 +1499,10 @@ en_result_t Bt_M23_EnDMA(en_bt_unit_t enUnit, stc_bt_m23_trig_dma_config_t* pstc
 
 /**
  *****************************************************************************
- ** \brief Base Timer æ•è·æ¯”è¾ƒAè½¯ä»¶è§¦å‘(æ¨¡å¼23)
+ ** \brief Base Timer ²¶»ñ±È½ÏAÈí¼ş´¥·¢(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1521,10 +1521,10 @@ en_result_t Bt_M23_EnSwTrigCapCmpA(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer æ•è·æ¯”è¾ƒBè½¯ä»¶è§¦å‘(æ¨¡å¼23)
+ ** \brief Base Timer ²¶»ñ±È½ÏBÈí¼ş´¥·¢(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1543,10 +1543,10 @@ en_result_t Bt_M23_EnSwTrigCapCmpB(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer è½¯ä»¶æ›´æ–°ä½¿èƒ½(æ¨¡å¼23)
+ ** \brief Base Timer Èí¼ş¸üĞÂÊ¹ÄÜ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1563,10 +1563,10 @@ en_result_t Bt_M23_EnSwUev(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer è½¯ä»¶è§¦å‘ä½¿èƒ½(æ¨¡å¼23)
+ ** \brief Base Timer Èí¼ş´¥·¢Ê¹ÄÜ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1583,10 +1583,10 @@ en_result_t Bt_M23_EnSwTrig(en_bt_unit_t enUnit)
 
 /**
  *****************************************************************************
- ** \brief Base Timer è½¯ä»¶åˆ¹è½¦ä½¿èƒ½(æ¨¡å¼23)
+ ** \brief Base Timer Èí¼şÉ²³µÊ¹ÄÜ(Ä£Ê½23)
  **
  **
- ** \param [in]  enUnit           Timeré€šé“é€‰æ‹©ï¼ˆTIM0ã€TIM1ã€TIM2ï¼‰
+ ** \param [in]  enUnit           TimerÍ¨µÀÑ¡Ôñ£¨TIM0¡¢TIM1¡¢TIM2£©
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/

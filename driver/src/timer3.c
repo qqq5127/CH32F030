@@ -89,10 +89,10 @@ static func_ptr_t pfnTim3Callback = NULL;
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ä¸­æ–­æ ‡å¿—è·å–(æ¨¡å¼0/1/23)
+ ** \brief Base Timer3 ÖĞ¶Ï±êÖ¾»ñÈ¡(Ä£Ê½0/1/23)
  **
  **
- ** \param [in]  enTim3Irq           ä¸­æ–­ç±»å‹
+ ** \param [in]  enTim3Irq           ÖĞ¶ÏÀàĞÍ
  ** 
  ** \retval TRUE or FALSE                                      
  *****************************************************************************/
@@ -109,10 +109,10 @@ boolean_t Tim3_GetIntFlag(en_tim3_irq_type_t enTim3Irq)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ä¸­æ–­æ ‡å¿—æ¸…é™¤(æ¨¡å¼0/1/23)
+ ** \brief Base Timer3 ÖĞ¶Ï±êÖ¾Çå³ı(Ä£Ê½0/1/23)
  **
  **
- ** \param [in]  enTim3Irq           ä¸­æ–­ç±»å‹
+ ** \param [in]  enTim3Irq           ÖĞ¶ÏÀàĞÍ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -127,7 +127,7 @@ en_result_t Tim3_ClearIntFlag(en_tim3_irq_type_t enTim3Irq)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ä¸­æ–­æ‰€æœ‰æ ‡å¿—æ¸…é™¤(æ¨¡å¼23)
+ ** \brief Base Timer3 ÖĞ¶ÏËùÓĞ±êÖ¾Çå³ı(Ä£Ê½23)
  **
  **
  ** 
@@ -160,7 +160,7 @@ en_result_t Tim3_ClearAllIntFlag(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ä¸­æ–­ä½¿èƒ½(æ¨¡å¼0)
+ ** \brief Base Timer3 ÖĞ¶ÏÊ¹ÄÜ(Ä£Ê½0)
  **
  **
  ** \param [in]  none
@@ -178,7 +178,7 @@ en_result_t Tim3_Mode0_EnableIrq(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ä¸­æ–­ç¦æ­¢(æ¨¡å¼0)
+ ** \brief Base Timer3 ÖĞ¶Ï½ûÖ¹(Ä£Ê½0)
  **
  **
  ** \param [in]  none
@@ -196,10 +196,10 @@ en_result_t Tim3_Mode0_DisableIrq(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ä¸­æ–­ä½¿èƒ½(æ¨¡å¼1)
+ ** \brief Base Timer3 ÖĞ¶ÏÊ¹ÄÜ(Ä£Ê½1)
  **
  **
- ** \param [in]  enTim3Irq           ä¸­æ–­ç±»å‹
+ ** \param [in]  enTim3Irq           ÖĞ¶ÏÀàĞÍ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -226,10 +226,10 @@ en_result_t Tim3_Mode1_EnableIrq (en_tim3_irq_type_t enTim3Irq)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ä¸­æ–­ç¦æ­¢(æ¨¡å¼1)
+ ** \brief Base Timer3 ÖĞ¶Ï½ûÖ¹(Ä£Ê½1)
  **
  **
- ** \param [in]  enTim3Irq           ä¸­æ–­ç±»å‹
+ ** \param [in]  enTim3Irq           ÖĞ¶ÏÀàĞÍ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -256,10 +256,10 @@ en_result_t Tim3_Mode1_DisableIrq (en_tim3_irq_type_t enTim3Irq)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ä¸­æ–­ä½¿èƒ½(æ¨¡å¼23)
+ ** \brief Base Timer3 ÖĞ¶ÏÊ¹ÄÜ(Ä£Ê½23)
  **
  **
- ** \param [in]  enTim3Irq           ä¸­æ–­ç±»å‹
+ ** \param [in]  enTim3Irq           ÖĞ¶ÏÀàĞÍ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -307,10 +307,10 @@ en_result_t Tim3_Mode23_EnableIrq (en_tim3_irq_type_t enTim3Irq)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ä¸­æ–­ç¦æ­¢(æ¨¡å¼23)
+ ** \brief Base Timer3 ÖĞ¶Ï½ûÖ¹(Ä£Ê½23)
  **
  **
- ** \param [in]  enTim3Irq           ä¸­æ–­ç±»å‹
+ ** \param [in]  enTim3Irq           ÖĞ¶ÏÀàĞÍ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -358,10 +358,10 @@ en_result_t Tim3_Mode23_DisableIrq (en_tim3_irq_type_t enTim3Irq)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ä¸­æ–­æœåŠ¡å‡½æ•°
+ ** \brief Base Timer3 ÖĞ¶Ï·şÎñº¯Êı
  **
  **
- ** \param [in]  u8Param           Timer3é€šé“é€‰æ‹©(3 - TIM3)
+ ** \param [in]  u8Param           Timer3Í¨µÀÑ¡Ôñ(3 - TIM3)
  ** 
  ** \retval NULL                                     
  *****************************************************************************/
@@ -385,10 +385,10 @@ void Tim3_IRQHandler(uint8_t u8Param)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 åˆå§‹åŒ–é…ç½®(æ¨¡å¼0)
+ ** \brief Base Timer3 ³õÊ¼»¯ÅäÖÃ(Ä£Ê½0)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -411,7 +411,7 @@ en_result_t Tim3_Mode0_Init(stc_tim3_mode0_config_t* pstcConfig)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 å¯åŠ¨è¿è¡Œ(æ¨¡å¼0)
+ ** \brief Base Timer3 Æô¶¯ÔËĞĞ(Ä£Ê½0)
  **
  **
  ** \param [in]  none
@@ -429,7 +429,7 @@ en_result_t Tim3_M0_Run(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 åœæ­¢è¿è¡Œ(æ¨¡å¼0)
+ ** \brief Base Timer3 Í£Ö¹ÔËĞĞ(Ä£Ê½0)
  **
  **
  ** \param [in]  none
@@ -447,10 +447,10 @@ en_result_t Tim3_M0_Stop(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ç¿»è½¬è¾“å‡ºä½¿èƒ½/ç¦æ­¢è®¾å®š(æ¨¡å¼0)
+ ** \brief Base Timer3 ·­×ªÊä³öÊ¹ÄÜ/½ûÖ¹Éè¶¨(Ä£Ê½0)
  **
  **
- ** \param [in]  bEnOutput          ç¿»è½¬è¾“å‡ºè®¾å®š TRUE:ä½¿èƒ½, FALSE:ç¦æ­¢
+ ** \param [in]  bEnOutput          ·­×ªÊä³öÉè¶¨ TRUE:Ê¹ÄÜ, FALSE:½ûÖ¹
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -465,10 +465,10 @@ en_result_t Tim3_M0_EnTOG_Output(boolean_t bEnOutput)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 16ä½è®¡æ•°å™¨åˆå€¼è®¾ç½®(æ¨¡å¼0)
+ ** \brief Base Timer3 16Î»¼ÆÊıÆ÷³õÖµÉèÖÃ(Ä£Ê½0)
  **
  **
- ** \param [in]  u16Data          CNT 16ä½åˆå€¼
+ ** \param [in]  u16Data          CNT 16Î»³õÖµ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -483,12 +483,12 @@ en_result_t Tim3_M0_Cnt16Set(uint16_t u16Data)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 16ä½è®¡æ•°å€¼è·å–(æ¨¡å¼0)
+ ** \brief Base Timer3 16Î»¼ÆÊıÖµ»ñÈ¡(Ä£Ê½0)
  **
  **
  ** \param [in]  none
  ** 
- ** \retval 16bitsè®¡æ•°å€¼                                      
+ ** \retval 16bits¼ÆÊıÖµ                                      
  *****************************************************************************/
 uint16_t Tim3_M0_Cnt16Get(void)
 {
@@ -501,10 +501,10 @@ uint16_t Tim3_M0_Cnt16Get(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 é‡è½½å€¼è®¾ç½®(æ¨¡å¼0)
+ ** \brief Base Timer3 ÖØÔØÖµÉèÖÃ(Ä£Ê½0)
  **
  **
- ** \param [in]  u16Data          16bitsé‡è½½å€¼
+ ** \param [in]  u16Data          16bitsÖØÔØÖµ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -519,10 +519,10 @@ en_result_t Tim3_M0_ARRSet(uint16_t u16Data)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 32ä½è®¡æ•°å™¨åˆå€¼è®¾ç½®(æ¨¡å¼0)
+ ** \brief Base Timer3 32Î»¼ÆÊıÆ÷³õÖµÉèÖÃ(Ä£Ê½0)
  **
  **
- ** \param [in]  u32Data          32ä½åˆå€¼
+ ** \param [in]  u32Data          32Î»³õÖµ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -537,12 +537,12 @@ en_result_t Tim3_M0_Cnt32Set(uint32_t u32Data)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 32ä½è®¡æ•°å€¼è·å–(æ¨¡å¼0)
+ ** \brief Base Timer3 32Î»¼ÆÊıÖµ»ñÈ¡(Ä£Ê½0)
  **
  **
  ** \param [in]  none
  ** 
- ** \retval 32bitsè®¡æ•°å€¼                                      
+ ** \retval 32bits¼ÆÊıÖµ                                      
  *****************************************************************************/
 uint32_t Tim3_M0_Cnt32Get(void)
 {
@@ -555,10 +555,10 @@ uint32_t Tim3_M0_Cnt32Get(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 åˆå§‹åŒ–é…ç½®(æ¨¡å¼1)
+ ** \brief Base Timer3 ³õÊ¼»¯ÅäÖÃ(Ä£Ê½1)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -578,10 +578,10 @@ en_result_t Tim3_Mode1_Init(stc_tim3_mode1_config_t* pstcConfig)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 PWC è¾“å…¥é…ç½®(æ¨¡å¼1)
+ ** \brief Base Timer3 PWC ÊäÈëÅäÖÃ(Ä£Ê½1)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -602,10 +602,10 @@ en_result_t Tim3_M1_Input_Config(stc_tim3_pwc_input_config_t* pstcConfig)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 PWCæµ‹é‡è¾¹æ²¿èµ·å§‹ç»“æŸé€‰æ‹©(æ¨¡å¼1)
+ ** \brief Base Timer3 PWC²âÁ¿±ßÑØÆğÊ¼½áÊøÑ¡Ôñ(Ä£Ê½1)
  **
  **
- ** \param [in]  enEdgeSel           pwcæµ‹é‡èµ·å§‹ç»ˆæ­¢ç”µå¹³
+ ** \param [in]  enEdgeSel           pwc²âÁ¿ÆğÊ¼ÖÕÖ¹µçÆ½
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -615,21 +615,21 @@ en_result_t Tim3_M1_PWC_Edge_Sel(en_tim3_m1cr_Edge_t enEdgeSel)
         
     switch (enEdgeSel)
     {
-        case 0:                                 ///< ä¸Šå‡æ²¿åˆ°ä¸Šå‡æ²¿(å‘¨æœŸ)
-            M0P_TIM3_MODE1->M1CR_f.EDG1ST = 0;  //ä¸Šå‡æ²¿
-            M0P_TIM3_MODE1->M1CR_f.EDG2ND = 0;  //ä¸Šå‡æ²¿
+        case 0:                                 ///< ÉÏÉıÑØµ½ÉÏÉıÑØ(ÖÜÆÚ)
+            M0P_TIM3_MODE1->M1CR_f.EDG1ST = 0;  //ÉÏÉıÑØ
+            M0P_TIM3_MODE1->M1CR_f.EDG2ND = 0;  //ÉÏÉıÑØ
             break;
-        case 1:                                 ///< ä¸‹é™æ²¿åˆ°ä¸Šå‡æ²¿(ä½ç”µå¹³)
-            M0P_TIM3_MODE1->M1CR_f.EDG1ST = 1;  //ä¸‹é™æ²¿
-            M0P_TIM3_MODE1->M1CR_f.EDG2ND = 0;  //ä¸Šå‡æ²¿
+        case 1:                                 ///< ÏÂ½µÑØµ½ÉÏÉıÑØ(µÍµçÆ½)
+            M0P_TIM3_MODE1->M1CR_f.EDG1ST = 1;  //ÏÂ½µÑØ
+            M0P_TIM3_MODE1->M1CR_f.EDG2ND = 0;  //ÉÏÉıÑØ
             break;
-        case 2:                                 ///< ä¸Šå‡æ²¿åˆ°ä¸‹é™æ²¿(é«˜ç”µå¹³)
-            M0P_TIM3_MODE1->M1CR_f.EDG1ST = 0;  //ä¸Šå‡æ²¿
-            M0P_TIM3_MODE1->M1CR_f.EDG2ND = 1;  //ä¸‹é™æ²¿
+        case 2:                                 ///< ÉÏÉıÑØµ½ÏÂ½µÑØ(¸ßµçÆ½)
+            M0P_TIM3_MODE1->M1CR_f.EDG1ST = 0;  //ÉÏÉıÑØ
+            M0P_TIM3_MODE1->M1CR_f.EDG2ND = 1;  //ÏÂ½µÑØ
             break;
-        case 3:                                 ///< ä¸‹é™æ²¿åˆ°ä¸‹é™æ²¿(å‘¨æœŸ)
-            M0P_TIM3_MODE1->M1CR_f.EDG1ST = 1;  //ä¸‹é™æ²¿
-            M0P_TIM3_MODE1->M1CR_f.EDG2ND = 1;  //ä¸‹é™æ²¿
+        case 3:                                 ///< ÏÂ½µÑØµ½ÏÂ½µÑØ(ÖÜÆÚ)
+            M0P_TIM3_MODE1->M1CR_f.EDG1ST = 1;  //ÏÂ½µÑØ
+            M0P_TIM3_MODE1->M1CR_f.EDG2ND = 1;  //ÏÂ½µÑØ
             break;
         default:
             ;
@@ -641,7 +641,7 @@ en_result_t Tim3_M1_PWC_Edge_Sel(en_tim3_m1cr_Edge_t enEdgeSel)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 å¯åŠ¨è¿è¡Œ(æ¨¡å¼1)
+ ** \brief Base Timer3 Æô¶¯ÔËĞĞ(Ä£Ê½1)
  **
  **
  ** \param [in]  none
@@ -659,7 +659,7 @@ en_result_t Tim3_M1_Run(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 åœæ­¢è¿è¡Œ(æ¨¡å¼1)
+ ** \brief Base Timer3 Í£Ö¹ÔËĞĞ(Ä£Ê½1)
  **
  **
  ** \param [in]  none
@@ -677,10 +677,10 @@ en_result_t Tim3_M1_Stop(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 16ä½è®¡æ•°å™¨åˆå€¼è®¾ç½®(æ¨¡å¼1)
+ ** \brief Base Timer3 16Î»¼ÆÊıÆ÷³õÖµÉèÖÃ(Ä£Ê½1)
  **
  **
- ** \param [in]  u16Data          16ä½åˆå€¼
+ ** \param [in]  u16Data          16Î»³õÖµ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -695,12 +695,12 @@ en_result_t Tim3_M1_Cnt16Set(uint16_t u16Data)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 16ä½è®¡æ•°å€¼è·å–(æ¨¡å¼1)
+ ** \brief Base Timer3 16Î»¼ÆÊıÖµ»ñÈ¡(Ä£Ê½1)
  **
  **
  ** \param [in]  none
  ** 
- ** \retval 16bitsè®¡æ•°å€¼                                      
+ ** \retval 16bits¼ÆÊıÖµ                                      
  *****************************************************************************/
 uint16_t Tim3_M1_Cnt16Get(void)
 {
@@ -713,12 +713,12 @@ uint16_t Tim3_M1_Cnt16Get(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 è„‰å†²å®½åº¦æµ‹é‡ç»“æœæ•°å€¼è·å–(æ¨¡å¼1)
+ ** \brief Base Timer3 Âö³å¿í¶È²âÁ¿½á¹ûÊıÖµ»ñÈ¡(Ä£Ê½1)
  **
  **
  ** \param [in]  none
  ** 
- ** \retval 16bitsè„‰å†²å®½åº¦æµ‹é‡ç»“æœ                                      
+ ** \retval 16bitsÂö³å¿í¶È²âÁ¿½á¹û                                      
  *****************************************************************************/
 uint16_t Tim3_M1_PWC_CapValueGet(void)
 {
@@ -731,10 +731,10 @@ uint16_t Tim3_M1_PWC_CapValueGet(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 åˆå§‹åŒ–é…ç½®(æ¨¡å¼23)
+ ** \brief Base Timer3 ³õÊ¼»¯ÅäÖÃ(Ä£Ê½23)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -759,11 +759,11 @@ en_result_t Tim3_Mode23_Init(stc_tim3_mode23_config_t* pstcConfig)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 PWMè¾“å‡ºä½¿èƒ½(æ¨¡å¼23)
+ ** \brief Base Timer3 PWMÊä³öÊ¹ÄÜ(Ä£Ê½23)
  **
  **
- ** \param [in]  bEnOutput          PWMè¾“å‡ºä½¿èƒ½/ç¦æ­¢è®¾å®š
- ** \param [in]  bEnAutoOutput      PWMè‡ªåŠ¨è¾“å‡ºä½¿èƒ½/ç¦æ­¢è®¾å®š
+ ** \param [in]  bEnOutput          PWMÊä³öÊ¹ÄÜ/½ûÖ¹Éè¶¨
+ ** \param [in]  bEnAutoOutput      PWM×Ô¶¯Êä³öÊ¹ÄÜ/½ûÖ¹Éè¶¨
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -780,7 +780,7 @@ en_result_t Tim3_M23_EnPWM_Output(boolean_t bEnOutput, boolean_t bEnAutoOutput)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 å¯åŠ¨è¿è¡Œ(æ¨¡å¼23)
+ ** \brief Base Timer3 Æô¶¯ÔËĞĞ(Ä£Ê½23)
  **
  **
  ** \param [in]  none
@@ -798,7 +798,7 @@ en_result_t Tim3_M23_Run(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 åœæ­¢è¿è¡Œ(æ¨¡å¼23)
+ ** \brief Base Timer3 Í£Ö¹ÔËĞĞ(Ä£Ê½23)
  **
  **
  ** \param [in]  none
@@ -816,11 +816,11 @@ en_result_t Tim3_M23_Stop(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 é‡è½½å€¼è®¾ç½®(æ¨¡å¼23)
+ ** \brief Base Timer3 ÖØÔØÖµÉèÖÃ(Ä£Ê½23)
  **
  **
- ** \param [in]  u16Data          16bitsé‡è½½å€¼
- ** \param [in]  bArrBufEn        ARRé‡è½½ç¼“å­˜ä½¿èƒ½TRUE/ç¦æ­¢FALSE
+ ** \param [in]  u16Data          16bitsÖØÔØÖµ
+ ** \param [in]  bArrBufEn        ARRÖØÔØ»º´æÊ¹ÄÜTRUE/½ûÖ¹FALSE
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -836,10 +836,10 @@ en_result_t Tim3_M23_ARRSet(uint16_t u16Data, boolean_t bArrBufEn)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 16ä½è®¡æ•°å™¨åˆå€¼è®¾ç½®(æ¨¡å¼23)
+ ** \brief Base Timer3 16Î»¼ÆÊıÆ÷³õÖµÉèÖÃ(Ä£Ê½23)
  **
  **
- ** \param [in]  u16Data          16ä½åˆå€¼
+ ** \param [in]  u16Data          16Î»³õÖµ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -854,12 +854,12 @@ en_result_t Tim3_M23_Cnt16Set(uint16_t u16Data)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 16ä½è®¡æ•°å€¼è·å–(æ¨¡å¼23)
+ ** \brief Base Timer3 16Î»¼ÆÊıÖµ»ñÈ¡(Ä£Ê½23)
  **
  **
  ** \param [in]  none
  ** 
- ** \retval 16bitsè®¡æ•°å€¼                                      
+ ** \retval 16bits¼ÆÊıÖµ                                      
  *****************************************************************************/
 uint16_t Tim3_M23_Cnt16Get(void)
 {
@@ -872,11 +872,11 @@ uint16_t Tim3_M23_Cnt16Get(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 æ¯”è¾ƒæ•è·å¯„å­˜å™¨CCRxA/CCRxBè®¾ç½®(æ¨¡å¼23)
+ ** \brief Base Timer3 ±È½Ï²¶»ñ¼Ä´æÆ÷CCRxA/CCRxBÉèÖÃ(Ä£Ê½23)
  **
  **
- ** \param [in]  enCCRSel           CCRxA/CCRxBè®¾å®š
- ** \param [in]  u16Data            CCRxA/CCRxB 16ä½åˆå§‹å€¼
+ ** \param [in]  enCCRSel           CCRxA/CCRxBÉè¶¨
+ ** \param [in]  u16Data            CCRxA/CCRxB 16Î»³õÊ¼Öµ
  ** 
  ** \retval Ok or Error                                     
  *****************************************************************************/
@@ -918,12 +918,12 @@ en_result_t Tim3_M23_CCR_Set(en_tim3_m23_ccrx_t enCCRSel, uint16_t u16Data)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 æ¯”è¾ƒæ•è·å¯„å­˜å™¨CCRxA/CCRxBè¯»å–(æ¨¡å¼23)
+ ** \brief Base Timer3 ±È½Ï²¶»ñ¼Ä´æÆ÷CCRxA/CCRxB¶ÁÈ¡(Ä£Ê½23)
  **
  **
- ** \param [in]  enCCRSel           CCRxA/CCRxBè®¾å®š
+ ** \param [in]  enCCRSel           CCRxA/CCRxBÉè¶¨
  ** 
- ** \retval 16bitsCCRxA/CCRxBæ•è·å€¼                                     
+ ** \retval 16bitsCCRxA/CCRxB²¶»ñÖµ                                     
  *****************************************************************************/
 uint16_t Tim3_M23_CCR_Get(en_tim3_m23_ccrx_t enCCRSel)
 {
@@ -963,10 +963,10 @@ uint16_t Tim3_M23_CCR_Get(en_tim3_m23_ccrx_t enCCRSel)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 PWMäº’è¡¥è¾“å‡ºæ¨¡å¼ä¸‹ï¼ŒGATEåŠŸèƒ½é€‰æ‹©(æ¨¡å¼23)
+ ** \brief Base Timer3 PWM»¥²¹Êä³öÄ£Ê½ÏÂ£¬GATE¹¦ÄÜÑ¡Ôñ(Ä£Ê½23)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -983,10 +983,10 @@ en_result_t Tim3_M23_GateFuncSel(stc_tim3_m23_gate_config_t* pstcConfig)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ä¸»ä»æ¨¡å¼é…ç½®(æ¨¡å¼23)
+ ** \brief Base Timer3 Ö÷´ÓÄ£Ê½ÅäÖÃ(Ä£Ê½23)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1004,11 +1004,11 @@ en_result_t Tim3_M23_MasterSlave_Set(stc_tim3_m23_master_slave_config_t* pstcCon
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 CHxA/CHxBæ¯”è¾ƒé€šé“æ§åˆ¶(æ¨¡å¼23)
+ ** \brief Base Timer3 CHxA/CHxB±È½ÏÍ¨µÀ¿ØÖÆ(Ä£Ê½23)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
- ** \param [in]  enTim3Chx        Timer3é€šé“(Tim3CH0, Tim3CH1, Tim3CH2)
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
+ ** \param [in]  enTim3Chx        Timer3Í¨µÀ(Tim3CH0, Tim3CH1, Tim3CH2)
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1067,11 +1067,11 @@ en_result_t Tim3_M23_PortOutput_Config(en_tim3_channel_t enTim3Chx, stc_tim3_m23
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 CHxA/CHxBè¾“å…¥æ§åˆ¶(æ¨¡å¼23)
+ ** \brief Base Timer3 CHxA/CHxBÊäÈë¿ØÖÆ(Ä£Ê½23)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
- ** \param [in]  enTim3Chx        Timer3é€šé“(Tim3CH0, Tim3CH1, Tim3CH2)
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
+ ** \param [in]  enTim3Chx        Timer3Í¨µÀ(Tim3CH0, Tim3CH1, Tim3CH2)
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1123,10 +1123,10 @@ en_result_t Tim3_M23_PortInput_Config(en_tim3_channel_t enTim3Chx, stc_tim3_m23_
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ERTè¾“å…¥æ§åˆ¶(æ¨¡å¼23)
+ ** \brief Base Timer3 ERTÊäÈë¿ØÖÆ(Ä£Ê½23)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1142,10 +1142,10 @@ en_result_t Tim3_M23_ETRInput_Config(stc_tim3_m23_etr_input_config_t* pstcConfig
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 åˆ¹è½¦BKè¾“å…¥æ§åˆ¶(æ¨¡å¼23)
+ ** \brief Base Timer3 É²³µBKÊäÈë¿ØÖÆ(Ä£Ê½23)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1172,10 +1172,10 @@ en_result_t Tim3_M23_BrakeInput_Config(stc_tim3_m23_bk_input_config_t* pstcConfi
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 è§¦å‘ADCæ§åˆ¶(æ¨¡å¼23)
+ ** \brief Base Timer3 ´¥·¢ADC¿ØÖÆ(Ä£Ê½23)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1196,10 +1196,10 @@ en_result_t Tim3_M23_TrigADC_Config(stc_tim3_m23_adc_trig_config_t* pstcConfig)
 
 /**
  *****************************************************************************
-** \brief Base Timer3 æ­»åŒºåŠŸèƒ½(æ¨¡å¼23)
+** \brief Base Timer3 ËÀÇø¹¦ÄÜ(Ä£Ê½23)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1215,10 +1215,10 @@ en_result_t Tim3_M23_DT_Config(stc_tim3_m23_dt_config_t* pstcConfig)
 
 /**
  *****************************************************************************
-** \brief Base Timer3 é‡å¤å‘¨æœŸè®¾ç½®(æ¨¡å¼23)
+** \brief Base Timer3 ÖØ¸´ÖÜÆÚÉèÖÃ(Ä£Ê½23)
  **
  **
- ** \param [in]  u8ValidPeriod       é‡å¤å‘¨æœŸå€¼
+ ** \param [in]  u8ValidPeriod       ÖØ¸´ÖÜÆÚÖµ
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1233,10 +1233,10 @@ en_result_t Tim3_M23_SetValidPeriod(uint8_t u8ValidPeriod)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 OCREFæ¸…é™¤åŠŸèƒ½(æ¨¡å¼23)
+ ** \brief Base Timer3 OCREFÇå³ı¹¦ÄÜ(Ä£Ê½23)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1252,10 +1252,10 @@ en_result_t Tim3_M23_OCRefClr(stc_tim3_m23_OCREF_Clr_config_t* pstcConfig)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 ä½¿èƒ½DMAä¼ è¾“(æ¨¡å¼23)
+ ** \brief Base Timer3 Ê¹ÄÜDMA´«Êä(Ä£Ê½23)
  **
  **
- ** \param [in]  pstcConfig       åˆå§‹åŒ–é…ç½®ç»“æ„ä½“æŒ‡é’ˆ
+ ** \param [in]  pstcConfig       ³õÊ¼»¯ÅäÖÃ½á¹¹ÌåÖ¸Õë
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1278,10 +1278,10 @@ en_result_t Tim3_M23_EnDMA(stc_tim3_m23_trig_dma_config_t* pstcConfig)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 æ•è·æ¯”è¾ƒAè½¯ä»¶è§¦å‘(æ¨¡å¼23)
+ ** \brief Base Timer3 ²¶»ñ±È½ÏAÈí¼ş´¥·¢(Ä£Ê½23)
  **
  **
- ** \param [in]  enTim3Chx           Timer3é€šé“(Tim3CH0, Tim3CH1, Tim3CH2)
+ ** \param [in]  enTim3Chx           Timer3Í¨µÀ(Tim3CH0, Tim3CH1, Tim3CH2)
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1309,10 +1309,10 @@ en_result_t Tim3_M23_EnSwTrigCapCmpA(en_tim3_channel_t enTim3Chx)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 æ•è·æ¯”è¾ƒBè½¯ä»¶è§¦å‘(æ¨¡å¼23)
+ ** \brief Base Timer3 ²¶»ñ±È½ÏBÈí¼ş´¥·¢(Ä£Ê½23)
  **
  **
- ** \param [in]  enTim3Chx           Timer3é€šé“(Tim3CH0, Tim3CH1, Tim3CH2)
+ ** \param [in]  enTim3Chx           Timer3Í¨µÀ(Tim3CH0, Tim3CH1, Tim3CH2)
  ** 
  ** \retval Ok or Error                                      
  *****************************************************************************/
@@ -1340,7 +1340,7 @@ en_result_t Tim3_M23_EnSwTrigCapCmpB(en_tim3_channel_t enTim3Chx)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 è½¯ä»¶æ›´æ–°ä½¿èƒ½(æ¨¡å¼23)
+ ** \brief Base Timer3 Èí¼ş¸üĞÂÊ¹ÄÜ(Ä£Ê½23)
  **
  **
  ** \param [in]  none
@@ -1358,7 +1358,7 @@ en_result_t Tim3_M23_EnSwUev(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 è½¯ä»¶è§¦å‘ä½¿èƒ½(æ¨¡å¼23)
+ ** \brief Base Timer3 Èí¼ş´¥·¢Ê¹ÄÜ(Ä£Ê½23)
  **
  **
  ** \param [in]  none
@@ -1376,7 +1376,7 @@ en_result_t Tim3_M23_EnSwTrig(void)
 
 /**
  *****************************************************************************
- ** \brief Base Timer3 è½¯ä»¶åˆ¹è½¦ä½¿èƒ½(æ¨¡å¼23)
+ ** \brief Base Timer3 Èí¼şÉ²³µÊ¹ÄÜ(Ä£Ê½23)
  **
  **
  ** \param [in]  none

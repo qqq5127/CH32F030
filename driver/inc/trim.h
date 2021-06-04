@@ -42,7 +42,7 @@
 /*****************************************************************************/
 /** \file trim.h
  **
- ** TRIM æ•°æ®ç»“æ„åŠAPIå£°æ˜
+ ** TRIM Êı¾İ½á¹¹¼°APIÉùÃ÷
  **  
  **
  ** History:
@@ -80,17 +80,17 @@ extern "C"
 
  /**
  ******************************************************************************
- ** \brief ç›‘æµ‹æ¨¡å¼ä½¿èƒ½æšä¸¾é‡å®šä¹‰    (MON_EN)
+ ** \brief ¼à²âÄ£Ê½Ê¹ÄÜÃ¶¾ÙÖØ¶¨Òå    (MON_EN)
  *****************************************************************************/
 typedef enum en_trim_monitor
 {
-    TrimMonDisable = 0u,            ///< ç¦æ­¢
-    TrimMonEnable  = 1u,            ///< ä½¿èƒ½
+    TrimMonDisable = 0u,            ///< ½ûÖ¹
+    TrimMonEnable  = 1u,            ///< Ê¹ÄÜ
 }en_trim_monitor_t; 
  
  /**
  ******************************************************************************
- ** \brief å¾…æ ¡å‡†/ç›‘æµ‹æ—¶é’Ÿé€‰æ‹©æšä¸¾é‡å®šä¹‰ (CALCLK_SEL)
+ ** \brief ´ıĞ£×¼/¼à²âÊ±ÖÓÑ¡ÔñÃ¶¾ÙÖØ¶¨Òå (CALCLK_SEL)
  *****************************************************************************/
 typedef enum en_trim_calclksel
 {
@@ -103,7 +103,7 @@ typedef enum en_trim_calclksel
 
 /**
  ******************************************************************************
- ** \brief å‚è€ƒæ—¶é’Ÿé€‰æ‹©æšä¸¾é‡å®šä¹‰ (REFCLK_SEL)
+ ** \brief ²Î¿¼Ê±ÖÓÑ¡ÔñÃ¶¾ÙÖØ¶¨Òå (REFCLK_SEL)
  *****************************************************************************/
 typedef enum en_trim_refclksel
 {
@@ -112,35 +112,35 @@ typedef enum en_trim_refclksel
     TrimRefRCL    = 2u,            ///< RCL
     TrimRefXTL    = 3u,            ///< XTL
     TrimRefIRC10K = 4u,            ///< IRC10K
-    TrimRefExtClk = 5u,            ///< å¤–éƒ¨è¾“å…¥æ—¶é’Ÿ
+    TrimRefExtClk = 5u,            ///< Íâ²¿ÊäÈëÊ±ÖÓ
 }en_trim_refclksel_t;
 
 /**
  ******************************************************************************
- ** \brief ä¸­æ–­æ ‡å¿—ç±»å‹æšä¸¾é‡å®šä¹‰
+ ** \brief ÖĞ¶Ï±êÖ¾ÀàĞÍÃ¶¾ÙÖØ¶¨Òå
  *****************************************************************************/
 typedef enum en_trim_inttype
 {
-    TrimStop     = 0u,            ///< å‚è€ƒè®¡æ•°å™¨åœæ­¢æ ‡å¿—
-    TrimCalCntOf = 1u,            ///< æ ¡å‡†è®¡æ•°å™¨æº¢å‡ºæ ‡å¿—
-    TrimXTLFault = 2u,            ///< XTL å¤±æ•ˆæ ‡å¿—
-    TrimXTHFault = 3u,            ///< XTH å¤±æ•ˆæ ‡å¿—
-    TrimPLLFault = 4u,            ///< PLL å¤±æ•ˆæ ‡å¿—
+    TrimStop     = 0u,            ///< ²Î¿¼¼ÆÊıÆ÷Í£Ö¹±êÖ¾
+    TrimCalCntOf = 1u,            ///< Ğ£×¼¼ÆÊıÆ÷Òç³ö±êÖ¾
+    TrimXTLFault = 2u,            ///< XTL Ê§Ğ§±êÖ¾
+    TrimXTHFault = 3u,            ///< XTH Ê§Ğ§±êÖ¾
+    TrimPLLFault = 4u,            ///< PLL Ê§Ğ§±êÖ¾
 }en_trim_inttype_t;
 
 /**
  ******************************************************************************
- ** \brief TRIM é…ç½®ç»“æ„ä½“å®šä¹‰ 
+ ** \brief TRIM ÅäÖÃ½á¹¹Ìå¶¨Òå 
  *****************************************************************************/
 typedef struct stc_trim_config
 {
-    en_trim_monitor_t    enMON;         ///< ç›‘æµ‹æ¨¡å¼ä½¿èƒ½
-    en_trim_calclksel_t  enCALCLK;      ///< æ ¡å‡†æ—¶é’Ÿé€‰æ‹©
-    uint32_t             u32CalCon;     ///< æ ¡å‡†è®¡æ•°å™¨æº¢å‡ºå€¼é…ç½®
-    en_trim_refclksel_t  enREFCLK;      ///< å‚è€ƒæ—¶é’Ÿé€‰æ‹©
-    uint32_t             u32RefCon;     ///< å‚è€ƒè®¡æ•°å™¨åˆå€¼é…ç½®
+    en_trim_monitor_t    enMON;         ///< ¼à²âÄ£Ê½Ê¹ÄÜ
+    en_trim_calclksel_t  enCALCLK;      ///< Ğ£×¼Ê±ÖÓÑ¡Ôñ
+    uint32_t             u32CalCon;     ///< Ğ£×¼¼ÆÊıÆ÷Òç³öÖµÅäÖÃ
+    en_trim_refclksel_t  enREFCLK;      ///< ²Î¿¼Ê±ÖÓÑ¡Ôñ
+    uint32_t             u32RefCon;     ///< ²Î¿¼¼ÆÊıÆ÷³õÖµÅäÖÃ
     
-    func_ptr_t           pfnTrimCb;     ///< TRIM ä¸­æ–­æœåŠ¡å›è°ƒå‡½æ•°[void function(void)]
+    func_ptr_t           pfnTrimCb;     ///< TRIM ÖĞ¶Ï·şÎñ»Øµ÷º¯Êı[void function(void)]
 }stc_trim_config_t;
 
 /******************************************************************************
@@ -150,25 +150,25 @@ typedef struct stc_trim_config
 /******************************************************************************
  * Global function prototypes (definition in C source)
  *****************************************************************************/
-///<<åŠŸèƒ½é…ç½®åŠæ“ä½œå‡½æ•°
-///<Trim é…ç½®åŠåˆå§‹åŒ–
+///<<¹¦ÄÜÅäÖÃ¼°²Ù×÷º¯Êı
+///<Trim ÅäÖÃ¼°³õÊ¼»¯
 en_result_t Trim_Init(stc_trim_config_t* pstcConfig);
-///<æ ¡å‡†/ç›‘æµ‹å¯åŠ¨/åœæ­¢
+///<Ğ£×¼/¼à²âÆô¶¯/Í£Ö¹
 en_result_t Trim_Run(void);
 en_result_t Trim_Stop(void);
 
-///<å‚è€ƒè®¡æ•°å™¨è®¡æ•°å€¼è·å–
+///<²Î¿¼¼ÆÊıÆ÷¼ÆÊıÖµ»ñÈ¡
 uint32_t Trim_RefCntGet(void);
-///<æ ¡å‡†è®¡æ•°å™¨è®¡æ•°å€¼è·å–
+///<Ğ£×¼¼ÆÊıÆ÷¼ÆÊıÖµ»ñÈ¡
 uint32_t Trim_CalCntGet(void);
  
-///<ä¸­æ–­æ“ä½œç›¸å…³å‡½æ•°
-///ä¸­æ–­ä½¿èƒ½/ç¦æ­¢
+///<ÖĞ¶Ï²Ù×÷Ïà¹Øº¯Êı
+///ÖĞ¶ÏÊ¹ÄÜ/½ûÖ¹
 en_result_t Trim_EnableIrq(void);
 en_result_t Trim_DisableIrq(void);
-///<ä¸­æ–­æ ‡å¿—è·å–
+///<ÖĞ¶Ï±êÖ¾»ñÈ¡
 boolean_t Trim_GetIntFlag(en_trim_inttype_t enIntType);
-///<ä¸­æ–­æ ‡å¿—æ¸…é™¤
+///<ÖĞ¶Ï±êÖ¾Çå³ı
 en_result_t Trim_ClearIntFlag(en_trim_inttype_t enIntType);
 
 //@} // TrimGroup

@@ -76,100 +76,100 @@ extern "C"
 
 /**
  ******************************************************************************
- ** \brief VCé€šé“
+ ** \brief VCÍ¨µÀ
  *****************************************************************************/
 typedef enum en_vc_channel
 {
-    VcChannel0 = 0u,                 ///< é€šé“0
-    VcChannel1 = 1u,                 ///< é€šé“1
+    VcChannel0 = 0u,                 ///< Í¨µÀ0
+    VcChannel1 = 1u,                 ///< Í¨µÀ1
 }en_vc_channel_t;
 
 
 /**
  ******************************************************************************
- ** \brief VCè¿Ÿæ»
+ ** \brief VC³ÙÖÍ
  *****************************************************************************/
 typedef enum en_vc_cmp_delay
 {
-    VcDelayoff  = 0u,            ///< è¿Ÿæ»å…³é—­
-    VcDelay10mv = 1u,            ///< è¿Ÿæ»10mv
-    VcDelay20mv = 2u,            ///< è¿Ÿæ»20mv
-    VcDelay30mv = 3u,            ///< è¿Ÿæ»30mv
+    VcDelayoff  = 0u,            ///< ³ÙÖÍ¹Ø±Õ
+    VcDelay10mv = 1u,            ///< ³ÙÖÍ10mv
+    VcDelay20mv = 2u,            ///< ³ÙÖÍ20mv
+    VcDelay30mv = 3u,            ///< ³ÙÖÍ30mv
 }en_vc_cmp_delay_t;
 
 /**
  ******************************************************************************
- ** \brief VCåç½®ç”µæµ
+ ** \brief VCÆ«ÖÃµçÁ÷
  *****************************************************************************/
 typedef enum en_vc_bias_current
 {
-    VcBias300na  = 0u,            ///< åç½®ç”µæµ300na
-    VcBias1200na = 1u,            ///< åç½®ç”µæµ1.2ua
-    VcBias10ua   = 2u,            ///< åç½®ç”µæµ10ua
-    VcBias20ua   = 3u,            ///< åç½®ç”µæµ20ua
+    VcBias300na  = 0u,            ///< Æ«ÖÃµçÁ÷300na
+    VcBias1200na = 1u,            ///< Æ«ÖÃµçÁ÷1.2ua
+    VcBias10ua   = 2u,            ///< Æ«ÖÃµçÁ÷10ua
+    VcBias20ua   = 3u,            ///< Æ«ÖÃµçÁ÷20ua
 }en_vc_bias_current_t;
 
 /**
  ******************************************************************************
- ** \brief VCè¾“å‡ºæ»¤æ³¢æ—¶é—´
+ ** \brief VCÊä³öÂË²¨Ê±¼ä
  *****************************************************************************/
 typedef enum en_vc_resp_filter
 {
-    VcFilter7us     = 0u,            ///< è¾“å‡ºæ»¤æ³¢æ—¶é—´7us
-    VcFilter14us    = 1u,           ///< è¾“å‡ºæ»¤æ³¢æ—¶é—´14us
-    VcFilter28us    = 2u,           ///< è¾“å‡ºæ»¤æ³¢æ—¶é—´28us
-    VcFilter112us   = 3u,          ///< è¾“å‡ºæ»¤æ³¢æ—¶é—´112us
-    VcFilter450us   = 4u,          ///< è¾“å‡ºæ»¤æ³¢æ—¶é—´450us
-    VcFilter1800us  = 5u,         ///< è¾“å‡ºæ»¤æ³¢æ—¶é—´1.8ms
-    VcFilter7200us  = 6u,         ///< è¾“å‡ºæ»¤æ³¢æ—¶é—´7.2ms
-    VcFilter28800us = 7u,        ///< è¾“å‡ºæ»¤æ³¢æ—¶é—´28.8ms
+    VcFilter7us     = 0u,            ///< Êä³öÂË²¨Ê±¼ä7us
+    VcFilter14us    = 1u,           ///< Êä³öÂË²¨Ê±¼ä14us
+    VcFilter28us    = 2u,           ///< Êä³öÂË²¨Ê±¼ä28us
+    VcFilter112us   = 3u,          ///< Êä³öÂË²¨Ê±¼ä112us
+    VcFilter450us   = 4u,          ///< Êä³öÂË²¨Ê±¼ä450us
+    VcFilter1800us  = 5u,         ///< Êä³öÂË²¨Ê±¼ä1.8ms
+    VcFilter7200us  = 6u,         ///< Êä³öÂË²¨Ê±¼ä7.2ms
+    VcFilter28800us = 7u,        ///< Êä³öÂË²¨Ê±¼ä28.8ms
 }en_vc_resp_filter_t;
 
 /**
  ******************************************************************************
- ** \brief VC Pç«¯è¾“å…¥
+ ** \brief VC P¶ËÊäÈë
  *****************************************************************************/
 typedef enum en_vc_input_p_src
 {																					
                                    //VC0                        //VC1
-    VcInPCh0 = 0u,                ///< è¾“å…¥é€šé“0 PC0		è¾“å…¥é€šé“0 PA0
-    VcInPCh1 = 1u,                ///< è¾“å…¥é€šé“1 PC1		è¾“å…¥é€šé“0 PA1
-    VcInPCh2 = 2u,                ///< è¾“å…¥é€šé“2 PC2		è¾“å…¥é€šé“0 PA2
-    VcInPCh3 = 3u,                ///< è¾“å…¥é€šé“3 PC3		è¾“å…¥é€šé“0 PA3
-    VcInPCh4 = 4u,                ///< è¾“å…¥é€šé“4 PA0		è¾“å…¥é€šé“0 PA4
-    VcInPCh5 = 5u,                ///< è¾“å…¥é€šé“5 PA1		è¾“å…¥é€šé“0 PA5
-    VcInPCh6 = 6u,                ///< è¾“å…¥é€šé“6 PA2		è¾“å…¥é€šé“0 PB1
-    VcInPCh7 = 7u,                ///< è¾“å…¥é€šé“7 PA3		è¾“å…¥é€šé“0 PB2
-    VcInPCh8 = 8u,                ///< è¾“å…¥é€šé“7 PA4		è¾“å…¥é€šé“0 PB10
-    VcInPCh9 = 9u,                ///< è¾“å…¥é€šé“7 PA5		è¾“å…¥é€šé“0 PB12
-    VcInPCh10 = 10u,                ///< è¾“å…¥é€šé“7 PA6		è¾“å…¥é€šé“0 PB13
-    VcInPCh11 = 11u,                ///< è¾“å…¥é€šé“7 PA7		è¾“å…¥é€šé“0 PB14
-    VcInPCh12 = 12u,                ///< è¾“å…¥é€šé“7 PB4		è¾“å…¥é€šé“0 PB4
-    VcInPCh13 = 13u,                ///< è¾“å…¥é€šé“7 PB5		è¾“å…¥é€šé“0 PB5
-    VcInPCh14 = 14u,                ///< è¾“å…¥é€šé“7 PB6		è¾“å…¥é€šé“0 PB6
-    VcInPCh15 = 15u,                ///< è¾“å…¥é€šé“7 PB7		è¾“å…¥é€šé“0 PB7                           
+    VcInPCh0 = 0u,                ///< ÊäÈëÍ¨µÀ0 PC0		ÊäÈëÍ¨µÀ0 PA0
+    VcInPCh1 = 1u,                ///< ÊäÈëÍ¨µÀ1 PC1		ÊäÈëÍ¨µÀ0 PA1
+    VcInPCh2 = 2u,                ///< ÊäÈëÍ¨µÀ2 PC2		ÊäÈëÍ¨µÀ0 PA2
+    VcInPCh3 = 3u,                ///< ÊäÈëÍ¨µÀ3 PC3		ÊäÈëÍ¨µÀ0 PA3
+    VcInPCh4 = 4u,                ///< ÊäÈëÍ¨µÀ4 PA0		ÊäÈëÍ¨µÀ0 PA4
+    VcInPCh5 = 5u,                ///< ÊäÈëÍ¨µÀ5 PA1		ÊäÈëÍ¨µÀ0 PA5
+    VcInPCh6 = 6u,                ///< ÊäÈëÍ¨µÀ6 PA2		ÊäÈëÍ¨µÀ0 PB1
+    VcInPCh7 = 7u,                ///< ÊäÈëÍ¨µÀ7 PA3		ÊäÈëÍ¨µÀ0 PB2
+    VcInPCh8 = 8u,                ///< ÊäÈëÍ¨µÀ7 PA4		ÊäÈëÍ¨µÀ0 PB10
+    VcInPCh9 = 9u,                ///< ÊäÈëÍ¨µÀ7 PA5		ÊäÈëÍ¨µÀ0 PB12
+    VcInPCh10 = 10u,                ///< ÊäÈëÍ¨µÀ7 PA6		ÊäÈëÍ¨µÀ0 PB13
+    VcInPCh11 = 11u,                ///< ÊäÈëÍ¨µÀ7 PA7		ÊäÈëÍ¨µÀ0 PB14
+    VcInPCh12 = 12u,                ///< ÊäÈëÍ¨µÀ7 PB4		ÊäÈëÍ¨µÀ0 PB4
+    VcInPCh13 = 13u,                ///< ÊäÈëÍ¨µÀ7 PB5		ÊäÈëÍ¨µÀ0 PB5
+    VcInPCh14 = 14u,                ///< ÊäÈëÍ¨µÀ7 PB6		ÊäÈëÍ¨µÀ0 PB6
+    VcInPCh15 = 15u,                ///< ÊäÈëÍ¨µÀ7 PB7		ÊäÈëÍ¨µÀ0 PB7                           
 }en_vc_input_p_src_t;
 
 /**
  ******************************************************************************
- ** \brief VC Nç«¯è¾“å…¥
+ ** \brief VC N¶ËÊäÈë
  *****************************************************************************/
 typedef enum en_vc_input_n_src
 {
                                  //VC0                          //VC1
-    VcInNCh0    = 0u,         ///< è¾“å…¥é€šé“0  PA0	        è¾“å…¥é€šé“0 PC0
-    VcInNCh1    = 1u,         ///< è¾“å…¥é€šé“1  PA1		è¾“å…¥é€šé“0 PC1
-    VcInNCh2    = 2u,         ///< è¾“å…¥é€šé“2  PA2		è¾“å…¥é€šé“0 PC2
-    VcInNCh3    = 3u,         ///< è¾“å…¥é€šé“3  PA3		è¾“å…¥é€šé“0 PC3
-    VcInNCh4    = 4u,         ///< è¾“å…¥é€šé“4  PA4		è¾“å…¥é€šé“0 PA0
-    VcInNCh5    = 5u,         ///< è¾“å…¥é€šé“5  PA5		è¾“å…¥é€šé“0 PA1
-    VcInNCh6    = 6u,         ///< è¾“å…¥é€šé“6  PA6		è¾“å…¥é€šé“0 PB0
-    VcInNCh7    = 7u,         ///< è¾“å…¥é€šé“7  PA7		è¾“å…¥é€šé“0 PB1
-    VcInNCh8    = 8u,         ///< è¾“å…¥é€šé“8  PC4		è¾“å…¥é€šé“0 PB2
-    VcInNCh9    = 9u,         ///< è¾“å…¥é€šé“9  PC5		è¾“å…¥é€šé“0 PB3
-    VcInNCh10   = 10u,        ///< è¾“å…¥é€šé“10 PB0 		è¾“å…¥é€šé“0 PB4   
-    ResDivOut   = 11u,        ///< Vccåˆ†å‹                      Vccåˆ†å‹
-    AiTs        = 12u,        ///< æ¸©åº¦ä¼ æ„Ÿå™¨                  æ¸©åº¦ä¼ æ„Ÿå™¨
+    VcInNCh0    = 0u,         ///< ÊäÈëÍ¨µÀ0  PA0	        ÊäÈëÍ¨µÀ0 PC0
+    VcInNCh1    = 1u,         ///< ÊäÈëÍ¨µÀ1  PA1		ÊäÈëÍ¨µÀ0 PC1
+    VcInNCh2    = 2u,         ///< ÊäÈëÍ¨µÀ2  PA2		ÊäÈëÍ¨µÀ0 PC2
+    VcInNCh3    = 3u,         ///< ÊäÈëÍ¨µÀ3  PA3		ÊäÈëÍ¨µÀ0 PC3
+    VcInNCh4    = 4u,         ///< ÊäÈëÍ¨µÀ4  PA4		ÊäÈëÍ¨µÀ0 PA0
+    VcInNCh5    = 5u,         ///< ÊäÈëÍ¨µÀ5  PA5		ÊäÈëÍ¨µÀ0 PA1
+    VcInNCh6    = 6u,         ///< ÊäÈëÍ¨µÀ6  PA6		ÊäÈëÍ¨µÀ0 PB0
+    VcInNCh7    = 7u,         ///< ÊäÈëÍ¨µÀ7  PA7		ÊäÈëÍ¨µÀ0 PB1
+    VcInNCh8    = 8u,         ///< ÊäÈëÍ¨µÀ8  PC4		ÊäÈëÍ¨µÀ0 PB2
+    VcInNCh9    = 9u,         ///< ÊäÈëÍ¨µÀ9  PC5		ÊäÈëÍ¨µÀ0 PB3
+    VcInNCh10   = 10u,        ///< ÊäÈëÍ¨µÀ10 PB0 		ÊäÈëÍ¨µÀ0 PB4   
+    ResDivOut   = 11u,        ///< Vcc·ÖÑ¹                      Vcc·ÖÑ¹
+    AiTs        = 12u,        ///< ÎÂ¶È´«¸ĞÆ÷                  ÎÂ¶È´«¸ĞÆ÷
     AiBg1p2     = 13u,        ///< BGR 1.2V                    BGR 1.2V
     AiAdcVref   = 14u,        ///< ADCVREF                     ADCVREF
     AiLdo       = 15u,        ///< LDO                         LDO
@@ -177,85 +177,85 @@ typedef enum en_vc_input_n_src
 
 /**
  ******************************************************************************
- ** \brief VCä¸­æ–­è§¦å‘æ–¹å¼
+ ** \brief VCÖĞ¶Ï´¥·¢·½Ê½
  *****************************************************************************/
 typedef enum en_vc_irq_sel
 {
-    VcIrqNone = 0u,            ///< æ— ä¸­æ–­
-    VcIrqRise = 1u,            ///< ä¸Šå‡æ²¿è§¦å‘
-    VcIrqFall = 2u,            ///< ä¸‹é™æ²¿è§¦å‘
-    VcIrqHigh = 3u,            ///< é«˜ç”µå¹³è§¦å‘
+    VcIrqNone = 0u,            ///< ÎŞÖĞ¶Ï
+    VcIrqRise = 1u,            ///< ÉÏÉıÑØ´¥·¢
+    VcIrqFall = 2u,            ///< ÏÂ½µÑØ´¥·¢
+    VcIrqHigh = 3u,            ///< ¸ßµçÆ½´¥·¢
 
 }en_vc_irq_sel_t;
 
 /**
  ******************************************************************************
- ** \brief VCçŠ¶æ€
+ ** \brief VC×´Ì¬
  *****************************************************************************/
 typedef enum en_vc_stat
 {
-    VcCmpResult  = 0u,                ///< VCæ¯”è¾ƒè¾“å‡ºç»“æœ
-    VcIntrResult = 1u,               ///< VCä¸­æ–­çŠ¶æ€
+    VcCmpResult  = 0u,                ///< VC±È½ÏÊä³ö½á¹û
+    VcIntrResult = 1u,               ///< VCÖĞ¶Ï×´Ì¬
 }en_vc_stat_t;
 
 /**
  ******************************************************************************
- ** \brief VCè¾“å‡ºé…ç½®
+ ** \brief VCÊä³öÅäÖÃ
  *****************************************************************************/
 typedef enum en_vc_output_config
 {
-    VcOutInvTimer = 0u,              ///< ç»“æœè¾“å‡ºè´Ÿå‘åˆ°å„Timer0,1,2,3
-    VcOutTIM0RCLR = 1u,              ///< ç»“æœä½¿èƒ½è¾“å‡ºåˆ°TIM0 REFCLR
-    VcOutTIM1RCLR = 2u,              ///< ç»“æœä½¿èƒ½è¾“å‡ºåˆ°TIM1 REFCLR
-    VcOutTIM2RCLR = 3u,              ///< ç»“æœä½¿èƒ½è¾“å‡ºåˆ°TIM2 REFCLR
-    VcOutTIM3RCLR = 4u,              ///< ç»“æœä½¿èƒ½è¾“å‡ºåˆ°TIM3 REFCLR
-    VcOutTIMBK    = 5u,              ///< ç»“æœä½¿èƒ½è¾“å‡ºåˆ°Timer0,1,2,3åˆ¹è½¦
-    VcOutInvTIM4  = 9u,              ///< ç»“æœè¾“å‡ºè´Ÿå‘åˆ°Timer4
-    VcOutTIM4     = 10u,             ///< ç»“æœä½¿èƒ½è¾“å‡ºåˆ°Timer4
-    VcOutInvTIM5  = 11u,             ///< ç»“æœè¾“å‡ºè´Ÿå‘åˆ°Timer5
-    VcOutTIM5     = 12u,             ///< ç»“æœä½¿èƒ½è¾“å‡ºåˆ°Timer5
-    VcOutInvTIM6  = 13u,             ///< ç»“æœè¾“å‡ºè´Ÿå‘åˆ°Timer6
-    VcOutTIM6     = 14u,             ///< ç»“æœä½¿èƒ½è¾“å‡ºåˆ°Timer6
-    VcOutBrake    = 15u,             ///< ç»“æœä½¿èƒ½è¾“å‡ºåˆ°Advanced Timeråˆ¹è½¦
-    VcOutDisable  = 16u,             ///< ç»“æœè¾“å‡ºé™¤èƒ½
+    VcOutInvTimer = 0u,              ///< ½á¹ûÊä³ö¸ºÏòµ½¸÷Timer0,1,2,3
+    VcOutTIM0RCLR = 1u,              ///< ½á¹ûÊ¹ÄÜÊä³öµ½TIM0 REFCLR
+    VcOutTIM1RCLR = 2u,              ///< ½á¹ûÊ¹ÄÜÊä³öµ½TIM1 REFCLR
+    VcOutTIM2RCLR = 3u,              ///< ½á¹ûÊ¹ÄÜÊä³öµ½TIM2 REFCLR
+    VcOutTIM3RCLR = 4u,              ///< ½á¹ûÊ¹ÄÜÊä³öµ½TIM3 REFCLR
+    VcOutTIMBK    = 5u,              ///< ½á¹ûÊ¹ÄÜÊä³öµ½Timer0,1,2,3É²³µ
+    VcOutInvTIM4  = 9u,              ///< ½á¹ûÊä³ö¸ºÏòµ½Timer4
+    VcOutTIM4     = 10u,             ///< ½á¹ûÊ¹ÄÜÊä³öµ½Timer4
+    VcOutInvTIM5  = 11u,             ///< ½á¹ûÊä³ö¸ºÏòµ½Timer5
+    VcOutTIM5     = 12u,             ///< ½á¹ûÊ¹ÄÜÊä³öµ½Timer5
+    VcOutInvTIM6  = 13u,             ///< ½á¹ûÊä³ö¸ºÏòµ½Timer6
+    VcOutTIM6     = 14u,             ///< ½á¹ûÊ¹ÄÜÊä³öµ½Timer6
+    VcOutBrake    = 15u,             ///< ½á¹ûÊ¹ÄÜÊä³öµ½Advanced TimerÉ²³µ
+    VcOutDisable  = 16u,             ///< ½á¹ûÊä³ö³ıÄÜ
 }en_vc_output_config_t;
 
 /**
  ******************************************************************************
- ** \brief VC DIVå‚è€ƒç”µå‹Vrefé€‰æ‹©
+ ** \brief VC DIV²Î¿¼µçÑ¹VrefÑ¡Ôñ
  *****************************************************************************/
 typedef enum en_vc_div_vref
 {
     VcDivVrefAvcc = 0u,              ///< AVCC
-    VcDivVrefAdc  = 1u,               ///< ADC_CR0 SREFé€‰æ‹©å‚è€ƒç”µå‹
+    VcDivVrefAdc  = 1u,               ///< ADC_CR0 SREFÑ¡Ôñ²Î¿¼µçÑ¹
 }en_vc_div_vref_t;
 
 /**
  ******************************************************************************
- ** \brief VCæ¨¡å—é…ç½®
+ ** \brief VCÄ£¿éÅäÖÃ
  *****************************************************************************/
 typedef struct stc_vc_dac_config
 {
-    boolean_t           bDivEn;       ///< ä½¿èƒ½/é™¤èƒ½ 6-bit VCC divider
-    uint8_t             u8DivVal;     ///< 6-bit VCC dividerè®¾ç½®å€¼
-    en_vc_div_vref_t    enDivVref;    ///< 6-bit VCC dividerè¾“å…¥å‚è€ƒç”µå‹é€‰æ‹©
+    boolean_t           bDivEn;       ///< Ê¹ÄÜ/³ıÄÜ 6-bit VCC divider
+    uint8_t             u8DivVal;     ///< 6-bit VCC dividerÉèÖÃÖµ
+    en_vc_div_vref_t    enDivVref;    ///< 6-bit VCC dividerÊäÈë²Î¿¼µçÑ¹Ñ¡Ôñ
 }stc_vc_dac_config_t;
 
 /**
  ******************************************************************************
- ** \brief VCé€šé“é…ç½®
+ ** \brief VCÍ¨µÀÅäÖÃ
  *****************************************************************************/
 typedef struct stc_vc_channel_config
 {
-    en_vc_channel_t         enVcChannel;        ///< VCé€šé“é€‰æ‹©
-    en_vc_cmp_delay_t       enVcCmpDly;         ///< VCè¿Ÿæ»
-    en_vc_bias_current_t    enVcBiasCurrent;    ///< VCåè½¬ç”µæµ
-    en_vc_resp_filter_t     enVcFilterTime;     ///< è¾“å‡ºæ»¤æ³¢æ—¶é—´
-    en_vc_input_p_src_t     enVcInPin_P;        ///< Pç«¯è¾“å…¥
-    en_vc_input_n_src_t     enVcInPin_N;        ///< Nç«¯è¾“å…¥
-    en_vc_output_config_t   enVcOutConfig;      ///< è¾“å‡ºé…ç½®
-    en_vc_irq_sel_t         enVcIrqSel;         ///< ä¸­æ–­è§¦å‘æ–¹å¼
-    func_ptr_t              pfnAnalogCmpCb;     ///< ä¸­æ–­å›è°ƒå‡½æ•°
+    en_vc_channel_t         enVcChannel;        ///< VCÍ¨µÀÑ¡Ôñ
+    en_vc_cmp_delay_t       enVcCmpDly;         ///< VC³ÙÖÍ
+    en_vc_bias_current_t    enVcBiasCurrent;    ///< VCÆ«×ªµçÁ÷
+    en_vc_resp_filter_t     enVcFilterTime;     ///< Êä³öÂË²¨Ê±¼ä
+    en_vc_input_p_src_t     enVcInPin_P;        ///< P¶ËÊäÈë
+    en_vc_input_n_src_t     enVcInPin_N;        ///< N¶ËÊäÈë
+    en_vc_output_config_t   enVcOutConfig;      ///< Êä³öÅäÖÃ
+    en_vc_irq_sel_t         enVcIrqSel;         ///< ÖĞ¶Ï´¥·¢·½Ê½
+    func_ptr_t              pfnAnalogCmpCb;     ///< ÖĞ¶Ï»Øµ÷º¯Êı
 }stc_vc_channel_config_t;
 
 /******************************************************************************

@@ -3,12 +3,14 @@
 #include "adc.h"
 #include "gpio.h"
 #include "bgr.h"
+#include "flash.h"
+#include "bt.h"
 #include "user_driver_pwm_dma.h"
 
 /******************************************************************************
 * Local variable definitions ('static')                                      *
 ******************************************************************************/
-static uint32_t ADC_Result_Array[16] = {0};
+static uint32_t PWM_DMA_Array[] = {4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000,4000,6000};
 
 
 /*******************************************************************************
@@ -16,7 +18,10 @@ static uint32_t ADC_Result_Array[16] = {0};
  ******************************************************************************/
 void Tim0Int(void)
 {
-    
+	if(TRUE == Bt_GetIntFlag(TIM0, BtUevIrq))
+	{			
+			Bt_ClearIntFlag(TIM0,BtUevIrq);
+	}
 }
 
 
@@ -25,9 +30,10 @@ void user_driver_pwm_dma_init(void)
 	uint16_t											u16ArrValue;
 	uint16_t											u16CompareAValue;
 	uint16_t											u16CntValue;
+	uint8_t 											u8ValidPeriod;
 
 
-	//en_flash_waitcycle_t          enFlashWait;
+	en_flash_waitcycle_t          enFlashWait;
 	stc_dma_config_t           stcDmaCfg;    
   stc_sysctrl_clk_config_t      stcClkConfig;
   stc_gpio_config_t             stcTIM0Port;
@@ -43,8 +49,8 @@ void user_driver_pwm_dma_init(void)
 
 
 
-	//enFlashWait = FlashWaitCycle1;                      //读等待周期设置为1（当HCLK大于24MHz时必须至少为1）
-	//Flash_WaitCycle(enFlashWait);                       // Flash 等待1个周期
+	enFlashWait = FlashWaitCycle1;                      //读等待周期设置为1（当HCLK大于24MHz时必须至少为1）
+	Flash_WaitCycle(enFlashWait);                       // Flash 等待1个周期
   // 
 
 	stcClkConfig.enClkSrc 	 = SysctrlClkXTH; 					//使用外部高速晶振,32M
@@ -60,13 +66,13 @@ void user_driver_pwm_dma_init(void)
 	stcTIM0Port.enDir  = GpioDirOut;
 	
 	Gpio_Init(GpioPortA, GpioPin5, &stcTIM0Port);
-	Gpio_SetAfMode(GpioPortA,GpioPin5,GpioAf4); 					 //PA00设置为TIM0_CHA
+	Gpio_SetAfMode(GpioPortA,GpioPin5,GpioAf4); 					 //PA05设置为TIM0_CHA
 
-	stcBtBaseCfg.enWorkMode 	 = BtWorkMode3; 						 //三角波模式
+	stcBtBaseCfg.enWorkMode 	 = BtWorkMode2; 						 //三角波模式
 	stcBtBaseCfg.enCT 				 = BtTimer; 								 //定时器功能，计数时钟为内部PCLK
 	stcBtBaseCfg.enPRS				 = BtPCLKDiv1;							 //PCLK
-	//stcBtBaseCfg.enCntDir 	 = BtCntUp; 								 //向上计数，在三角波模式时只读
-	stcBtBaseCfg.enPWMTypeSel  = BtComplementaryPWM;			 //互补输出PWM
+	stcBtBaseCfg.enCntDir 	   = BtCntUp; 								 //向上计数，在三角波模式时只读
+	stcBtBaseCfg.enPWMTypeSel  = BtIndependentPWM;			 //独立输出PWM
 	stcBtBaseCfg.enPWM2sSel 	 = BtSinglePointCmp;				 //单点比较功能
 	stcBtBaseCfg.bOneShot 		 = FALSE; 									 //循环计数
 	stcBtBaseCfg.bURSSel			 = FALSE; 									 //上下溢更新
@@ -88,30 +94,11 @@ void user_driver_pwm_dma_init(void)
 
 	Bt_M23_PortOutput_Config(TIM0, &stcBtPortCmpCfg); 		 //比较输出端口配置
 
+	u8ValidPeriod = 0;                                     //事件更新周期设置，0表示锯齿波每个周期更新一次，每+1代表延迟1个周期
+	Bt_M23_SetValidPeriod(TIM0,u8ValidPeriod);             //间隔周期设置
 	u16CntValue = 0;
-
 	Bt_M23_Cnt16Set(TIM0, u16CntValue); 									 //设置计数初值
 
-	Bt_ClearAllIntFlag(TIM0); 														 //清中断标志
-	Bt_Mode23_EnableIrq(TIM0,BtUevIrq); 									 //使能TIM0 UEV更新中断
-	EnableNvic(TIM0_IRQn, IrqLevel0, TRUE); 							 //TIM0中断使能 	
-
-	Bt_M23_EnPWM_Output(TIM0, TRUE, FALSE); 							 //TIM0 端口输出使能
-
-	Bt_M23_Run(TIM0); 																		 //TIM0 运行。
-
-
-  if (Ok != Sysctrl_SetPeripheralGate(SysctrlPeripheralAdcBgr, TRUE))
-  {
-    return;
-  }	
-  
-  Gpio_SetAnalogMode(GpioPortA, GpioPin0);        //PA00 (AIN0)
-  Gpio_SetAnalogMode(GpioPortA, GpioPin2);        //PA02 (AIN2)
-  Gpio_SetAnalogMode(GpioPortA, GpioPin5);        //PA05 (AIN5)
-
-    //
-  //Adc_ConfigDmaTrig(DmaSqr);
   
   stcDmaCfg.enMode =  DmaBurst;                   
   stcDmaCfg.u16BlockSize = 0x01u;
@@ -122,16 +109,22 @@ void user_driver_pwm_dma_init(void)
   stcDmaCfg.bDestAddrReloadCtl = FALSE;
   stcDmaCfg.bSrcAddrReloadCtl = FALSE;
   stcDmaCfg.bSrcBcTcReloadCtl = FALSE;
-  stcDmaCfg.u32SrcAddress = (uint32_t) &(M0P_ADC->SQRRESULT0);
-  stcDmaCfg.u32DstAddress = (uint32_t)&ADC_Result_Array[0];
-  stcDmaCfg.enRequestNum = ADCSQRTrig;	        //
+  stcDmaCfg.u32SrcAddress = (uint32_t) &(M0P_TIM0_MODE23->CCR0A);
+  stcDmaCfg.u32DstAddress = (uint32_t)&PWM_DMA_Array[0];
+  stcDmaCfg.enRequestNum = TIM0ATrig;	        //
   Dma_InitChannel(DmaCh0,&stcDmaCfg);	
   
   //
   Dma_Enable();
   Dma_EnableChannel(DmaCh0);
-  //Dma_Start(DmaCh0);		
-  Adc_SQR_Start();
+
+	Bt_ClearAllIntFlag(TIM0); 														 //清中断标志
+	Bt_Mode23_EnableIrq(TIM0,BtUevIrq); 									 //使能TIM0 UEV更新中断
+	EnableNvic(TIM0_IRQn, IrqLevel0, TRUE); 							 //TIM0中断使能 	
+
+	Bt_M23_EnPWM_Output(TIM0, TRUE, FALSE); 							 //TIM0 端口输出使能
+
+	Bt_M23_Run(TIM0); 																		 //TIM0 运行。
 
   //
   while(Dma_GetStat(DmaCh0) != DmaTransferComplete);

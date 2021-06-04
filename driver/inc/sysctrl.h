@@ -78,26 +78,26 @@ extern "C"
 /******************************************************************************
  * Global type definitions
  ******************************************************************************/
-#define SYSTEM_XTH            32*1000*1000u     //é»˜è®¤32MHz,å…·ä½“å€¼åº”æ ¹æ®å®é™…ç³»ç»Ÿä¿®æ”¹
-#define SYSTEM_XTL            32768u            //é»˜è®¤32768Hz,å…·ä½“å€¼åº”æ ¹æ®å®é™…ç³»ç»Ÿä¿®æ”¹
+#define SYSTEM_XTH            32*1000*1000u     //Ä¬ÈÏ32MHz,¾ßÌåÖµÓ¦¸ù¾İÊµ¼ÊÏµÍ³ĞŞ¸Ä
+#define SYSTEM_XTL            32768u            //Ä¬ÈÏ32768Hz,¾ßÌåÖµÓ¦¸ù¾İÊµ¼ÊÏµÍ³ĞŞ¸Ä
  
 /**
  *******************************************************************************
- ** \brief ç³»ç»Ÿæ—¶é’Ÿè¾“å…¥æºç±»å‹å®šä¹‰
+ ** \brief ÏµÍ³Ê±ÖÓÊäÈëÔ´ÀàĞÍ¶¨Òå
  ** \note
  ******************************************************************************/
 typedef enum en_sysctrl_clk_source
 {
-    SysctrlClkRCH  = 0u,               ///< å†…éƒ¨é«˜é€Ÿæ—¶é’Ÿ
-    SysctrlClkXTH  = 1u,               ///< å¤–éƒ¨é«˜é€Ÿæ—¶é’Ÿ
-    SysctrlClkRCL  = 2u,               ///< å†…éƒ¨ä½é€Ÿæ—¶é’Ÿ
-    SysctrlClkXTL  = 3u,               ///< å¤–éƒ¨ä½é€Ÿæ—¶é’Ÿ
-    SysctrlClkPLL  = 4u,               ///< PLLæ—¶é’Ÿ
+    SysctrlClkRCH  = 0u,               ///< ÄÚ²¿¸ßËÙÊ±ÖÓ
+    SysctrlClkXTH  = 1u,               ///< Íâ²¿¸ßËÙÊ±ÖÓ
+    SysctrlClkRCL  = 2u,               ///< ÄÚ²¿µÍËÙÊ±ÖÓ
+    SysctrlClkXTL  = 3u,               ///< Íâ²¿µÍËÙÊ±ÖÓ
+    SysctrlClkPLL  = 4u,               ///< PLLÊ±ÖÓ
 }en_sysctrl_clk_source_t;
 
 /**
  *******************************************************************************
- ** \brief RCHé¢‘ç‡å€¼æšä¸¾ç±»å‹å®šä¹‰
+ ** \brief RCHÆµÂÊÖµÃ¶¾ÙÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_rch_freq
 {
@@ -110,19 +110,19 @@ typedef enum en_sysctrl_rch_freq
 
 /**
  *******************************************************************************
- ** \brief XTALé©±åŠ¨èƒ½åŠ›ç±»å‹å®šä¹‰
+ ** \brief XTALÇı¶¯ÄÜÁ¦ÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_xtal_driver
 {
-    SysctrlXtalDriver0 = 0u,                ///< æœ€å¼±é©±åŠ¨èƒ½åŠ›
-    SysctrlXtalDriver1 = 1u,                ///< å¼±é©±åŠ¨èƒ½åŠ›
-    SysctrlXtalDriver2 = 3u,                ///< ä¸€èˆ¬é©±åŠ¨èƒ½åŠ›
-    SysctrlXtalDriver3 = 3u,                ///< æœ€å¼ºé©±åŠ¨èƒ½åŠ›
+    SysctrlXtalDriver0 = 0u,                ///< ×îÈõÇı¶¯ÄÜÁ¦
+    SysctrlXtalDriver1 = 1u,                ///< ÈõÇı¶¯ÄÜÁ¦
+    SysctrlXtalDriver2 = 3u,                ///< Ò»°ãÇı¶¯ÄÜÁ¦
+    SysctrlXtalDriver3 = 3u,                ///< ×îÇ¿Çı¶¯ÄÜÁ¦
 }en_sysctrl_xtal_driver_t;
 
 /**
  *******************************************************************************
- ** \brief XTHé¢‘ç‡å€¼èŒƒå›´é€‰æ‹©ç±»å‹å®šä¹‰
+ ** \brief XTHÆµÂÊÖµ·¶Î§Ñ¡ÔñÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_xth_freq
 {
@@ -134,19 +134,19 @@ typedef enum en_sysctrl_xth_freq
 
 /**
  *******************************************************************************
- ** \brief XTHæ—¶é’Ÿç¨³å®šå‘¨æœŸæ•°ç±»å‹å®šä¹‰
+ ** \brief XTHÊ±ÖÓÎÈ¶¨ÖÜÆÚÊıÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_xth_cycle
 {
-    SysctrlXthStableCycle256   = 0u,              ///< 256 ä¸ªå‘¨æœŸæ•°
-    SysctrlXthStableCycle1024  = 1u,              ///< 1024 ä¸ªå‘¨æœŸæ•°
-    SysctrlXthStableCycle4096  = 2u,              ///< 4096 ä¸ªå‘¨æœŸæ•°
-    SysctrlXthStableCycle16384 = 3u,              ///< 16384 ä¸ªå‘¨æœŸæ•°
+    SysctrlXthStableCycle256   = 0u,              ///< 256 ¸öÖÜÆÚÊı
+    SysctrlXthStableCycle1024  = 1u,              ///< 1024 ¸öÖÜÆÚÊı
+    SysctrlXthStableCycle4096  = 2u,              ///< 4096 ¸öÖÜÆÚÊı
+    SysctrlXthStableCycle16384 = 3u,              ///< 16384 ¸öÖÜÆÚÊı
 }en_sysctrl_xth_cycle_t;
 
 /**
  *******************************************************************************
- ** \brief RCLé¢‘ç‡å€¼æšä¸¾ç±»å‹å®šä¹‰
+ ** \brief RCLÆµÂÊÖµÃ¶¾ÙÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_rcl_freq
 {
@@ -156,59 +156,59 @@ typedef enum en_sysctrl_rcl_freq
 
 /**
  *******************************************************************************
- ** \brief RCLæ—¶é’Ÿç¨³å®šå‘¨æœŸæ•°ç±»å‹å®šä¹‰
+ ** \brief RCLÊ±ÖÓÎÈ¶¨ÖÜÆÚÊıÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_rcl_cycle
 {
-    SysctrlRclStableCycle4   = 0u,                  ///< 4 ä¸ªå‘¨æœŸæ•°
-    SysctrlRclStableCycle16  = 1u,                  ///< 16 ä¸ªå‘¨æœŸæ•°
-    SysctrlRclStableCycle64  = 2u,                  ///< 64 ä¸ªå‘¨æœŸæ•°
-    SysctrlRclStableCycle256 = 3u,                  ///< 256 ä¸ªå‘¨æœŸæ•°
+    SysctrlRclStableCycle4   = 0u,                  ///< 4 ¸öÖÜÆÚÊı
+    SysctrlRclStableCycle16  = 1u,                  ///< 16 ¸öÖÜÆÚÊı
+    SysctrlRclStableCycle64  = 2u,                  ///< 64 ¸öÖÜÆÚÊı
+    SysctrlRclStableCycle256 = 3u,                  ///< 256 ¸öÖÜÆÚÊı
 }en_sysctrl_rcl_cycle_t;
 
 /**
  *******************************************************************************
- ** \brief XTLæ—¶é’Ÿç¨³å®šå‘¨æœŸæ•°ç±»å‹å®šä¹‰
+ ** \brief XTLÊ±ÖÓÎÈ¶¨ÖÜÆÚÊıÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_xtl_cycle
 {
-    SysctrlXtlStableCycle256   = 0u,                  ///< 256 ä¸ªå‘¨æœŸæ•°
-    SysctrlXtlStableCycle1024  = 1u,                  ///< 1024 ä¸ªå‘¨æœŸæ•°
-    SysctrlXtlStableCycle4096  = 2u,                  ///< 4096 ä¸ªå‘¨æœŸæ•°
-    SysctrlXtlStableCycle16384 = 3u,                  ///< 16384 ä¸ªå‘¨æœŸæ•°
+    SysctrlXtlStableCycle256   = 0u,                  ///< 256 ¸öÖÜÆÚÊı
+    SysctrlXtlStableCycle1024  = 1u,                  ///< 1024 ¸öÖÜÆÚÊı
+    SysctrlXtlStableCycle4096  = 2u,                  ///< 4096 ¸öÖÜÆÚÊı
+    SysctrlXtlStableCycle16384 = 3u,                  ///< 16384 ¸öÖÜÆÚÊı
 }en_sysctrl_xtl_cycle_t;
 
 /**
  *******************************************************************************
- ** \brief XTLæ™¶ä½“æŒ¯å¹…æšä¸¾ç±»å‹å®šä¹‰
+ ** \brief XTL¾§ÌåÕñ·ùÃ¶¾ÙÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_xtl_amp
 {
-    SysctrlXtlAmp0 = 0u,                ///< æœ€å°æŒ¯å¹…
-    SysctrlXtlAmp1 = 1u,                ///< å°æŒ¯å¹…
-    SysctrlXtlAmp2 = 2u,                ///< ä¸€èˆ¬æŒ¯å¹…
-    SysctrlXtlAmp3 = 3u,                ///< æœ€å¤§æŒ¯å¹…
+    SysctrlXtlAmp0 = 0u,                ///< ×îĞ¡Õñ·ù
+    SysctrlXtlAmp1 = 1u,                ///< Ğ¡Õñ·ù
+    SysctrlXtlAmp2 = 2u,                ///< Ò»°ãÕñ·ù
+    SysctrlXtlAmp3 = 3u,                ///< ×î´óÕñ·ù
 }en_sysctrl_xtl_amp_t;
 
 /**
  *******************************************************************************
- ** \brief PLLæ—¶é’Ÿç¨³å®šå‘¨æœŸæ•°ç±»å‹å®šä¹‰
+ ** \brief PLLÊ±ÖÓÎÈ¶¨ÖÜÆÚÊıÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_pll_cycle
 {
-    SysctrlPllStableCycle128   = 0u,                  ///< 128ä¸ªå‘¨æœŸæ•°
-    SysctrlPllStableCycle256   = 1u,                  ///< 256ä¸ªå‘¨æœŸæ•°
-    SysctrlPllStableCycle512   = 2u,                  ///< 512ä¸ªå‘¨æœŸæ•°
-    SysctrlPllStableCycle1024  = 3u,                  ///< 1024ä¸ªå‘¨æœŸæ•°
-    SysctrlPllStableCycle2048  = 4u,                  ///< 2048ä¸ªå‘¨æœŸæ•°
-    SysctrlPllStableCycle4096  = 5u,                  ///< 4096ä¸ªå‘¨æœŸæ•°
-    SysctrlPllStableCycle8192  = 6u,                  ///< 8192ä¸ªå‘¨æœŸæ•°
-    SysctrlPllStableCycle16384 = 7u,                  ///< 16384ä¸ªå‘¨æœŸæ•°    
+    SysctrlPllStableCycle128   = 0u,                  ///< 128¸öÖÜÆÚÊı
+    SysctrlPllStableCycle256   = 1u,                  ///< 256¸öÖÜÆÚÊı
+    SysctrlPllStableCycle512   = 2u,                  ///< 512¸öÖÜÆÚÊı
+    SysctrlPllStableCycle1024  = 3u,                  ///< 1024¸öÖÜÆÚÊı
+    SysctrlPllStableCycle2048  = 4u,                  ///< 2048¸öÖÜÆÚÊı
+    SysctrlPllStableCycle4096  = 5u,                  ///< 4096¸öÖÜÆÚÊı
+    SysctrlPllStableCycle8192  = 6u,                  ///< 8192¸öÖÜÆÚÊı
+    SysctrlPllStableCycle16384 = 7u,                  ///< 16384¸öÖÜÆÚÊı    
 }en_sysctrl_pll_cycle_t;
 
 /**
  *******************************************************************************
- ** \brief PLLè¾“å…¥é¢‘ç‡èŒƒå›´ç±»å‹å®šä¹‰
+ ** \brief PLLÊäÈëÆµÂÊ·¶Î§ÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_pll_infreq
 {
@@ -220,7 +220,7 @@ typedef enum en_sysctrl_pll_infreq
 
 /**
  *******************************************************************************
- ** \brief PLLè¾“å‡ºé¢‘ç‡èŒƒå›´ç±»å‹å®šä¹‰
+ ** \brief PLLÊä³öÆµÂÊ·¶Î§ÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_pll_outfreq
 {
@@ -233,38 +233,38 @@ typedef enum en_sysctrl_pll_outfreq
 
 /**
  *******************************************************************************
- ** \brief PLLè¾“å…¥æ—¶é’Ÿæºç±»å‹å®šä¹‰
+ ** \brief PLLÊäÈëÊ±ÖÓÔ´ÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_pll_clksource
 {
-    SysctrlPllXthXtal   = 0u,                  ///< XTHæ™¶æŒ¯è¾“å…¥çš„æ—¶é’Ÿ
-    SysctrlPllXthPd00In = 2u,                  ///< XTHä»ç«¯å£PD00è¾“å…¥çš„æ—¶é’Ÿ
-    SysctrlPllRch       = 3u,                  ///< RCHæ—¶é’Ÿ
+    SysctrlPllXthXtal   = 0u,                  ///< XTH¾§ÕñÊäÈëµÄÊ±ÖÓ
+    SysctrlPllXthPd00In = 2u,                  ///< XTH´Ó¶Ë¿ÚPD00ÊäÈëµÄÊ±ÖÓ
+    SysctrlPllRch       = 3u,                  ///< RCHÊ±ÖÓ
 }en_sysctrl_pll_clksource_t;
 
 /**
  *******************************************************************************
- ** \brief PLLè¾“å…¥æ—¶é’Ÿæºç±»å‹å®šä¹‰
+ ** \brief PLLÊäÈëÊ±ÖÓÔ´ÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_pll_mul
 {
-    SysctrlPllMul1  = 1u,                   ///< 1å€é¢‘
-    SysctrlPllMul2  = 2u,                   ///< 2å€é¢‘
-    SysctrlPllMul3  = 3u,                   ///< 3å€é¢‘
-    SysctrlPllMul4  = 4u,                   ///< 4å€é¢‘
-    SysctrlPllMul5  = 5u,                   ///< 5å€é¢‘
-    SysctrlPllMul6  = 6u,                   ///< 6å€é¢‘
-    SysctrlPllMul7  = 7u,                   ///< 7å€é¢‘
-    SysctrlPllMul8  = 8u,                   ///< 8å€é¢‘
-    SysctrlPllMul9  = 9u,                   ///< 9å€é¢‘
-    SysctrlPllMul10 = 10u,                  ///< 10å€é¢‘
-    SysctrlPllMul11 = 11u,                  ///< 11å€é¢‘
-    SysctrlPllMul12 = 12u,                  ///< 12å€é¢‘
+    SysctrlPllMul1  = 1u,                   ///< 1±¶Æµ
+    SysctrlPllMul2  = 2u,                   ///< 2±¶Æµ
+    SysctrlPllMul3  = 3u,                   ///< 3±¶Æµ
+    SysctrlPllMul4  = 4u,                   ///< 4±¶Æµ
+    SysctrlPllMul5  = 5u,                   ///< 5±¶Æµ
+    SysctrlPllMul6  = 6u,                   ///< 6±¶Æµ
+    SysctrlPllMul7  = 7u,                   ///< 7±¶Æµ
+    SysctrlPllMul8  = 8u,                   ///< 8±¶Æµ
+    SysctrlPllMul9  = 9u,                   ///< 9±¶Æµ
+    SysctrlPllMul10 = 10u,                  ///< 10±¶Æµ
+    SysctrlPllMul11 = 11u,                  ///< 11±¶Æµ
+    SysctrlPllMul12 = 12u,                  ///< 12±¶Æµ
 }en_sysctrl_pll_mul_t;
 
 /**
  *******************************************************************************
- ** \brief HCLKæ—¶é’Ÿåˆ†é¢‘ç³»æ•°ç±»å‹å®šä¹‰
+ ** \brief HCLKÊ±ÖÓ·ÖÆµÏµÊıÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_hclk_div
 {
@@ -280,7 +280,7 @@ typedef enum en_sysctrl_hclk_div
 
 /**
  *******************************************************************************
- ** \brief PCLKåˆ†é¢‘ç³»æ•°
+ ** \brief PCLK·ÖÆµÏµÊı
  ******************************************************************************/
 typedef enum en_sysctrl_pclk_div
 {
@@ -293,71 +293,71 @@ typedef enum en_sysctrl_pclk_div
 
 /**
  *******************************************************************************
- ** \brief ç³»ç»Ÿæ§åˆ¶æ¨¡å—å…¶ä»–åŠŸèƒ½æ•°æ®ç±»å‹å®šä¹‰
+ ** \brief ÏµÍ³¿ØÖÆÄ£¿éÆäËû¹¦ÄÜÊı¾İÀàĞÍ¶¨Òå
  ******************************************************************************/
 typedef enum en_sysctrl_func
 {
-    SysctrlWkupByRCHEn      =0u,                    ///< å”¤é†’æ—¶ä½¿ç”¨RCHæ—¶é’Ÿ
-    SysctrlEXTHEn           =1u,                    ///< ä½¿èƒ½å¤–éƒ¨é«˜é€Ÿæ—¶é’Ÿä»è¾“å…¥å¼•è„šPD00è¾“å…¥
-    SysctrlEXTLEn           =2u,                    ///< ä½¿èƒ½å¤–éƒ¨ä½é€Ÿé€Ÿæ—¶é’Ÿä»è¾“å…¥å¼•è„šPC14è¾“å…¥
-    SysctrlXTLAlwaysOnEn    =3u,                    ///< ä½¿èƒ½åXTL_ENåªå¯ç½®ä½
-    SysctrlCMLockUpEn       =5u,                    ///< ä½¿èƒ½åCPUæ‰§è¡Œæ— æ•ˆæŒ‡ä»¤ä¼šå¤ä½MCU
-    SysctrlSWDUseIOEn       =6u,                    ///< SWDç«¯å£è®¾ä¸ºIOåŠŸèƒ½
+    SysctrlWkupByRCHEn      =0u,                    ///< »½ĞÑÊ±Ê¹ÓÃRCHÊ±ÖÓ
+    SysctrlEXTHEn           =1u,                    ///< Ê¹ÄÜÍâ²¿¸ßËÙÊ±ÖÓ´ÓÊäÈëÒı½ÅPD00ÊäÈë
+    SysctrlEXTLEn           =2u,                    ///< Ê¹ÄÜÍâ²¿µÍËÙËÙÊ±ÖÓ´ÓÊäÈëÒı½ÅPC14ÊäÈë
+    SysctrlXTLAlwaysOnEn    =3u,                    ///< Ê¹ÄÜºóXTL_ENÖ»¿ÉÖÃÎ»
+    SysctrlCMLockUpEn       =5u,                    ///< Ê¹ÄÜºóCPUÖ´ĞĞÎŞĞ§Ö¸Áî»á¸´Î»MCU
+    SysctrlSWDUseIOEn       =6u,                    ///< SWD¶Ë¿ÚÉèÎªIO¹¦ÄÜ
 }en_sysctrl_func_t;
 
 /**
  *******************************************************************************
- ** \brief å¤–è®¾æ—¶é’Ÿé—¨æ§å¼€å…³ç±»å‹æšä¸¾
+ ** \brief ÍâÉèÊ±ÖÓÃÅ¿Ø¿ª¹ØÀàĞÍÃ¶¾Ù
  ******************************************************************************/
 typedef enum en_sysctrl_peripheral_gate
 {
-    SysctrlPeripheralUart0      = 0u,       ///< ä¸²å£0
-    SysctrlPeripheralUart1      = 1u,       ///< ä¸²å£1
+    SysctrlPeripheralUart0      = 0u,       ///< ´®¿Ú0
+    SysctrlPeripheralUart1      = 1u,       ///< ´®¿Ú1
     SysctrlPeripheralI2c0       = 4u,       ///< I2C0
     SysctrlPeripheralI2c1       = 5u,       ///< I2C1
     SysctrlPeripheralSpi0       = 6u,       ///< SPI0
     SysctrlPeripheralSpi1       = 7u,       ///< SPI1
-    SysctrlPeripheralBTim       = 8u,       ///< åŸºç¡€å®šæ—¶å™¨
-    SysctrlPeripheralAdvTim     = 10u,      ///< é«˜çº§å®šæ—¶å™¨
-    SysctrlPeripheralTim3       = 11u,      ///< å®šæ—¶å™¨3
+    SysctrlPeripheralBTim       = 8u,       ///< »ù´¡¶¨Ê±Æ÷
+    SysctrlPeripheralAdvTim     = 10u,      ///< ¸ß¼¶¶¨Ê±Æ÷
+    SysctrlPeripheralTim3       = 11u,      ///< ¶¨Ê±Æ÷3
     SysctrlPeripheralOpa        = 13u,      ///< OPA
-    SysctrlPeripheralPca        = 14u,      ///< å¯ç¼–ç¨‹è®¡æ•°é˜µåˆ—
-    SysctrlPeripheralWdt        = 15u,      ///< çœ‹é—¨ç‹—
+    SysctrlPeripheralPca        = 14u,      ///< ¿É±à³Ì¼ÆÊıÕóÁĞ
+    SysctrlPeripheralWdt        = 15u,      ///< ¿´ÃÅ¹·
     SysctrlPeripheralAdcBgr     = 16u,      ///< ADC&BGR
-    SysctrlPeripheralVcLvd      = 17u,      ///< ç”µå‹æ¯”è¾ƒå’Œä½ç”µå‹æ£€æµ‹
+    SysctrlPeripheralVcLvd      = 17u,      ///< µçÑ¹±È½ÏºÍµÍµçÑ¹¼ì²â
     SysctrlPeripheralRng        = 18u,      ///< RNG
-    SysctrlPeripheralTrim       = 21u,      ///< æ—¶é’Ÿæ ¡å‡†
-    SysctrlPeripheralTick       = 24u,      ///< ç³»ç»Ÿå®šæ—¶å™¨
+    SysctrlPeripheralTrim       = 21u,      ///< Ê±ÖÓĞ£×¼
+    SysctrlPeripheralTick       = 24u,      ///< ÏµÍ³¶¨Ê±Æ÷
     SysctrlPeripheralSwd        = 25u,      ///< SWD
     SysctrlPeripheralCrc        = 26u,      ///< CRC
     SysctrlPeripheralAes        = 27u,      ///< AES
     SysctrlPeripheralGpio       = 28u,      ///< GPIO
     SysctrlPeripheralDma        = 29u,      ///< DMA
-    SysctrlPeripheralDiv        = 30u,      ///< é™¤æ³•å™¨
+    SysctrlPeripheralDiv        = 30u,      ///< ³ı·¨Æ÷
     SysctrlPeripheralFlash      = 31u,      ///< Flash
 }en_sysctrl_peripheral_gate_t;
 
 /**
  *******************************************************************************
- ** \brief æ—¶é’Ÿåˆå§‹åŒ–é…ç½®ç»“æ„ä½“å®šä¹‰
+ ** \brief Ê±ÖÓ³õÊ¼»¯ÅäÖÃ½á¹¹Ìå¶¨Òå
  ******************************************************************************/
 typedef struct
 {
-    en_sysctrl_clk_source_t  enClkSrc;       ///< æ—¶é’Ÿæºé€‰æ‹©
-    en_sysctrl_hclk_div_t    enHClkDiv;      ///< HCLKåˆ†é¢‘ç³»æ•°
-    en_sysctrl_pclk_div_t    enPClkDiv;      ///< PCLKåˆ†é¢‘ç³»æ•°
+    en_sysctrl_clk_source_t  enClkSrc;       ///< Ê±ÖÓÔ´Ñ¡Ôñ
+    en_sysctrl_hclk_div_t    enHClkDiv;      ///< HCLK·ÖÆµÏµÊı
+    en_sysctrl_pclk_div_t    enPClkDiv;      ///< PCLK·ÖÆµÏµÊı
 }stc_sysctrl_clk_config_t;
 
 /**
  *******************************************************************************
- ** \brief æ—¶é’Ÿåˆå§‹åŒ–é…ç½®ç»“æ„ä½“å®šä¹‰
+ ** \brief Ê±ÖÓ³õÊ¼»¯ÅäÖÃ½á¹¹Ìå¶¨Òå
  ******************************************************************************/
 typedef struct
 {
-    en_sysctrl_pll_infreq_t    enInFreq;        ///< PLLè¾“å…¥æ—¶é’Ÿé¢‘ç‡èŒƒå›´é€‰æ‹©
-    en_sysctrl_pll_outfreq_t   enOutFreq;       ///< PLLè¾“å‡ºæ—¶é’Ÿé¢‘ç‡èŒƒå›´é€‰æ‹©
-    en_sysctrl_pll_clksource_t enPllClkSrc;     ///< PLLè¾“å…¥æ—¶é’Ÿæºé€‰æ‹©
-    en_sysctrl_pll_mul_t       enPllMul;        ///< PLLå€é¢‘ç³»æ•°é€‰æ‹©
+    en_sysctrl_pll_infreq_t    enInFreq;        ///< PLLÊäÈëÊ±ÖÓÆµÂÊ·¶Î§Ñ¡Ôñ
+    en_sysctrl_pll_outfreq_t   enOutFreq;       ///< PLLÊä³öÊ±ÖÓÆµÂÊ·¶Î§Ñ¡Ôñ
+    en_sysctrl_pll_clksource_t enPllClkSrc;     ///< PLLÊäÈëÊ±ÖÓÔ´Ñ¡Ôñ
+    en_sysctrl_pll_mul_t       enPllMul;        ///< PLL±¶ÆµÏµÊıÑ¡Ôñ
 }stc_sysctrl_pll_config_t;
 
 /******************************************************************************
@@ -367,55 +367,55 @@ typedef struct
 /******************************************************************************
  * Global function prototypes (definition in C source)
  ******************************************************************************/
-///< ç³»ç»Ÿæ—¶é’Ÿåˆå§‹åŒ–API:ç”¨äºä¸Šç”µåï¼Œç³»ç»Ÿå·¥ä½œä¹‹å‰å¯¹ä¸»é¢‘åŠå¤–è®¾æ—¶é’Ÿè¿›è¡Œåˆå§‹åŒ–ï¼› 
-///< æ³¨æ„1ï¼šä½¿ç”¨è¯¥åˆå§‹åŒ–å‡½æ•°å‰éœ€è¦æ ¹æ®ç³»ç»Ÿï¼Œå¿…é¡»ä¼˜å…ˆè®¾ç½®ç›®æ ‡å†…éƒ¨æ—¶é’Ÿæºçš„TRIMå€¼æˆ–å¤–éƒ¨æ—¶é’Ÿæºçš„é¢‘ç‡èŒƒå›´ï¼Œ
-///< æ³¨æ„2ï¼šXTHã€XTLçš„é¢‘ç‡èŒƒå›´è®¾å®šï¼Œéœ€è¦æ ¹æ®å¤–éƒ¨æ™¶æŒ¯å†³å®šï¼Œ
-///< æ³¨æ„3ï¼šæœ¬é©±åŠ¨é»˜è®¤å®å®šä¹‰ï¼šSYSTEM_XTH=32MHz,SYSTEM_XTL=32768Hz,å¦‚ä½¿ç”¨å…¶å®ƒå¤–éƒ¨æ™¶æŒ¯ï¼Œå¿…é¡»ä¿®æ”¹è¿™ä¸¤ä¸ªå®å®šä¹‰çš„å€¼ã€‚
+///< ÏµÍ³Ê±ÖÓ³õÊ¼»¯API:ÓÃÓÚÉÏµçºó£¬ÏµÍ³¹¤×÷Ö®Ç°¶ÔÖ÷Æµ¼°ÍâÉèÊ±ÖÓ½øĞĞ³õÊ¼»¯£» 
+///< ×¢Òâ1£ºÊ¹ÓÃ¸Ã³õÊ¼»¯º¯ÊıÇ°ĞèÒª¸ù¾İÏµÍ³£¬±ØĞëÓÅÏÈÉèÖÃÄ¿±êÄÚ²¿Ê±ÖÓÔ´µÄTRIMÖµ»òÍâ²¿Ê±ÖÓÔ´µÄÆµÂÊ·¶Î§£¬
+///< ×¢Òâ2£ºXTH¡¢XTLµÄÆµÂÊ·¶Î§Éè¶¨£¬ĞèÒª¸ù¾İÍâ²¿¾§Õñ¾ö¶¨£¬
+///< ×¢Òâ3£º±¾Çı¶¯Ä¬ÈÏºê¶¨Òå£ºSYSTEM_XTH=32MHz,SYSTEM_XTL=32768Hz,ÈçÊ¹ÓÃÆäËüÍâ²¿¾§Õñ£¬±ØĞëĞŞ¸ÄÕâÁ½¸öºê¶¨ÒåµÄÖµ¡£
 en_result_t Sysctrl_ClkInit(stc_sysctrl_clk_config_t *pstcCfg);
 
-///< ç³»ç»Ÿæ—¶é’Ÿå»åˆå§‹åŒ–API:æ¢å¤ä¸ºä¸Šç”µé»˜è®¤çŠ¶æ€->PCLK=HCLK=SystemClk=RCH4MHz
+///< ÏµÍ³Ê±ÖÓÈ¥³õÊ¼»¯API:»Ö¸´ÎªÉÏµçÄ¬ÈÏ×´Ì¬->PCLK=HCLK=SystemClk=RCH4MHz
 en_result_t Sysctrl_ClkDeInit(void);
 
-///< ç³»ç»Ÿæ—¶é’Ÿæ¨¡å—çš„åŸºæœ¬åŠŸèƒ½è®¾ç½®
-///< æ³¨æ„ï¼šä½¿èƒ½éœ€è¦ä½¿ç”¨çš„æ—¶é’Ÿæºä¹‹å‰ï¼Œå¿…é¡»ä¼˜å…ˆè®¾ç½®ç›®æ ‡å†…éƒ¨æ—¶é’Ÿæºçš„TRIMå€¼æˆ–å¤–éƒ¨æ—¶é’Ÿæºçš„é¢‘ç‡èŒƒå›´
+///< ÏµÍ³Ê±ÖÓÄ£¿éµÄ»ù±¾¹¦ÄÜÉèÖÃ
+///< ×¢Òâ£ºÊ¹ÄÜĞèÒªÊ¹ÓÃµÄÊ±ÖÓÔ´Ö®Ç°£¬±ØĞëÓÅÏÈÉèÖÃÄ¿±êÄÚ²¿Ê±ÖÓÔ´µÄTRIMÖµ»òÍâ²¿Ê±ÖÓÔ´µÄÆµÂÊ·¶Î§
 en_result_t Sysctrl_ClkSourceEnable(en_sysctrl_clk_source_t enSource, boolean_t bFlag);
 
-///<å¤–éƒ¨æ™¶æŒ¯é©±åŠ¨é…ç½®ï¼šç³»ç»Ÿåˆå§‹åŒ–Sysctrl_ClkInit()ä¹‹åï¼Œå¯æ ¹æ®éœ€è¦é…ç½®å¤–éƒ¨æ™¶æŒ¯çš„é©±åŠ¨èƒ½åŠ›ï¼Œæ—¶é’Ÿåˆå§‹åŒ–Sysctrl_ClkInit()é»˜è®¤ä¸ºæœ€å¤§å€¼;
+///<Íâ²¿¾§ÕñÇı¶¯ÅäÖÃ£ºÏµÍ³³õÊ¼»¯Sysctrl_ClkInit()Ö®ºó£¬¿É¸ù¾İĞèÒªÅäÖÃÍâ²¿¾§ÕñµÄÇı¶¯ÄÜÁ¦£¬Ê±ÖÓ³õÊ¼»¯Sysctrl_ClkInit()Ä¬ÈÏÎª×î´óÖµ;
 en_result_t Sysctrl_XTHDriverConfig(en_sysctrl_xtal_driver_t enDriver);
 en_result_t Sysctrl_XTLDriverConfig(en_sysctrl_xtl_amp_t enAmp, en_sysctrl_xtal_driver_t enDriver);
 
-///<æ—¶é’Ÿç¨³å®šå‘¨æœŸè®¾ç½®:ç³»ç»Ÿåˆå§‹åŒ–Sysctrl_ClkInit()ä¹‹åï¼Œå¯æ ¹æ®éœ€è¦é…ç½®æ—¶é’Ÿå¼€å¯åçš„ç¨³å®šä¹‹é—´ï¼Œé»˜è®¤ä¸ºæœ€å¤§å€¼;
+///<Ê±ÖÓÎÈ¶¨ÖÜÆÚÉèÖÃ:ÏµÍ³³õÊ¼»¯Sysctrl_ClkInit()Ö®ºó£¬¿É¸ù¾İĞèÒªÅäÖÃÊ±ÖÓ¿ªÆôºóµÄÎÈ¶¨Ö®¼ä£¬Ä¬ÈÏÎª×î´óÖµ;
 en_result_t Sysctrl_SetXTHStableTime(en_sysctrl_xth_cycle_t enCycle);
 en_result_t Sysctrl_SetRCLStableTime(en_sysctrl_rcl_cycle_t enCycle);
 en_result_t Sysctrl_SetXTLStableTime(en_sysctrl_xtl_cycle_t enCycle);
 en_result_t Sysctrl_SetPLLStableTime(en_sysctrl_pll_cycle_t enCycle);
 
-///<ç³»ç»Ÿæ—¶é’Ÿæºåˆ‡æ¢å¹¶æ›´æ–°ç³»ç»Ÿæ—¶é’Ÿï¼šå¦‚æœéœ€è¦åœ¨ç³»ç»Ÿæ—¶é’Ÿåˆå§‹åŒ–Sysctrl_ClkInit()ä¹‹ååˆ‡æ¢ä¸»é¢‘æ—¶é’Ÿæºï¼Œåˆ™ä½¿ç”¨è¯¥å‡½æ•°ï¼›
-///< æ—¶é’Ÿåˆ‡æ¢å‰åï¼Œå¿…é¡»æ ¹æ®ç›®æ ‡é¢‘ç‡å€¼è®¾ç½®Flashè¯»ç­‰å¾…å‘¨æœŸï¼Œå¯é…ç½®æ’å…¥å‘¨æœŸä¸º0ã€1ã€2ï¼Œ
-///< æ³¨æ„!!!ï¼šå½“HCLKå¤§äº24MHzæ—¶ï¼ŒFLASHç­‰å¾…å‘¨æœŸæ’å…¥å¿…é¡»è‡³å°‘ä¸º1,å¦åˆ™ç¨‹åºè¿è¡Œå¯èƒ½äº§ç”ŸæœªçŸ¥é”™è¯¯
+///<ÏµÍ³Ê±ÖÓÔ´ÇĞ»»²¢¸üĞÂÏµÍ³Ê±ÖÓ£ºÈç¹ûĞèÒªÔÚÏµÍ³Ê±ÖÓ³õÊ¼»¯Sysctrl_ClkInit()Ö®ºóÇĞ»»Ö÷ÆµÊ±ÖÓÔ´£¬ÔòÊ¹ÓÃ¸Ãº¯Êı£»
+///< Ê±ÖÓÇĞ»»Ç°ºó£¬±ØĞë¸ù¾İÄ¿±êÆµÂÊÖµÉèÖÃFlash¶ÁµÈ´ıÖÜÆÚ£¬¿ÉÅäÖÃ²åÈëÖÜÆÚÎª0¡¢1¡¢2£¬
+///< ×¢Òâ!!!£ºµ±HCLK´óÓÚ24MHzÊ±£¬FLASHµÈ´ıÖÜÆÚ²åÈë±ØĞëÖÁÉÙÎª1,·ñÔò³ÌĞòÔËĞĞ¿ÉÄÜ²úÉúÎ´Öª´íÎó
 en_result_t Sysctrl_SysClkSwitch(en_sysctrl_clk_source_t enSource);
 
-///< æ—¶é’Ÿæºé¢‘ç‡è®¾å®šï¼šæ ¹æ®ç³»ç»Ÿæƒ…å†µï¼Œå•ç‹¬è®¾ç½®ä¸åŒæ—¶é’Ÿæºçš„é¢‘ç‡å€¼;
-///< æ—¶é’Ÿé¢‘ç‡è®¾ç½®å‰ï¼Œå¿…é¡»æ ¹æ®ç›®æ ‡é¢‘ç‡å€¼è®¾ç½®Flashè¯»ç­‰å¾…å‘¨æœŸï¼Œå¯é…ç½®æ’å…¥å‘¨æœŸä¸º0ã€1ã€2ï¼Œ
-///< å…¶ä¸­XTLçš„æ—¶é’Ÿç”±å¤–éƒ¨æ™¶æŒ¯å†³å®šï¼Œæ— éœ€è®¾ç½®ã€‚
+///< Ê±ÖÓÔ´ÆµÂÊÉè¶¨£º¸ù¾İÏµÍ³Çé¿ö£¬µ¥¶ÀÉèÖÃ²»Í¬Ê±ÖÓÔ´µÄÆµÂÊÖµ;
+///< Ê±ÖÓÆµÂÊÉèÖÃÇ°£¬±ØĞë¸ù¾İÄ¿±êÆµÂÊÖµÉèÖÃFlash¶ÁµÈ´ıÖÜÆÚ£¬¿ÉÅäÖÃ²åÈëÖÜÆÚÎª0¡¢1¡¢2£¬
+///< ÆäÖĞXTLµÄÊ±ÖÓÓÉÍâ²¿¾§Õñ¾ö¶¨£¬ÎŞĞèÉèÖÃ¡£
 en_result_t Sysctrl_SetRCHTrim(en_sysctrl_rch_freq_t enRCHFreq);
 en_result_t Sysctrl_SetRCLTrim(en_sysctrl_rcl_freq_t enRCLFreq);
 en_result_t Sysctrl_SetXTHFreq(en_sysctrl_xth_freq_t enXTHFreq);
 en_result_t Sysctrl_SetPLLFreq(stc_sysctrl_pll_config_t *pstcPLLCfg);
 
-///< æ—¶é’Ÿåˆ†é¢‘è®¾ç½®:æ ¹æ®ç³»ç»Ÿæƒ…å†µï¼Œå•ç‹¬è®¾ç½®HCLKã€PCLKçš„åˆ†é…å€¼;
+///< Ê±ÖÓ·ÖÆµÉèÖÃ:¸ù¾İÏµÍ³Çé¿ö£¬µ¥¶ÀÉèÖÃHCLK¡¢PCLKµÄ·ÖÅäÖµ;
 en_result_t Sysctrl_SetHCLKDiv(en_sysctrl_hclk_div_t enHCLKDiv);
 en_result_t Sysctrl_SetPCLKDiv(en_sysctrl_pclk_div_t enPCLKDiv);
 
-///< æ—¶é’Ÿé¢‘ç‡è·å–ï¼šæ ¹æ®ç³»ç»Ÿéœ€è¦ï¼Œè·å–å½“å‰HCLKåŠPCLKçš„é¢‘ç‡å€¼
+///< Ê±ÖÓÆµÂÊ»ñÈ¡£º¸ù¾İÏµÍ³ĞèÒª£¬»ñÈ¡µ±Ç°HCLK¼°PCLKµÄÆµÂÊÖµ
 uint32_t Sysctrl_GetHClkFreq(void);
 uint32_t Sysctrl_GetPClkFreq(void);
 
-///< å¤–è®¾é—¨æ§å¼€å…³/çŠ¶æ€è·å–ï¼šç”¨äºæ§åˆ¶å¤–è®¾æ¨¡å—çš„ä½¿èƒ½ï¼Œä½¿ç”¨è¯¥æ¨¡å—çš„åŠŸèƒ½ä¹‹å‰ï¼Œå¿…é¡»ä½¿èƒ½è¯¥æ¨¡å—çš„é—¨æ§æ—¶é’Ÿï¼›
+///< ÍâÉèÃÅ¿Ø¿ª¹Ø/×´Ì¬»ñÈ¡£ºÓÃÓÚ¿ØÖÆÍâÉèÄ£¿éµÄÊ¹ÄÜ£¬Ê¹ÓÃ¸ÃÄ£¿éµÄ¹¦ÄÜÖ®Ç°£¬±ØĞëÊ¹ÄÜ¸ÃÄ£¿éµÄÃÅ¿ØÊ±ÖÓ£»
 en_result_t Sysctrl_SetPeripheralGate(en_sysctrl_peripheral_gate_t enPeripheral, boolean_t bFlag);
 boolean_t   Sysctrl_GetPeripheralGate(en_sysctrl_peripheral_gate_t enPeripheral);
 
-///< ç³»ç»ŸåŠŸèƒ½é…ç½®ï¼šç”¨äºè®¾ç½®å…¶ä»–ç³»ç»Ÿç›¸å…³ç‰¹æ®ŠåŠŸèƒ½ï¼›
+///< ÏµÍ³¹¦ÄÜÅäÖÃ£ºÓÃÓÚÉèÖÃÆäËûÏµÍ³Ïà¹ØÌØÊâ¹¦ÄÜ£»
 en_result_t Sysctrl_SetFunc(en_sysctrl_func_t enFunc, boolean_t bFlag);
 
 
