@@ -14,7 +14,7 @@
 /*
  * Define the Device Header File: 
  */
-#define CMSIS_device_header "ARMCM0plus.h"
+#define CMSIS_device_header "HC32F030F8TA.h"
 
 
 #endif /* RTE_COMPONENTS_H */

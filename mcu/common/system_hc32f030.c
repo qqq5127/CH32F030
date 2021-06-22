@@ -86,56 +86,56 @@ static void _HidePinInit(void)
 	M0P_SYSCTRL->PERI_CLKEN_f.GPIO = 1;
 	
   #if defined(HC32F030Jxxx)      //48PIN MCU	  
-	M0P_GPIO->PCADS &= 0xE000;   ///< PC00~PC12配置为数字端口
-	M0P_GPIO->PDADS &= 0xFFCB;   ///< PD02/PD04/PD05配置为数字端口
+	M0P_GPIO->PCADS &= 0xE000;   ///< PC00~PC12配置为数字端�?
+	M0P_GPIO->PDADS &= 0xFFCB;   ///< PD02/PD04/PD05配置为数字端�?
 	
-    M0P_GPIO->PCDIR	|= 0x1FFF;   ///< PC00~PC12配置为端口输入
-    M0P_GPIO->PDDIR	|= 0x0034;   ///< PD02/PD04/PD05配置为端口输入
+    M0P_GPIO->PCDIR	|= 0x1FFF;   ///< PC00~PC12配置为端口输�?
+    M0P_GPIO->PDDIR	|= 0x0034;   ///< PD02/PD04/PD05配置为端口输�?
 	
-	M0P_GPIO->PCPU  |= 0x1FFF;   ///< PC00~PC12配置为上拉
-	M0P_GPIO->PDPU  |= 0x0034;   ///< PD02/PD04/PD05配置为上拉
+	M0P_GPIO->PCPU  |= 0x1FFF;   ///< PC00~PC12配置为上�?
+	M0P_GPIO->PDPU  |= 0x0034;   ///< PD02/PD04/PD05配置为上�?
     
   #elif defined(HC32F030Hxxx)    //44PIN MCU
-    M0P_GPIO->PBADS &= 0xFDFF;   ///< PB09配置为数字端口
-    M0P_GPIO->PCADS &= 0xC000;   ///< PC00~PC13配置为数字端口
-	M0P_GPIO->PDADS &= 0xFFCB;   ///< PD02/PD04/PD05配置为数字端口
+    M0P_GPIO->PBADS &= 0xFDFF;   ///< PB09配置为数字端�?
+    M0P_GPIO->PCADS &= 0xC000;   ///< PC00~PC13配置为数字端�?
+	M0P_GPIO->PDADS &= 0xFFCB;   ///< PD02/PD04/PD05配置为数字端�?
 	
-    M0P_GPIO->PBDIR	|= 0x0200;   ///< PB09配置为端口输入
-    M0P_GPIO->PCDIR	|= 0x3FFF;   ///< PC00~PC13配置为端口输入
-    M0P_GPIO->PDDIR	|= 0x0034;   ///< PD02/PD04/PD05配置为端口输入
+    M0P_GPIO->PBDIR	|= 0x0200;   ///< PB09配置为端口输�?
+    M0P_GPIO->PCDIR	|= 0x3FFF;   ///< PC00~PC13配置为端口输�?
+    M0P_GPIO->PDDIR	|= 0x0034;   ///< PD02/PD04/PD05配置为端口输�?
 	
-	M0P_GPIO->PBPU  |= 0x0200;   ///< PB09配置为上拉
-	M0P_GPIO->PCPU  |= 0x3FFF;   ///< PC00~PC13配置为上拉
-	M0P_GPIO->PDPU  |= 0x0034;   ///< PD02/PD04/PD05配置为上拉 
+	M0P_GPIO->PBPU  |= 0x0200;   ///< PB09配置为上�?
+	M0P_GPIO->PCPU  |= 0x3FFF;   ///< PC00~PC13配置为上�?
+	M0P_GPIO->PDPU  |= 0x0034;   ///< PD02/PD04/PD05配置为上�?
     
   #elif defined(HC32F030Fxxx)    //32PIN MCU    
-	M0P_GPIO->PBADS &= 0x00FB;   ///< PB02/PB08~15配置为数字端口
-	M0P_GPIO->PCADS &= 0x0000;   ///< PC00~PC15配置为数字端口
-	M0P_GPIO->PDADS &= 0xFF0B;   ///< PD02/PD04/PD05/PD06/PD07配置为数字端口
+	M0P_GPIO->PBADS &= 0x00FB;   ///< PB02/PB08~15配置为数字端�?
+	M0P_GPIO->PCADS &= 0x0000;   ///< PC00~PC15配置为数字端�?
+	M0P_GPIO->PDADS &= 0xFF0B;   ///< PD02/PD04/PD05/PD06/PD07配置为数字端�?
 	
-    M0P_GPIO->PBDIR	|= 0xFF04;   ///< PB02/PB08/PB09/PB10/PB12/PB13/PB14/PB15配置为端口输入
-    M0P_GPIO->PCDIR	|= 0xFFFF;   ///< PC00~PC15配置为端口输入
-    M0P_GPIO->PDDIR	|= 0x00F4;   ///< PD02/PD04/PD05/PD06/PD07配置为端口输入
+    M0P_GPIO->PBDIR	|= 0xFF04;   ///< PB02/PB08/PB09/PB10/PB12/PB13/PB14/PB15配置为端口输�?
+    M0P_GPIO->PCDIR	|= 0xFFFF;   ///< PC00~PC15配置为端口输�?
+    M0P_GPIO->PDDIR	|= 0x00F4;   ///< PD02/PD04/PD05/PD06/PD07配置为端口输�?
 	
-	M0P_GPIO->PBPU  |= 0xFF04;   ///< PB02/PB08/PB09/PB10/PB12/PB13/PB14/PB15配置为上拉
-	M0P_GPIO->PCPU  |= 0xFFFF;   ///< PC00~PC15配置为上拉
-	M0P_GPIO->PDPU  |= 0x00F4;   ///< PD02/PD04/PD05/PD06/PD07配置为上拉
+	M0P_GPIO->PBPU  |= 0xFF04;   ///< PB02/PB08/PB09/PB10/PB12/PB13/PB14/PB15配置为上�?
+	M0P_GPIO->PCPU  |= 0xFFFF;   ///< PC00~PC15配置为上�?
+	M0P_GPIO->PDPU  |= 0x00F4;   ///< PD02/PD04/PD05/PD06/PD07配置为上�?
     
   #elif defined(HC32F030Exxx)    //28PIN MCU
-    M0P_GPIO->PAADS &= 0x7FFF;   ///< PA15配置为数字端口
-    M0P_GPIO->PBADS &= 0x0007;   ///< PB03~15配置为数字端口
-	M0P_GPIO->PCADS &= 0xC000;   ///< PC00~PC13配置位数字端口
-	M0P_GPIO->PDADS &= 0xFF0B;   ///< PD02/PD04/PD05/PD06/PD07配置位数字端口
+    M0P_GPIO->PAADS &= 0x7FFF;   ///< PA15配置为数字端�?
+    M0P_GPIO->PBADS &= 0x0007;   ///< PB03~15配置为数字端�?
+	M0P_GPIO->PCADS &= 0xC000;   ///< PC00~PC13配置位数字端�?
+	M0P_GPIO->PDADS &= 0xFF0B;   ///< PD02/PD04/PD05/PD06/PD07配置位数字端�?
 	
-    M0P_GPIO->PADIR	|= 0x8000;   ///< PA15配置为端口输入
-    M0P_GPIO->PBDIR	|= 0xFFF8;   ///< PB03~15配置为端口输入
-    M0P_GPIO->PCDIR	|= 0x3FFF;   ///< PC00~PC13配置为端口输入
-    M0P_GPIO->PDDIR	|= 0x00F4;   ///< PD02/PD04/PD05/PD06/PD07配置为端口输入
+    M0P_GPIO->PADIR	|= 0x8000;   ///< PA15配置为端口输�?
+    M0P_GPIO->PBDIR	|= 0xFFF8;   ///< PB03~15配置为端口输�?
+    M0P_GPIO->PCDIR	|= 0x3FFF;   ///< PC00~PC13配置为端口输�?
+    M0P_GPIO->PDDIR	|= 0x00F4;   ///< PD02/PD04/PD05/PD06/PD07配置为端口输�?
 	
-	M0P_GPIO->PAPU  |= 0x8000;   ///< PA15配置为上拉
-	M0P_GPIO->PBPU  |= 0xFFF8;   ///< PB03~15配置为上拉
-	M0P_GPIO->PCPU  |= 0x3FFF;   ///< PC00~PC13配置为上拉
-	M0P_GPIO->PDPU  |= 0x00F4;	 ///< PD02/PD04/PD05/PD06/PD07配置为上拉
+	M0P_GPIO->PAPU  |= 0x8000;   ///< PA15配置为上�?
+	M0P_GPIO->PBPU  |= 0xFFF8;   ///< PB03~15配置为上�?
+	M0P_GPIO->PCPU  |= 0x3FFF;   ///< PC00~PC13配置为上�?
+	M0P_GPIO->PDPU  |= 0x00F4;	 ///< PD02/PD04/PD05/PD06/PD07配置为上�?
     
   #endif
 	
