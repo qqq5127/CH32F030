@@ -14,9 +14,8 @@
 * Local variable definitions ('static')                                      *
 ******************************************************************************/
 //static uint8_t* io_point = NULL;	// cuixu test
-static uint32_t  pwm_led_buff[40][24];
+uint32_t  pwm_led_buff[40][24];
 boolean_t bSendIrq;
-
 
 static void Spi0CallBack(void)
 {
@@ -66,6 +65,29 @@ void Spi_PortInit(void)
     Gpio_SetAfMode(GpioPortA, GpioPin11,GpioAf6);
 }
 
+static void user_disable_irq(void)
+{
+	EnableNvic(TIM0_IRQn, IrqLevel3, FALSE); 								//TIM0中断使能
+}
+
+static void user_enable_irq(void)
+{
+	EnableNvic(TIM0_IRQn, IrqLevel3, TRUE); 								//TIM0中断使能
+}
+
+void user_refresh_led(void)
+{
+	user_disable_irq();
+	Spi_SetCS(Spi0,FALSE);//使能片选信号
+	Dma_Enable();
+	Dma_EnableChannel(DmaCh0);
+	//EnableNvic(SPI0_IRQn,IrqLevel3,TRUE);
+	//M0P_SPI0->DATA = 0xaa;
+	//等待传输完成
+	while(Dma_GetStat(DmaCh0) != DmaTransferComplete);
+	Spi_SetCS(Spi0,TRUE);//不使能片选信号
+	user_enable_irq();
+}
 
 void user_driver_pwm_dma_init(void)
 {
@@ -74,6 +96,9 @@ void user_driver_pwm_dma_init(void)
   stc_sysctrl_clk_config_t      stcClkConfig;
 	stc_gpio_config_t 				stcLEDPortCfg;
 	stc_spi_config_t  SPIConfig;		
+	uint8_t i;
+	uint8_t j;
+	
 
 #if SPI_DMA_CONFIG	
 	stc_dma_config_t           stcDmaCfg;
@@ -101,29 +126,24 @@ void user_driver_pwm_dma_init(void)
 	Sysctrl_SetPeripheralGate(SysctrlPeripheralSpi0,TRUE); //SPI0
 	Sysctrl_SetPeripheralGate(SysctrlPeripheralDma,TRUE); //SPI0
 
+	for(i=0;i<40;i++)
 	{
-		boolean_t flag = FALSE;
-		for(uint8_t i=0;i<40;i++)
+		for(j=0;j<24;j++)
 		{
-			for(uint8_t j=0;j<24;j++)
+		#if 0
+			if(flag)
 			{
-			#if 0
-				if(flag)
-				{
-					pwm_led_buff[i][j]=0xC0;	//0
-				}
-				else
-				{
-					pwm_led_buff[i][j]=0xFC;	//1
-				}
-				flag = !flag;
-			#else
-				pwm_led_buff[i][j]=0xFC;	//0
-			#endif
+				pwm_led_buff[i][j]=0xC0;	//0
 			}
+			else
+			{
+				pwm_led_buff[i][j]=0xFC;	//1
+			}
+			flag = !flag;
+		#else
+			pwm_led_buff[i][j]=0xC0;	//0
+		#endif
 		}
-		pwm_led_buff[0][7]=0;
-		pwm_led_buff[39][23]=0;
 	}
 #if 0
 	stcLEDPortCfg.enDir  = GpioDirOut;
@@ -178,4 +198,25 @@ void user_driver_pwm_dma_init(void)
 #endif	
 	Spi_SetCS(Spi0,TRUE);//使能片选信号
 
+	delay1ms(200);
+	for(i=0;i<40;i++)
+	{
+		for(j=0;j<24;j++)
+		{
+	#if 0
+			if(flag)
+			{
+				pwm_led_buff[i][j]=0xC0;	//0
+			}
+			else
+			{
+				pwm_led_buff[i][j]=0xFC;	//1
+			}
+			flag = !flag;
+	#else
+			pwm_led_buff[i][j]=0xC0;	//0
+	#endif
+		}
+	}
+	user_refresh_led();
 }

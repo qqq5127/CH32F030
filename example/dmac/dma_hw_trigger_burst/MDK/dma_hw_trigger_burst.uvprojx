@@ -52,7 +52,7 @@
           <OutputName>dma_hw_trigger_burst</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\output\release\</ListingPath>
@@ -401,6 +401,11 @@
               <FileType>1</FileType>
               <FilePath>..\source\main.c</FilePath>
             </File>
+            <File>
+              <FileName>user_app_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\user_app_led.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -460,6 +465,36 @@
               <FileName>spi.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\driver\src\spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_driver_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\user_driver_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_driver_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\user_driver_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_driver_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\user_driver_uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\driver\src\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_driver_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\user_driver_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_driver_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\source\user_driver_key.c</FilePath>
             </File>
           </Files>
         </Group>

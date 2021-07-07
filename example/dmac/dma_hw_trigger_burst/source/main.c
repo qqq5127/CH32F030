@@ -58,6 +58,12 @@
 #include "gpio.h"
 #include "bgr.h"
 #include "user_driver_pwm_dma.h"
+#include "user_driver_timer.h"
+#include "user_driver_adc.h"
+#include "user_driver_uart.h"
+#include "user_driver_flash.h"
+#include "user_app_led.h"
+#include "user_driver_key.h"
 
 
 /**
@@ -70,10 +76,36 @@
 int32_t main(void)
 {
   user_driver_pwm_dma_init();
- 
+ 	user_driver_timer_init();
+ 	user_driver_adc_init();
+	user_driver_key_init();
+	user_driver_uart_init();
+	user_driver_flash_init();
+#if 0	//cuixu test
+	{
+		uint8_t data;
+		
+		//user_driver_flash_write_colour(0x03);
+		data = user_driver_flash_get_colour();
+		data = data;
+	}
+#endif
+	user_app_led_init();
 	while (1)
   {
-    ;
+    if(timer_10ms_flag)
+    {
+    	uint16_t adc_temp;
+			
+			timer_10ms_flag = 0;
+			user_app_led_loop();
+
+			adc_temp = user_driver_adc_sgl_start();
+			user_app_led_calcu_level(adc_temp);
+			user_driver_key_sacn();
+			//if(adc_temp > 360)
+				//user_driver_uart_print("adc",adc_temp);
+		}
   }
 }
 
